@@ -1,0 +1,641 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\IfFileExists{newpxtext.sty}{
+  \usepackage{newpxtext}
+  \usepackage{newpxmath}
+}{
+  \usepackage{mathpazo}
+}
+\usepackage{amsmath}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[framemethod=default]{mdframed}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+% ---------------------------------------------------------------- colours
+\definecolor{boxfill}{HTML}{EAF2FA}
+\definecolor{boxrule}{HTML}{2C6EAB}
+\definecolor{graytext}{HTML}{767676}
+\definecolor{rulegray}{HTML}{BFBFBF}
+
+% ---------------------------------------------------------------- callout box
+\newmdenv[
+  backgroundcolor=boxfill,
+  linecolor=boxrule,
+  linewidth=3pt,
+  topline=false, bottomline=false, rightline=false, leftline=true,
+  innerleftmargin=11pt, innerrightmargin=11pt,
+  innertopmargin=9pt, innerbottommargin=9pt,
+  skipabove=10pt, skipbelow=10pt,
+  roundcorner=0pt
+]{callout}
+
+% ---------------------------------------------------------------- headings
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{0.8em}{}[\vspace{2pt}\color{rulegray}\titlerule]
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection}{0.7em}{}
+\titlespacing*{\section}{0pt}{20pt}{10pt}
+\titlespacing*{\subsection}{0pt}{14pt}{6pt}
+
+% ---------------------------------------------------------------- footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{\color{rulegray}\hrule width\headwidth height\footrulewidth \vskip4pt}
+\fancyfoot[L]{\color{graytext}\small Deep mutational scanning and ranking resolution}
+\fancyfoot[R]{\color{graytext}\small\thepage}
+
+\setlist[itemize]{topsep=4pt,itemsep=2pt,parsep=0pt,leftmargin=1.4em}
+\setlist[enumerate]{topsep=4pt,itemsep=2pt,parsep=0pt,leftmargin=1.6em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.25em}
+
+\newcommand{\fit}{\phi}
+\newcommand{\data}{\mathcal{D}}
+\newcommand{\resolved}{\rho_{\alpha}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\note}[1]{\textcolor{boxrule}{\small[#1]}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+\noindent{\Large\bfseries How much ordering information does a deep mutational scan contain? Quantifying ranking resolution in protein fitness landscapes}
+
+\vspace{10pt}
+{\color{graytext} Renato's internship project \hfill Paper outline --- August 2026}
+
+\vspace{4pt}
+
+\begin{callout}
+\textbf{Summary.}
+Deep mutational scans (DMSs) are widely used to prioritize protein variants. Protein engineers use them to decide which variants to validate, combine, or carry into future rounds of optimization. Machine-learning researchers use them as labels for training and evaluating protein fitness predictors. In both settings, what ultimately matters is not the absolute fitness value assigned to a variant, but the ordering induced by those values.
+
+A published DMS landscape is typically presented as a table of variants and fitness scores. This presentation suggests a precise ranking of variants. However, that table should not be treated as ground truth for two distinct reasons. First, fitness is definition- and analysis-dependent: different reasonable choices used to transform counts into fitness values can induce different orderings. Second, even after fixing one assay definition and analysis model, the scores are inferred from finite sequencing counts before and after selection, leaving measurement uncertainty about the induced ordering.
+
+This project asks the following question: \emph{how much ordering information does a DMS landscape actually contain?} We do not attempt to recover a uniquely defined notion of true fitness. Fitness is assay-dependent and necessarily reflects modeling choices. Instead, we separate two questions: how the ordering changes across reasonable definitions or analyses, and how much uncertainty remains after one assay definition and analysis model are fixed.
+
+We fit probabilistic models directly to the sequencing counts and propagate uncertainty into quantities that are relevant for downstream use. We first ask whether the rankings implied by the posterior distribution agree with the rankings reported by the original study. We then fix our assay model and quantify rank uncertainty relative to an internal model reference, with particular emphasis on the top of the landscape where experimental decisions are typically made. Next, we study the stability of top-$k$ candidate sets across posterior draws, while retaining overlap with the published top-$k$ as a complementary diagnostic. Finally, we investigate which experimental properties and local landscape features drive ranking resolution and whether the results depend on the particular modeling assumptions used to quantify uncertainty.
+
+The central claim of the paper is that DMS landscapes should not be viewed as ground-truth rankings. Their orderings depend on the definition and analysis used to construct fitness and, conditional on any fixed choice, have finite resolution. Quantifying that resolution is important for both protein engineering decisions and the interpretation of machine-learning benchmarks built from DMS data.
+\end{callout}
+
+\newpage
+
+% ==================================================================
+\section*{Background}
+
+\paragraph{Fitness is assay-defined.}
+There is no universal definition of protein fitness. A protein is put under some external pressure, and fitness measures how well the protein does under that pressure. The pressure depends on the experiment. Common choices include reaction yield, turnover number, stability, expression, binding to a partner, or survival under a selection condition.
+
+This is familiar to protein engineers. A screen for thermal stability, a screen for binding, and a screen for catalytic activity define different optimization problems. The same sequence can be good under one definition and mediocre under another. Some definitions are also in tension: increasing stability can reduce activity if the protein becomes too rigid for the motions required by catalysis.
+
+The point is not that DMS fitness values are useless. The point is that they are operational quantities. A DMS fitness value should be read as a score induced by a particular assay and analysis pipeline, not as an assay-independent property of a sequence.
+
+\paragraph{The deep mutational scanning experiment.}
+A deep mutational scan measures many variants in parallel. A typical experiment has four steps:
+\begin{enumerate}
+  \item \textbf{Build a variant library.} DNA is ordered or generated so that a large collection of variants is present in the same pool.
+  \item \textbf{Sequence before selection.} The input library is sampled and sequenced, often in replicate, giving an input count per variant.
+  \item \textbf{Apply the selection pressure.} The library is exposed to the assay condition. Examples include heat shock, antibiotic selection, binding enrichment, or growth under a chosen condition.
+  \item \textbf{Sequence after selection.} The selected library is sampled and sequenced again, giving an output count per variant.
+\end{enumerate}
+
+The basic data are therefore counts before and after selection. Fitness is usually computed from the change in abundance, often as an output-to-input ratio with some normalization, filtering, and replicate aggregation.
+
+\paragraph{Where uncertainty enters.}
+The count ratio hides an important distinction. Ten output counts against one input count and ten thousand output counts against one thousand input counts both give a ratio of ten. The second estimate is much better supported. In the first case, a change of one read can move the estimate substantially.
+
+This matters because the reported table usually gives one value per variant. Once the table is used downstream, the uncertainty from finite sampling is usually gone. The user sees a sequence and a number, and the number is treated as the target.
+
+\paragraph{Why ordering is the central object.}
+The absolute value of the score is often not what matters. A protein engineer usually asks which variants should be validated, which mutations should be combined, or which sequences should be used in the next round. These are ranking and selection questions.
+
+Machine-learning benchmarks use the same structure. A model is useful if it ranks promising variants above poor ones, especially under difficult generalization splits. Many benchmark metrics, such as Spearman correlation, top-$k$ retrieval, and enrichment among the best candidates, are functions of the ordering induced by the labels.
+
+This motivates the main question of the paper:
+
+\begin{callout}
+\begin{center}
+  \textit{How much of the ordering induced by a DMS landscape is supported by the observed counts?}
+\end{center}
+\end{callout}
+
+% ==================================================================
+\section*{Our motivation to work on this}
+
+Machine-learning work on protein fitness often treats reported DMS scores as ground truth. That assumption is rarely stated because it does not look like an assumption: the dataset arrives as a table of sequences and numbers, and the numbers are the target. Yet the table hides both the definition and analysis choices that produced the score and the measurement uncertainty arising from finite counts.
+
+Benchmarks such as FLIP and FLIP2 make the evaluation problem more realistic by using splits that reflect protein-engineering use cases. These include training on low-fitness variants and predicting high-fitness ones, or training on single mutants and predicting combinations. This changes the question from interpolation to useful generalization.
+
+This work focuses on a different part of the pipeline. Even before asking whether a model can generalize, we ask how much ranking information is present in the labels used for evaluation. If two models differ by a small amount in top-$k$ retrieval, but the top-$k$ set is itself uncertain at that scale, then the benchmark may not be able to distinguish the models. The improvement may be real, but the experiment may not contain enough information to show it.
+
+The same concern applies to protein engineering. If a reported top-50 list is unstable under count uncertainty, then the list should be treated as a candidate set with uncertainty rather than as a resolved ordering of exactly fifty variants.
+
+% ==================================================================
+\section*{What we do}
+
+Concretely, our objective is to quantify the ranking information supported by the observed DMS counts. We do this by fitting probabilistic models to the counts and propagating uncertainty into ranks, pairwise comparisons, and top-$k$ sets.
+
+\paragraph{Data.}
+For each landscape we have, per variant $i$ and replicate $r$, a count before selection $n^{\text{in}}_{ir}$ and a count after selection $n^{\text{out}}_{ir}$, together with the sequencing depth of each library. Counts are sparse and uneven. Many variants are observed a small number of times, and some are observed zero times after selection.
+
+\paragraph{Assay model.}
+We fit a generative model directly to the counts. The model is not meant to recover a universal true fitness. It defines an assay-level latent score and propagates uncertainty from finite sequencing counts into downstream quantities.
+
+The model has four components:
+\begin{enumerate}
+  \item \textbf{Fitness.} Each variant has an assay-level fitness parameter $\fit_i$. The prior family is chosen from a small set of possibilities, such as exponential, gamma, or Lomax. This is part of the model specification rather than a claim about biological truth.
+  \item \textbf{Replicate rates.} Each replicate has its own rate for variant $i$, drawn around $\fit_i$. Replicate disagreement is therefore represented in the model rather than averaged away before inference.
+  \item \textbf{Selection.} A growth or selection function maps the input proportion of a variant to its expected output proportion. We consider simple exponential and saturating forms where appropriate.
+  \item \textbf{Counts.} The observed sequencing counts are sampled from the underlying proportions at the observed sequencing depths.
+\end{enumerate}
+
+The output is a posterior distribution over assay-level fitness values,
+\[
+p(\fit_1,\ldots,\fit_N \mid \data),
+\]
+where $\data$ denotes the observed counts.
+
+\paragraph{Why use a Bayesian model?}
+Published landscapes already involve modelling choices. Counts are normalized, filtered, combined across replicates, and transformed into scores. A Bayesian model makes the assumptions explicit and keeps the uncertainty instead of collapsing it into one number per variant.
+
+The posterior should not be read as uncertainty about an assay-independent notion of fitness. It is uncertainty about an assay-defined score under a stated model for the counts. Each posterior draw corresponds to one plausible landscape consistent with the observed data and the model assumptions.
+
+\paragraph{Inference and model checks.}
+We fit models by maximum likelihood and by HMC, and use posterior draws for downstream ranking summaries. Fits are screened for convergence. We use prior predictive checks to assess whether the model and prior imply plausible counts before conditioning on the data, and posterior predictive checks to assess whether the fitted model reproduces the main features of the observed counts.
+
+This check is important. A wide posterior under a model that cannot reproduce the data is not evidence about the experiment. We only interpret ranking uncertainty after checking that the model gives a reasonable account of the observed counts.
+
+\paragraph{Ranking summaries.}
+Each posterior draw induces a ranking of variants. From these rankings we compute:
+\begin{itemize}
+  \item rank-agreement curves comparing the reported rank to the posterior rank distribution;
+  \item an area-to-diagonal summary of the rank-agreement curve;
+  \item posterior rank intervals for each variant;
+  \item signed rank deviations from an internal model reference induced by per-variant posterior median scores;
+  \item posterior inclusion probabilities for top-$k$ sets under the fixed model;
+  \item posterior-to-posterior and posterior-to-central top-$k$ overlap;
+  \item overlap between the reported top-$k$ set and posterior top-$k$ sets as a complementary diagnostic;
+  \item pairwise ordering probabilities, $P(\fit_i > \fit_j \mid \data)$.
+\end{itemize}
+
+These quantities are the main objects of the paper. Fitness values enter only because they induce rankings.
+
+\paragraph{Alternative fitness definitions and uncertainty procedures.}
+Because fitness is assay-defined and model-dependent, we also compute simpler alternatives:
+\begin{itemize}
+  \item the naive ratio, pooling counts across replicates and dividing summed output by summed input;
+  \item a replicate-level ratio, normalized to a reference variant and combined across replicates with inverse-variance weighting;
+  \item simplified count models where possible;
+  \item a nonparametric bootstrap of the published estimator where the original analysis can be reproduced.
+\end{itemize}
+
+The purpose of doing this is to ask whether the main conclusions about ranking resolution depend on one particular model.
+
+% ==================================================================
+\section*{\Large{Paper structure}}
+
+\noindent{The numbered sections below are the proposed sections of the paper, plus a discussion section. For each section, we state the question, the claim, the content, and the figure.}
+
+% ==================================================================
+\setcounter{section}{0}
+\section{Do we recover the reported ordering?}
+
+\begin{callout}
+\textbf{Claim.}
+The ordering induced by the posterior model can differ systematically from the ordering implied by the published point estimates.
+\end{callout}
+
+\subsection*{Question}
+
+The published landscape gives one ordering of variants. After fitting a probabilistic model to the underlying counts, we obtain a posterior distribution over orderings. We ask whether the reported ordering looks typical under that posterior. This is a whole-landscape agreement question: if we redo the analysis while propagating count uncertainty, do we recover the same ordering?
+
+We can also ask this for the top-$k$ reported variants instead of the full landscape. This is the cohort currently retained in the compact analysis and is directly relevant to candidate selection.
+
+\subsection*{Content}
+
+For each variant $i$, let $r_i^{\mathrm{rep}}$ be its reported rank, with rank one corresponding to the highest reported fitness. Let $R_i$ be the posterior random variable for its rank under posterior draws.
+
+We compute a directional reported-rank sample percentile,
+\[
+u_i = P(R_i < r_i^{\mathrm{rep}} \mid \data)
++ \frac{1}{2}P(R_i = r_i^{\mathrm{rep}} \mid \data).
+\]
+The definition should be stated once and used consistently.
+
+The empirical CDF of the $u_i$ values describes where reported ranks fall within their posterior rank distributions. We summarize its departure from a uniform percentile distribution by
+\[
+A_{\mathrm{ECDF}} =
+\int_0^1 |F(t)-t|\,dt.
+\]
+This is a descriptive ECDF-to-uniform area, not a monotone rank-error or calibration measure. Exact rank recovery puts every $u_i$ at 0.5 and gives area 0.25.
+
+We compute this curve over reported top-$k$ cohorts, such as top 100 and top 1000. The top-focused version is useful because the whole landscape may be dominated by low-fitness or zero-inflated variants, while downstream decisions often depend on the top of the landscape.
+
+As a direct monotone diagnostic, we also compute Spearman correlation between $r_i^{\mathrm{rep}}$ and the posterior-median sampled rank $Q_{0.50}(R_i)$ within the same reported cohort. Positive correlation indicates concordant ordering, correlation near zero indicates little monotone relation, and negative correlation would support a reversed ordering. This statistic complements rather than replaces $A_{\mathrm{ECDF}}$.
+
+\subsection*{Figure 1}
+
+\begin{itemize}
+  \item[\textbf{(a)}] \textbf{Example reported-rank percentile curve.} For one landscape and model, plot the empirical CDF of directional reported-rank sample percentiles against the uniform diagonal.
+  \item[\textbf{(b)}] \textbf{PDZ curves.} Overlay one curve per PDZ landscape and model for the reported top 100.
+  \item[\textbf{(c)}] \textbf{TrpB curves.} Overlay one curve per TrpB landscape and model for the reported top 100.
+  \item[\textbf{(d)}] \textbf{NucB curves.} Overlay one curve per NucB generation and model for the reported top 100.
+  \item[\textbf{(e)}] \textbf{ECDF-to-uniform area.} Plot the descriptive area across landscapes and models.
+  \item[\textbf{(f)}] \textbf{Direct rank concordance.} Plot reported-rank versus posterior-median sampled-rank Spearman correlation across landscapes and models.
+\end{itemize}
+
+\paragraph{Message.}
+This section diagnoses disagreement between the reported ordering and a specified fitted analysis. It does not by itself attribute that disagreement to finite counts.
+
+% ==================================================================
+\section{How uncertain are ranks under the fixed model?}
+
+\begin{callout}
+\textbf{Claim.}
+Even after fixing a definition of fitness and a model for the counts, many rank positions are supported only weakly by the observed counts.
+\end{callout}
+
+\subsection*{Question}
+
+Once the assay-level fitness definition and count model are fixed, we ask how far each variant can move under posterior uncertainty.
+
+This is a variant-level measurement-uncertainty question. It asks how precisely each variant is located in the ordering under the fixed model, without using the reported rank as the center of the analysis.
+
+\subsection*{Content}
+
+For each variant $i$, posterior draws produce a score distribution and a rank distribution $R_i$. We define the internal model reference by first taking each variant's posterior median score,
+\[
+\widetilde \fit_i = Q_{0.50}(\fit_i \mid \data),
+\]
+and then ranking all candidates by these medians,
+\[
+\widetilde r_i = \rank_{\downarrow}(\widetilde \fit_i).
+\]
+This is the ordering induced by posterior median scores. It need not equal the ordering induced by the per-variant median posterior ranks $Q_{0.50}(R_i)$ because ranking and taking medians do not commute.
+
+We summarize each sampled rank distribution by
+\[
+Q_{0.05}(R_i), \quad Q_{0.50}(R_i), \quad Q_{0.95}(R_i),
+\]
+and express signed rank deviations relative to the fixed median-score reference,
+\[
+\Delta_i^{(0.05)} = Q_{0.05}(R_i) - \widetilde r_i,
+\]
+\[
+\Delta_i^{(0.95)} = Q_{0.95}(R_i) - \widetilde r_i.
+\]
+
+A positive value means the posterior allows the variant to move lower than its reference rank. A negative value means the posterior allows the variant to move higher. Because rank is bounded and asymmetric near the top, posterior quantiles are more interpretable than a standard deviation.
+
+We report the top of the landscape separately from the full landscape. A rank shift of 100 places near the top can change which variants are validated. The same shift near the bottom may not matter for candidate selection.
+
+For the top-$k$ region, we define the cohort using the median-score model reference and use summaries such as:
+\begin{itemize}
+  \item posterior rank interval width $Q_{0.95}(R_i)-Q_{0.05}(R_i)$ in rank positions;
+  \item distribution of $\Delta_i^{(0.05)}$ and $\Delta_i^{(0.95)}$ among model-defined top-$k$ variants;
+  \item the fraction of model-defined top-$k$ variants whose 90\% sampled rank interval leaves the top-$k$ region.
+\end{itemize}
+
+The reported rank $r_i^{\mathrm{rep}}$ can still be shown as a separate marker. Its displacement from $\widetilde r_i$ represents published-versus-model disagreement, while the sampled interval represents uncertainty conditional on the fitted analysis.
+
+\subsection*{Figure 2}
+
+\begin{itemize}
+  \item[\textbf{(a)}] \textbf{PDZ top-rank example.} For one PDZ analysis, show median-score reference ranks 1--50 and their 5th--95th percentile sampled rank intervals. Mark the median sampled rank and reported rank separately.
+  \item[\textbf{(b)}] \textbf{TrpB top-rank example.} Repeat the same display for one TrpB analysis.
+  \item[\textbf{(c)}] \textbf{Distribution of rank uncertainty.} Compare the within-run distributions of 90\% sampled rank interval widths, in raw rank positions, among model-reference top-100 variants across analyses. Boxes span the 25th--75th percentiles, whiskers span the 5th--95th percentiles, and markers show the medians. A vertical guide at width 100 marks one top-100 span.
+  \item[\textbf{(d)}] \textbf{Uncertain top-100 membership.} Plot the fraction of each run's model-reference top 100 whose 95th-percentile sampled rank exceeds 100.
+\end{itemize}
+
+\paragraph{Message.}
+This section makes the uncertainty concrete. Instead of saying that a fitness estimate is noisy, we say how far a variant can move around a fixed model-defined reference ordering under the observed count uncertainty.
+
+% ==================================================================
+\section{How stable are top-\texorpdfstring{$k$}{k} decisions?}
+
+\begin{callout}
+\textbf{Claim.}
+The top of the landscape is the part most often used for decisions, and it can be unstable even when the reported scores give a precise-looking ordering.
+\end{callout}
+
+\subsection*{Question}
+
+Protein engineers often use DMS landscapes to choose a small number of variants for follow-up. Machine-learning benchmarks often ask whether a model retrieves the best variants. Both uses depend on the stability of top-$k$ sets.
+
+We ask three complementary questions: if we sample two plausible landscapes, how often do they select the same top-$k$ set? How closely do sampled sets follow the fixed median-score model reference? And how often do sampled sets recover the published top-$k$ set?
+
+\subsection*{Content}
+
+Let $T_k^{(s)}$ be the top-$k$ set in posterior draw $s$. We first compute posterior-to-posterior overlap,
+\[
+C_k =
+E_{s \neq s'}\left[
+\frac{|T_k^{(s)} \cap T_k^{(s')}|}{k}
+\mid \data
+\right].
+\]
+Let $T_k^\star$ be the top-$k$ set under the fixed median-score model reference. We compute
+\[
+C_k^\star =
+E_s\left[
+\frac{|T_k^{(s)} \cap T_k^\star|}{k}
+\mid \data
+\right].
+\]
+
+As a complementary published-versus-model diagnostic, let $T_k^{\mathrm{rep}}$ be the reported top-$k$ set and compute
+\[
+O_k^{\mathrm{rep}} =
+E_s\left[
+\frac{|T_k^{(s)} \cap T_k^{\mathrm{rep}}|}{k}
+\mid \data
+\right].
+\]
+
+We also compute variant-level posterior inclusion probabilities,
+\[
+q_i(k) = P(i \in T_k \mid \data).
+\]
+
+These quantities answer different questions. The curves $C_k$ and $C_k^\star$ measure decision reproducibility under the fixed model. The curve $O_k^{\mathrm{rep}}$ measures overlap with the published answer and therefore combines model disagreement with finite-count uncertainty. The inclusion probability asks which individual variants are consistently supported as top-$k$ candidates.
+
+This section differs from Section~2. Section~2 asks how far individual variants can move around a model-defined reference rank. Section~3 asks whether the downstream decision changes. A set can contain variants with wide rank intervals while retaining stable membership; conversely, modest rank uncertainty near the cutoff can change membership.
+
+\subsection*{Figure 3}
+
+\begin{itemize}
+  \item[\textbf{(a)}] \textbf{PDZ top-100 boundary.} Show median-score reference ranks 91--100 and the ten strongest outside challengers, with their top-100 inclusion probabilities and model/published membership.
+  \item[\textbf{(b)}] \textbf{TrpB top-100 boundary.} Repeat for one TrpB analysis.
+  \item[\textbf{(c)}] \textbf{NucB top-100 boundary.} Repeat for one NucB analysis.
+  \item[\textbf{(d)}] \textbf{PDZ top-$k$ stability.} Plot $C_k$, $C_k^\star$, and $O_k^{\mathrm{rep}}$ over $k \in \{1,2,5,10,20,50,100,200,500,1000\}$.
+  \item[\textbf{(e)}] \textbf{TrpB top-$k$ stability.} Repeat the three curves for TrpB.
+  \item[\textbf{(f)}] \textbf{NucB top-$k$ stability.} Repeat the three curves for NucB.
+\end{itemize}
+
+For NucB, the reported comparator is the generation-specific highest-sort-gate enrichment factor, whereas the HMC likelihood uses all available fluorescence gates. The continuous reference therefore measures agreement with one gate-specific assay summary, not internal stability of the HMC ranking. The Thomas et al. categorical activity taxonomy is retained as a complementary sensitivity analysis. Premature-stop fiducials remain on the fitted HMC axis for alignment but are not eligible ranking candidates.
+
+\paragraph{Message.}
+This section translates ranking uncertainty into a decision problem. A DMS landscape may define a useful region of promising variants without resolving the exact ordering inside that region.
+
+% ==================================================================
+\section{What determines ranking resolution?}
+
+\begin{callout}
+\textbf{Claim.}
+Ranking resolution is associated jointly with experimental support and local landscape structure. In the current fits, input-count support is consistently associated with score precision. Count-aware discordance among replicate or repeated observations has a smaller and less consistent relationship. The density of similarly scoring competitors is associated with how score uncertainty propagates into ranks and top-$k$ decisions.
+\end{callout}
+
+\subsection*{Question}
+
+Which experimental properties control uncertainty in the assay-level score, and under what landscape conditions does that score uncertainty change rankings or candidate-set membership?
+
+This distinction matters because score precision and ranking resolution are related but not identical. A variant with an uncertain score can retain a stable rank when it is separated from its neighbors. A variant with a relatively precise score can move substantially when many competitors have nearly identical scores. We therefore examine two linked stages:
+\[
+\text{count support and observation agreement}
+\longrightarrow
+\text{score uncertainty},
+\]
+\[
+\text{score uncertainty} \times \text{local crowding}
+\longrightarrow
+\text{rank and top-}k\text{ uncertainty}.
+\]
+
+\subsection*{Content}
+
+\paragraph{Experimental support and score uncertainty.}
+For each variant we quantify support from the observed counts. The primary support variable is total input count, transformed as $\log(1+n_i^{\mathrm{in}})$, because it is measured before selection and is less directly determined by fitness than output count. Output count, the minimum or harmonic mean of input and output counts, and zero-output indicators are retained as sensitivity variables.
+
+Where the raw experiment contains paired replicate observations, we calculate a depth-normalized enrichment for each replicate and a count-aware discordance statistic. The statistic should distinguish disagreement beyond the variability expected from low counts, rather than labeling every sparse variant as discordant. Experiments with timepoints or other repeated-observation structures are handled separately and are not called biological replicates without verification.
+
+For each variant $i$, posterior samples of the latent score produce a 90\% score interval with width
+\[
+W_i^{\fit} = Q_{0.95}(\fit_i)-Q_{0.05}(\fit_i).
+\]
+Here and throughout Figure~4, ``90\% interval'' means the central interval from the 5th to the 95th percentile of the retained posterior samples. It is not an interquartile range.
+
+Because score scales differ across fitted analyses, we define a separate within-run score ruler. Let
+\[
+m_i=Q_{0.50}(\fit_i)
+\]
+be the posterior-median score, and order all candidates from largest to smallest $m_i$. Among the first 1,000 candidates in this fixed median-score ordering, define
+\[
+S_{\mathrm{run}}
+=Q_{0.75}\!\left(m_{(1:1000)}\right)
+-Q_{0.25}\!\left(m_{(1:1000)}\right).
+\]
+This is the IQR of 1,000 cross-variant posterior medians. It is a scale ruler, not uncertainty for variant $i$. The relative score uncertainty plotted in Figure~4 is
+\[
+U_i=\frac{W_i^{\fit}}{S_{\mathrm{run}}}.
+\]
+Thus $U_i=1$ means that one variant's central 90\% posterior score interval is as wide as the middle 50\% spread of median scores among that run's top 1,000 candidates. The raw score interval is retained in the generated table. Dividing by $S_{\mathrm{run}}$ multiplies every score width in a run by the same constant, so it does not change within-run ordering or score-uncertainty decile membership.
+
+We first ask whether lower input support is associated with larger $U_i$ within an analysis run. Replicate or repeated-observation discordance is retained as a supporting adjusted analysis rather than a main Figure~4 panel because its association is smaller and its definition necessarily differs across verified observation structures.
+
+\paragraph{Sampled rank and rank uncertainty.}
+For posterior sample $s$, $R_i^{(s)}$ is the exact descending rank of $\fit_i^{(s)}$ against every candidate in that landscape and fit; exact score ties receive their average rank. This sample-specific full-landscape rank is different from the fixed median-score reference rank $r_i^\star$ obtained by sorting $m_i$. In particular, $r_i^\star$ need not equal $Q_{0.50}(R_i)$ because ranking and taking medians do not commute.
+
+The plotted rank uncertainty is
+\[
+W_i^R=Q_{0.95}(R_i)-Q_{0.05}(R_i),
+\]
+measured directly in rank positions. A value of 100 means that the central 90\% of sampled ranks spans 100 positions. It is not a score quantity and is not divided by $S_{\mathrm{run}}$.
+
+\paragraph{Local competition and rank uncertainty.}
+We define local spacing from the fixed median-score ordering, independently of the focal variant's posterior width. At a focal reference rank $r$ with five neighbors available on each side,
+\[
+D_r=\frac{m_{(r-5)}-m_{(r+5)}}{10S_{\mathrm{run}}}.
+\]
+This is the average median-score drop per rank across ten rank steps, in run-IQR units per rank. Small $D_r$ means that neighboring variants have nearly identical median scores and the neighborhood is crowded. As sensitivity analyses, we retain counts of candidates within fixed 1\% and 2\% run-IQR score windows.
+
+For each model-reference top-100 variant and plausible top-100 challenger, we relate rank-interval width
+\[
+W_i^R = Q_{0.95}(R_i)-Q_{0.05}(R_i)
+\]
+to score uncertainty, local crowding, and their interaction. The interaction tests the hypothesis that the same amount of score uncertainty produces more rank movement in a crowded region than in a sparse one. Model-reference rank is retained as an adjustment because rank geometry is asymmetric near rank 1 and near the decision boundary.
+
+The main figure first shows the simpler marginal relationship between $U_i$ and $W_i^R$. It then makes local geometry concrete with two focal variants from the same fitted analysis. Eligible focal variants are in the model-reference top 100, have ranks 10--95, have complete five-rank neighborhoods, are at most 15 reference ranks apart, and have $U_i$ values within a factor of 1.2. Among eligible pairs, the display maximizes the ratio of larger to smaller $D_r$. Selection does not use $W_i^R$ or top-100 inclusion probability. The panels therefore show the downstream rank consequence without choosing the examples because that consequence is large.
+
+For each displayed neighbor $j$, panels (c) and (d) show the posterior median and central 90\% score interval. The horizontal coordinate is
+\[
+X_j=\frac{\fit_j-m_{\mathrm{focal}}}{S_{\mathrm{run}}}.
+\]
+The dotted zero line is therefore the focal posterior-median score. The panels are centered on different focal medians but use one common horizontal range and, because both focal variants come from one run, one common $S_{\mathrm{run}}$. The visual comparison is the separation of neighboring median scores relative to similarly wide score intervals, not their absolute score levels.
+
+The selected pair is from TrpB libB under the Exponential--Sigmoid fit. The more-separated focal variant has reference rank 10, $U_i=1.449$, $D_r=0.317$, sampled-rank percentiles $(8,16,66)$, and $W_i^R=58$. The crowded focal variant has reference rank 23, $U_i=1.418$, $D_r=0.014$, sampled-rank percentiles $(13,40,155)$, and $W_i^R=142$. Their raw score widths are similar, 0.354 and 0.346, and both use $S_{\mathrm{run}}=0.244$. Panel (c) is consequently ``more separated,'' not fully resolved: its rank interval still spans 58 positions.
+
+The displayed score intervals are marginal intervals for individual variants. Interval overlap is visual evidence of difficult separation, but it is not how $W_i^R$ is calculated. Scores can be correlated across posterior samples, and candidates outside the eleven displayed rows can affect rank. The annotated rank intervals come from joint sample-by-sample ranks against the full landscape and include both effects.
+
+\paragraph{Cohort, bins, and aggregation.}
+Panels (a) and (b) use the model-reference top 100 plus every outside challenger with posterior top-100 inclusion probability at least 0.01. This focuses the analysis on candidates relevant to the top-100 decision; it is not an all-variant population analysis.
+
+Within each analysis run, panel (a) sorts this cohort by $\log(1+n_i^{\mathrm{input}})$ and divides it into ten approximately equal-sized groups. Decile 1 has the lowest input support and decile 10 the highest. The transformation is monotone and therefore does not change membership relative to raw-count deciles. The x-axis is ordinal within a run: the absolute count threshold for a decile can differ across runs. Each y-value is the median $U_i$ in one run and decile. Connecting the ten medians is a visual guide, not a fitted regression.
+
+Panel (b) sorts the same cohort by $U_i$ within each run and plots the median $W_i^R$ in each decile. Again, the x-axis gives relative position within a run rather than a common numerical score-width threshold. Both y-axes are logarithmic, but their tick labels retain the original units: relative score-width units in panel (a), rank positions in panel (b).
+
+Each faint line is one landscape--model analysis run. For each family-level bold line, runs are first combined by taking the median within each landscape and decile, then landscapes are combined by another median. Each landscape therefore receives equal final weight even if it has more fitted models or more plausible challengers. No confidence band is displayed.
+
+\paragraph{The top-$k$ boundary.}
+For the top-100 decision, we measure the median score drop per rank across a fixed window around rank 100 and compare it with typical score uncertainty among variants near that boundary. The direct gap between ranks 100 and 101 is retained as a diagnostic. The uncertainty-to-local-spacing ratio measures how large uncertainty is relative to the spacing that must be resolved. We ask whether this boundary difficulty predicts top-100 instability,
+\[
+1-C_{100},
+\]
+and the size of the challenger cloud with non-negligible $q_i(100)$.
+
+\paragraph{Observed pattern in the current fits.}
+The landscape-level input-support coefficient is negative in all 18 landscapes (median standardized coefficient $-0.50$). The conditional discordance coefficient is positive in 10 of 11 landscapes with a compatible observation structure, but its median is small ($0.06$). Score uncertainty is positively associated with rank uncertainty in 17 of 18 landscapes, and the crowding coefficient is positive in 15 of 18, whereas the uncertainty-by-crowding interaction is positive in only 3 of 18. Thus the data support joint score-uncertainty and crowding associations, but not a uniform synergistic interaction. Across the 18 landscape medians, boundary difficulty and top-100 instability track closely (Spearman $\rho=0.97$). This last comparison is descriptive because both quantities summarize the same posterior draws.
+
+\paragraph{Nesting and scope of inference.}
+We estimate relationships within an analysis run. Multiple model specifications fitted to the same landscape share experimental counts, so they are summarized within landscape before comparing landscapes. The independent experimental units are the landscapes, not all landscape--model combinations. The first analysis is observational: it can identify stable associations consistent with the proposed mechanism, but it cannot establish that count depth, disagreement, or crowding causes the observed uncertainty.
+
+The primary cohort is the median-score model-reference top 100 together with outside challengers satisfying $q_i(100)\geq0.01$. Reported top-100 and top-1000 cohorts, alternate crowding windows, and output-count definitions are sensitivity analyses.
+
+\paragraph{Controlled follow-up.}
+A direct causal test would thin input reads, output reads, or both; refit the same model to each thinned dataset; and recompute score, rank, and top-$k$ summaries. Leave-one-replicate-out fits would test the contribution of replication where replicate structure is verified. These perturbations require new inference from altered counts. Subsampling existing posterior draws tests Monte Carlo precision and is not a substitute for read downsampling.
+
+\subsection*{Figure 4}
+
+\begin{itemize}
+  \item[\textbf{(a)}] \textbf{Count support to score uncertainty.} The x-axis is within-run input-count decile. The y-axis is the decile median of $U_i=[Q_{0.95}(\fit_i)-Q_{0.05}(\fit_i)]/S_{\mathrm{run}}$. Thin lines are runs; bold lines are landscape-weighted family medians.
+  \item[\textbf{(b)}] \textbf{Score uncertainty to rank uncertainty.} The x-axis is within-run $U_i$ decile. The y-axis is the decile median of $W_i^R=Q_{0.95}(R_i)-Q_{0.05}(R_i)$ in rank positions. Aggregation is identical to panel (a).
+  \item[\textbf{(c)}] \textbf{More-separated score neighborhood.} For reference ranks 5--15, show score medians and central 90\% intervals after subtracting the focal rank-10 median and dividing by $S_{\mathrm{run}}$. Highlight the matched focal variant and report its $U_i$, $D_r$, and $W_i^R$.
+  \item[\textbf{(d)}] \textbf{Crowded score neighborhood.} Repeat panel (c) for reference ranks 18--28 around the matched focal rank 23. Use the same horizontal scale. The focal $U_i$ is nearly unchanged, while $D_r$ is 23-fold smaller and $W_i^R$ is larger.
+\end{itemize}
+
+The discordance regression, crowding interaction, and rank-100 uncertainty-to-spacing analysis remain supporting analyses. They check whether the simplified visual chain is consistent across runs, but their derived quantities do not carry the main figure.
+
+\paragraph{Message.}
+Higher count support is consistently associated with greater score precision in these fits; the discordance association is weaker. Precise scores resolve rankings only when candidates are sufficiently separated at the decision scale. Ranking resolution is therefore associated jointly with experimental support and local landscape structure.
+
+This is a proximate, model-conditional explanation rather than an intervention-level causal result. Panel (a) is observational. Panels (b)--(d) summarize related quantities from the same posterior samples. The figure does not estimate how adding reads would alter score or rank intervals; that question requires altered count data and refitting.
+
+\subsection*{Supporting Figure 8: median fitness-score geometry}
+
+To describe the central fitted geometry of each landscape, we estimate a Gaussian kernel density from the posterior-median scores $m_i=Q_{0.50}(\fit_i)$ of all ranking-eligible candidates. Figure 8.1 contains one panel for each PDZ landscape, Figure 8.2 one panel for each TrpB landscape, and Figure 8.3 one panel for each NucB generation. Multiple model analyses of one landscape are overlaid. A model-specific vertical line marks the fixed median-score rank-100 cutoff $m_{(100)}$. Panels within one protein family share score and density limits.
+
+This figure concerns between-candidate point summaries, not within-candidate uncertainty. In CRIPT-N Gamma--Sigmoid, the first 100 medians span approximately 0.085 score units, whereas the median central 90\% posterior score width among those candidates is approximately 1.54. The uncertainty is therefore nearly 18 times the entire top-100 median-score span and must be displayed separately.
+
+\subsection*{Supporting Figure 9: decision-relative fitness and score uncertainty}
+
+For each variant in the primary top-100 decision cohort, define
+\[
+X_i=\frac{m_i-m_{(100)}}{S_{\mathrm{run}}},
+\qquad
+U_i=\frac{Q_{0.95}(\fit_i)-Q_{0.05}(\fit_i)}{S_{\mathrm{run}}}.
+\]
+The common denominator removes model-specific score units. Centering at $m_{(100)}$ gives $X_i>0$ for fixed top-100 members, $X_i=0$ at the decision boundary, and $X_i<0$ for outside challengers. Because both quantities use the same scale ruler,
+\[
+\frac{|X_i|}{U_i}
+=
+\frac{|m_i-m_{(100)}|}{Q_{0.95}(\fit_i)-Q_{0.05}(\fit_i)},
+\]
+which compares the candidate's score margin from the cutoff directly with its posterior score uncertainty.
+
+Figure 9.1 contains one panel per PDZ analysis, Figure 9.2 one panel per TrpB analysis, and Figure 9.3 one panel per NucB analysis. The y-axis is logarithmic and shared within protein family. Blue filled points are fixed top-100 members; orange open points are outside candidates with $q_i(100)\geq0.01$. Each panel reports a within-run Spearman correlation. Across the 49 runs this correlation ranges from $-0.961$ to $0.727$ and is negative in 42 runs: 13 of 14 PDZ runs, all 28 TrpB runs, and only 1 of 7 NucB runs. NucB therefore shows that lower decision-relative score is not universally associated with wider posterior score intervals.
+
+The correlation is descriptive. Posterior medians and intervals are summaries of the same fit, variants share posterior draws, and models fitted to one landscape share counts. Figure 9 therefore localizes score uncertainty along the decision-relative fitness axis but does not establish that fitness causes uncertainty. Rank resolution also depends on local spacing and joint posterior correlation.
+
+\subsection*{Supporting Figure 10: per-analysis summary of why the top 100 is uncertain}
+
+Figure 10.1 contains one row per PDZ analysis, Figure 10.2 one row per TrpB analysis, and Figure 10.3 one row per NucB analysis. Every row uses the primary decision cohort: the fixed median-score top 100 plus outside candidates with $q_i(100)\geq0.01$. Four linked columns summarize experimental support, score precision, and the top-100 consequence.
+
+\begin{enumerate}
+  \item \textbf{Input support to score uncertainty.} Plot every cohort variant at $\log_{10}(n_i^{\mathrm{input}}+1)$ and $U_i$. Zero counts remain at zero. Overlay an ordinary least-squares descriptive trend in the transformed coordinates.
+  \item \textbf{Output abundance to score uncertainty.} Repeat the point-level display using the transformed output count
+  \[
+  \log_{10}(n_i^{\mathrm{output}}+1).
+  \]
+  Output is shown separately because it is partly determined by fitness and is therefore a sensitivity diagnostic rather than an equivalent pre-selection support measure.
+  \item \textbf{Decision margin to score uncertainty.} Plot $X_i=(m_i-m_{(100)})/S_{\mathrm{run}}$ against $U_i$, with a vertical guide at $X_i=0$.
+  \item \textbf{Decision margin to top-100 inclusion.} Plot $X_i$ against $q_i(100)$, with guides at $X_i=0$ and $q_i(100)=0.5$. A sharp transition indicates a resolved top-100 boundary; a broad mixed transition indicates unstable membership.
+\end{enumerate}
+
+Filled blue points denote fixed top-100 members and open orange points denote outside challengers. The input and output columns share one zero-preserving count range within protein family. The first three columns share a log-$U_i$ range, and the last two share a row-specific $X_i$ range. Each row reports $1-C_{100}$ and the number of challengers satisfying $q_i(100)\geq0.01$.
+
+Across all 49 runs, the within-run score-uncertainty correlation is negative for input count (range $-0.993$ to $-0.018$) and output count (range $-0.998$ to $-0.037$). The decision-margin correlation ranges from $-0.961$ to $0.727$ and is negative in 42 runs. These values summarize the displayed cohort and transformations and are descriptive: variants share posterior draws, output abundance is fitness-dependent, and multiple analyses of one landscape share counts. Figure 10 composes the proposed proximate chain but does not establish that support or fitness causes uncertainty.
+
+As supporting checks, we report the same associations separately for fixed top-100 members and outside challengers, and a rank-residual partial Spearman correlation between decision margin and score uncertainty adjusted for input support. Several positive NucB primary-cohort correlations weaken or reverse after stratification, consistent with cohort composition rather than reversed score direction. These checks do not alter the main Figure 10 panels or the stability estimands.
+
+% ==================================================================
+\section{How sensitive are these conclusions to fitness definitions and uncertainty procedures?}
+
+\begin{callout}
+\textbf{Claim.}
+The exact central ordering can depend on the fitness definition and analysis, as it should. The conclusion that the ordering has finite resolution should not depend on one Bayesian fit: finite counts support less ranking information than the reported point estimates suggest.
+\end{callout}
+
+\subsection*{Question}
+
+A natural criticism is that rank uncertainty may be an artifact of the Bayesian model. This section addresses that concern directly and also asks how the central ordering changes across reasonable fitness definitions and analyses.
+
+\subsection*{Content}
+
+We repeat the rank-agreement, rank-uncertainty, and top-$k$ analyses under several procedures:
+\begin{itemize}
+  \item \textbf{Full posterior by HMC.} This is the main analysis. It includes the prior family, growth function, replicate structure, and count observation model.
+  \item \textbf{Maximum likelihood with a parametric bootstrap.} Fit the same model by maximum likelihood, simulate counts under the fitted model, refit, and recompute the ranking summaries.
+  \item \textbf{Simplified count model.} Use a simpler model close to a ratio estimator, such as independent count models for input and output rates where feasible.
+  \item \textbf{Nonparametric bootstrap of the published estimator.} Resample reads or count data within libraries and recompute the original published score, when the original estimator is available.
+  \item \textbf{Alternative fitness proxies.} Compare the posterior fitness parameter with simpler point estimates, such as pooled output/input ratios and replicate-level inverse-variance estimates.
+\end{itemize}
+
+The goal is not to make every procedure agree exactly. Some disagreement is expected because the procedures answer slightly different questions, and differences in their central rankings quantify definition or analysis dependence. The separate question is whether reasonable uncertainty procedures tell the same qualitative story about rank resolution and top-$k$ decisions.
+
+\subsection*{Figure 5}
+
+\begin{itemize}
+  \item[\textbf{(a)}] \textbf{Reported-order diagnostics across procedures.} Compare the directional percentile curves and direct rank-displacement summaries under the full posterior, parametric bootstrap, simplified count model, and nonparametric bootstrap.
+  \item[\textbf{(b)}] \textbf{Rank interval summaries across procedures.} Compare posterior or bootstrap rank-interval widths for model-reference and reported top-$k$ variants.
+  \item[\textbf{(c)}] \textbf{Top-$k$ stability.} Compare the qualitative shape of self-consistency and reference-overlap curves across procedures.
+  \item[\textbf{(d)}] \textbf{Fitness-definition sensitivity.} Compare top-$k$ sets and ranking summaries induced by the reported fitness, naive ratio, inverse-variance estimator, and posterior fitness.
+\end{itemize}
+
+\paragraph{Message.}
+This section should make the methodology feel reasonable rather than fragile. The Bayesian model is one way to propagate uncertainty, not the only possible way to see the issue.
+
+% ==================================================================
+\section{Discussion}
+
+\begin{callout}
+\textbf{Claim.}
+A DMS table should not be treated as a ground-truth sequence-to-fitness mapping for two reasons: its ordering depends on the fitness definition and analysis, and, even after those choices are fixed, finite counts imply only finite ranking resolution.
+\end{callout}
+
+\subsection*{How to read DMS landscapes}
+
+A reported DMS score should be read as an assay-defined estimate, not as a direct measurement of an assay-independent property. This is already clear to many experimentalists, but it can be hidden when landscapes are distributed as machine-learning datasets.
+
+There are two distinct reasons not to treat the resulting table as ground truth. First, different reasonable definitions and analysis pipelines can induce different central orderings. This is definition or analysis dependence, rather than necessarily an error, because there is no unique assay-independent fitness quantity.
+
+Second, even after fixing the assay definition and analysis model, the induced ordering has finite resolution because it is inferred from finite counts. Some comparisons are well supported. Others are not. Sections~2 and~3 quantify this second source using internal model references, while Section~1 and the cross-procedure comparisons diagnose disagreement between analyses.
+
+\subsection*{Implications for protein engineering}
+
+Protein engineers use DMS landscapes to choose variants for follow-up. If a reported top-$k$ set is unstable, then the output of the screen should be treated as a set of plausible candidates rather than as an exact ordering.
+
+This does not make the screen unhelpful. A coarse ranking can still be useful. The practical question is whether the resolution is adequate for the next decision. If only twenty variants can be validated, then the relevant quantity is whether the screen can separate a stable candidate set of that size.
+
+\subsection*{Implications for machine-learning benchmarks}
+
+Machine-learning benchmarks often evaluate whether models recover the ordering induced by DMS labels. If the experimental counts do not resolve that ordering at the relevant scale, then small differences between models should be interpreted carefully.
+
+A benchmark can still be useful, but its uncertainty should include uncertainty in the labels. Instead of reporting one leaderboard number, benchmark evaluations could report uncertainty intervals induced by plausible assay-consistent landscapes.
+
+\subsection*{Future work}
+
+The natural next step is to use uncertainty during model training, not only during evaluation. For example, posterior pairwise probabilities could define soft preferences between variants. A model could then be trained to respect strongly resolved comparisons while not overfitting comparisons that the assay does not resolve.
+
+Another direction is experimental design. If ranking resolution can be predicted from read depth, replicate structure, and local score spacing, then a screen can be designed around the ranking resolution needed for the downstream decision.
+
+\end{document}

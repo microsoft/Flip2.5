@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "fits": [
+    {
+      "landscape": "trans-1",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "landscape": "trans-2",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "landscape": "cis",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "job": "small-clean_3",
+      "landscape": "cis",
+      "growth_rate_prior": "lomax",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "canonical_filename": "lomax_exponential.nc"
+    },
+    {
+      "job": "small-clean_4",
+      "landscape": "cis",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "sigmoid",
+      "posterior_variable": "log_r_mean",
+      "canonical_filename": "exponential_sigmoid.nc"
+    },
+    {
+      "job": "large-clean_70",
+      "landscape": "cript-c",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "job": "large-clean_73",
+      "landscape": "cript-c",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "sigmoid",
+      "posterior_variable": "log_r_mean",
+      "canonical_filename": "exponential_sigmoid.nc"
+    },
+    {
+      "job": "large-clean_81",
+      "landscape": "cript-n",
+      "growth_rate_prior": "gamma",
+      "growth_curve": "sigmoid",
+      "posterior_variable": "inv_r_mean",
+      "canonical_filename": "gamma_sigmoid.nc"
+    }
+  ]
+}

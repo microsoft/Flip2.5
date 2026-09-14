@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "protein_family": "novel-enzyme",
+    "landscape": "synthetic-error-benchmark",
+    "inference_method": "simulation",
+    "model_spec": "independent-measurements",
+    "fit_id": "seed-23"
+  },
+  "variants": "variants.csv",
+  "scores": "scores.csv",
+  "counts": "counts.csv",
+  "score_contracts": {
+    "measurement_error": "synthetic-measurement-error-v1"
+  },
+  "uncertainty_target": "repeated_measurement_error",
+  "fit_method": "simulation",
+  "sample_kind": "simulated experiment"
+}

@@ -1,0 +1,30 @@
+{
+  "settings": {
+    "k_values": [1, 2, 4],
+    "retain_k": 4,
+    "decision_k": 2,
+    "external_top_n": 4,
+    "model_top_n": 2,
+    "interval": [0.05, 0.95],
+    "challenger_probability": 0.1,
+    "seed": 23
+  },
+  "runs": [
+    {
+      "run_id": "toy-parameter-posterior-example",
+      "family": "toy",
+      "landscape": "toy",
+      "sampling": "parameter_posterior",
+      "model": "example",
+      "score": "fitness",
+      "score_path": "scores/toy-parameter-posterior-example",
+      "feature_path": "features/toy",
+      "score_higher_is_better": true,
+      "external_value_column": "reported_fitness",
+      "external_rank_column": "reported_rank",
+      "external_higher_is_better": true,
+      "min_reference_samples": 1,
+      "variant_chunk_size": 4
+    }
+  ]
+}

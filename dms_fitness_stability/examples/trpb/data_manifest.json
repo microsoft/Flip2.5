@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "landscape": "trpb",
+  "archive": {
+    "filename": "TrpBFitness.zip",
+    "bytes": 11832705,
+    "sha256": "cffd04e91a22761e7e58618c6e3e2534a9dfc566d7853295c007e579c66e2e0b",
+    "uploaded_from": "C:\\Users\\t-renatob\\Downloads\\TrpBFitness.zip"
+  },
+  "counts": {
+    "source": "amlt:default:data/dms_stan/flip3_data/counts/trpb",
+    "files": {
+      "four-site.csv": {
+        "bytes": 185112017,
+        "sha256": "8feeaee38b7b9d5871f9fe03e5fea3f0661ae2fe5477a2226d45c84f333afa7a"
+      },
+      "libA.csv": {
+        "bytes": 1875836,
+        "sha256": "81485097b97f2935e4683c183461afc3b45cad3aeb2a7442928796701aa77646"
+      },
+      "libB.csv": {
+        "bytes": 1886873,
+        "sha256": "7ac8ba509eaa509becd048409839b52fc333edde935d770ce7e73bf5893ff715"
+      },
+      "libC.csv": {
+        "bytes": 1883299,
+        "sha256": "8641cbc7e071534e2e4e1a0a821630624680fd7fc7c99ef0a33adce8bd1a2b23"
+      },
+      "libD.csv": {
+        "bytes": 5820412,
+        "sha256": "2aac594d8ce4ae6271621f459ab57ffd42ee2146cb4a90e699d9f75cd2a78c83"
+      },
+      "libE.csv": {
+        "bytes": 5943352,
+        "sha256": "f529ea30725b5d852d24fe2a293f7763cdf5571507ca88c4bb2559a805dc07c4"
+      },
+      "libF.csv": {
+        "bytes": 5574301,
+        "sha256": "6f9071cce6bba084a6bfd10e4a1bd7a6d68ab98a0f98818a7649d5cdfe6eb5a5"
+      },
+      "libG.csv": {
+        "bytes": 5767090,
+        "sha256": "369af608162685ad1302da41784db0309db0b39b14a3989a34e6f945e17d0474"
+      },
+      "libH.csv": {
+        "bytes": 5757586,
+        "sha256": "becb29ee81a5e8bb2e13e44af21ae07117d97f1de8b29ec9d54b175c7c4fd8ee"
+      },
+      "libI.csv": {
+        "bytes": 5871849,
+        "sha256": "e35ccfed48ddec04746ad5ec9b79a99d100833efea67ff7a43c77972c82e1362"
+      }
+    }
+  },
+  "reported_fitness": {
+    "source": "TrpBFitness.zip",
+    "files": {
+      "four-site.csv": {
+        "bytes": 8494938,
+        "sha256": "d7e3ab4bcb721819ddf79ac0c9d322046dcdc4ce7d0df7d5ccd423fee771cb76"
+      },
+      "libA.csv": {
+        "bytes": 379993,
+        "sha256": "0ca0c3b280fe7b6376d1b075d6c085c95fed06038e21d7ff9ab68cb95df32dfe"
+      },
+      "libB.csv": {
+        "bytes": 380771,
+        "sha256": "eceeff8664bd1cf9becaf5194e1123bf717d4bcfb6baafd34fb4a7fa1766f0e0"
+      },
+      "libC.csv": {
+        "bytes": 378472,
+        "sha256": "4f5990f8b7d3b24342e0fa10d678efa221df995edc54d98aaea0b6306523aaec"
+      },
+      "libD.csv": {
+        "bytes": 367281,
+        "sha256": "fb6debc7ecc742a96c9dd8f1046a0dae9252d63945810560a8faa7ac3751cc36"
+      },
+      "libE.csv": {
+        "bytes": 381620,
+        "sha256": "fff6c6f5033cce33043e060f64cb05d3bcf4c529f88c0c465722c528e06413dd"
+      },
+      "libF.csv": {
+        "bytes": 352237,
+        "sha256": "ea9cda4d528f96ec5eccabfafc4e69f26e3d419a16f48d1e8d6435ff99503c38"
+      },
+      "libG.csv": {
+        "bytes": 360763,
+        "sha256": "13c8f0cdacf4539423674204b8ef12a2d30e165f5f499105d5301009ce736934"
+      },
+      "libH.csv": {
+        "bytes": 371003,
+        "sha256": "6d8d110c5300fc74d38612c0f37b9ae2ada9743ab92a493fafbd6e50689665d9"
+      },
+      "libI.csv": {
+        "bytes": 364175,
+        "sha256": "02f9eb1f849f5dc93fc3c923a38cc10ec41c5bdaceb9ff2a534a9dd773048fe7"
+      }
+    }
+  }
+}

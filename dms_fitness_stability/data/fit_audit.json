@@ -1,0 +1,6533 @@
+[
+  {
+    "job_id": 1,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_1",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_1",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_1",
+    "score_variable": "log_r_mean",
+    "variant_count": 10660,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/data_dms_stability/pdz_cis/fits/pdz_cis_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 9913801447,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          10660
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            10660
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            10660
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            10660
+          ],
+          "timepoint_counts": [
+            3,
+            10660
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/data_dms_stability/pdz_cis/fits/pdz_cis_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 555473531,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          10660
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 3,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_3",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_3",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_3",
+    "score_variable": "log_r_mean",
+    "variant_count": 10660,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_3/pdz/cis/pdz_cis_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 9866063490,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          10660
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            10660
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            10660
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            10660
+          ],
+          "timepoint_counts": [
+            3,
+            10660
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_3/pdz/cis/pdz_cis_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 555473531,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          10660
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 4,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_4",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_4",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_4",
+    "score_variable": "log_r_mean",
+    "variant_count": 10660,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_4/pdz/cis/pdz_cis_exponential_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 9917401631,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          10660
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            10660
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            10660
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            10660
+          ],
+          "timepoint_counts": [
+            3,
+            10660
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_4/pdz/cis/pdz_cis_exponential_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 555483602,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          10660
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 7,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_7",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_7",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_7",
+    "score_variable": "r",
+    "variant_count": 9254,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_7/trpb/libA/trpb_libA_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 4007388821,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9254
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9254
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9254
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9254
+          ],
+          "timepoint_counts": [
+            2,
+            9254
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_7/trpb/libA/trpb_libA_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185451496,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9254
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 8,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_8",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_8",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_8",
+    "score_variable": "r",
+    "variant_count": 9254,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_8/trpb/libA/trpb_libA_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 4001397241,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9254
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9254
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9254
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9254
+          ],
+          "timepoint_counts": [
+            2,
+            9254
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_8/trpb/libA/trpb_libA_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185451496,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9254
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 9,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_9",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_9",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_9",
+    "score_variable": "r",
+    "variant_count": 9254,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_9/trpb/libA/trpb_libA_exponential_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 4007036042,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9254
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9254
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9254
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9254
+          ],
+          "timepoint_counts": [
+            2,
+            9254
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_9/trpb/libA/trpb_libA_exponential_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185458918,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9254
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 11,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_11",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_11",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_11",
+    "score_variable": "r",
+    "variant_count": 9261,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_11/trpb/libB/trpb_libB_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 4026803261,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9261
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9261
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9261
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9261
+          ],
+          "timepoint_counts": [
+            2,
+            9261
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_11/trpb/libB/trpb_libB_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185591748,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9261
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 12,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_12",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_12",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_12",
+    "score_variable": "r",
+    "variant_count": 9261,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_12/trpb/libB/trpb_libB_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 4010431523,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9261
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9261
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9261
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9261
+          ],
+          "timepoint_counts": [
+            2,
+            9261
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_12/trpb/libB/trpb_libB_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185591748,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9261
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 13,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_13",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_13",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_13",
+    "score_variable": "r",
+    "variant_count": 9261,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_13/trpb/libB/trpb_libB_exponential_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 4026347498,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9261
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9261
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9261
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9261
+          ],
+          "timepoint_counts": [
+            2,
+            9261
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_13/trpb/libB/trpb_libB_exponential_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185599170,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9261
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 15,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_15",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_15",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_15",
+    "score_variable": "r",
+    "variant_count": 9260,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_15/trpb/libC/trpb_libC_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 3920045182,
+        "issues": [
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:posterior_predictive",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9260
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_15/trpb/libC/trpb_libC_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185571712,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9260
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_15/trpb/libC/trpb_libC_exponential_exponential-20260405085014.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 6039997637,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9260
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9260
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9260
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9260
+          ],
+          "timepoint_counts": [
+            2,
+            9260
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 16,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_16",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_16",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_16",
+    "score_variable": "r",
+    "variant_count": 9260,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_16/trpb/libC/trpb_libC_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 3978213854,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9260
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9260
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9260
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9260
+          ],
+          "timepoint_counts": [
+            2,
+            9260
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_16/trpb/libC/trpb_libC_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185571712,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9260
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 17,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_17",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_17",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_17",
+    "score_variable": "r",
+    "variant_count": 9260,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_17/trpb/libC/trpb_libC_exponential_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 3983114163,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9260
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9260
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            9260
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9260
+          ],
+          "timepoint_counts": [
+            2,
+            9260
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_17/trpb/libC/trpb_libC_exponential_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 185579134,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          1,
+          1000,
+          9260
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 19,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_19",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_19",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_19",
+    "score_variable": "log_r_mean",
+    "variant_count": 9057,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_19/trpb/libD/trpb_libD_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 12306874128,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9057
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9057
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9057
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9057
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9057
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_19/trpb/libD/trpb_libD_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 471698939,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9057
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 20,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_20",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_20",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_20",
+    "score_variable": "log_r_mean",
+    "variant_count": 9057,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_20/trpb/libD/trpb_libD_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 12352365355,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9057
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9057
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9057
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9057
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9057
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_20/trpb/libD/trpb_libD_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 471698939,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9057
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 21,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_21",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_21",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_21",
+    "score_variable": "inv_r_mean",
+    "variant_count": 9057,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_21/trpb/libD/trpb_libD_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 12303888500,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9057
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9057
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9057
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9057
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9057
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_21/trpb/libD/trpb_libD_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 471698939,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9057
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 25,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_25",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_25",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_25",
+    "score_variable": "log_r_mean",
+    "variant_count": 9229,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_25/trpb/libE/trpb_libE_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 9992948527,
+        "issues": [
+          "h5netcdf_open_failure",
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9229
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_25/trpb/libE/trpb_libE_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 332768147,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9229
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_25/trpb/libE/trpb_libE_exponential_exponential-20260404232845.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 15434734639,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9229
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9229
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            2,
+            9229
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9229
+          ],
+          "timepoint_counts": [
+            3,
+            2,
+            9229
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 26,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_26",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_26",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_26",
+    "score_variable": "log_r_mean",
+    "variant_count": 9229,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_26/trpb/libE/trpb_libE_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 10013276725,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9229
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9229
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            2,
+            9229
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9229
+          ],
+          "timepoint_counts": [
+            3,
+            2,
+            9229
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_26/trpb/libE/trpb_libE_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 406750155,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9229
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 27,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_27",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_27",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_27",
+    "score_variable": "inv_r_mean",
+    "variant_count": 9229,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_27/trpb/libE/trpb_libE_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 9992232440,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9229
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9229
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            2,
+            9229
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9229
+          ],
+          "timepoint_counts": [
+            3,
+            2,
+            9229
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_27/trpb/libE/trpb_libE_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 406750155,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9229
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 31,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_31",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_31",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_31",
+    "score_variable": "log_r_mean",
+    "variant_count": 8996,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_31/trpb/libF/trpb_libF_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 7254348658,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8996
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            8996
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            2,
+            8996
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            8996
+          ],
+          "timepoint_counts": [
+            2,
+            2,
+            8996
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_31/trpb/libF/trpb_libF_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 324442319,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          8996
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 32,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_32",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_32",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_32",
+    "score_variable": "log_r_mean",
+    "variant_count": 8996,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_32/trpb/libF/trpb_libF_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 7245067102,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8996
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            8996
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            2,
+            8996
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            8996
+          ],
+          "timepoint_counts": [
+            2,
+            2,
+            8996
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_32/trpb/libF/trpb_libF_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 324442319,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          8996
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 33,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_33",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_33",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_33",
+    "score_variable": "inv_r_mean",
+    "variant_count": 8996,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_33/trpb/libF/trpb_libF_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 7240925453,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8996
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            8996
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            2,
+            8996
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            8996
+          ],
+          "timepoint_counts": [
+            2,
+            2,
+            8996
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_33/trpb/libF/trpb_libF_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 324442319,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          8996
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 34,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_34",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_34",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_34",
+    "score_variable": "log_r_mean",
+    "variant_count": 8996,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_34/trpb/libF/trpb_libF_exponential_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 7254249533,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8996
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            8996
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            2,
+            2,
+            8996
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            8996
+          ],
+          "timepoint_counts": [
+            2,
+            2,
+            8996
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_34/trpb/libF/trpb_libF_exponential_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 324452179,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "d",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          8996
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 37,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_37",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_37",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_37",
+    "score_variable": "log_r_mean",
+    "variant_count": 9041,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_37/trpb/libG/trpb_libG_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 12303798366,
+        "issues": [
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:posterior_predictive",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9041
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_37/trpb/libG/trpb_libG_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 470865723,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9041
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_37/trpb/libG/trpb_libG_exponential_exponential-20260404234146.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 19461058519,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9041
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9041
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9041
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9041
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9041
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 38,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_38",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_38",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_38",
+    "score_variable": "log_r_mean",
+    "variant_count": 9041,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_38/trpb/libG/trpb_libG_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 12356345448,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9041
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9041
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9041
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9041
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9041
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_38/trpb/libG/trpb_libG_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 470865723,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9041
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 39,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_39",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_39",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_39",
+    "score_variable": "inv_r_mean",
+    "variant_count": 9041,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_39/trpb/libG/trpb_libG_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 12287787079,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9041
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9041
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9041
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9041
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9041
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_39/trpb/libG/trpb_libG_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 470865723,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9041
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 43,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_43",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_43",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_43",
+    "score_variable": "log_r_mean",
+    "variant_count": 8970,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_43/trpb/libH/trpb_libH_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 11923607188,
+        "issues": [
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:posterior_predictive",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8970
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_43/trpb/libH/trpb_libH_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 467168327,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          8970
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_43/trpb/libH/trpb_libH_exponential_exponential-20260405101041.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 19461058519,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8970
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            8970
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            8970
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            8970
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            8970
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 44,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_44",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_44",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_44",
+    "score_variable": "log_r_mean",
+    "variant_count": 8970,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_44/trpb/libH/trpb_libH_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 11914188120,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8970
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            8970
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            8970
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            8970
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            8970
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_44/trpb/libH/trpb_libH_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 467168327,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          8970
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 45,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_45",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_45",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_45",
+    "score_variable": "inv_r_mean",
+    "variant_count": 8970,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_45/trpb/libH/trpb_libH_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 11914452014,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8970
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            8970
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            8970
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            8970
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            8970
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_45/trpb/libH/trpb_libH_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 467168327,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          8970
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 49,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_49",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_49",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_49",
+    "score_variable": "log_r_mean",
+    "variant_count": 9121,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_49/trpb/libI/trpb_libI_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 12549711878,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9121
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9121
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9121
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9121
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9121
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_49/trpb/libI/trpb_libI_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 475031803,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9121
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 50,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_50",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_50",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_50",
+    "score_variable": "log_r_mean",
+    "variant_count": 9121,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_50/trpb/libI/trpb_libI_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 12561132626,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9121
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9121
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9121
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9121
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9121
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_50/trpb/libI/trpb_libI_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 475031803,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9121
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 51,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_51",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_51",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_51",
+    "score_variable": "inv_r_mean",
+    "variant_count": 9121,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_51/trpb/libI/trpb_libI_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 12533853562,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9121
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            9121
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            4,
+            2,
+            9121
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            9121
+          ],
+          "timepoint_counts": [
+            4,
+            2,
+            9121
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_51/trpb/libI/trpb_libI_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 475031803,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          9121
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 55,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G1",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_55",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_55",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_55",
+    "score_variable": "absolute_mean_log_fluorescence",
+    "variant_count": 10760,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_55/nuc/G1/nuc_G1_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 27257936538,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "absolute_mean_log_fluorescence",
+        "score_shape": [
+          8,
+          4000,
+          10760
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {
+          "hc1": [
+            10760
+          ],
+          "hc2": [
+            2,
+            10760
+          ],
+          "hc3": [
+            10760
+          ],
+          "ic1": [
+            2,
+            10760
+          ],
+          "ic2": [
+            2,
+            10760
+          ],
+          "ic3": [
+            10760
+          ],
+          "lc": [
+            3,
+            10760
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_55/nuc/G1/nuc_G1_exponential_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 819241913,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "absolute_mean_log_fluorescence",
+        "score_shape": [
+          1,
+          1000,
+          10760
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 56,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G1",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_56",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_56",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_56",
+    "score_variable": "absolute_mean_log_fluorescence",
+    "variant_count": 10760,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_56/nuc/G1/nuc_G1_lomax_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "limited",
+        "bytes": 27089876940,
+        "issues": [
+          "h5netcdf_open_failure",
+          "observed_variable_missing:ic1",
+          "observed_variable_missing:ic2",
+          "observed_variable_missing:ic3",
+          "observed_variable_missing:lc",
+          "observed_variable_missing:hc1",
+          "observed_variable_missing:hc2",
+          "observed_variable_missing:hc3",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "absolute_mean_log_fluorescence",
+        "score_shape": [
+          8,
+          4000,
+          10760
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_56/nuc/G1/nuc_G1_lomax_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 819241913,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "absolute_mean_log_fluorescence",
+        "score_shape": [
+          1,
+          1000,
+          10760
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_56/nuc/G1/nuc_G1_lomax-20260405064020.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 45744931420,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "absolute_mean_log_fluorescence",
+        "score_shape": [
+          8,
+          4000,
+          10760
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {
+          "hc1": [
+            10760
+          ],
+          "hc2": [
+            2,
+            10760
+          ],
+          "hc3": [
+            10760
+          ],
+          "ic1": [
+            2,
+            10760
+          ],
+          "ic2": [
+            2,
+            10760
+          ],
+          "ic3": [
+            10760
+          ],
+          "lc": [
+            3,
+            10760
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 57,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G2",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_57",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_57",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_57",
+    "score_variable": "log_fluorescence",
+    "variant_count": 14755,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_57/nuc/G2/nuc_G2_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 6677197602,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          8,
+          2000,
+          14755
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {
+          "c86": [
+            14755
+          ],
+          "c93": [
+            14755
+          ],
+          "c975": [
+            14755
+          ],
+          "ic1": [
+            2,
+            14755
+          ],
+          "ic2": [
+            14755
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_57/nuc/G2/nuc_G2_exponential_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 532194312,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 58,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G2",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_58",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_58",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_58",
+    "score_variable": "log_fluorescence",
+    "variant_count": 14755,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_58/nuc/G2/nuc_G2_lomax_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 10176146511,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          8,
+          3000,
+          14755
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {
+          "c86": [
+            14755
+          ],
+          "c93": [
+            14755
+          ],
+          "c975": [
+            14755
+          ],
+          "ic1": [
+            2,
+            14755
+          ],
+          "ic2": [
+            14755
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_58/nuc/G2/nuc_G2_lomax_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 532194312,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 59,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G3",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_59",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_59",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_59",
+    "score_variable": "log_fluorescence",
+    "variant_count": 18790,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_59/nuc/G3/nuc_G3_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 8067890710,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          8,
+          2000,
+          18790
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {
+          "ic1": [
+            18790
+          ],
+          "oc1": [
+            4,
+            18790
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_59/nuc/G3/nuc_G3_exponential_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 526991806,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          1,
+          1000,
+          18790
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 61,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G4",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_61",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_61",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_61",
+    "score_variable": "log_fluorescence",
+    "variant_count": 15554,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_61/nuc/G4/nuc_G4_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 6593562727,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          8,
+          2000,
+          15554
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {
+          "ic1": [
+            15554
+          ],
+          "oc1": [
+            4,
+            15554
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_61/nuc/G4/nuc_G4_exponential_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 436241422,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          1,
+          1000,
+          15554
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 62,
+    "family": "large_clean",
+    "dataset": "nuc",
+    "subset": "G4",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_62",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_62",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_62",
+    "score_variable": "log_fluorescence",
+    "variant_count": 15554,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_62/nuc/G4/nuc_G4_lomax_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 6593756604,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          8,
+          2000,
+          15554
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {
+          "ic1": [
+            15554
+          ],
+          "oc1": [
+            4,
+            15554
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_62/nuc/G4/nuc_G4_lomax_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 436241422,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_fluorescence",
+        "score_shape": [
+          1,
+          1000,
+          15554
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 63,
+    "family": "large_clean",
+    "dataset": "k50",
+    "subset": "",
+    "fitness_distribution": "(MASSIVE, only MLE)",
+    "growth_curve": "",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_63",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_63",
+    "mle_experiment": "k50-mle",
+    "mle_job_name": "k50_mle_lr0-01",
+    "score_variable": "mean_dg",
+    "variant_count": 1824523,
+    "hmc_status": "not_required",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/k50-mle/k50_mle_lr0-01/k50/k50_None_None_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 443627674689,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "c",
+          "chain",
+          "d",
+          "draw",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m",
+          "mle",
+          "o",
+          "observed_data",
+          "p",
+          "posterior",
+          "posterior_predictive",
+          "q",
+          "r"
+        ],
+        "score_variable": "mean_dg",
+        "score_shape": [
+          1,
+          1000,
+          1824523
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 64,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_64",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_64",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_64",
+    "score_variable": "log_r_mean",
+    "variant_count": 194361,
+    "hmc_status": "not_required",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_64/trpb/four-site/trpb_four-site_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 14514442100,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          194361
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 65,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_65",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_65",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_65",
+    "score_variable": "log_r_mean",
+    "variant_count": 194361,
+    "hmc_status": "not_required",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_65/trpb/four-site/trpb_four-site_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 14514442100,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          194361
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 66,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_66",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_66",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_66",
+    "score_variable": "inv_r_mean",
+    "variant_count": 194361,
+    "hmc_status": "not_required",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_66/trpb/four-site/trpb_four-site_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 14514442100,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "c",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          194361
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 67,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_67",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_67",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_67",
+    "score_variable": "log_r_mean",
+    "variant_count": 194361,
+    "hmc_status": "not_required",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_67/trpb/four-site/trpb_four-site_exponential_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 14514449461,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "d",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          194361
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 68,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_68",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_68",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_68",
+    "score_variable": "log_r_mean",
+    "variant_count": 194361,
+    "hmc_status": "not_required",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_68/trpb/four-site/trpb_four-site_lomax_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 14514449461,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "d",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          194361
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 69,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_69",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_69",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_69",
+    "score_variable": "inv_r_mean",
+    "variant_count": 194361,
+    "hmc_status": "not_required",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_69/trpb/four-site/trpb_four-site_gamma_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 14514449461,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "d",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          194361
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 70,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_70",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_70",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_70",
+    "score_variable": "log_r_mean",
+    "variant_count": 145290,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_70/pdz/cript-c/pdz_cript-c_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 124860976373,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          145290
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            145290
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            3,
+            145290
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_70/pdz/cript-c/pdz_cript-c_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8739734571,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 71,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_71",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_71",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_71",
+    "score_variable": "log_r_mean",
+    "variant_count": 145290,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_71/pdz/cript-c/pdz_cript-c_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 185380575898,
+        "issues": [
+          "h5netcdf_open_failure",
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_71/pdz/cript-c/pdz_cript-c_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8739734571,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_71/pdz/cript-c/pdz_cript-c_lomax_exponential-20260403053144.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 265199408326,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          145290
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            3,
+            145290
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 72,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_72",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_72",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_72",
+    "score_variable": "inv_r_mean",
+    "variant_count": 145290,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_72/pdz/cript-c/pdz_cript-c_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "limited",
+        "bytes": 184913381184,
+        "issues": [
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          145290
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ]
+        },
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_72/pdz/cript-c/pdz_cript-c_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8739734571,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_72/pdz/cript-c/pdz_cript-c_gamma_exponential-20260407031255.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 265199408326,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          145290
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            3,
+            145290
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 73,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_73",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_73",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_73",
+    "score_variable": "log_r_mean",
+    "variant_count": 145290,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_73/pdz/cript-c/pdz_cript-c_exponential_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 187996262103,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          145290
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            3,
+            145290
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_73/pdz/cript-c/pdz_cript-c_exponential_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8739744642,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 74,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_74",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_74",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_74",
+    "score_variable": "log_r_mean",
+    "variant_count": 145290,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "removed_after_failed_validation",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_74/pdz/cript-c/pdz_cript-c_lomax_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 116850942448,
+        "issues": [
+          "h5netcdf_open_failure",
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_74/pdz/cript-c/pdz_cript-c_lomax_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8739744642,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_74/pdz/cript-c/pdz_cript-c_lomax_sigmoid-20260407025947.nc",
+        "kind": "raw_hmc",
+        "status": "unusable",
+        "bytes": 178500862654,
+        "issues": [
+          "h5netcdf_open_failure",
+          "h5py_open_failure"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (bad object header version number)'",
+          "RuntimeError: Unable to get group info (bad object header version number)"
+        ],
+        "groups": [],
+        "score_variable": "log_r_mean",
+        "score_shape": null,
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": false,
+        "h5netcdf_compatible": false
+      }
+    ]
+  },
+  {
+    "job_id": 76,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_76",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_76",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_76",
+    "score_variable": "log_r_mean",
+    "variant_count": 123765,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "removed_after_failed_validation",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_76/pdz/cript-n/pdz_cript-n_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "limited",
+        "bytes": 109285683020,
+        "issues": [
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          123765
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            123765
+          ]
+        },
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_76/pdz/cript-n/pdz_cript-n_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 6992399275,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          123765
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_76/pdz/cript-n/pdz_cript-n_exponential_exponential-20260407031157.nc",
+        "kind": "raw_hmc",
+        "status": "unusable",
+        "bytes": 153000765990,
+        "issues": [
+          "h5netcdf_open_failure",
+          "h5py_open_failure"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (bad object header version number)'",
+          "RuntimeError: Unable to get group info (bad object header version number)"
+        ],
+        "groups": [],
+        "score_variable": "log_r_mean",
+        "score_shape": null,
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": false,
+        "h5netcdf_compatible": false
+      }
+    ]
+  },
+  {
+    "job_id": 77,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_77",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_77",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_77",
+    "score_variable": "log_r_mean",
+    "variant_count": 123765,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": true,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_77/pdz/cript-n/pdz_cript-n_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 109135259501,
+        "issues": [
+          "h5netcdf_open_failure",
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          123765
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_77/pdz/cript-n/pdz_cript-n_lomax_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 6992399275,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          123765
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 78,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_78",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_78",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_78",
+    "score_variable": "inv_r_mean",
+    "variant_count": 123765,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_78/pdz/cript-n/pdz_cript-n_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 143656232729,
+        "issues": [
+          "predictive_boundary_read_failure:starting_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "OSError: Can't synchronously read data (wrong B-tree signature)"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          123765
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            3000,
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            8,
+            3000,
+            3,
+            123765
+          ]
+        },
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_78/pdz/cript-n/pdz_cript-n_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 6992399275,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          123765
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_78/pdz/cript-n/pdz_cript-n_gamma_exponential-20260407031232.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 226949597878,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          123765
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            3000,
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            8,
+            3000,
+            3,
+            123765
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            3,
+            123765
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 80,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_80",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_80",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_80",
+    "score_variable": "log_r_mean",
+    "variant_count": 123765,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_80/pdz/cript-n/pdz_cript-n_lomax_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 109142002150,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          123765
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            123765
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            3,
+            123765
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_80/pdz/cript-n/pdz_cript-n_lomax_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 6992409346,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          123765
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 81,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_81",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_81",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_81",
+    "score_variable": "inv_r_mean",
+    "variant_count": 123765,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_81/pdz/cript-n/pdz_cript-n_gamma_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 108954883100,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          123765
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            123765
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            3,
+            123765
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_81/pdz/cript-n/pdz_cript-n_gamma_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 6992409346,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          123765
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 82,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-1",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_82",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_82",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_82",
+    "score_variable": "log_r_mean",
+    "variant_count": 150769,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "usable_for_analysis",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_82/pdz/trans-1/pdz_trans-1_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": null,
+        "issues": [
+          "historical_h5netcdf_open_failure",
+          "original_artifact_unavailable_for_reaudit"
+        ],
+        "errors": [
+          "Historical report: downloaded diagnosed NetCDF did not open; original local file is unavailable for re-audit."
+        ],
+        "groups": [],
+        "score_variable": "log_r_mean",
+        "score_shape": null,
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": null,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_82/pdz/trans-1/pdz_trans-1_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8740172891,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          150769
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_82/pdz/trans-1/pdz_trans-1_exponential_exponential-20260407030507.nc",
+        "kind": "raw_hmc",
+        "status": "validated",
+        "bytes": 183600800198,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_stats"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          150769
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            150769
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            150769
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            150769
+          ],
+          "timepoint_counts": [
+            3,
+            150769
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 84,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-1",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_84",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_84",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_84",
+    "score_variable": "inv_r_mean",
+    "variant_count": 150769,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_84/pdz/trans-1/pdz_trans-1_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 125960020559,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          150769
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            150769
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            150769
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            150769
+          ],
+          "timepoint_counts": [
+            3,
+            150769
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_84/pdz/trans-1/pdz_trans-1_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8740172891,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          150769
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 88,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_88",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_88",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_88",
+    "score_variable": "log_r_mean",
+    "variant_count": 151624,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_88/pdz/trans-2/pdz_trans-2_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 126600320254,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          151624
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            151624
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            151624
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            151624
+          ],
+          "timepoint_counts": [
+            3,
+            151624
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_88/pdz/trans-2/pdz_trans-2_exponential_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8740241291,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          151624
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 90,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_90",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_90",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_90",
+    "score_variable": "inv_r_mean",
+    "variant_count": 151624,
+    "hmc_status": "removed_after_failed_validation",
+    "mle_status": "validated",
+    "raw_status": "removed_after_failed_validation",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_90/pdz/trans-2/pdz_trans-2_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 126079290132,
+        "issues": [
+          "predictive_boundary_read_failure:starting_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "OSError: Can't synchronously read data (wrong B-tree signature)"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          151624
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            151624
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            151624
+          ]
+        },
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_90/pdz/trans-2/pdz_trans-2_gamma_exponential_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8740241291,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          151624
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_90/pdz/trans-2/pdz_trans-2_gamma_exponential-20260403124036.nc",
+        "kind": "raw_hmc",
+        "status": "unusable",
+        "bytes": 186150802526,
+        "issues": [
+          "h5netcdf_open_failure",
+          "h5py_open_failure"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (bad object header version number)'",
+          "RuntimeError: Unable to get group info (bad object header version number)"
+        ],
+        "groups": [],
+        "score_variable": "inv_r_mean",
+        "score_shape": null,
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": false,
+        "h5netcdf_compatible": false
+      }
+    ]
+  },
+  {
+    "job_id": 92,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_92",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_92",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_92",
+    "score_variable": "log_r_mean",
+    "variant_count": 151624,
+    "hmc_status": "missing",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": true,
+    "inventory_issues": [],
+    "diagnosed_hmc": [],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_92/pdz/trans-2/pdz_trans-2_lomax_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8740251362,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          151624
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  },
+  {
+    "job_id": 93,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_93",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_93",
+    "mle_experiment": "mle",
+    "mle_job_name": "mle_93",
+    "score_variable": "inv_r_mean",
+    "variant_count": 151624,
+    "hmc_status": "validated",
+    "mle_status": "validated",
+    "raw_status": "not_checked",
+    "fallback_required": false,
+    "preferred_hmc_download_required": false,
+    "inventory_issues": [],
+    "diagnosed_hmc": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_93/pdz/trans-2/pdz_trans-2_gamma_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "validated",
+        "bytes": 126014282553,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "observed_data",
+          "posterior",
+          "posterior_predictive",
+          "sample_diagnostic_tests",
+          "sample_stats",
+          "variable_diagnostic_stats",
+          "variable_diagnostic_tests"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          151624
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            151624
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            151624
+          ]
+        },
+        "observed_shapes": {
+          "starting_counts": [
+            3,
+            151624
+          ],
+          "timepoint_counts": [
+            3,
+            151624
+          ]
+        },
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "retired_diagnosed_hmc": [],
+    "sampled_mle": [
+      {
+        "path": "/data/amlt/mle/mle_93/pdz/trans-2/pdz_trans-2_gamma_sigmoid_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 8740251362,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "b",
+          "chain",
+          "draw",
+          "mle",
+          "observed_data",
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          1,
+          1000,
+          151624
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "raw_hmc": [],
+    "retired_raw_hmc": []
+  }
+]

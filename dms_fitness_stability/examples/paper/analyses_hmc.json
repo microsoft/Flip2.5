@@ -1,0 +1,495 @@
+{
+  "schema_version": 2,
+  "analyses": [
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-1",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "large-clean_82",
+      "job_id": 82,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-1",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "large-clean_84",
+      "job_id": 84,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-2",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "large-clean_88",
+      "job_id": 88,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-2",
+      "inference_method": "hmc",
+      "model_spec": "gamma-sigmoid",
+      "fit_id": "large-clean_93",
+      "job_id": 93,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_1",
+      "job_id": 1,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_3",
+      "job_id": 3,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_4",
+      "job_id": 4,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "large-clean_70",
+      "job_id": 70,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "large-clean_71",
+      "job_id": 71,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "large-clean_72",
+      "job_id": 72,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "large-clean_73",
+      "job_id": 73,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "large-clean_78",
+      "job_id": 78,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "hmc",
+      "model_spec": "lomax-sigmoid",
+      "fit_id": "large-clean_80",
+      "job_id": 80,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "hmc",
+      "model_spec": "gamma-sigmoid",
+      "fit_id": "large-clean_81",
+      "job_id": 81,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libA",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_7",
+      "job_id": 7,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libA",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_8",
+      "job_id": 8,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libA",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_9",
+      "job_id": 9,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libB",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_11",
+      "job_id": 11,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libB",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_12",
+      "job_id": 12,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libB",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_13",
+      "job_id": 13,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libC",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_15",
+      "job_id": 15,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libC",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_16",
+      "job_id": 16,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libC",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_17",
+      "job_id": 17,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libD",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_19",
+      "job_id": 19,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libD",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_20",
+      "job_id": 20,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libD",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_21",
+      "job_id": 21,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libE",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_25",
+      "job_id": 25,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libE",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_26",
+      "job_id": 26,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libE",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_27",
+      "job_id": 27,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_31",
+      "job_id": 31,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_32",
+      "job_id": 32,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_33",
+      "job_id": 33,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_34",
+      "job_id": 34,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libG",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_37",
+      "job_id": 37,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libG",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_38",
+      "job_id": 38,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libG",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_39",
+      "job_id": 39,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libH",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_43",
+      "job_id": 43,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libH",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_44",
+      "job_id": 44,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libH",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_45",
+      "job_id": 45,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libI",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_49",
+      "job_id": 49,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libI",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_50",
+      "job_id": 50,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libI",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_51",
+      "job_id": 51,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "log_mean_growth"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G1",
+      "inference_method": "hmc",
+      "model_spec": "exponential",
+      "fit_id": "small-clean_55",
+      "job_id": 55,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "model_fluorescence"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G1",
+      "inference_method": "hmc",
+      "model_spec": "lomax",
+      "fit_id": "small-clean_56",
+      "job_id": 56,
+      "artifact_kind": "raw_hmc",
+      "primary_score": "model_fluorescence"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G2",
+      "inference_method": "hmc",
+      "model_spec": "exponential",
+      "fit_id": "small-clean_57",
+      "job_id": 57,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "model_fluorescence"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G2",
+      "inference_method": "hmc",
+      "model_spec": "lomax",
+      "fit_id": "small-clean_58",
+      "job_id": 58,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "model_fluorescence"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G3",
+      "inference_method": "hmc",
+      "model_spec": "exponential",
+      "fit_id": "small-clean_59",
+      "job_id": 59,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "model_fluorescence"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G4",
+      "inference_method": "hmc",
+      "model_spec": "exponential",
+      "fit_id": "small-clean_61",
+      "job_id": 61,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "model_fluorescence"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G4",
+      "inference_method": "hmc",
+      "model_spec": "lomax",
+      "fit_id": "small-clean_62",
+      "job_id": 62,
+      "artifact_kind": "diagnosed_hmc",
+      "primary_score": "model_fluorescence"
+    }
+  ]
+}

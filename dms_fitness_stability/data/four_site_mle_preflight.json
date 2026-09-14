@@ -1,0 +1,230 @@
+[
+  {
+    "job_id": 64,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_64",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_64",
+        "name": "trpb/four-site/trpb_four-site_exponential_exponential_samples.nc",
+        "size": "14.5 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_64",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 65,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_65",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_65",
+        "name": "trpb/four-site/trpb_four-site_lomax_exponential_samples.nc",
+        "size": "14.5 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_65",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 66,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_66",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_66",
+        "name": "trpb/four-site/trpb_four-site_gamma_exponential_samples.nc",
+        "size": "14.5 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_66",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 67,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_67",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_67",
+        "name": "trpb/four-site/trpb_four-site_exponential_sigmoid_samples.nc",
+        "size": "14.5 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_67",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 68,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_68",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_68",
+        "name": "trpb/four-site/trpb_four-site_lomax_sigmoid_samples.nc",
+        "size": "14.5 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_68",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 69,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_69",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_69",
+        "name": "trpb/four-site/trpb_four-site_gamma_sigmoid_samples.nc",
+        "size": "14.5 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_69",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "analyses": [
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_3",
+      "job_id": 3,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-four-site",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_64",
+      "job_id": 64,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G3",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential",
+      "fit_id": "mle_59",
+      "job_id": 59,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "highest_gate_enrichment"
+    }
+  ]
+}

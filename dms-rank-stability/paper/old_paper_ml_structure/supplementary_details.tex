@@ -1,0 +1,504 @@
+\section{Supplementary assay and fitting details}
+\label{app:fit-details}
+
+The models and fitting procedures use the \texttt{flipv3} module of
+SciStanPy at revision
+\href{https://github.com/microsoft/SciStanPy/tree/09c439f675ead70f851d814242f153ecb7712113/flipv3}{\texttt{09c439f675ea}},
+the version pinned by the companion analysis repository. We first describe
+the observations and model equations, then report the fitting records and
+available diagnostics. Source defaults, requested command settings, and
+values confirmed by saved artifacts are distinguished throughout. TODO
+entries mark missing records or checks.
+
+\subsection{Experimental records and candidate identities}
+\label{app:experimental-records}
+
+The source studies are the PDZ interaction assays of \citet{zarin2024}, the
+TrpB active-site libraries of \citet{johnston2024}, and the NucB engineering
+generations of \citet{thomas2025}. We retain their landscape labels rather
+than counting fitted models as new experiments. The PDZ inputs
+are cis, trans-1, trans-2, CRIPT-C, and CRIPT-N. TrpB contains three-site
+libraries A--I and a four-site library; the labels refer to distinct variant
+libraries, not different resampling seeds. NucB generations G1--G4 are
+successive engineering collections with different screening protocols.
+
+\paragraph{Physical assays and reported labels.}
+The PDZ experiment measures binding between PSD95-PDZ3 and CRIPT through
+protein complementation in yeast. Its source protocol
+(\href{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE265816}{GSE265816})
+documents three biological growth competitions for each library. Input
+populations are grown without the selective drug; the output competition
+uses methotrexate at $200\,\mu\mathrm{g}/\mathrm{mL}$ for approximately five
+generations. DNA from the input and output cultures is sequenced, and DiMSum
+produces replicate-combined binding-dependent fitness estimates and standard
+errors. The deposited protocol also describes normalization between library
+blocks using stop-codon and synonymous variants, followed by linear scaling
+between libraries using shared variants. These source score-processing steps
+are distinct from fitting our count models.
+
+The TrpB libraries use an engineered background derived from the
+\emph{Thermotoga maritima} enzyme. Bacteria lacking the native
+\textit{trpA} and \textit{trpB} genes express a library of introduced TrpB
+sequences. With indole supplied, synthesis of tryptophan supports growth;
+sequencing observes the resulting changes in library composition
+\citep{johnston2024}. The nine three-site libraries together cover twenty
+positions, while the four-site library varies positions 183, 184, 227, and
+228. A stop codon terminates translation prematurely, providing a
+nonfunctional control for the source growth-score normalization. The count
+model does not estimate separate catalytic, expression, and stability effects.
+
+The NucB generations are successive rounds of engineering, not four biological
+replicates of a fixed library. Their input and selected populations have
+different fluorescence thresholds and sequencing structures
+\citep{thomas2025}. The source release contains pre-sort and post-sort counts,
+enrichment estimates relative to known controls, and activity labels combined
+across rounds. Our model uses the generation-specific count observations;
+it does not treat the combined categorical activity labels as count data.
+Source low-throughput measurements of purified enzymes are separate validation
+experiments and do not enter the rank calculations here.
+
+\note{TODO: Complete the residue-level TrpB three-site designs. Specify the
+constructs and mutated sites in PDZ cis, trans-1, trans-2, CRIPT-C, and CRIPT-N.
+Verify the NucB fluorescent substrate, compartment protocol, and incubation
+conditions against the full experimental methods. Add the per-task
+correspondence to FLIP2 without treating its subsets as additional experiments.}
+
+\paragraph{Count axes.}
+The model input arrays preserve the following observation structures. A
+repeated sequencing library is distinguished from a new biological population.
+The last array dimension is always the fitted variant axis; source controls
+can belong to this axis without being eligible ranking candidates.
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+Assay & Input observations & Output observations \\
+\midrule
+PDZ & Three replicate vectors & Three paired vectors \\
+TrpB A--C & One shared vector & One vector per timepoint \\
+TrpB D--I & One shared vector & Two replicates per timepoint \\
+TrpB four-site & Two replicate vectors & Two replicates per timepoint \\
+NucB G1 & Five vectors, three populations & Seven selected count vectors \\
+NucB G2 & Three vectors, two populations & Three selected count vectors \\
+NucB G3--G4 & One vector per generation & Four selected count vectors \\
+\bottomrule
+\end{tabular}
+\end{center}
+Generation 1 sequences the first two input populations twice and the third
+once; generation 2 sequences the first input twice and the second once.
+
+\subsection{PDZ count model and latent fitness}
+\label{app:pdz-model}
+
+\paragraph{Observation model.}
+Let $M$ denote the number of variants on the fitted count axis, including
+any rows that are excluded from ranking. This is distinct from the number
+$N$ of ranking-eligible variants in the main text. For each of the three
+PDZ replicates $r\in\{1,2,3\}$, let
+$\mathbf n_r^{\mathrm{in}}=(n_{1r}^{\mathrm{in}},\ldots,n_{Mr}^{\mathrm{in}})$
+and $\mathbf n_r^{\mathrm{out}}$ be its input and output count vectors. Write
+$D_r^{\mathrm{in}}:=\sum_{i=1}^M n_{ir}^{\mathrm{in}}$ and
+$D_r^{\mathrm{out}}:=\sum_{i=1}^M n_{ir}^{\mathrm{out}}$ for their observed
+sequencing totals. The model conditions on these totals.
+
+Let $\boldsymbol\pi_r^0$ be the vector of input probabilities for replicate
+$r$, with nonnegative entries summing to one. A growth function gives positive
+unnormalized output abundances $a_{ir}$ from the input probabilities and
+replicate-level growth parameters. Define
+$\pi_{ir}^1:=a_{ir}/\sum_{j=1}^M a_{jr}$. The count model is
+\begin{align}
+\mathbf n_r^{\mathrm{in}}\mid\theta
+&\sim\operatorname{Multinomial}(D_r^{\mathrm{in}},\boldsymbol\pi_r^0),\\
+\mathbf n_r^{\mathrm{out}}\mid\theta
+&\sim\operatorname{Multinomial}(D_r^{\mathrm{out}},\boldsymbol\pi_r^1).
+\end{align}
+Here $\theta$ includes the input probabilities, the growth parameters, and
+any shared parameters. Conditional on those parameters, the input and output
+observations contribute separate likelihood terms. Within a library, the
+multinomial distribution retains dependence between variant counts through
+their fixed total. The implementation works with log probabilities and
+normalizes the output abundances on that scale.
+
+The source defines separate input probability vectors for the three PDZ
+replicates and a hierarchy linking their variant-specific growth rates.
+Each input vector has a symmetric Dirichlet prior,
+$\boldsymbol\pi_r^0\sim\operatorname{Dirichlet}(\alpha_0\mathbf1_M)$,
+where $\mathbf1_M$ is a vector of $M$ ones and $\alpha_0>0$ is the
+per-variant concentration. The source class \texttt{ExpDirichlet} stores
+$\log\boldsymbol\pi_r^0$; its name denotes a log parameterization, not a
+different input-count likelihood.
+
+\paragraph{Growth functions.}
+Let $b_{ir}$ be the effective growth parameter for variant $i$ in replicate
+$r$, and let $\tau\geq0$ be elapsed time on the model's scale. PDZ has one
+post-selection observation, for which $\tau=1$. For exponential growth the
+unnormalized abundance is
+\[
+a_{ir}(\tau):=\pi_{ir}^0\exp(b_{ir}\tau).
+\]
+For sigmoid growth, the implementation instead uses
+\[
+a_{ir}(\tau):=\pi_{ir}^0
+\frac{1+\exp(b_{ir}c)}{1+\exp[b_{ir}(c-\tau)]},
+\qquad c\sim\operatorname{Gamma}(a_c,b_c).
+\]
+Here $c$ is a shared positive offset. We use the shape--rate convention
+for every Gamma distribution in this supplement, so its mean is shape
+divided by rate. Both growth functions start at $a_{ir}(0)=\pi_{ir}^0$.
+Output probabilities normalize $a_{ir}(\tau)$ over variants separately
+for each observed library. We use these functions as assay models of abundance
+change, not as mechanistic descriptions of every stage of the biological assay.
+
+\paragraph{Exponential and Lomax rate families.}
+For each variant, let $m_i>0$ be its central growth parameter and
+$\eta_i:=\log m_i$. The Exponential specification assigns
+$m_i\sim\operatorname{Exponential}(\beta)$, with rate $\beta$ and mean
+$1/\beta$. The Lomax specification assigns a distribution with scale
+$\lambda>0$, shape $a_L>0$, and density
+\[
+p(m_i\mid\lambda,a_L)=\frac{a_L}{\lambda}
+(1+m_i/\lambda)^{-(a_L+1)},\qquad m_i>0.
+\]
+SciStanPy's \texttt{ExpExponential} and \texttt{ExpLomax} variables store
+$\eta_i$, including the appropriate transformed density. They do not mean
+that $\eta_i$ itself has an ordinary Exponential or Lomax distribution.
+
+There are two available replicate models. The normal option uses
+$b_{ir}\mid m_i\sim\operatorname{Normal}(m_i,\sigma_b^2)$. Its central
+parameter is the conditional mean rate, and the replicate rates may be
+negative. The lognormal option uses
+$\log b_{ir}\mid\eta_i\sim\operatorname{Normal}(\eta_i,\sigma_b^2)$.
+Here $m_i$ is the conditional median rate; the conditional mean is
+$m_i\exp(\sigma_b^2/2)$. Since $\sigma_b$ is shared, both induce the same
+ordering of these central rates. The hierarchy can be represented using
+standard-normal latent variables or using the replicate variables directly.
+The command flag \texttt{--centered} selects the latter representation where
+the model exposes that option. The command records, rather than the default
+alone, determine whether a run uses normal or lognormal replicate variation.
+
+\paragraph{Gamma inverse-rate family.}
+The Gamma specification assigns an inverse-rate parameter
+$\kappa_i\sim\operatorname{Gamma}(a_\kappa,b_\kappa)$ and
+$b_{ir}\mid\kappa_i\sim\operatorname{Exponential}(\kappa_i)$.
+The conditional mean growth rate is $m_i:=1/\kappa_i$. The stored
+parameter is \texttt{inv\_r\_mean}, and the score extractor applies
+$h_i(\theta):=-\log\kappa_i$. For the Exponential and Lomax hierarchies,
+the stored variable is \texttt{log\_r\_mean} and
+$h_i(\theta):=\eta_i$. Thus the score labeled \texttt{log\_mean\_growth}
+orders the central growth parameter; in the lognormal hierarchy it is not
+literally the logarithm of the arithmetic mean replicate rate.
+
+\paragraph{Hyperparameters.}
+The source defaults are $\alpha_0=0.1$, $\beta=10$, $\lambda=1$,
+$a_L=2$, $\sigma_b=0.1$, $(a_\kappa,b_\kappa)=(2,0.5)$, and
+$(a_c,b_c)=(4,8)$. The job commands can override them. In particular,
+the recorded PDZ commands set $\alpha_0=5$ and select normal replicate
+variation for the Exponential and Lomax hierarchies. We retain per-run
+command settings in the fit inventory rather than replacing overrides with
+the class defaults.
+
+\subsection{TrpB count model and latent fitness}
+\label{app:trpb-model}
+
+\paragraph{Time and observation structure.}
+TrpB uses the same growth functions and multinomial observation model as
+PDZ, but has multiple post-selection timepoints. Let $t_\ell$ be an
+observed time, indexed by $\ell$, and define
+$\tau_\ell:=t_\ell/\max_{\ell'}t_{\ell'}$. Effective growth rates are
+therefore expressed per normalized assay duration, not per hour. The model
+factory removes optical-density columns before model construction; the
+likelihood uses sequencing counts and normalized times.
+
+Libraries A--C have one input count vector and one output vector per timepoint.
+They use a single input probability vector $\boldsymbol\pi^0$ and one rate
+$b_i$ per variant across the observed times. The prior is Exponential or
+Lomax on $b_i$, with the definitions given above; the flat Gamma alternative
+is not implemented. Their latent score is $h_i(\theta):=\log b_i$, obtained
+from the stored positive variable \texttt{r}.
+
+Libraries D--I have one shared input count vector and replicate-specific
+output vectors at each retained time. They use one
+$\boldsymbol\pi^0$ across output replicates and hierarchical $b_{ir}$
+rates, with the Exponential, Lomax, or Gamma inverse-rate construction
+above. For each time and replicate, the output vector has a multinomial
+likelihood with its own observed total and normalized grown probabilities.
+The single input observation contributes one likelihood term; it is not
+repeated once per output replicate. Their score is $\eta_i$ or
+$-\log\kappa_i$, as for PDZ.
+
+The four-site model has two input count vectors and replicate-specific
+outputs. Both input vectors share one latent input probability vector, while
+the output rates use the same hierarchical families. The prepared paper
+collection contains optimized-fit count resampling, but no parameter-posterior
+or posterior-count analysis, for this landscape.
+
+\paragraph{Model and scoring timepoints.}
+The model uses the times supplied by the data loader; the count-derived
+fitness calculation can use a different retained subset. In particular,
+the four-site loader supplies 12, 16, 20, 24, 28, and 36 hours, while the
+deposited count-score reconstruction excludes the 12-hour observation.
+Appendix~\ref{app:scores} distinguishes those score rules from the count
+likelihood. The input Dirichlet concentration and other hyperparameters have
+the defaults above, with overrides and centered/noncentered choices listed
+for each job.
+
+\subsection{NucB gate model and latent fitness}
+\label{app:nuc-model}
+
+\paragraph{Latent fluorescence.}
+For variant $i$, let $L_i$ be a log-fluorescence location and
+$v_i:=\exp(L_i)>0$ its fluorescence-scale center. The Exponential family
+assigns $v_i\sim\operatorname{Exponential}(\beta)$; the Lomax family
+assigns the scale--shape distribution defined above. Both use a log
+parameterization internally. The paper's parameter score is
+$h_i(\theta):=L_i$, not a count enrichment and not raw measured fluorescence.
+For generation 1 the stored variable is
+\texttt{absolute\_mean\_log\_fluorescence}; for generations 2--4 it is
+\texttt{log\_fluorescence}. The extractor retains those values without
+exponentiating them. The data-product label \texttt{model\_fluorescence}
+therefore denotes a log-scale parameter in these analyses.
+
+\paragraph{Gate probabilities.}
+Let $z_g>0$ be the fluorescence threshold for gate $g$, and
+$\sigma_F>0$ a shared spread parameter. For a lognormal observation model,
+the probability of exceeding the threshold for a variant with location $L$
+is
+\[
+s_g(L,\sigma_F):=1-\Phi\!\left(\frac{\log z_g-L}{\sigma_F}\right),
+\]
+where $\Phi$ is the standard-normal cumulative distribution function.
+Generations 3 and 4 also expose a normal option,
+$s_g(L,\sigma_F):=1-\Phi[(z_g-\exp L)/\sigma_F]$.
+The recorded generation-3 command uses that normal option; generations 1
+and 2 use the lognormal survival model, and the recorded generation-4
+command leaves the lognormal default in place.
+
+For gate $g$ arising from input population $r$, the variant probabilities
+are
+\[
+\pi_{ig}^{\mathrm{gate}}:=
+\frac{\pi_{ir}^0s_g(L_{ir},\sigma_F)}
+{\sum_{j=1}^M\pi_{jr}^0s_g(L_{jr},\sigma_F)}.
+\]
+Here $L_{ir}$ is the population-specific location when the model includes
+one, and otherwise equals $L_i$. Each observed gate count vector is
+multinomial with these probabilities and its observed sequencing total.
+The gate likelihoods use survival probabilities above thresholds, not a
+partition of all cells into mutually exclusive fluorescence bins. Repeated
+sequencing of an input or selected population shares its underlying probability
+vector but contributes its own count likelihood and total.
+
+\paragraph{Generations.}
+Generation 1 has three input-population vectors,
+$\boldsymbol\pi_r^0\sim\operatorname{Dirichlet}(\alpha_0\mathbf1_M)$,
+and population-specific log locations
+$L_{ir}\mid L_i,\sigma_E\sim\operatorname{Normal}(L_i,\sigma_E^2)$.
+The experimental spread satisfies
+$\sigma_E\sim\operatorname{HalfNormal}(s_E)$, meaning the absolute value
+of a mean-zero normal draw with standard deviation $s_E$. Low- and high-threshold
+selected counts use the corresponding location and input population.
+Generation 2 has two input vectors and a shared $L_i$ across gates; the
+86 and 97.5 gates use the first input population, and the 93 gate uses the
+second. Generations 3 and 4 each have one input vector and four thresholded
+output count vectors, all sharing $L_i$.
+
+All generations assign
+$\sigma_F\sim\operatorname{Gamma}(a_F,b_F)$. The source names this
+parameter \texttt{codon\_noise}; that name is a modeling interpretation,
+not evidence that the observed spread can be attributed only to codon usage.
+Defaults are $(a_F,b_F)=(2,2)$ and $s_E=0.5$. The command records use
+$\alpha_0=5$ for NucB and request Exponential rates $10,12.5,15,17.5$ in
+generations 1--4, respectively, through the flag \texttt{exp\_beta}.
+However, the inspected factory forwards that keyword while the Exponential
+mixin accepts \texttt{beta}; the unmatched keyword is absorbed without
+overriding the default. Under this source revision the effective rate is
+therefore 10, unless \texttt{beta} is passed through another entry point.
+We record the requested setting and this source-level behavior separately.
+The Lomax shape keyword matches its constructor argument; the recorded shapes
+are $2,4,6,8$, respectively, at scale one.
+Only specifications present in the curated fit inventory contribute to the
+paper's results.
+
+\paragraph{Threshold values.}
+The immutable data loader supplies the following thresholds on its fluorescence
+scale. These are assay calibration constants, not fitted rank cutoffs.
+For generation 1, the three pairs correspond to the three input populations.
+For generations 2--4, values follow the gate order used in the count arrays.
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+Generation & Gate labels & Threshold values \\
+\midrule
+G1 & Low, by population & 0.100, 0.115, 0.100 \\
+G1 & High, by population & 0.501, 0.600, 0.370 \\
+G2 & 86, 93, 97.5 & 0.201, 0.318, 0.385 \\
+G3 & 59, 80, 95, 99 & 0.118, 0.217, 0.285, 0.346 \\
+G4 & 70, 90, 98, 99.5 & 0.124, 0.199, 0.306, 0.384 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Controls and interpretation.}
+Appended negative-control rows enter the multinomial normalization and fitted
+axis but not the candidate ranking. Gate thresholds determine the connection
+between the latent location and the assay; none of these parameters is a
+universal biochemical fitness measure. The highest-gate enrichment score used
+for the count-resampling analyses is defined separately in
+Appendix~\ref{app:scores}. It is not identical to $L_i$, even though both
+are oriented so that higher scores correspond to higher inferred assay activity.
+
+\subsection{Optimization and posterior simulation}
+\label{app:inference-details}
+
+\paragraph{Posterior simulation.}
+The \texttt{mcmc\_flip.py} entry point constructs the selected model,
+generates and compiles its Stan program, and runs Hamiltonian Monte Carlo
+through CmdStan. It then converts samples and generated quantities to NetCDF
+and runs the diagnostic routines. The command-line defaults are eight chains,
+2,000 warmup iterations and 2,000 retained iterations per chain, with seed
+1025. The job command list overrides warmup and retained iterations for some
+models. The saved artifact attributes, rather than the defaults, are the
+source for actual chain counts, iteration counts, and Stan versions in the
+fit inventory. The representative artifacts inspected here record Stan 2.38.0
+and maximum tree depth 10. Absence of an explicit adaptation option in the
+launcher is not a record of its effective per-fit value.
+
+\paragraph{Optimized fit.}
+The source calls the second entry point \texttt{mle\_flip.py}. Its
+PyTorch objective sums log densities of both
+observed nodes and latent parameter nodes. In the parameterization evaluated
+by that backend, it maximizes a joint-density objective of the form
+\[
+\hat\theta:=\arg\max_\theta
+\left\{\sum_{o\in\mathcal O}\log p(d_o\mid\operatorname{pa}(o))
++\sum_{v\in\mathcal V}\log p(\theta_v\mid\operatorname{pa}(v))\right\}.
+\]
+Here $\mathcal O$ indexes observed count nodes with values $d_o$,
+$\mathcal V$ indexes latent stochastic nodes, and
+$\operatorname{pa}(\cdot)$ denotes a node's parents in the model. Thus the
+fitted mode includes priors and hierarchical densities; it is not the
+maximizer of the count likelihood alone. Density modes also depend on the
+chosen parameterization. We use \emph{optimized-fit count resampling} in the
+prose and preserve \texttt{mle\_predictive} as the existing data identifier.
+This correction changes the description, not the stored fits or results.
+
+Optimization uses Adam, with source defaults of learning rate $0.001$, at
+most 100,000 full-data steps, and stopping after 10 steps without an improvement
+in the recorded objective. The routine retains a saved best state when early
+stopping is triggered and writes the loss trajectory. The launcher passes
+seed 1025 unless overridden. These are reproducible source settings; the
+inventory flags where a historical artifact or loss record is unavailable
+to confirm an individual execution. Optimization convergence requires the
+loss and restart records listed below.
+
+\paragraph{Resampled counts.}
+Posterior-count samples are generated using sampled model parameters and
+the corresponding fixed library totals. The optimized-fit workflow exports
+the fitted distributions and produces count realizations using its sampling
+routine without reoptimizing on each realization. Appendix~\ref{app:scores}
+then maps those counts to the same family-specific reconstruction functions
+used throughout the rank analysis. Preserving one joint draw across all
+variant and observation axes is necessary for coherent rank uncertainty.
+
+\subsection{Convergence and predictive checks}
+\label{app:fit-checks}
+
+\paragraph{Available sampler evidence.}
+All 49 posterior artifacts were accessible for this inventory. Their recorded
+chain count, warmup, retained iterations, and seed agree with the corresponding
+job commands. All have eight chains, seed 1025, Stan 2.38.0, and a recorded
+maximum tree depth of 10. None records a divergent transition. Six fits record
+tree-depth saturation: TrpB jobs 20, 25, 26, 38, 43, and 44 have 4,000,
+16,000, 16,000, 1,692, 12,454, and 14,000 saturated transitions, respectively.
+These are warnings about trajectory length and computational efficiency;
+zero divergences does not remove the need to examine them.
+
+Forty artifacts include convergence and effective sample size summaries for
+the stored score parameter. Across their fitted variant axes, the largest
+finite recorded convergence statistic $\hat R$ is approximately 1.0067,
+the smallest bulk effective sample size is 1,876.9,
+and the smallest tail effective sample size is 889.2. These diagnostics apply
+to the native stored score parameter, including fitted controls when present.
+They are not effective sample sizes for ranks or top-$k$ membership. The nine
+raw-artifact fallbacks lack these stored summaries and are shown as unavailable.
+The code's variable-level diagnostic
+defaults flag $\hat R\geq1.01$ and effective sample sizes at most 100 per
+chain. We report the recorded values rather than assigning one pass/fail
+label to the whole analysis.
+
+\paragraph{Energy diagnostic.}
+For each saved chain with energy sequence $E_1,\ldots,E_T$, we compute the
+ratio
+\[
+B:=\frac{(T-1)^{-1}\sum_{t=2}^T(E_t-E_{t-1})^2}
+{T^{-1}\sum_{t=1}^T(E_t-\overline E)^2},
+\qquad \overline E:=T^{-1}\sum_{t=1}^T E_t.
+\]
+This is the energy-based fraction of missing information (BFMI) estimate
+using the displayed variance convention. The minimum over all inspected
+chains is 0.637. We calculate this from energy traces because the inspected
+source's stored flag named \texttt{low\_ebfmi} compares individual energy
+values with a threshold rather than calculating this chain-level ratio.
+The inventory does not interpret that flag as a valid BFMI test.
+
+\paragraph{What these checks do not establish.}
+The inventory records diagnostic availability and values for the retained
+fits without applying new exclusions. Sampler diagnostics assess simulation
+from the fitted distribution, not whether that distribution describes the
+experiment. Predictive checks remain necessary, particularly for specifications
+that produce very different rank uncertainty from the same counts.
+
+\subsubsection{Reserved predictive-check exhibits}
+\note{TODO: Add per-fit observed-versus-predictive checks for count support,
+zero counts, replicate or timepoint variation, and gate enrichment. Define
+each discrepancy statistic and show the relevant biological examples. This
+subsection is intentionally open; the sampler inventory is not a substitute
+for these checks.}
+
+\subsubsection{Reserved exception and optimization checks}
+\note{TODO: Recompute missing native-score diagnostics for raw fallbacks;
+quantify rank- and inclusion-specific Monte Carlo precision; review tree-depth
+saturation and the strongly specification-sensitive PDZ fits; recover the
+optimization loss curves and any restart evidence for all optimized fits.
+Document the original retention decisions separately from any new sensitivity
+analysis. No new fits or filters have been applied in this draft.}
+
+\subsection{Score reconstruction and missing-data audit}
+\label{app:score-audit}
+The TrpB and NucB reconstructions reproduce the source finite scores and
+coverage at the numerical tolerances stated in Appendix~\ref{app:scores}.
+The fit mapping records retained samples and exclusions. The PDZ reconstruction
+is an approximation because the exact original DiMSum configuration has
+not been recovered.
+\note{TODO: Add the per-assay reconstruction comparisons, original DiMSum
+revision and configuration if recovered, finite-score support distributions,
+and sensitivity of reported-rank summaries to missingness and ties.}
+
+\subsection{Reproducibility and complete supplementary exhibits}
+\label{app:reproducibility}
+
+The two tables below enumerate all 49 posterior fits and all 60 optimized
+fits used by the 158 analysis runs. Each posterior fit supplies both a
+parameter and a posterior-count view. The separate machine-readable inventory
+records each analysis identifier, its fitted artifact, its source job command,
+all parsed options, retained samples and exclusions, and available native-score
+diagnostics. Source hashes identify the model and launcher files used for this
+description. Historical job commands are records of requested settings; saved
+artifact attributes confirm the reported sampling counts, but do not embed
+every prior option or the complete software environment.
+
+Model codes combine the rate-family initial (E: Exponential, L: Lomax,
+G: Gamma inverse-rate) and growth-function initial (E: exponential,
+S: sigmoid). NucB has only the fluorescence-family code E or L. A source
+artifact may have been retired after its prepared score matrix was validated;
+this is distinct from a missing paper analysis. Three original optimized
+artifacts remain locally available, while all 60 prepared optimized-count
+score matrices are available for the rank analysis.
+
+\input{paper/old_paper_ml_structure/generated/fit_inventory.tex}
+
+\note{TODO: Supply versioned public archives and complete environment locks,
+and assemble the remaining fit-specific predictive and sensitivity exhibits.
+Full-landscape uncertainty estimation, read-depth interventions, and FLIP2
+predictor evaluation remain outside this draft.}

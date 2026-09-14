@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "prepared_at": "2026-09-03T22:30:49.966070+00:00",
+  "repository_commit": "3815c124010f5b7eac805d428f803be117f7db7d",
+  "analysis_data_manifest": "data/analysis_data_manifest.json",
+  "manifest_sha256_before": "4ab73c14cc8407508ec674eb720ac35dc4a2ce356fec66a94d6f9334a5cc0620",
+  "methods": {
+    "mle_predictive": {
+      "old_root": "/data/data_dms_stability/paper/mle_predictive/proxies",
+      "new_root": "/data/data_dms_stability/paper/analysis_data/scores/mle_predictive/canonical",
+      "expected_analysis_ids_sha256": "00a3eec7bfea8b1034feb3db8b40b0865411a826dd156bdd20dd41afd4672924",
+      "equivalence_audit": "data/mle_schema_v2_post_conversion_audit.json",
+      "equivalence_audit_sha256": "cd2cd62d781233385dd19eaea05c24fdeb8815ae9dec23c074845e85f566d6b8",
+      "cache_root": "/data/data_dms_stability/paper/mle_predictive/mechanisms/cache",
+      "cache_count": 62,
+      "source_tree": {
+        "path": "/data/data_dms_stability/paper/mle_predictive/proxies",
+        "bundle_count": 61,
+        "file_count": 244,
+        "logical_bytes": 25948026193,
+        "allocated_bytes": 25948811264
+      }
+    },
+    "hmc_count_based": {
+      "old_root": "/data/data_dms_stability/paper/hmc_count_based/proxies",
+      "new_root": "/data/data_dms_stability/paper/analysis_data/scores/hmc_count_based/canonical",
+      "expected_analysis_ids_sha256": "0d21a908125c51e6270e1ccdbe6ab4b255c789f03e873e9724f794f32ff2f124",
+      "equivalence_audit": "data/hmc_count_schema_v2_post_conversion_audit.json",
+      "equivalence_audit_sha256": "cf459d8863aa450398d44c6ffb485055a18525c8d8ff97608e11b28efbce92ab",
+      "cache_root": "/data/data_dms_stability/paper/hmc_count_based/mechanisms/cache",
+      "cache_count": 49,
+      "source_tree": {
+        "path": "/data/data_dms_stability/paper/hmc_count_based/proxies",
+        "bundle_count": 49,
+        "file_count": 196,
+        "logical_bytes": 110405530176,
+        "allocated_bytes": 110406275072
+      }
+    }
+  },
+  "condition": "publish and independently verify this record before relocation",
+  "execution_attempt": {
+    "interrupted_at": "2026-09-03T22:35:59.553034Z",
+    "phase": "cache_provenance_update",
+    "roots_relocated": true,
+    "updated_cache_count": 0,
+    "error_type": "TypeError",
+    "error": "historical source_size and source_mtime_ns attributes are one-element int64 arrays",
+    "recovery_implementation_commit": "61d1b2d44aa0d0ba49c673d38f9c441997ca67e3",
+    "recovery_azure_commit": "77e5ecfb3c22b84a3e4dc9696f39fa077e8f2105"
+  },
+  "recovery_condition": "publish and independently verify this interrupted-state record before cache provenance migration resumes",
+  "relocated_at": "2026-09-03T22:43:17.520631+00:00",
+  "updated_cache_count": 111,
+  "completed_at": "2026-09-03T23:06:51.658212+00:00",
+  "manifest_sha256_after": "c19c50d03b367e72275de0c9d7dfe0cfa69257d6846a446eb562cf2ba2c83a79",
+  "validated_score_bundles": 208,
+  "validated_feature_bundles": 21,
+  "post_validation": {
+    "validated_at": "2026-09-04T03:10:54.896930Z",
+    "manifest_path_only_relocations": 110,
+    "old_roots_absent": true,
+    "score_audits": {
+      "mle_predictive": {
+        "path": "data/mle_score_audit.json",
+        "sha256": "2cc7cc9e6e87c039baac058f5814cb1853641683a9912253127210092174650d",
+        "analysis_count": 61,
+        "historical_scientific_records_equal": true
+      },
+      "hmc_count_based": {
+        "path": "data/hmc_count_based_score_audit.json",
+        "sha256": "2a83685bb5dc207a0635cc2e61264fcc463f292610944c3c34aaa7f0d1e8af5c",
+        "analysis_count": 49,
+        "historical_scientific_records_equal": true
+      }
+    },
+    "mechanism_tables": {
+      "mle_predictive": {
+        "analysis_runs": 62,
+        "table_count": 8,
+        "exact_decompressed_matches": 8,
+        "cache_count": 62,
+        "cache_source_kind": "score_ensemble",
+        "cache_inventory_unchanged": true,
+        "cache_inventory_sha256": "83148905aeccd1fa0f1e29dfe16032f9099fc9110a87301131315edcd60c5898"
+      },
+      "hmc_count_based": {
+        "analysis_runs": 49,
+        "table_count": 8,
+        "exact_decompressed_matches": 8,
+        "cache_count": 49,
+        "cache_source_kind": "score_ensemble",
+        "cache_inventory_unchanged": true,
+        "cache_inventory_sha256": "194da007c9d6dbe98d2d60aeef80d47daae309d39cb47bbcc27333eea47c862b"
+      }
+    },
+    "operational_smoke": {
+      "default_score_roots": true,
+      "deprecated_proxy_root_alias": true,
+      "retained_mle_preprocessing_sources": 3
+    },
+    "repository_checks": {
+      "pytest_passed": 249,
+      "ruff": "passed",
+      "diagnostics": "clean",
+      "diff_check": "passed"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+variant_id,is_ranking_candidate,variant_label,experimental_group
+A,true,alpha,designed
+B,true,beta,designed
+C,true,gamma,designed
+D,true,delta,designed
+control,false,assay control,control

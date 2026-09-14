@@ -1,0 +1,302 @@
+\section{Materials and Methods}
+\label{sec:methods}
+
+\subsection{Data, candidate alignment, and count models}
+
+We use the prepared counts, source fitness scores, and candidate identities
+from the PDZ, TrpB, and NucB studies
+\citep{zarin2024,johnston2024,thomas2025}. Candidate sequences are aligned
+across the source scores, fitted outputs, and count features before
+ranking. Source controls can contribute to a count likelihood or a
+normalization total without being ranking candidates. In particular,
+appended NucB controls encoding premature stops are excluded from candidate
+rankings. Supplementary Section~\ref{app:reproducibility} records counts,
+exclusions, and sample provenance.
+
+Let $\data$ denote the observed counts together with their population,
+replicate, timepoint, and gate identities, and let $\theta$ denote model
+parameters. Conditional on the recorded total reads and a vector of
+variant probabilities, each sequenced population has a multinomial
+count likelihood. Assay-specific models determine these probabilities.
+This accounts for the fixed-total dependence among variant counts,
+but does not claim to capture every source of experimental variation.
+
+PDZ and TrpB models transform input abundances through exponential
+or sigmoid growth functions before normalizing output probabilities.
+PDZ has three paired input/output biological replicates with hierarchical
+growth rates. TrpB A--C uses one rate per variant across times;
+D--I uses a shared input vector and hierarchical output rates.
+The four-site model uses two input observations sharing a latent
+composition. TrpB times are divided by the last modeled time, so
+the rate scale is the assay duration rather than hours.
+
+For NucB, each selected population's probabilities are proportional
+to input abundance times the probability of exceeding its gate
+threshold. The model uses survival probabilities, not probabilities
+of mutually exclusive fluorescence bins. Generation-specific
+populations and thresholds preserve the experimental observation
+structure. Supplementary Sections~\ref{app:pdz-model}--\ref{app:nuc-model}
+give the complete equations, priors, and parameterizations.
+
+\subsection{Fitted and count-derived scores}
+
+Write $h_i(\theta)$ for candidate $i$'s fitted parameter score and
+$g_i(\data)$ for its count-derived score. In growth models without
+replicate effects, $h_i=\log b_i$ for positive rate $b_i$. In the
+Exponential and Lomax hierarchies, $h_i=\log m_i$ for central rate
+$m_i$, a conditional mean under normal replicate variation and
+a conditional median under lognormal variation. For the Gamma
+inverse-rate hierarchy, $h_i=-\log\kappa_i$, with conditional mean
+rate $1/\kappa_i$. For NucB, $h_i=L_i$, the fitted log-fluorescence
+location. Higher scores are preferred, but the units differ
+between assays.
+
+The PDZ count score combines log enrichments relative to the unmutated
+reference (wild type), using inverse-variance weights. It is a DiMSum-style approximation,
+not a rerun of the source DiMSum configuration. The TrpB count
+score normalizes observations using stop-codon variants and the
+maximum before averaging retained timepoints and replicates.
+NucB uses enrichment at the highest selected gate. The latter
+two calculations reproduce the source finite scores at numerical
+tolerance $10^{-12}$. Supplementary Section~\ref{app:scores}
+specifies formulas, filtering, and unresolved source details.
+
+\subsection{Fitting and sampled score collections}
+
+We combine the count likelihood $p(\data\mid\theta)$ with a prior
+$p(\theta)$, a distribution specifying parameter assumptions before
+conditioning on the counts. Posterior samples target
+$p(\theta\mid\data)\propto p(\data\mid\theta)p(\theta)$ using
+Hamiltonian Monte Carlo (HMC). The optimized fit $\hat\theta$
+also includes prior terms in its objective; despite the upstream
+routine's \texttt{mle} name, it is not likelihood-only maximum
+likelihood estimation. The analyses reuse stored fits from the
+pinned SciStanPy implementation. Supplementary
+Section~\ref{app:inference-details} distinguishes recorded job
+settings, implementation defaults, and artifact-verified settings.
+
+Let $N$ be the number of ranking-eligible candidates, $S$ the
+number of retained samples in a run, and
+$\boldsymbol{\fit}^{(s)}=(\fit_1^{(s)},\ldots,\fit_N^{(s)})$
+the joint score vector in sample $s$. The collections are:
+\begin{align}
+\text{Parameter:}\quad
+&\theta^{(s)}\sim p(\theta\mid\data),
+&&\fit_i^{(s)}:=h_i(\theta^{(s)}),\\
+\text{Optimized-fit counts:}\quad
+&\data^{(s)}\sim p(\cdot\mid\hat\theta),
+&&\fit_i^{(s)}:=g_i(\data^{(s)}),\\
+\text{Posterior counts:}\quad
+&\theta^{(s)}\sim p(\theta\mid\data),\quad
+\data^{(s)}\sim p(\cdot\mid\theta^{(s)}),
+&&\fit_i^{(s)}:=g_i(\data^{(s)}).
+\end{align}
+The count recipes condition on recorded sequencing depths and
+recompute scores without refitting. They represent alternative
+count outcomes under the model, not all variation in a new assay.
+The score calculations also differ between parameter and count
+samples, so comparisons are not an additive variance decomposition.
+Table~\ref{tab:inventory} lists retained runs and samples. The
+four-site TrpB landscape has optimized-fit count samples only.
+
+\begin{table}[htbp]
+\centering
+\caption{Analysis inventory. A run is one landscape, model, and sampling
+recipe. Retained samples are draws per run, not effective sample sizes.
+The 49 posterior fits and 60 optimized fits give 158 analysis runs
+because posterior fits support two sampling recipes.}
+\label{tab:inventory}
+\begin{tabular}{lrrr}
+\toprule
+Scheme & Landscapes & Runs & Retained samples \\
+\midrule
+Parameter & 18 & 49 & 16,000--32,000 \\
+Optimized-fit counts & 19 & 60 & 967--1,000 \\
+Posterior counts & 18 & 49 & 15,839--32,000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Ranks, references, and cohorts}
+
+Let $R_i^{(s)}$ be the descending rank of $\fit_i^{(s)}$ among
+eligible candidates with finite scores in sample $s$. Rank one
+is best, exact score ties receive average ranks, and an undefined
+score has no rank. Write $Q_a(\fit_i)$ and $Q_a(R_i)$ for empirical
+quantiles at probability $a$ over a candidate's finite samples.
+The median-score reference ranks $\widetilde\fit_i:=Q_{0.50}(\fit_i)$
+to obtain $\widetilde r_i$. This is distinct from the median
+sampled rank $Q_{0.50}(R_i)$. Rank intervals are
+$[Q_{0.05}(R_i),Q_{0.95}(R_i)]$; widths and signed endpoint
+differences from $\widetilde r_i$ are stored separately.
+
+Reported-order comparisons use the reported top 100 and top 1,000.
+Rank-interval summaries use each run's median-score reference top
+100. The decision cohort contains that reference batch and every
+outside candidate selected into the sampled top 100 with frequency
+at least 0.01. This is not a reference-top-1,000 restriction on
+challengers. All displayed ranks and inclusion frequencies are
+calculated against the full eligible competitor pool, not just
+the displayed cohort.
+
+We retain samples with at least 1,000 finite candidate scores.
+Undefined scores are not replaced by zero. Count-based reference
+medians require at least two finite scores per candidate;
+parameter-based references require at least one. Eligibility can differ
+slightly between score constructions because of these finite-score rules. Fixed-size
+top-$k$ sets use deterministic tie selection rather than a
+threshold on average ranks. Supplementary
+Section~\ref{app:computation} gives the remaining finite and
+tie conventions.
+
+\subsection{Reported-rank curves and summary statistics}
+
+Let $r_i^{\mathrm{rep}}$ be candidate $i$'s reported rank and
+$\mathcal S_i$ the indices of its finite sampled ranks. Its
+reported-rank sample percentile is
+\[
+u_i:=\frac{1}{|\mathcal S_i|}\sum_{s\in\mathcal S_i}
+\left[\mathbf1\{R_i^{(s)}<r_i^{\mathrm{rep}}\}
++\tfrac12\mathbf1\{R_i^{(s)}=r_i^{\mathrm{rep}}\}\right].
+\]
+Here $\mathbf1\{\cdot\}$ is one when the condition holds and zero
+otherwise. For each reported cohort, its empirical cumulative
+distribution function is $F(u)$, and the stored area is
+\[
+A:=\int_0^1|F(u)-u|\,du.
+\]
+We integrate the step function exactly between its jumps, not
+by trapezoidal interpolation through plotted vertices. Candidates
+with no finite sampled rank are omitted from the curve, with
+the supported cohort count recorded. Spearman correlation instead
+compares $r_i^{\mathrm{rep}}$ and $Q_{0.50}(R_i)$ over the supported
+cohort. Supplementary
+Section~\ref{app:area-interpretation} gives contrasting cases that
+have the same area and the implementation checks.
+
+\paragraph{Mean absolute rank displacement.}
+For each run, let $\mathcal C_{100}$ contain reported-top-100 candidates
+with finite reported and median sampled ranks, and let
+$n_{100}:=|\mathcal C_{100}|$. We calculate
+\[
+D_{\mathrm{rank}}:=\frac{1}{n_{100}}\sum_{i\in\mathcal C_{100}}
+\left|Q_{0.50}(R_i)-r_i^{\mathrm{rep}}\right|.
+\]
+The median is taken over each candidate's finite sampled ranks before
+the absolute difference is calculated; this is not the average absolute
+displacement across individual samples. We then average candidates with
+equal weight. Reported cohort membership and rank positions are taken
+from the prepared tables without reranking within the cohort. All runs
+have 99 or 100 supported candidates, whose counts are retained alongside
+the full-precision displacement values in the exported CSV.
+Table~\ref{tab:rank-displacement} aligns matching landscape/model
+specifications across the parameter-posterior, optimized-fit count,
+and posterior count collections, without averaging across models or
+omitting specifications available under only one sampling scheme.
+The table rounds to one decimal place for display. Rank ties retain
+the conventions described above; the percentile equality convention
+does not enter this calculation.
+
+\subsection{Candidate inclusion and batch overlap}
+
+Let $T_k^{(s)}$ contain the $k$ selected candidates in sample $s$.
+Define $\hat q_i(k):=S^{-1}\sum_s\mathbf1\{i\in T_k^{(s)}\}$.
+An undefined score counts as no selection, so the denominator
+includes every retained sample. For distinct samples, the mean
+shared fraction is
+\[
+\widehat C_k:=\frac{1}{S(S-1)}\sum_{s\ne s'}
+\frac{|T_k^{(s)}\cap T_k^{(s')}|}{k}.
+\]
+Writing $T_k^\star$ and $T_k^{\mathrm{rep}}$ for the fixed
+median-score and reported batches, we also report
+\[
+\widehat C_k^\star:=\frac{1}{S}\sum_s
+\frac{|T_k^{(s)}\cap T_k^\star|}{k},\qquad
+\widehat O_k^{\mathrm{rep}}:=\frac{1}{S}\sum_s
+\frac{|T_k^{(s)}\cap T_k^{\mathrm{rep}}|}{k}.
+\]
+The fixed-list comparison is $|T_k^\star\cap T_k^{\mathrm{rep}}|/k$.
+We use budgets $k\in\{10,20,50,100,200,500,1000\}$ and calculate
+sample-pair overlap exactly from inclusion counts
+(Supplementary Section~\ref{app:computation}). Two independent
+uniform size-$k$ subsets of $N$ candidates share fraction $k/N$
+in expectation, which provides a reference rather than a model
+of engineering selection.
+
+\subsection{Score geometry and descriptive comparisons}
+
+Define $S_{\mathrm{run}}$ as the IQR of the top-1,000 median
+scores, $W_i^{\fit}:=Q_{0.95}(\fit_i)-Q_{0.05}(\fit_i)$,
+and $U_i:=W_i^{\fit}/S_{\mathrm{run}}$. The score margin is
+$X_i:=(\widetilde\fit_i-\widetilde\fit_{(100)})/S_{\mathrm{run}}$,
+where $\widetilde\fit_{(100)}$ is the reference rank-100 score.
+The common denominator leaves within-run Spearman correlations
+unchanged. Nonlinear monotone score transformations can change
+widths and spacing while preserving sampled ranks, so score
+geometry is interpreted on its stated scale.
+
+Count features sum the retained observed input and output reads
+with shared inputs counted once. Supplementary
+Section~\ref{app:count-features} specifies the assay-dependent
+sums. Within-run correlations and regressions use the decision
+cohort and are descriptive associations, not estimates of the
+effect of additional reads. We retain individual model-run points
+and use medians across models within landscapes when summarizing
+landscapes. More fitted models do not create more independent
+experimental evidence.
+
+\paragraph{Overview point displays.}
+In the overview panels of Figs.~\ref{fig:reported}, \ref{fig:ranks},
+\ref{fig:reported1000}, and~\ref{fig:counts}, each small filled dot
+represents one scalar summary for a landscape/model/sampling-scheme
+analysis, not a sample or chain. Within each landscape and scheme,
+we order models by their names and run identifiers, then assign evenly
+spaced vertical offsets for display. A singleton receives no additional
+offset. These positions are deterministic and have no quantitative
+interpretation; the horizontal metric values are not jittered. Larger
+hollow symbols show medians across models at the scheme's central
+vertical position. The black example outlines and arrows follow the
+selected model points, including their display offsets, not the medians.
+
+\subsection{Running examples and reproducible exports}
+\label{methods:examples}
+
+We choose the running examples to illustrate contrasting behavior,
+not to represent the nearest median in each protein system. PDZ trans-1
+shows many plausible replacements despite a narrow range of score widths;
+TrpB libB combines low reported-rank agreement with substantial batch
+turnover; NucB G3 has uncertain internal ranks but a comparatively stable
+top-100 group. The two growth examples use Exponential--Exponential and
+NucB uses Exponential. All three are available in each sampling collection.
+
+We contextualize these choices using four summaries: reported-top-100
+curve area and Spearman correlation, median reference-top-100 rank width,
+and $\widehat C_{100}$. Within each protein system and sampling recipe,
+we summarize the non-Gamma models by their median within each landscape.
+None of the selected values lies outside the interval from the lower
+quartile minus 1.5 IQRs to the upper quartile plus 1.5 IQRs of those
+landscape summaries. This is a descriptive outlier check, not a claim
+that the examples are typical on every metric. TrpB libB is near the
+low-agreement end; related three-site libraries A--C also show substantial
+batch instability. The complete overview and supplementary curves retain
+the full context, including Gamma fits.
+
+The example audit records all run values, their percentile positions
+relative to equally weighted landscape medians, mean and largest distances
+from the center, and the reason for each illustrative choice. The centrality
+shortlist is descriptive and does not determine the fixed examples.
+All retained posterior fits underwent sampler diagnostics; omission of a summary
+from a saved output does not make a fit ineligible. The recorded numerical
+diagnostics are preserved without imputing values absent from the files.
+
+The resulting identities are passed explicitly to every main
+figure and comparison table. Exports use prepared summary tables,
+not a new fit or a subset of candidate points. The provenance
+record contains source-table and fit-inventory hashes. Each of
+the 158 analyses appears once in the point-level supplement and
+once with each of the two reported cohorts in the curve supplement.
+The curves share panels within each protein system and sampling scheme;
+Table~\ref{tab:reported-curve-statistics} retains individual analysis
+statistics. Tests check ranks, ties, cohort coverage, exact areas, example
+identities, and plotted coordinates. These are implementation checks.

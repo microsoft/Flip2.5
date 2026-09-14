@@ -1,0 +1,91 @@
+[
+  {
+    "job_id": 63,
+    "dataset": "k50",
+    "status": "removed",
+    "approved_at": "2026-09-03T06:53:15.226229+00:00",
+    "reason": "excluded_from_first_paper_and_removed_for_conversion_capacity",
+    "artifact": {
+      "path": "/data/amlt/k50-mle/k50_mle_lr0-01/k50/k50_None_None_None_samples.nc",
+      "bytes": 443627674689,
+      "mtime_ns": 1787764708146480153,
+      "sha256": "b8ba017a60e8c639634484265585f9df18191d2e0578658adcaf0590bb302eda",
+      "validation": {
+        "path": "/data/amlt/k50-mle/k50_mle_lr0-01/k50/k50_None_None_None_samples.nc",
+        "kind": "sampled_mle",
+        "status": "validated",
+        "bytes": 443627674689,
+        "issues": [],
+        "errors": [],
+        "groups": [
+          "a",
+          "c",
+          "chain",
+          "d",
+          "draw",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m",
+          "mle",
+          "o",
+          "observed_data",
+          "p",
+          "posterior",
+          "posterior_predictive",
+          "q",
+          "r"
+        ],
+        "score_variable": "mean_dg",
+        "score_shape": [
+          1,
+          1000,
+          1824523
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    },
+    "source": {
+      "kind": "sampled_mle",
+      "experiment": "k50-mle",
+      "job_name": "k50_mle_lr0-01",
+      "name": "k50/k50_None_None_None_samples.nc",
+      "size": "443.6 GB",
+      "last_modified": "4mo ago"
+    },
+    "recovery_command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "results",
+      "download",
+      "k50-mle",
+      ":k50_mle_lr0-01",
+      "--include",
+      "k50/k50_None_None_None_samples.nc",
+      "--output",
+      "/data/amlt",
+      "--n-workers",
+      "1"
+    ],
+    "downstream": {
+      "baseline_kind": "mle_predictive_schema_v1_pre_conversion",
+      "baseline_repository_commit": "d0f9d3b869326358b941349ddd067ab6641c3251",
+      "analysis_id": "k50__k50__mle-predictive__massive-only-mle__k50-mle-lr0-01",
+      "score_semantic_sha256": "cbac37b9cf805246f9820606200bc53966898cf9e39a7725a236cd2a10f72737",
+      "result_metadata_sha256": "8e68c803525d32b9f66dd2b23e1bad852c186cee735e2cf930ebe83200257c49",
+      "mechanism_cache_ids": [
+        "k50__k50-chymotrypsin__mle-predictive__massive-only-mle__k50-mle-lr0-01",
+        "k50__k50-trypsin__mle-predictive__massive-only-mle__k50-mle-lr0-01"
+      ]
+    },
+    "removal_started_at": "2026-09-03T06:56:36.661321+00:00",
+    "removed_at": "2026-09-03T06:57:19.467728+00:00"
+  }
+]

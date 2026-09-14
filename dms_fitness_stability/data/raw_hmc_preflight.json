@@ -1,0 +1,266 @@
+[
+  {
+    "job_id": 15,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_15",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_15",
+    "pattern": "trpb/libC/trpb_libC_exponential_exponential-*.nc",
+    "candidates": [
+      {
+        "name": "trpb/libC/trpb_libC_exponential_exponential-20260405085014.nc",
+        "size": "6.0 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "--json-tables",
+      "results",
+      "list",
+      "small-clean",
+      ":small-clean_15",
+      "--include",
+      "trpb/libC/trpb_libC_exponential_exponential-*.nc"
+    ]
+  },
+  {
+    "job_id": 25,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_25",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_25",
+    "pattern": "trpb/libE/trpb_libE_exponential_exponential-*.nc",
+    "candidates": [
+      {
+        "name": "trpb/libE/trpb_libE_exponential_exponential-20260404232845.nc",
+        "size": "15.4 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "--json-tables",
+      "results",
+      "list",
+      "small-clean",
+      ":small-clean_25",
+      "--include",
+      "trpb/libE/trpb_libE_exponential_exponential-*.nc"
+    ]
+  },
+  {
+    "job_id": 37,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_37",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_37",
+    "pattern": "trpb/libG/trpb_libG_exponential_exponential-*.nc",
+    "candidates": [
+      {
+        "name": "trpb/libG/trpb_libG_exponential_exponential-20260404234146.nc",
+        "size": "19.5 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "--json-tables",
+      "results",
+      "list",
+      "small-clean",
+      ":small-clean_37",
+      "--include",
+      "trpb/libG/trpb_libG_exponential_exponential-*.nc"
+    ]
+  },
+  {
+    "job_id": 43,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_43",
+    "hmc_experiment": "small-clean",
+    "hmc_job_name": "small-clean_43",
+    "pattern": "trpb/libH/trpb_libH_exponential_exponential-*.nc",
+    "candidates": [
+      {
+        "name": "trpb/libH/trpb_libH_exponential_exponential-20260405101041.nc",
+        "size": "19.5 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "--json-tables",
+      "results",
+      "list",
+      "small-clean",
+      ":small-clean_43",
+      "--include",
+      "trpb/libH/trpb_libH_exponential_exponential-*.nc"
+    ]
+  },
+  {
+    "job_id": 72,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_72",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_72",
+    "pattern": "pdz/cript-c/pdz_cript-c_gamma_exponential-*.nc",
+    "candidates": [
+      {
+        "name": "pdz/cript-c/pdz_cript-c_gamma_exponential-20260407031255.nc",
+        "size": "265.2 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "--json-tables",
+      "results",
+      "list",
+      "large-clean",
+      ":large-clean_72",
+      "--include",
+      "pdz/cript-c/pdz_cript-c_gamma_exponential-*.nc"
+    ]
+  },
+  {
+    "job_id": 76,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_76",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_76",
+    "pattern": "pdz/cript-n/pdz_cript-n_exponential_exponential-*.nc",
+    "candidates": [
+      {
+        "name": "pdz/cript-n/pdz_cript-n_exponential_exponential-20260407031157.nc",
+        "size": "153.0 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "--json-tables",
+      "results",
+      "list",
+      "large-clean",
+      ":large-clean_76",
+      "--include",
+      "pdz/cript-n/pdz_cript-n_exponential_exponential-*.nc"
+    ]
+  },
+  {
+    "job_id": 78,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_78",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_78",
+    "pattern": "pdz/cript-n/pdz_cript-n_gamma_exponential-*.nc",
+    "candidates": [
+      {
+        "name": "pdz/cript-n/pdz_cript-n_gamma_exponential-20260407031232.nc",
+        "size": "226.9 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "--json-tables",
+      "results",
+      "list",
+      "large-clean",
+      ":large-clean_78",
+      "--include",
+      "pdz/cript-n/pdz_cript-n_gamma_exponential-*.nc"
+    ]
+  },
+  {
+    "job_id": 90,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_90",
+    "hmc_experiment": "large-clean",
+    "hmc_job_name": "large-clean_90",
+    "pattern": "pdz/trans-2/pdz_trans-2_gamma_exponential-*.nc",
+    "candidates": [
+      {
+        "name": "pdz/trans-2/pdz_trans-2_gamma_exponential-20260403124036.nc",
+        "size": "186.2 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "command": [
+      "/home/t-renatob/venvs/amulet/bin/amlt",
+      "--json-tables",
+      "results",
+      "list",
+      "large-clean",
+      ":large-clean_90",
+      "--include",
+      "pdz/trans-2/pdz_trans-2_gamma_exponential-*.nc"
+    ]
+  }
+]

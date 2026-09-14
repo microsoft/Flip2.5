@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "analyses": [
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-1",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "exponential_exponential"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-2",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "exponential_exponential"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "exponential_exponential"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "hmc",
+      "model_spec": "lomax-exponential",
+      "fit_id": "small-clean_3"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_4"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "large-clean_70"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "large-clean_73"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "hmc",
+      "model_spec": "gamma-sigmoid",
+      "fit_id": "large-clean_81"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libA",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_7"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libA",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_9"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libB",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_11"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libB",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_13"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libC",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_15"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libC",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_17"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libD",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_19"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libD",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_21"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libE",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_25"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libE",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_27"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_31"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "hmc",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "small-clean_34"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libG",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_37"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libG",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_39"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libH",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_43"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libH",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_45"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libI",
+      "inference_method": "hmc",
+      "model_spec": "exponential-exponential",
+      "fit_id": "small-clean_49"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libI",
+      "inference_method": "hmc",
+      "model_spec": "gamma-exponential",
+      "fit_id": "small-clean_51"
+    }
+  ]
+}

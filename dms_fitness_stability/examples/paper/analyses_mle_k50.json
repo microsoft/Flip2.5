@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "analyses": [
+    {
+      "protein_family": "k50",
+      "landscape": "k50",
+      "inference_method": "mle_predictive",
+      "model_spec": "(MASSIVE, only MLE)",
+      "fit_id": "k50_mle_lr0-01",
+      "job_id": 63,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "mean_log_chymotrypsin_enrichment",
+      "scores": [
+        "mean_log_chymotrypsin_enrichment",
+        "mean_log_trypsin_enrichment"
+      ]
+    }
+  ]
+}

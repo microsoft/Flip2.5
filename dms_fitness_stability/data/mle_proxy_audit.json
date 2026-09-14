@@ -1,0 +1,1651 @@
+[
+  {
+    "analysis_id": "pdz__pdz-cis__mle-predictive__exponential-exponential__mle-1",
+    "job_id": 1,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 10660,
+    "n_ranking_candidates": 9475,
+    "n_score_supported_candidates": 9475,
+    "n_variable_candidates": 9474,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 9475
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 9474
+    },
+    "min_finite_ranking_candidates": 9474,
+    "max_finite_ranking_candidates": 9475,
+    "proxy_bytes": 33175438,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cis__mle-predictive__lomax-exponential__mle-3",
+    "job_id": 3,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 10660,
+    "n_ranking_candidates": 9475,
+    "n_score_supported_candidates": 9475,
+    "n_variable_candidates": 9474,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 9475
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 9474
+    },
+    "min_finite_ranking_candidates": 9468,
+    "max_finite_ranking_candidates": 9475,
+    "proxy_bytes": 33616864,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cis__mle-predictive__exponential-sigmoid__mle-4",
+    "job_id": 4,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 10660,
+    "n_ranking_candidates": 9475,
+    "n_score_supported_candidates": 9475,
+    "n_variable_candidates": 9474,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 9475
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 9474
+    },
+    "min_finite_ranking_candidates": 9474,
+    "max_finite_ranking_candidates": 9475,
+    "proxy_bytes": 32869688,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__exponential-exponential__mle-70",
+    "job_id": 70,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117719,
+    "max_finite_ranking_candidates": 117723,
+    "proxy_bytes": 421514782,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__lomax-exponential__mle-71",
+    "job_id": 71,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117608,
+    "max_finite_ranking_candidates": 117662,
+    "proxy_bytes": 434460481,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__gamma-exponential__mle-72",
+    "job_id": 72,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117717,
+    "max_finite_ranking_candidates": 117723,
+    "proxy_bytes": 427231600,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__exponential-sigmoid__mle-73",
+    "job_id": 73,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117722,
+    "max_finite_ranking_candidates": 117723,
+    "proxy_bytes": 402150024,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__lomax-sigmoid__mle-74",
+    "job_id": 74,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117722,
+    "max_finite_ranking_candidates": 117723,
+    "proxy_bytes": 404041357,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__exponential-exponential__mle-76",
+    "job_id": 76,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 123765,
+    "n_ranking_candidates": 91815,
+    "n_score_supported_candidates": 91815,
+    "n_variable_candidates": 91814,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 91815
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 91814
+    },
+    "min_finite_ranking_candidates": 91462,
+    "max_finite_ranking_candidates": 91815,
+    "proxy_bytes": 422723423,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__lomax-exponential__mle-77",
+    "job_id": 77,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 123765,
+    "n_ranking_candidates": 91815,
+    "n_score_supported_candidates": 91815,
+    "n_variable_candidates": 91814,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 91815
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 91814
+    },
+    "min_finite_ranking_candidates": 89526,
+    "max_finite_ranking_candidates": 91711,
+    "proxy_bytes": 417444481,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__gamma-exponential__mle-78",
+    "job_id": 78,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 123765,
+    "n_ranking_candidates": 91815,
+    "n_score_supported_candidates": 91815,
+    "n_variable_candidates": 91814,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 91815
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 91814
+    },
+    "min_finite_ranking_candidates": 0,
+    "max_finite_ranking_candidates": 91807,
+    "proxy_bytes": 414026474,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__lomax-sigmoid__mle-80",
+    "job_id": 80,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 123765,
+    "n_ranking_candidates": 91815,
+    "n_score_supported_candidates": 91815,
+    "n_variable_candidates": 91814,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 91815
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 91814
+    },
+    "min_finite_ranking_candidates": 91671,
+    "max_finite_ranking_candidates": 91815,
+    "proxy_bytes": 422700027,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__gamma-sigmoid__mle-81",
+    "job_id": 81,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 123765,
+    "n_ranking_candidates": 91815,
+    "n_score_supported_candidates": 91815,
+    "n_variable_candidates": 91814,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 91815
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 91814
+    },
+    "min_finite_ranking_candidates": 0,
+    "max_finite_ranking_candidates": 91806,
+    "proxy_bytes": 404619721,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-1__mle-predictive__exponential-exponential__mle-82",
+    "job_id": 82,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-1",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 150769,
+    "n_ranking_candidates": 109376,
+    "n_score_supported_candidates": 109376,
+    "n_variable_candidates": 109376,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 109376
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 109376
+    },
+    "min_finite_ranking_candidates": 109374,
+    "max_finite_ranking_candidates": 109376,
+    "proxy_bytes": 467474102,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-1__mle-predictive__gamma-exponential__mle-84",
+    "job_id": 84,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-1",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 150769,
+    "n_ranking_candidates": 109376,
+    "n_score_supported_candidates": 109376,
+    "n_variable_candidates": 109376,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 109376
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 109376
+    },
+    "min_finite_ranking_candidates": 109301,
+    "max_finite_ranking_candidates": 109352,
+    "proxy_bytes": 471349893,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__mle-predictive__exponential-exponential__mle-88",
+    "job_id": 88,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 151624,
+    "n_ranking_candidates": 142251,
+    "n_score_supported_candidates": 142251,
+    "n_variable_candidates": 142250,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 142251
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 142250
+    },
+    "min_finite_ranking_candidates": 142249,
+    "max_finite_ranking_candidates": 142251,
+    "proxy_bytes": 476556715,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__mle-predictive__gamma-exponential__mle-90",
+    "job_id": 90,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 151624,
+    "n_ranking_candidates": 142251,
+    "n_score_supported_candidates": 142251,
+    "n_variable_candidates": 142250,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 142251
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 142250
+    },
+    "min_finite_ranking_candidates": 142155,
+    "max_finite_ranking_candidates": 142209,
+    "proxy_bytes": 482670127,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__mle-predictive__lomax-sigmoid__mle-92",
+    "job_id": 92,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 151624,
+    "n_ranking_candidates": 142251,
+    "n_score_supported_candidates": 142251,
+    "n_variable_candidates": 142250,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 142251
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 142250
+    },
+    "min_finite_ranking_candidates": 141260,
+    "max_finite_ranking_candidates": 141455,
+    "proxy_bytes": 484978495,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__mle-predictive__gamma-sigmoid__mle-93",
+    "job_id": 93,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 151624,
+    "n_ranking_candidates": 142251,
+    "n_score_supported_candidates": 142251,
+    "n_variable_candidates": 142250,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 142251
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 142250
+    },
+    "min_finite_ranking_candidates": 142152,
+    "max_finite_ranking_candidates": 142209,
+    "proxy_bytes": 482650719,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__mle-predictive__exponential-exponential__mle-7",
+    "job_id": 7,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9254,
+    "n_ranking_candidates": 9230,
+    "n_score_supported_candidates": 9230,
+    "n_variable_candidates": 9230,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "min_finite_ranking_candidates": 9219,
+    "max_finite_ranking_candidates": 9230,
+    "proxy_bytes": 31567605,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__mle-predictive__lomax-exponential__mle-8",
+    "job_id": 8,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9254,
+    "n_ranking_candidates": 9230,
+    "n_score_supported_candidates": 9230,
+    "n_variable_candidates": 9230,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "min_finite_ranking_candidates": 9217,
+    "max_finite_ranking_candidates": 9230,
+    "proxy_bytes": 31512328,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__mle-predictive__exponential-sigmoid__mle-9",
+    "job_id": 9,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9254,
+    "n_ranking_candidates": 9230,
+    "n_score_supported_candidates": 9230,
+    "n_variable_candidates": 9230,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "min_finite_ranking_candidates": 9220,
+    "max_finite_ranking_candidates": 9230,
+    "proxy_bytes": 31569186,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__mle-predictive__exponential-exponential__mle-11",
+    "job_id": 11,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9261,
+    "n_ranking_candidates": 9257,
+    "n_score_supported_candidates": 9257,
+    "n_variable_candidates": 9256,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9257
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9256
+    },
+    "min_finite_ranking_candidates": 9254,
+    "max_finite_ranking_candidates": 9257,
+    "proxy_bytes": 30344625,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__mle-predictive__lomax-exponential__mle-12",
+    "job_id": 12,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9261,
+    "n_ranking_candidates": 9257,
+    "n_score_supported_candidates": 9257,
+    "n_variable_candidates": 9256,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9257
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9256
+    },
+    "min_finite_ranking_candidates": 9254,
+    "max_finite_ranking_candidates": 9257,
+    "proxy_bytes": 30578431,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__mle-predictive__exponential-sigmoid__mle-13",
+    "job_id": 13,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9261,
+    "n_ranking_candidates": 9257,
+    "n_score_supported_candidates": 9257,
+    "n_variable_candidates": 9256,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9257
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9256
+    },
+    "min_finite_ranking_candidates": 9255,
+    "max_finite_ranking_candidates": 9257,
+    "proxy_bytes": 30353511,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__mle-predictive__exponential-exponential__mle-15",
+    "job_id": 15,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9260,
+    "n_ranking_candidates": 9255,
+    "n_score_supported_candidates": 9255,
+    "n_variable_candidates": 9254,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9255
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9254
+    },
+    "min_finite_ranking_candidates": 9252,
+    "max_finite_ranking_candidates": 9255,
+    "proxy_bytes": 30652047,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__mle-predictive__lomax-exponential__mle-16",
+    "job_id": 16,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9260,
+    "n_ranking_candidates": 9255,
+    "n_score_supported_candidates": 9255,
+    "n_variable_candidates": 9254,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9255
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9254
+    },
+    "min_finite_ranking_candidates": 9252,
+    "max_finite_ranking_candidates": 9255,
+    "proxy_bytes": 30600136,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__mle-predictive__exponential-sigmoid__mle-17",
+    "job_id": 17,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9260,
+    "n_ranking_candidates": 9255,
+    "n_score_supported_candidates": 9255,
+    "n_variable_candidates": 9254,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9255
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9254
+    },
+    "min_finite_ranking_candidates": 9252,
+    "max_finite_ranking_candidates": 9255,
+    "proxy_bytes": 30655326,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__mle-predictive__exponential-exponential__mle-19",
+    "job_id": 19,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9057,
+    "n_ranking_candidates": 8968,
+    "n_score_supported_candidates": 8968,
+    "n_variable_candidates": 8968,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "min_finite_ranking_candidates": 8931,
+    "max_finite_ranking_candidates": 8951,
+    "proxy_bytes": 31427411,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__mle-predictive__lomax-exponential__mle-20",
+    "job_id": 20,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9057,
+    "n_ranking_candidates": 8968,
+    "n_score_supported_candidates": 8968,
+    "n_variable_candidates": 8968,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "min_finite_ranking_candidates": 8935,
+    "max_finite_ranking_candidates": 8956,
+    "proxy_bytes": 31411230,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__mle-predictive__gamma-exponential__mle-21",
+    "job_id": 21,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9057,
+    "n_ranking_candidates": 8968,
+    "n_score_supported_candidates": 8968,
+    "n_variable_candidates": 8968,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "min_finite_ranking_candidates": 8930,
+    "max_finite_ranking_candidates": 8953,
+    "proxy_bytes": 31432376,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__mle-predictive__exponential-exponential__mle-25",
+    "job_id": 25,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9229,
+    "n_ranking_candidates": 9222,
+    "n_score_supported_candidates": 9222,
+    "n_variable_candidates": 9221,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9222
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9221
+    },
+    "min_finite_ranking_candidates": 9216,
+    "max_finite_ranking_candidates": 9222,
+    "proxy_bytes": 31825930,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__mle-predictive__lomax-exponential__mle-26",
+    "job_id": 26,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9229,
+    "n_ranking_candidates": 9222,
+    "n_score_supported_candidates": 9222,
+    "n_variable_candidates": 9221,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9222
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9221
+    },
+    "min_finite_ranking_candidates": 9214,
+    "max_finite_ranking_candidates": 9222,
+    "proxy_bytes": 31634074,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__mle-predictive__gamma-exponential__mle-27",
+    "job_id": 27,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9229,
+    "n_ranking_candidates": 9222,
+    "n_score_supported_candidates": 9222,
+    "n_variable_candidates": 9221,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9222
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9221
+    },
+    "min_finite_ranking_candidates": 9216,
+    "max_finite_ranking_candidates": 9222,
+    "proxy_bytes": 31932624,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__mle-predictive__exponential-exponential__mle-31",
+    "job_id": 31,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 8996,
+    "n_ranking_candidates": 8543,
+    "n_score_supported_candidates": 8542,
+    "n_variable_candidates": 8541,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8542
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8541
+    },
+    "min_finite_ranking_candidates": 8434,
+    "max_finite_ranking_candidates": 8482,
+    "proxy_bytes": 30341159,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__mle-predictive__lomax-exponential__mle-32",
+    "job_id": 32,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 8996,
+    "n_ranking_candidates": 8543,
+    "n_score_supported_candidates": 8542,
+    "n_variable_candidates": 8541,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8542
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8541
+    },
+    "min_finite_ranking_candidates": 8428,
+    "max_finite_ranking_candidates": 8471,
+    "proxy_bytes": 30185049,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__mle-predictive__gamma-exponential__mle-33",
+    "job_id": 33,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 8996,
+    "n_ranking_candidates": 8543,
+    "n_score_supported_candidates": 8542,
+    "n_variable_candidates": 8541,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8542
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8541
+    },
+    "min_finite_ranking_candidates": 8426,
+    "max_finite_ranking_candidates": 8474,
+    "proxy_bytes": 30155016,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__mle-predictive__exponential-sigmoid__mle-34",
+    "job_id": 34,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 8996,
+    "n_ranking_candidates": 8543,
+    "n_score_supported_candidates": 8542,
+    "n_variable_candidates": 8541,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8542
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8541
+    },
+    "min_finite_ranking_candidates": 8441,
+    "max_finite_ranking_candidates": 8489,
+    "proxy_bytes": 30312454,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__mle-predictive__exponential-exponential__mle-37",
+    "job_id": 37,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9041,
+    "n_ranking_candidates": 8709,
+    "n_score_supported_candidates": 8709,
+    "n_variable_candidates": 8708,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8709
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8708
+    },
+    "min_finite_ranking_candidates": 8671,
+    "max_finite_ranking_candidates": 8695,
+    "proxy_bytes": 31274123,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__mle-predictive__lomax-exponential__mle-38",
+    "job_id": 38,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9041,
+    "n_ranking_candidates": 8709,
+    "n_score_supported_candidates": 8708,
+    "n_variable_candidates": 8708,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8708
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8708
+    },
+    "min_finite_ranking_candidates": 8661,
+    "max_finite_ranking_candidates": 8691,
+    "proxy_bytes": 31281086,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__mle-predictive__gamma-exponential__mle-39",
+    "job_id": 39,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9041,
+    "n_ranking_candidates": 8709,
+    "n_score_supported_candidates": 8709,
+    "n_variable_candidates": 8708,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8709
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8708
+    },
+    "min_finite_ranking_candidates": 8666,
+    "max_finite_ranking_candidates": 8694,
+    "proxy_bytes": 31230985,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__mle-predictive__exponential-exponential__mle-43",
+    "job_id": 43,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 8970,
+    "n_ranking_candidates": 8930,
+    "n_score_supported_candidates": 8930,
+    "n_variable_candidates": 8930,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "min_finite_ranking_candidates": 8927,
+    "max_finite_ranking_candidates": 8930,
+    "proxy_bytes": 30987161,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__mle-predictive__lomax-exponential__mle-44",
+    "job_id": 44,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 8970,
+    "n_ranking_candidates": 8930,
+    "n_score_supported_candidates": 8930,
+    "n_variable_candidates": 8930,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "min_finite_ranking_candidates": 8927,
+    "max_finite_ranking_candidates": 8930,
+    "proxy_bytes": 30934586,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__mle-predictive__gamma-exponential__mle-45",
+    "job_id": 45,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 8970,
+    "n_ranking_candidates": 8930,
+    "n_score_supported_candidates": 8930,
+    "n_variable_candidates": 8930,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "min_finite_ranking_candidates": 8927,
+    "max_finite_ranking_candidates": 8930,
+    "proxy_bytes": 30993667,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__mle-predictive__exponential-exponential__mle-49",
+    "job_id": 49,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9121,
+    "n_ranking_candidates": 9018,
+    "n_score_supported_candidates": 9017,
+    "n_variable_candidates": 9017,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9017
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9017
+    },
+    "min_finite_ranking_candidates": 8964,
+    "max_finite_ranking_candidates": 8991,
+    "proxy_bytes": 31452915,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__mle-predictive__lomax-exponential__mle-50",
+    "job_id": 50,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9121,
+    "n_ranking_candidates": 9018,
+    "n_score_supported_candidates": 9018,
+    "n_variable_candidates": 9018,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "min_finite_ranking_candidates": 8948,
+    "max_finite_ranking_candidates": 8983,
+    "proxy_bytes": 31391324,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__mle-predictive__gamma-exponential__mle-51",
+    "job_id": 51,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 9121,
+    "n_ranking_candidates": 9018,
+    "n_score_supported_candidates": 9018,
+    "n_variable_candidates": 9018,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "min_finite_ranking_candidates": 8966,
+    "max_finite_ranking_candidates": 8992,
+    "proxy_bytes": 31456865,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__exponential-exponential__mle-64",
+    "job_id": 64,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 194361,
+    "n_ranking_candidates": 193170,
+    "n_score_supported_candidates": 193170,
+    "n_variable_candidates": 193170,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 193170
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 193170
+    },
+    "min_finite_ranking_candidates": 192822,
+    "max_finite_ranking_candidates": 192901,
+    "proxy_bytes": 667362940,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__lomax-exponential__mle-65",
+    "job_id": 65,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 194361,
+    "n_ranking_candidates": 193170,
+    "n_score_supported_candidates": 193170,
+    "n_variable_candidates": 193170,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 193170
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 193170
+    },
+    "min_finite_ranking_candidates": 192862,
+    "max_finite_ranking_candidates": 192947,
+    "proxy_bytes": 662105879,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__gamma-exponential__mle-66",
+    "job_id": 66,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 194361,
+    "n_ranking_candidates": 193170,
+    "n_score_supported_candidates": 193169,
+    "n_variable_candidates": 193167,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 193169
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 193167
+    },
+    "min_finite_ranking_candidates": 192817,
+    "max_finite_ranking_candidates": 192897,
+    "proxy_bytes": 669710243,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__exponential-sigmoid__mle-67",
+    "job_id": 67,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 194361,
+    "n_ranking_candidates": 193170,
+    "n_score_supported_candidates": 193167,
+    "n_variable_candidates": 193165,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 193167
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 193165
+    },
+    "min_finite_ranking_candidates": 192585,
+    "max_finite_ranking_candidates": 192681,
+    "proxy_bytes": 672756688,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__lomax-sigmoid__mle-68",
+    "job_id": 68,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 194361,
+    "n_ranking_candidates": 193170,
+    "n_score_supported_candidates": 193166,
+    "n_variable_candidates": 193165,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 193166
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 193165
+    },
+    "min_finite_ranking_candidates": 192499,
+    "max_finite_ranking_candidates": 192608,
+    "proxy_bytes": 672607128,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__gamma-sigmoid__mle-69",
+    "job_id": 69,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 194361,
+    "n_ranking_candidates": 193170,
+    "n_score_supported_candidates": 193165,
+    "n_variable_candidates": 193165,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 193165
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 193165
+    },
+    "min_finite_ranking_candidates": 193007,
+    "max_finite_ranking_candidates": 193060,
+    "proxy_bytes": 659730457,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "nuc__nuc-g1__mle-predictive__exponential__mle-55",
+    "job_id": 55,
+    "protein_family": "nuc",
+    "landscape": "nuc-G1",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 10760,
+    "n_ranking_candidates": 9441,
+    "n_score_supported_candidates": 9441,
+    "n_variable_candidates": 2418,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 9441
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 2418
+    },
+    "min_finite_ranking_candidates": 9441,
+    "max_finite_ranking_candidates": 9441,
+    "proxy_bytes": 14136731,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "nuc__nuc-g1__mle-predictive__lomax__mle-56",
+    "job_id": 56,
+    "protein_family": "nuc",
+    "landscape": "nuc-G1",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 10760,
+    "n_ranking_candidates": 9441,
+    "n_score_supported_candidates": 9441,
+    "n_variable_candidates": 2418,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 9441
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 2418
+    },
+    "min_finite_ranking_candidates": 9441,
+    "max_finite_ranking_candidates": 9441,
+    "proxy_bytes": 14163970,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "nuc__nuc-g2__mle-predictive__exponential__mle-57",
+    "job_id": 57,
+    "protein_family": "nuc",
+    "landscape": "nuc-G2",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 14755,
+    "n_ranking_candidates": 14678,
+    "n_score_supported_candidates": 14678,
+    "n_variable_candidates": 6212,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 14678
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 6212
+    },
+    "min_finite_ranking_candidates": 14678,
+    "max_finite_ranking_candidates": 14678,
+    "proxy_bytes": 21639604,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "nuc__nuc-g2__mle-predictive__lomax__mle-58",
+    "job_id": 58,
+    "protein_family": "nuc",
+    "landscape": "nuc-G2",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 14755,
+    "n_ranking_candidates": 14678,
+    "n_score_supported_candidates": 14678,
+    "n_variable_candidates": 6133,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 14678
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 6133
+    },
+    "min_finite_ranking_candidates": 14678,
+    "max_finite_ranking_candidates": 14678,
+    "proxy_bytes": 21505667,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "nuc__nuc-g3__mle-predictive__exponential__mle-59",
+    "job_id": 59,
+    "protein_family": "nuc",
+    "landscape": "nuc-G3",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 18790,
+    "n_ranking_candidates": 18618,
+    "n_score_supported_candidates": 18618,
+    "n_variable_candidates": 6311,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 18618
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 6311
+    },
+    "min_finite_ranking_candidates": 18618,
+    "max_finite_ranking_candidates": 18618,
+    "proxy_bytes": 26791239,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "nuc__nuc-g4__mle-predictive__exponential__mle-61",
+    "job_id": 61,
+    "protein_family": "nuc",
+    "landscape": "nuc-G4",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 15554,
+    "n_ranking_candidates": 15404,
+    "n_score_supported_candidates": 15404,
+    "n_variable_candidates": 3683,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 15404
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 3683
+    },
+    "min_finite_ranking_candidates": 15403,
+    "max_finite_ranking_candidates": 15404,
+    "proxy_bytes": 15544159,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "nuc__nuc-g4__mle-predictive__lomax__mle-62",
+    "job_id": 62,
+    "protein_family": "nuc",
+    "landscape": "nuc-G4",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 15554,
+    "n_ranking_candidates": 15404,
+    "n_score_supported_candidates": 15404,
+    "n_variable_candidates": 3598,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 15404
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 3598
+    },
+    "min_finite_ranking_candidates": 15403,
+    "max_finite_ranking_candidates": 15404,
+    "proxy_bytes": 15080837,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  },
+  {
+    "analysis_id": "k50__k50__mle-predictive__massive-only-mle__k50-mle-lr0-01",
+    "job_id": 63,
+    "protein_family": "k50",
+    "landscape": "k50",
+    "status": "valid",
+    "n_samples": 1000,
+    "n_variants": 1824523,
+    "n_ranking_candidates": 1760285,
+    "n_score_supported_candidates": 1760285,
+    "n_variable_candidates": 1760280,
+    "n_score_supported_candidates_by_score": {
+      "mean_log_chymotrypsin_enrichment": 1760285,
+      "mean_log_trypsin_enrichment": 1760285
+    },
+    "n_variable_candidates_by_score": {
+      "mean_log_chymotrypsin_enrichment": 1760284,
+      "mean_log_trypsin_enrichment": 1760280
+    },
+    "min_finite_ranking_candidates": 1760285,
+    "max_finite_ranking_candidates": 1760285,
+    "proxy_bytes": 11660634936,
+    "proxy_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "proxy_compression": "gzip"
+  }
+]

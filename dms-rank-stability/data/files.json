@@ -1,0 +1,268 @@
+{
+  "publication": {
+    "status": "staging",
+    "doi": null
+  },
+  "citations": [
+    {
+      "family": "pdz",
+      "study": "Zarin, Hidalgo-Carcedo, and Lehner, A complete map of specificity encoding enables reprogramming of a protein interaction",
+      "doi": "10.1101/2024.04.25.591103",
+      "data": "NCBI GEO GSE265816"
+    },
+    {
+      "family": "trpb",
+      "study": "Johnston et al., A combinatorially complete epistatic fitness landscape in an enzyme active site",
+      "doi": "10.1073/pnas.2400439121",
+      "data": "CaltechDATA 10.22002/h5rah-5z170"
+    },
+    {
+      "family": "nuc",
+      "study": "Thomas et al., Engineering highly active nuclease enzymes with machine learning and high-throughput screening",
+      "doi": "10.1016/j.cels.2025.101236",
+      "data": "google-deepmind/nuclease_design@702284847c4558567d8288169a86dc147cfaab32"
+    }
+  ],
+  "files": [
+    {
+      "name": "features-pdz.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "features",
+      "sampling": [],
+      "families": ["pdz"],
+      "landscapes": ["pdz-cis", "pdz-cript-c", "pdz-cript-n", "pdz-trans-1", "pdz-trans-2"]
+    },
+    {
+      "name": "features-trpb.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "features",
+      "sampling": [],
+      "families": ["trpb"],
+      "landscapes": ["trpb-four-site", "trpb-liba", "trpb-libb", "trpb-libc", "trpb-libd", "trpb-libe", "trpb-libf", "trpb-libg", "trpb-libh", "trpb-libi"]
+    },
+    {
+      "name": "features-nuc.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "features",
+      "sampling": [],
+      "families": ["nuc"],
+      "landscapes": ["nuc-g1", "nuc-g2", "nuc-g3", "nuc-g4"]
+    },
+    {
+      "name": "mle-predictive-pdz.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["mle_predictive"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-cis", "pdz-cript-c", "pdz-cript-n", "pdz-trans-1", "pdz-trans-2"]
+    },
+    {
+      "name": "mle-predictive-trpb.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["mle_predictive"],
+      "families": ["trpb"],
+      "landscapes": ["trpb-four-site", "trpb-liba", "trpb-libb", "trpb-libc", "trpb-libd", "trpb-libe", "trpb-libf", "trpb-libg", "trpb-libh", "trpb-libi"]
+    },
+    {
+      "name": "mle-predictive-nuc.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["mle_predictive"],
+      "families": ["nuc"],
+      "landscapes": ["nuc-g1", "nuc-g2", "nuc-g3", "nuc-g4"]
+    },
+    {
+      "name": "parameter-posterior-pdz-cis.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["parameter_posterior"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-cis"]
+    },
+    {
+      "name": "parameter-posterior-pdz-cript-c.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["parameter_posterior"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-cript-c"]
+    },
+    {
+      "name": "parameter-posterior-pdz-cript-n.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["parameter_posterior"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-cript-n"]
+    },
+    {
+      "name": "parameter-posterior-pdz-trans-1.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["parameter_posterior"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-trans-1"]
+    },
+    {
+      "name": "parameter-posterior-pdz-trans-2.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["parameter_posterior"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-trans-2"]
+    },
+    {
+      "name": "parameter-posterior-trpb.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["parameter_posterior"],
+      "families": ["trpb"],
+      "landscapes": ["trpb-liba", "trpb-libb", "trpb-libc", "trpb-libd", "trpb-libe", "trpb-libf", "trpb-libg", "trpb-libh", "trpb-libi"]
+    },
+    {
+      "name": "parameter-posterior-nuc.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["parameter_posterior"],
+      "families": ["nuc"],
+      "landscapes": ["nuc-g1", "nuc-g2", "nuc-g3", "nuc-g4"]
+    },
+    {
+      "name": "posterior-predictive-pdz-cis.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["posterior_predictive"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-cis"]
+    },
+    {
+      "name": "posterior-predictive-pdz-cript-c.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["posterior_predictive"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-cript-c"]
+    },
+    {
+      "name": "posterior-predictive-pdz-cript-n.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["posterior_predictive"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-cript-n"]
+    },
+    {
+      "name": "posterior-predictive-pdz-trans-1.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["posterior_predictive"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-trans-1"]
+    },
+    {
+      "name": "posterior-predictive-pdz-trans-2.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["posterior_predictive"],
+      "families": ["pdz"],
+      "landscapes": ["pdz-trans-2"]
+    },
+    {
+      "name": "posterior-predictive-trpb.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["posterior_predictive"],
+      "families": ["trpb"],
+      "landscapes": ["trpb-liba", "trpb-libb", "trpb-libc", "trpb-libd", "trpb-libe", "trpb-libf", "trpb-libg", "trpb-libh", "trpb-libi"]
+    },
+    {
+      "name": "posterior-predictive-nuc.tar.gz",
+      "url": null,
+      "doi": null,
+      "bytes": null,
+      "sha256": null,
+      "format": "tar.gz",
+      "content": "scores",
+      "sampling": ["posterior_predictive"],
+      "families": ["nuc"],
+      "landscapes": ["nuc-g1", "nuc-g2", "nuc-g3", "nuc-g4"]
+    }
+  ]
+}

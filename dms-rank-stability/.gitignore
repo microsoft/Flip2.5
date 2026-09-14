@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+data/downloads/
+data/example/output/
+analysis/results/
+analysis/tables/
+analysis/figures/
+analysis/executed/
+preprocessing/fits/
+preprocessing/output/

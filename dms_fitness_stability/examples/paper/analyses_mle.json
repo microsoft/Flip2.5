@@ -1,0 +1,619 @@
+{
+  "schema_version": 2,
+  "analyses": [
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_1",
+      "job_id": 1,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_3",
+      "job_id": 3,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cis",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "mle_4",
+      "job_id": 4,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_70",
+      "job_id": 70,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_71",
+      "job_id": 71,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_72",
+      "job_id": 72,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "mle_73",
+      "job_id": 73,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-c",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-sigmoid",
+      "fit_id": "mle_74",
+      "job_id": 74,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_76",
+      "job_id": 76,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_77",
+      "job_id": 77,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_78",
+      "job_id": 78,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-sigmoid",
+      "fit_id": "mle_80",
+      "job_id": 80,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-cript-n",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-sigmoid",
+      "fit_id": "mle_81",
+      "job_id": 81,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-1",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_82",
+      "job_id": 82,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-1",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_84",
+      "job_id": 84,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-2",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_88",
+      "job_id": 88,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-2",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_90",
+      "job_id": 90,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-2",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-sigmoid",
+      "fit_id": "mle_92",
+      "job_id": 92,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "pdz",
+      "landscape": "pdz-trans-2",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-sigmoid",
+      "fit_id": "mle_93",
+      "job_id": 93,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "dimsum_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libA",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_7",
+      "job_id": 7,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libA",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_8",
+      "job_id": 8,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libA",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "mle_9",
+      "job_id": 9,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libB",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_11",
+      "job_id": 11,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libB",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_12",
+      "job_id": 12,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libB",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "mle_13",
+      "job_id": 13,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libC",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_15",
+      "job_id": 15,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libC",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_16",
+      "job_id": 16,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libC",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "mle_17",
+      "job_id": 17,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libD",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_19",
+      "job_id": 19,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libD",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_20",
+      "job_id": 20,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libD",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_21",
+      "job_id": 21,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libE",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_25",
+      "job_id": 25,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libE",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_26",
+      "job_id": 26,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libE",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_27",
+      "job_id": 27,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_31",
+      "job_id": 31,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_32",
+      "job_id": 32,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_33",
+      "job_id": 33,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libF",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "mle_34",
+      "job_id": 34,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libG",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_37",
+      "job_id": 37,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libG",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_38",
+      "job_id": 38,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libG",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_39",
+      "job_id": 39,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libH",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_43",
+      "job_id": 43,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libH",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_44",
+      "job_id": 44,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libH",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_45",
+      "job_id": 45,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libI",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_49",
+      "job_id": 49,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libI",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_50",
+      "job_id": 50,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-libI",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_51",
+      "job_id": 51,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-four-site",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-exponential",
+      "fit_id": "mle_64",
+      "job_id": 64,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-four-site",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-exponential",
+      "fit_id": "mle_65",
+      "job_id": 65,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-four-site",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-exponential",
+      "fit_id": "mle_66",
+      "job_id": 66,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-four-site",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential-sigmoid",
+      "fit_id": "mle_67",
+      "job_id": 67,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-four-site",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax-sigmoid",
+      "fit_id": "mle_68",
+      "job_id": 68,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "trpb",
+      "landscape": "trpb-four-site",
+      "inference_method": "mle_predictive",
+      "model_spec": "gamma-sigmoid",
+      "fit_id": "mle_69",
+      "job_id": 69,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "johnston_fitness"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G1",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential",
+      "fit_id": "mle_55",
+      "job_id": 55,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "highest_gate_enrichment"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G1",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax",
+      "fit_id": "mle_56",
+      "job_id": 56,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "highest_gate_enrichment"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G2",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential",
+      "fit_id": "mle_57",
+      "job_id": 57,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "highest_gate_enrichment"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G2",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax",
+      "fit_id": "mle_58",
+      "job_id": 58,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "highest_gate_enrichment"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G3",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential",
+      "fit_id": "mle_59",
+      "job_id": 59,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "highest_gate_enrichment"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G4",
+      "inference_method": "mle_predictive",
+      "model_spec": "exponential",
+      "fit_id": "mle_61",
+      "job_id": 61,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "highest_gate_enrichment"
+    },
+    {
+      "protein_family": "nuc",
+      "landscape": "nuc-G4",
+      "inference_method": "mle_predictive",
+      "model_spec": "lomax",
+      "fit_id": "mle_62",
+      "job_id": 62,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "highest_gate_enrichment"
+    },
+    {
+      "protein_family": "k50",
+      "landscape": "k50",
+      "inference_method": "mle_predictive",
+      "model_spec": "(MASSIVE, only MLE)",
+      "fit_id": "k50_mle_lr0-01",
+      "job_id": 63,
+      "artifact_kind": "sampled_mle",
+      "primary_score": "mean_log_chymotrypsin_enrichment",
+      "scores": [
+        "mean_log_chymotrypsin_enrichment",
+        "mean_log_trypsin_enrichment"
+      ]
+    }
+  ]
+}

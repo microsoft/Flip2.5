@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "score_bundle": "output/scores",
+  "score_name": "measurement_error",
+  "direction": "lower",
+  "top_k": [1, 2],
+  "seed": 23,
+  "output": "output",
+  "feature_bundle": "output/features",
+  "retain_k": 2,
+  "tracked_model_top_n": 2,
+  "model_reference_min_finite_samples": 2,
+  "external_reference": null,
+  "features": {
+    "required": ["input_count", "output_count"],
+    "permitted_missing": []
+  },
+  "mechanisms": {
+    "decision_k": 1,
+    "challenger_probability": 0.01,
+    "reference_scale_k": 4,
+    "interval": [0.05, 0.95]
+  },
+  "reporting": {
+    "main_k": 1,
+    "k_values": [1, 2],
+    "percentile_cohorts": [1, 2],
+    "candidate_probability": 0.01
+  }
+}

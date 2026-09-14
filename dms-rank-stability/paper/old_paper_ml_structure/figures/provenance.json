@@ -1,0 +1,779 @@
+{
+  "table_root": "/data/data_dms_rank_stability/tables",
+  "config_sha256": "cf09571dd9cb3c074b3ca80ed2fd1c0f8bcffcba119e8d5edf48a8ceb6f4616f",
+  "examples": [
+    [
+      "pdz-trans-1",
+      "exponential-exponential",
+      "PDZ trans-1"
+    ],
+    [
+      "trpb-libB",
+      "exponential-exponential",
+      "TrpB libB"
+    ],
+    [
+      "nuc-G3",
+      "exponential",
+      "NucB G3"
+    ]
+  ],
+  "table_sha256": {
+    "parameter_posterior/runs.csv": "9442c4fec8ed2c7d29b376e9f67591488cc09fe4896f0e5cc32f9c7b8c2978c9",
+    "parameter_posterior/rank_percentiles.csv": "e9bff227d30f160645302c54d1e6378f0c9078f1fa99965c6ee578ec757bed48",
+    "parameter_posterior/model_rank_intervals.csv": "a6511e21f69709d05810ac59ce834617adf3b41425be69cb7eb2a988d0c586b5",
+    "parameter_posterior/top_k_curves.csv": "2564424aa863abcb05256ee0436f51f890de03c7bed45a3c47dd458bc453ef17",
+    "parameter_posterior/top_k_candidates.csv": "262db89628d03b72c63e3eb9f1f161c84d3ccf93a3839aaba875c232509ee093",
+    "parameter_posterior/mechanism_variants.csv": "876820e1e579f9544b8d9b91dc1b23da6834e7ff7f67c2644eb333fdf3880614",
+    "parameter_posterior/mechanism_runs.csv": "c5cfae0c44e1edd59c215f4955a789385122e5e35e651af181c0996c40bf949c",
+    "parameter_posterior/mechanism_diagnostics.csv": "26380c39bfa107d82236a5679e706fa66994629c0eaf51cf80b7e6be3ca1ea3a",
+    "parameter_posterior/reference_diagnostics.csv": "69332a685884251f20e2254a4dde0ecb3c8063b1451ef4952f9f461b57e8bd3e",
+    "mle_predictive/runs.csv": "7b1b935c9e82193b7c8739b1306b892ccf3838c70700946e96d8fb4ea985ad76",
+    "mle_predictive/rank_percentiles.csv": "599f3e77f3ccdc75480f79be8dafa226f8dfeef25fa6bfa5c59c61fd3040f405",
+    "mle_predictive/model_rank_intervals.csv": "9d47993b735f3cf3748365c3fe3fc871c31ff0ecf2ea1757693b0186b87aa1d7",
+    "mle_predictive/top_k_curves.csv": "57a1332405d106aef3d4df064aa86471b96ac197933cda4527f3cc782d266aa7",
+    "mle_predictive/top_k_candidates.csv": "4065b1495ff511c63b63d5afa73cd652976c272edb2deb2113f87d863f4369b9",
+    "mle_predictive/mechanism_variants.csv": "c7e4945b049e062a5a621babaf738ffb8fdb416342863e22cb3a32679e069306",
+    "mle_predictive/mechanism_runs.csv": "ea98de5811f2c5d273fcff4e92e91f48b3505ee0aebbb3417f306f735128510e",
+    "mle_predictive/mechanism_diagnostics.csv": "5e686d5a8e6f1a288ab458d7b3420c89a761d72ee29f4b8872c7039d4d4070e0",
+    "mle_predictive/reference_diagnostics.csv": "7f2d7ffab753fd4a97b49e0f8caca3c8296708b28f18ef0ab9d38999f0bf9904",
+    "posterior_predictive/runs.csv": "f8f7234866b3a35dfdc1f74259fbc81b95e6e46857ad7d358124087194d48b00",
+    "posterior_predictive/rank_percentiles.csv": "150156833a1a83430e1905fe9c9ccfb97aa1627df54bda6b0c73502e5ae71ba5",
+    "posterior_predictive/model_rank_intervals.csv": "902560aaed29707425f9830fb3f489c25e0741189096f202db3d91abab9941cb",
+    "posterior_predictive/top_k_curves.csv": "3e411a75b67e94963b7a87e5128115f49495b24dc4de3ab0bc829e714de9925a",
+    "posterior_predictive/top_k_candidates.csv": "0e51ee36c7a0636dda6b924ce3c57bc6ad75eed3384fbfaa0bbc85f656b6c6e6",
+    "posterior_predictive/mechanism_variants.csv": "b1f4c86ded2b0b74e99fd6ec43d659b14ff5efce2c28b4029f0619982b192f88",
+    "posterior_predictive/mechanism_runs.csv": "d4926a8827489f0e9137f7b296912423546391857caa5204df56a13455469766",
+    "posterior_predictive/mechanism_diagnostics.csv": "2e61e212a6f9c861f890d9b595d17a1712ab57f80235f6feab8959b3c6c5fe39",
+    "posterior_predictive/reference_diagnostics.csv": "b7105f4be75847fa5601e3e618a32a196022e8007d97b61aa5f4edcbd1c35548"
+  },
+  "figures": [
+    "reported_order",
+    "rank_uncertainty",
+    "selection_stability",
+    "explaining_resolution",
+    "reported_order_top1000",
+    "count_support"
+  ],
+  "evidence_tables": [
+    "reference_comparisons",
+    "landscape_set_sizes",
+    "explanation_variants",
+    "explanation_runs"
+  ],
+  "explanation": {
+    "sampling": "parameter_posterior",
+    "examples": [
+      [
+        "pdz-trans-1",
+        "exponential-exponential",
+        "PDZ trans-1"
+      ],
+      [
+        "trpb-libB",
+        "exponential-exponential",
+        "TrpB libB"
+      ],
+      [
+        "nuc-G3",
+        "exponential",
+        "NucB G3"
+      ]
+    ],
+    "run_ids": [
+      "pdz-trans-1-parameter-posterior-exponential-exponential",
+      "trpb-libb-parameter-posterior-exponential-exponential",
+      "nuc-g3-parameter-posterior-exponential"
+    ],
+    "variant_rows": 1063,
+    "excluded_model_families": [
+      "gamma"
+    ],
+    "aggregation": "none",
+    "cohort": "reference top 100 plus outside candidates with inclusion at least 0.01",
+    "axis_limits": "counts and widths shared across examples; margins shared within each row",
+    "plot_width_floor": 0.0211295399923033
+  },
+  "supplementary_why_pages": [
+    {
+      "sampling": "parameter_posterior",
+      "family": "pdz",
+      "page": 1,
+      "run_ids": [
+        "pdz-trans-1-parameter-posterior-exponential-exponential",
+        "pdz-trans-1-parameter-posterior-gamma-exponential",
+        "pdz-trans-2-parameter-posterior-exponential-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_pdz_01",
+      "label": "fig:why-parameter_posterior-pdz-1"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "pdz",
+      "page": 2,
+      "run_ids": [
+        "pdz-trans-2-parameter-posterior-gamma-sigmoid",
+        "pdz-cis-parameter-posterior-exponential-exponential",
+        "pdz-cis-parameter-posterior-lomax-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_pdz_02",
+      "label": "fig:why-parameter_posterior-pdz-2"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "pdz",
+      "page": 3,
+      "run_ids": [
+        "pdz-cis-parameter-posterior-exponential-sigmoid",
+        "pdz-cript-c-parameter-posterior-exponential-exponential",
+        "pdz-cript-c-parameter-posterior-lomax-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_pdz_03",
+      "label": "fig:why-parameter_posterior-pdz-3"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "pdz",
+      "page": 4,
+      "run_ids": [
+        "pdz-cript-c-parameter-posterior-gamma-exponential",
+        "pdz-cript-c-parameter-posterior-exponential-sigmoid",
+        "pdz-cript-n-parameter-posterior-gamma-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_pdz_04",
+      "label": "fig:why-parameter_posterior-pdz-4"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "pdz",
+      "page": 5,
+      "run_ids": [
+        "pdz-cript-n-parameter-posterior-lomax-sigmoid",
+        "pdz-cript-n-parameter-posterior-gamma-sigmoid"
+      ],
+      "stem": "summary_why_parameter_posterior_pdz_05",
+      "label": "fig:why-parameter_posterior-pdz-5"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 1,
+      "run_ids": [
+        "trpb-liba-parameter-posterior-exponential-exponential",
+        "trpb-liba-parameter-posterior-lomax-exponential",
+        "trpb-liba-parameter-posterior-exponential-sigmoid"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_01",
+      "label": "fig:why-parameter_posterior-trpb-1"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 2,
+      "run_ids": [
+        "trpb-libb-parameter-posterior-exponential-exponential",
+        "trpb-libb-parameter-posterior-lomax-exponential",
+        "trpb-libb-parameter-posterior-exponential-sigmoid"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_02",
+      "label": "fig:why-parameter_posterior-trpb-2"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 3,
+      "run_ids": [
+        "trpb-libc-parameter-posterior-exponential-exponential",
+        "trpb-libc-parameter-posterior-lomax-exponential",
+        "trpb-libc-parameter-posterior-exponential-sigmoid"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_03",
+      "label": "fig:why-parameter_posterior-trpb-3"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 4,
+      "run_ids": [
+        "trpb-libd-parameter-posterior-exponential-exponential",
+        "trpb-libd-parameter-posterior-lomax-exponential",
+        "trpb-libd-parameter-posterior-gamma-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_04",
+      "label": "fig:why-parameter_posterior-trpb-4"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 5,
+      "run_ids": [
+        "trpb-libe-parameter-posterior-exponential-exponential",
+        "trpb-libe-parameter-posterior-lomax-exponential",
+        "trpb-libe-parameter-posterior-gamma-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_05",
+      "label": "fig:why-parameter_posterior-trpb-5"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 6,
+      "run_ids": [
+        "trpb-libf-parameter-posterior-exponential-exponential",
+        "trpb-libf-parameter-posterior-lomax-exponential",
+        "trpb-libf-parameter-posterior-gamma-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_06",
+      "label": "fig:why-parameter_posterior-trpb-6"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 7,
+      "run_ids": [
+        "trpb-libf-parameter-posterior-exponential-sigmoid",
+        "trpb-libg-parameter-posterior-exponential-exponential",
+        "trpb-libg-parameter-posterior-lomax-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_07",
+      "label": "fig:why-parameter_posterior-trpb-7"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 8,
+      "run_ids": [
+        "trpb-libg-parameter-posterior-gamma-exponential",
+        "trpb-libh-parameter-posterior-exponential-exponential",
+        "trpb-libh-parameter-posterior-lomax-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_08",
+      "label": "fig:why-parameter_posterior-trpb-8"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 9,
+      "run_ids": [
+        "trpb-libh-parameter-posterior-gamma-exponential",
+        "trpb-libi-parameter-posterior-exponential-exponential",
+        "trpb-libi-parameter-posterior-lomax-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_09",
+      "label": "fig:why-parameter_posterior-trpb-9"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "trpb",
+      "page": 10,
+      "run_ids": [
+        "trpb-libi-parameter-posterior-gamma-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_trpb_10",
+      "label": "fig:why-parameter_posterior-trpb-10"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "nuc",
+      "page": 1,
+      "run_ids": [
+        "nuc-g1-parameter-posterior-exponential",
+        "nuc-g1-parameter-posterior-lomax",
+        "nuc-g2-parameter-posterior-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_nuc_01",
+      "label": "fig:why-parameter_posterior-nuc-1"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "nuc",
+      "page": 2,
+      "run_ids": [
+        "nuc-g2-parameter-posterior-lomax",
+        "nuc-g3-parameter-posterior-exponential",
+        "nuc-g4-parameter-posterior-exponential"
+      ],
+      "stem": "summary_why_parameter_posterior_nuc_02",
+      "label": "fig:why-parameter_posterior-nuc-2"
+    },
+    {
+      "sampling": "parameter_posterior",
+      "family": "nuc",
+      "page": 3,
+      "run_ids": [
+        "nuc-g4-parameter-posterior-lomax"
+      ],
+      "stem": "summary_why_parameter_posterior_nuc_03",
+      "label": "fig:why-parameter_posterior-nuc-3"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "pdz",
+      "page": 1,
+      "run_ids": [
+        "pdz-cis-mle-predictive-exponential-exponential",
+        "pdz-cis-mle-predictive-lomax-exponential",
+        "pdz-cis-mle-predictive-exponential-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_pdz_01",
+      "label": "fig:why-mle_predictive-pdz-1"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "pdz",
+      "page": 2,
+      "run_ids": [
+        "pdz-cript-c-mle-predictive-exponential-exponential",
+        "pdz-cript-c-mle-predictive-lomax-exponential",
+        "pdz-cript-c-mle-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_pdz_02",
+      "label": "fig:why-mle_predictive-pdz-2"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "pdz",
+      "page": 3,
+      "run_ids": [
+        "pdz-cript-c-mle-predictive-exponential-sigmoid",
+        "pdz-cript-c-mle-predictive-lomax-sigmoid",
+        "pdz-cript-n-mle-predictive-exponential-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_pdz_03",
+      "label": "fig:why-mle_predictive-pdz-3"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "pdz",
+      "page": 4,
+      "run_ids": [
+        "pdz-cript-n-mle-predictive-lomax-exponential",
+        "pdz-cript-n-mle-predictive-gamma-exponential",
+        "pdz-cript-n-mle-predictive-lomax-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_pdz_04",
+      "label": "fig:why-mle_predictive-pdz-4"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "pdz",
+      "page": 5,
+      "run_ids": [
+        "pdz-cript-n-mle-predictive-gamma-sigmoid",
+        "pdz-trans-1-mle-predictive-exponential-exponential",
+        "pdz-trans-1-mle-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_pdz_05",
+      "label": "fig:why-mle_predictive-pdz-5"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "pdz",
+      "page": 6,
+      "run_ids": [
+        "pdz-trans-2-mle-predictive-exponential-exponential",
+        "pdz-trans-2-mle-predictive-gamma-exponential",
+        "pdz-trans-2-mle-predictive-lomax-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_pdz_06",
+      "label": "fig:why-mle_predictive-pdz-6"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "pdz",
+      "page": 7,
+      "run_ids": [
+        "pdz-trans-2-mle-predictive-gamma-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_pdz_07",
+      "label": "fig:why-mle_predictive-pdz-7"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 1,
+      "run_ids": [
+        "trpb-liba-mle-predictive-exponential-exponential",
+        "trpb-liba-mle-predictive-lomax-exponential",
+        "trpb-liba-mle-predictive-exponential-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_01",
+      "label": "fig:why-mle_predictive-trpb-1"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 2,
+      "run_ids": [
+        "trpb-libb-mle-predictive-exponential-exponential",
+        "trpb-libb-mle-predictive-lomax-exponential",
+        "trpb-libb-mle-predictive-exponential-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_02",
+      "label": "fig:why-mle_predictive-trpb-2"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 3,
+      "run_ids": [
+        "trpb-libc-mle-predictive-exponential-exponential",
+        "trpb-libc-mle-predictive-lomax-exponential",
+        "trpb-libc-mle-predictive-exponential-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_03",
+      "label": "fig:why-mle_predictive-trpb-3"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 4,
+      "run_ids": [
+        "trpb-libd-mle-predictive-exponential-exponential",
+        "trpb-libd-mle-predictive-lomax-exponential",
+        "trpb-libd-mle-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_04",
+      "label": "fig:why-mle_predictive-trpb-4"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 5,
+      "run_ids": [
+        "trpb-libe-mle-predictive-exponential-exponential",
+        "trpb-libe-mle-predictive-lomax-exponential",
+        "trpb-libe-mle-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_05",
+      "label": "fig:why-mle_predictive-trpb-5"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 6,
+      "run_ids": [
+        "trpb-libf-mle-predictive-exponential-exponential",
+        "trpb-libf-mle-predictive-lomax-exponential",
+        "trpb-libf-mle-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_06",
+      "label": "fig:why-mle_predictive-trpb-6"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 7,
+      "run_ids": [
+        "trpb-libf-mle-predictive-exponential-sigmoid",
+        "trpb-libg-mle-predictive-exponential-exponential",
+        "trpb-libg-mle-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_07",
+      "label": "fig:why-mle_predictive-trpb-7"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 8,
+      "run_ids": [
+        "trpb-libg-mle-predictive-gamma-exponential",
+        "trpb-libh-mle-predictive-exponential-exponential",
+        "trpb-libh-mle-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_08",
+      "label": "fig:why-mle_predictive-trpb-8"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 9,
+      "run_ids": [
+        "trpb-libh-mle-predictive-gamma-exponential",
+        "trpb-libi-mle-predictive-exponential-exponential",
+        "trpb-libi-mle-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_09",
+      "label": "fig:why-mle_predictive-trpb-9"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 10,
+      "run_ids": [
+        "trpb-libi-mle-predictive-gamma-exponential",
+        "trpb-four-site-mle-predictive-exponential-exponential",
+        "trpb-four-site-mle-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_10",
+      "label": "fig:why-mle_predictive-trpb-10"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 11,
+      "run_ids": [
+        "trpb-four-site-mle-predictive-gamma-exponential",
+        "trpb-four-site-mle-predictive-exponential-sigmoid",
+        "trpb-four-site-mle-predictive-lomax-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_11",
+      "label": "fig:why-mle_predictive-trpb-11"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "trpb",
+      "page": 12,
+      "run_ids": [
+        "trpb-four-site-mle-predictive-gamma-sigmoid"
+      ],
+      "stem": "summary_why_mle_predictive_trpb_12",
+      "label": "fig:why-mle_predictive-trpb-12"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "nuc",
+      "page": 1,
+      "run_ids": [
+        "nuc-g1-mle-predictive-exponential",
+        "nuc-g1-mle-predictive-lomax",
+        "nuc-g2-mle-predictive-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_nuc_01",
+      "label": "fig:why-mle_predictive-nuc-1"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "nuc",
+      "page": 2,
+      "run_ids": [
+        "nuc-g2-mle-predictive-lomax",
+        "nuc-g3-mle-predictive-exponential",
+        "nuc-g4-mle-predictive-exponential"
+      ],
+      "stem": "summary_why_mle_predictive_nuc_02",
+      "label": "fig:why-mle_predictive-nuc-2"
+    },
+    {
+      "sampling": "mle_predictive",
+      "family": "nuc",
+      "page": 3,
+      "run_ids": [
+        "nuc-g4-mle-predictive-lomax"
+      ],
+      "stem": "summary_why_mle_predictive_nuc_03",
+      "label": "fig:why-mle_predictive-nuc-3"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "pdz",
+      "page": 1,
+      "run_ids": [
+        "pdz-trans-1-posterior-predictive-exponential-exponential",
+        "pdz-trans-1-posterior-predictive-gamma-exponential",
+        "pdz-trans-2-posterior-predictive-exponential-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_pdz_01",
+      "label": "fig:why-posterior_predictive-pdz-1"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "pdz",
+      "page": 2,
+      "run_ids": [
+        "pdz-trans-2-posterior-predictive-gamma-sigmoid",
+        "pdz-cis-posterior-predictive-exponential-exponential",
+        "pdz-cis-posterior-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_pdz_02",
+      "label": "fig:why-posterior_predictive-pdz-2"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "pdz",
+      "page": 3,
+      "run_ids": [
+        "pdz-cis-posterior-predictive-exponential-sigmoid",
+        "pdz-cript-c-posterior-predictive-exponential-exponential",
+        "pdz-cript-c-posterior-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_pdz_03",
+      "label": "fig:why-posterior_predictive-pdz-3"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "pdz",
+      "page": 4,
+      "run_ids": [
+        "pdz-cript-c-posterior-predictive-gamma-exponential",
+        "pdz-cript-c-posterior-predictive-exponential-sigmoid",
+        "pdz-cript-n-posterior-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_pdz_04",
+      "label": "fig:why-posterior_predictive-pdz-4"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "pdz",
+      "page": 5,
+      "run_ids": [
+        "pdz-cript-n-posterior-predictive-lomax-sigmoid",
+        "pdz-cript-n-posterior-predictive-gamma-sigmoid"
+      ],
+      "stem": "summary_why_posterior_predictive_pdz_05",
+      "label": "fig:why-posterior_predictive-pdz-5"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 1,
+      "run_ids": [
+        "trpb-liba-posterior-predictive-exponential-exponential",
+        "trpb-liba-posterior-predictive-lomax-exponential",
+        "trpb-liba-posterior-predictive-exponential-sigmoid"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_01",
+      "label": "fig:why-posterior_predictive-trpb-1"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 2,
+      "run_ids": [
+        "trpb-libb-posterior-predictive-exponential-exponential",
+        "trpb-libb-posterior-predictive-lomax-exponential",
+        "trpb-libb-posterior-predictive-exponential-sigmoid"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_02",
+      "label": "fig:why-posterior_predictive-trpb-2"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 3,
+      "run_ids": [
+        "trpb-libc-posterior-predictive-exponential-exponential",
+        "trpb-libc-posterior-predictive-lomax-exponential",
+        "trpb-libc-posterior-predictive-exponential-sigmoid"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_03",
+      "label": "fig:why-posterior_predictive-trpb-3"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 4,
+      "run_ids": [
+        "trpb-libd-posterior-predictive-exponential-exponential",
+        "trpb-libd-posterior-predictive-lomax-exponential",
+        "trpb-libd-posterior-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_04",
+      "label": "fig:why-posterior_predictive-trpb-4"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 5,
+      "run_ids": [
+        "trpb-libe-posterior-predictive-exponential-exponential",
+        "trpb-libe-posterior-predictive-lomax-exponential",
+        "trpb-libe-posterior-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_05",
+      "label": "fig:why-posterior_predictive-trpb-5"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 6,
+      "run_ids": [
+        "trpb-libf-posterior-predictive-exponential-exponential",
+        "trpb-libf-posterior-predictive-lomax-exponential",
+        "trpb-libf-posterior-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_06",
+      "label": "fig:why-posterior_predictive-trpb-6"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 7,
+      "run_ids": [
+        "trpb-libf-posterior-predictive-exponential-sigmoid",
+        "trpb-libg-posterior-predictive-exponential-exponential",
+        "trpb-libg-posterior-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_07",
+      "label": "fig:why-posterior_predictive-trpb-7"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 8,
+      "run_ids": [
+        "trpb-libg-posterior-predictive-gamma-exponential",
+        "trpb-libh-posterior-predictive-exponential-exponential",
+        "trpb-libh-posterior-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_08",
+      "label": "fig:why-posterior_predictive-trpb-8"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 9,
+      "run_ids": [
+        "trpb-libh-posterior-predictive-gamma-exponential",
+        "trpb-libi-posterior-predictive-exponential-exponential",
+        "trpb-libi-posterior-predictive-lomax-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_09",
+      "label": "fig:why-posterior_predictive-trpb-9"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "trpb",
+      "page": 10,
+      "run_ids": [
+        "trpb-libi-posterior-predictive-gamma-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_trpb_10",
+      "label": "fig:why-posterior_predictive-trpb-10"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "nuc",
+      "page": 1,
+      "run_ids": [
+        "nuc-g1-posterior-predictive-exponential",
+        "nuc-g1-posterior-predictive-lomax",
+        "nuc-g2-posterior-predictive-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_nuc_01",
+      "label": "fig:why-posterior_predictive-nuc-1"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "nuc",
+      "page": 2,
+      "run_ids": [
+        "nuc-g2-posterior-predictive-lomax",
+        "nuc-g3-posterior-predictive-exponential",
+        "nuc-g4-posterior-predictive-exponential"
+      ],
+      "stem": "summary_why_posterior_predictive_nuc_02",
+      "label": "fig:why-posterior_predictive-nuc-2"
+    },
+    {
+      "sampling": "posterior_predictive",
+      "family": "nuc",
+      "page": 3,
+      "run_ids": [
+        "nuc-g4-posterior-predictive-lomax"
+      ],
+      "stem": "summary_why_posterior_predictive_nuc_03",
+      "label": "fig:why-posterior_predictive-nuc-3"
+    }
+  ]
+}

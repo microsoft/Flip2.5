@@ -1,0 +1,918 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[round,authoryear]{natbib}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{{paper/figures/}}
+\AddToHook{env/figure/begin}{\centering}
+\AddToHook{env/table/begin}{\centering}
+\setlength{\LTleft}{\fill}
+\setlength{\LTright}{\fill}
+
+\definecolor{boxrule}{HTML}{2C6EAB}
+\newcommand{\fit}{\phi}
+\newcommand{\data}{\mathcal{D}}
+\newcommand{\resolved}{\rho_{\alpha}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\note}[1]{\textcolor{boxrule}{\small[#1]}}
+
+\title{How well do deep mutational scans resolve top-ranked variant batches?\\
+\large Ranking uncertainty in protein engineering and machine-learning benchmarks}
+\author{[TODO: authors and affiliations]}
+\date{Working draft \textbar\ September 2026}
+
+\begin{document}
+\maketitle
+
+\noindent\note{Working draft. Missing experimental records, model checks,
+and publication metadata are identified in the text and supplement.}
+
+\begin{abstract}
+Protein engineers use measurements of protein fitness, performance in a
+specified experimental test, to choose variants for further study.
+Machine-learning researchers use the same measurements to train and evaluate
+predictors that help select candidate batches.
+Deep mutational scans measure many variants together, and sorting their
+reported scores gives a convenient ordering.
+But that ordering depends on how fitness is calculated from sequencing
+counts, and an exact list does not show the uncertainty left by finite counts.
+In the present work, we examine how these choices and uncertainties affect
+leading ranks in three protein systems measured through growth or fluorescence.
+We use fitted count models to generate joint sets of fitness scores and
+measure rank intervals, candidate inclusion frequencies, and overlap between
+selected batches.
+The fitted and reported score summaries select different batches, and
+repeated sampled selections can also replace a substantial fraction of a
+batch within a fixed analysis.
+The extent of turnover varies across landscapes and selection budgets,
+so an exact list of leading variants can conceal uncertainty
+about which candidates to select.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:introduction}
+
+Protein engineers change amino-acid sequences to improve a chosen function.
+For example, they may seek an enzyme that carries out a chemical reaction
+more effectively or a protein that binds a particular partner
+\citep{yang2019}. Performance in the experimental test chosen for that
+purpose is often called \emph{protein fitness}. Improving that performance
+requires finding useful sequence changes without testing every possible
+combination. Allowing each of four positions to take any of the twenty
+standard amino acids already gives 160,000 combinations. In directed
+evolution, measurements guide successive rounds of sequence changes,
+but a change that helps in one sequence background need not help in
+another. This dependence, called epistasis, makes combinations of changes
+important to the search \citep{yang2019,johnston2024}. Testing combinations
+therefore competes with the need to measure each one well.
+
+Machine learning helps organize this search. A predictor trained on measured
+sequences and fitness scores can propose a batch of untested variants for
+the next experiment. The choice of training data and the ability to predict
+beyond it both affect this process \citep{yang2019,wittmann2021}.
+The same sequence--score pairs are used to evaluate predictors: an analyst
+asks whether a model recovers the measured ordering or identifies the
+leading candidates. Benchmarks such as FLIP and ProteinGym collect
+experimental data for these comparisons \citep{dallago2021,notin2023}.
+The interpretation of a prediction therefore depends on what its fitness
+label measures and how well the experiment determines that label.
+
+The immediate output of this workflow is often a batch, not an exact
+ordering of every possible sequence. An engineer with resources to test
+a hundred variants needs a candidate group; the order of two variants
+within that group may not affect the experiment. A researcher evaluating
+the predictor may instead measure how closely it reproduces the entire
+reported ordering. These objectives are related but not equivalent.
+Separating clearly different variants can give a useful overall
+correlation while leaving the choice among closely competing leaders
+unresolved. The relevant experimental resolution depends on the decision
+the predictions will support.
+
+Training and evaluation use these measurements in different ways. During
+training, experimental scores determine which sequence changes the model
+learns to associate with improved performance. During evaluation, the
+reported scores become the reference against which predictions are judged.
+Uncertainty in that reference is distinct from uncertainty in the predictor.
+Even a predictor that exactly reproduced a released table would inherit
+the table's decisions about fitness construction and the resolution of its
+leading ranks. This does not make the labels unusable. It makes their
+experimental interpretation part of the prediction problem, especially
+when the intended output is a short list of candidates for testing.
+
+Fitness is defined by an assay, not by sequence alone. An assay is a
+specified experimental test, and different tests can summarize different
+properties of the same protein. Binding or enzyme activity may be coupled
+to the growth of cells carrying a variant; activity may instead produce
+a fluorescent signal used to select cells or droplets. These measurements
+do not all estimate one universal quantity. For example, growth supported
+by an enzyme can depend on both its activity and the amount of functional
+protein in the cell. A fitness score from that experiment is not necessarily
+a direct measurement of the purified enzyme's reaction rate.
+
+Deep mutational scanning makes such measurements for many sequence variants
+in parallel \citep{fowler2014}. The experiment starts with a \emph{library}
+of DNA sequences encoding different protein variants. After a pooled
+selection, researchers sequence the DNA to identify which variants became
+more common. Sequencing before selection gives \emph{input counts};
+sequencing the selected population gives \emph{output counts}. A read is
+an observation of a DNA fragment assigned to a variant, not a direct
+measurement of that protein's fitness. A common score begins with
+\emph{enrichment}, the variant's fraction of output reads divided by its
+fraction of input reads. Using both populations accounts for unequal
+starting abundances, while using fractions accounts for unequal total
+numbers of reads, or sequencing depths.
+
+The physical readout and its statistical summary are also different
+choices. A growth assay can be summarized by enrichment at an endpoint
+or by a growth parameter fitted across observations. A fluorescence
+screen can be summarized by passage through one threshold or by a
+signal distribution fitted from several thresholds. These choices use
+the observations to answer related questions, but they need not induce
+the same ordering. Before asking whether a ranking is precise, we need
+to specify which assay summary is being ranked.
+
+The enrichment ratio alone hides how much data supports it. In a
+hypothetical experiment with equal input and output depths, 10 output reads
+for 1 input read and 10,000 output reads for 1,000 input reads both give
+a ratio of ten. One extra input read halves the first ratio and barely
+changes the second. A released score can therefore have different precision
+for well-observed and sparsely observed variants. Combining observations
+also requires care: a new biological population, another sequencing sample
+from the same population, a later timepoint, and a different fluorescence
+threshold are not interchangeable replicates.
+
+The observation structure determines what additional information the
+counts provide. Biological replicates can reveal variation between
+populations, timepoints describe changes during selection, and multiple
+gates probe different parts of a signal distribution. Simply adding all
+these counts would discard those distinctions. A statistical model can
+retain them while linking the counts to variant-level performance.
+Uncertainty in the resulting scores then reflects the information
+available under that model, rather than an identical error assigned to
+every variant.
+
+A released \emph{fitness landscape} usually contains sequences and one
+reported score per variant. Sorting those scores gives the \emph{reported
+ordering}. Taking its leading hundred candidates is a natural way to
+propose a validation batch or assess a predictor's retrieval of strong
+variants. But two questions remain. First, would another calculation of
+fitness from the same observations select the same candidates? Scores
+depend on choices about normalization, reference sequences, and how
+observations are combined. Second, how much would the proposed batch vary
+under the uncertainty in one specified analysis? An exact sorted list
+answers neither question.
+
+Methods for estimating fitness already address measurement uncertainty.
+Enrich2 and DiMSum estimate score errors from counts and repeated
+measurements \citep{rubin2017,faure2020}; model-based enrichment estimation
+shares information between related sequences \citep{busia2023}. Analyses
+of experimental design also study the effects of read depth and sampling
+choices on precision \citep{matuszewski2016}. Our question is what the
+remaining uncertainty means for ranks and batches. Separate score intervals
+do not answer it: shared shifts of all scores leave ranks unchanged,
+whereas relative changes between close competitors can exchange their
+positions. Two variants can repeatedly exchange ranks and both stay in
+a batch; a smaller movement across its cutoff can replace a member.
+
+This leaves an empirical question beyond whether the measurements are
+noisy: does their uncertainty mainly concern exchanges within a robust
+group, or which variants belong to that group? The answer depends on
+the competing scores, how they vary together, and the selection budget.
+Increasing a budget also moves the cutoff to a different part of the
+landscape. A precision estimate for one score, or a single correlation
+over the landscape, cannot determine the answer at every cutoff.
+We therefore assess the sampled selections themselves.
+
+In the present work, we analyze sequencing counts from three protein
+systems: PDZ-mediated binding, tryptophan production by TrpB, and DNA
+cleavage by NucB \citep{zarin2024,johnston2024,thomas2025}. These landscapes
+are also used in the FLIP2 protein-fitness benchmark \citep{didi2026}.
+Their distinct experimental readouts require corresponding count models.
+We use these models to generate joint sets of fitness scores, rank each set against
+all eligible competitors, and select its leading batch. We examine
+(1) agreement with reported leading ranks, (2) uncertainty in ranks and
+batch membership within an analysis, and (3) the count support and score
+differences associated with plausible replacements. Reported top-100 and
+top-1,000 cohorts and batch budgets from 10 to 1,000 keep the analysis
+focused on leading candidates.
+
+The fitted and reported score summaries select different batches, and
+agreement within a fitted analysis does not imply agreement with the
+reported list. Within an analysis, uncertain individual ranks can coexist
+with a largely stable batch, and a larger batch budget does not always
+increase the shared fraction of candidates. Lower input counts are
+associated with wider score intervals in all analyzed leading-candidate
+cohorts, but interval width alone does not identify which candidates are
+replaceable. These results concern the experimental labels before a
+predictor is introduced.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Three experimental readouts of protein fitness}
+\label{sec:overview}
+
+The three systems connect protein function to sequencing counts in
+different ways. The PDZ assays couple binding between PSD95-PDZ3 and
+its partner CRIPT to yeast growth; their reported scores summarize
+binding-dependent changes in abundance \citep{zarin2024}. In the TrpB
+assays, introduced enzyme variants support bacterial growth by producing
+tryptophan, and sequencing follows their abundance over time
+\citep{johnston2024}. NucB activity is measured through fluorescence
+sorting: a \emph{gate} collects a population above a specified signal
+threshold, and sequencing measures which variants enter it
+\citep{thomas2025}. We analyze five PDZ landscapes and four NucB
+engineering generations. The TrpB data contain nine libraries varying
+three amino-acid positions and one varying four positions.
+These are different candidate collections, not replicate experiments of
+one landscape. Studying both growth and sorting assays lets us examine
+the ranking questions across distinct ways of turning protein performance
+into sequencing counts, without equating their fitness units.
+Supplementary Section~\ref{app:experimental-records}
+explains the assays and their reported labels in detail.
+
+We fit growth models to PDZ and TrpB counts and signal-distribution models
+to NucB counts. Each model accounts for a variant's input abundance when
+describing its output counts. A posterior distribution represents parameter
+uncertainty conditional on the observed counts and the model.
+We use three kinds of samples to ask how ranking conclusions vary.
+\emph{Parameter resampling} draws from this posterior to calculate
+fitness. \emph{Optimized-fit
+count resampling} generates alternative count observations from a single
+optimized fit and recalculates count-based fitness. \emph{Posterior count
+resampling} also generates alternative counts, but varies the parameters
+over their posterior distribution. Both count-based recipes retain the
+recorded sequencing depths and do not
+refit the model for each draw.
+
+Parameter samples ask how uncertain the fitted performance parameters
+are. Count samples ask how the count-derived scores would vary across
+alternative sequencing outcomes at the recorded depths. We keep those
+questions separate rather than interpreting the recipes as interchangeable
+estimates of one source of noise. None simulates every stage of a new
+physical experiment. Each draw keeps all candidate
+scores together, including their shared variation. Its ranks therefore
+compare each candidate with every finite, eligible competitor in that
+draw. We retain 158 analyses: 49 parameter, 60 optimized-fit count, and
+49 posterior count runs. A \emph{run} is one landscape, model specification,
+and sampling recipe; several runs can use the same observations.
+Materials and Methods gives the sampling formulas and inventory.
+
+We use the same three running examples throughout: PDZ trans-1 and
+TrpB libB under Exponential--Exponential, and NucB G3 under Exponential.
+The examples illustrate different relationships between score precision,
+rank uncertainty, and batch turnover; they were not chosen as median cases.
+The growth-model names distinguish rate assumptions
+and growth functions; the NucB name distinguishes signal-location
+assumptions. Methods Section~\ref{methods:examples} gives the selection
+rule and its limitations. All model specifications remain in the overview
+panels and supplement.
+
+\subsection{Reported and fitted top-100 lists differ}
+\label{sec:reported}
+
+The fitted and reported scores select different top-100 batches. To make
+this comparison, we first take each candidate's median sampled score and
+rank these medians. We call the resulting fixed list the
+\emph{median-score reference}. This gives a proposed batch from the
+fitted analysis to compare with the batch obtained by sorting reported
+scores. Under parameter resampling, its top 100
+shares 52 candidates (52\%) with the reported batch for PDZ trans-1, 33 (33\%)
+for TrpB libB, and 68 (68\%) for NucB G3
+(Table~\ref{tab:reference-comparisons}). These fixed-list intersections
+compare two summaries of the same experimental data, before examining
+turnover among individual sampled batches.
+
+For a hundred-candidate validation budget, the two summaries therefore
+agree on about half the candidates in PDZ trans-1, one third in
+TrpB libB, and two thirds in NucB G3. Within each example, both summaries
+use the same source experiment. The disagreement is
+not between competing sequence predictors; it arises before a predictor
+is introduced, when the experimental observations are converted into
+the list against which predictions might be judged.
+
+The scores need not estimate the same assay summary. For NucB, the
+reported comparator uses enrichment at the highest selected gate, while
+the fitted parameter score uses counts from all available gates. For PDZ,
+our count-based calculation approximates the original DiMSum score.
+Disagreement does not, by itself, show that the reported ordering is wrong.
+
+Changing the units of a fixed score list alone would not explain this
+result: a common strictly increasing transformation preserves its ordering. Here the
+calculations also differ in how they combine observations and which
+performance parameter or count summary they estimate. In TrpB, for
+example, the reported calculation normalizes count ratios relative to
+stop-codon variants and an observation's maximum before averaging;
+the parameter score orders growth parameters fitted to the time-indexed
+counts. The fixed-list comparison establishes the consequence for
+selection without assuming that the two scores are interchangeable.
+
+We next ask where each reported rank falls within that candidate's sampled
+rank distribution. This adds information absent from a fixed-list
+intersection: do reported leaders fall near the middle of their sampled
+ranks, or do most sampled rankings move them in one direction? For a
+candidate, its \emph{reported-rank sample
+percentile} is the fraction of finite sampled ranks better than the
+reported rank, giving ties half weight. A value near zero means that the
+reported rank is better than most sampled ranks; a value near one means
+it is worse. The curves in Fig.~\ref{fig:reported}a--c summarize these
+percentiles over the reported top 100. At each horizontal value, the
+vertical value is the fraction of candidates with a percentile at or
+below it. A steep increase near zero therefore identifies reported
+leaders that usually move down in the fitted analysis.
+
+That increase is evident in all three examples
+(Fig.~\ref{fig:reported}a--c). Under parameter resampling, 65 of the
+reported top 100 TrpB candidates (65\%) have percentiles at or below
+0.1, compared with 55 (55\%) for NucB G3 and 42 (42\%) for PDZ trans-1.
+The concentration near zero therefore involves most of the reported
+TrpB leaders, not a small subset of the cohort.
+Both count-based TrpB curves have the same broad shape: 63 of 100
+candidates under optimized-fit count resampling and 65 of 100 under
+posterior count resampling have percentiles at or below 0.1.
+These fractions describe where reported ranks lie within the sampled
+distributions; they do not measure the number of rank positions moved.
+
+PDZ trans-1 shows a stronger difference between sampling recipes
+(Fig.~\ref{fig:reported}a). Its optimized-fit count curve places 67 of
+100 percentiles at or below 0.1, compared with 42 for parameter and
+37 for posterior count resampling. The curves also rise at different
+rates through the interior. They retain the direction and shape of
+these differences before either is reduced to an area or correlation.
+
+The middle row of Fig.~\ref{fig:reported} summarizes each curve by the
+absolute area between it and the uniform diagonal. Under parameter
+resampling, the areas are 0.210 for PDZ trans-1, 0.314 for TrpB libB, and
+0.232 for NucB G3. Area provides one value per analysis for the overview,
+but smaller area is not automatically better rank agreement. Exact
+recovery of every reported rank would put every percentile at 0.5,
+not produce a uniform distribution. Area also discards the direction
+and shape of a departure. Table~\ref{tab:reported-curve-statistics}
+reports each analysis's area and correlation for both cohorts.
+Supplementary Section~\ref{app:all-reported-curves} groups the full
+curves by protein system and sampling scheme.
+
+Relative order is a separate question. The bottom row of
+Fig.~\ref{fig:reported} shows the Spearman correlation between reported
+ranks and median sampled ranks within the reported top 100. Spearman
+correlation measures whether candidates occur in a similar relative
+order; it does not measure how far their ranks move or how variable
+those ranks are. Across the three recipes, correlations are
+0.190--0.319 for PDZ trans-1, 0.050--0.056 for TrpB libB, and 0.503--0.584
+for NucB G3. The black outlines and arrows identify these exact fits
+among the individual model points, rather than identifying a
+median across models as the example.
+
+Each small filled dot in the overview panels is one summary for a
+landscape, model specification, and sampling scheme. It is not a posterior
+draw, chain, variant, or experimental replicate. For example, TrpB libB
+contributes three model dots per scheme, whereas NucB G3 contributes one.
+Larger hollow symbols mark the median across models within each landscape
+and scheme. Small fixed vertical offsets help distinguish nearby model
+points; their horizontal metric values are unchanged. When only one model
+is available, its dot lies inside the hollow median symbol.
+
+The overview rows also show why one example cannot stand for an entire
+protein system. Under Exponential--Exponential parameter resampling,
+the reported-top-100 correlation is 0.943 for PDZ cis and 0.310 for
+PDZ trans-1 (Fig.~\ref{fig:reported}g). In TrpB it is 0.904 for
+libD but $-0.082$ for libC under the same specification (panel h).
+Individual model specifications are retained because changing the model
+can also change the result within a landscape. The hollow symbols summarize
+models fitted to shared data, not independent experimental replications.
+
+The cohort also matters. For NucB G3, expanding the reported cohort to
+1,000 raises the correlations to 0.921--0.926; agreement over that larger
+group hides disagreement within its top 100. TrpB libB also improves
+over the larger cohort, but its correlations remain only 0.252--0.262
+(Fig.~\ref{fig:reported1000}). A predictor evaluated over a larger
+cohort would therefore face a different ranking comparison, even using
+the same underlying experiment. The area and correlation rows address
+complementary aspects of that comparison: departure of the percentile
+distribution and preservation of relative order. Neither quantifies
+how often an individual candidate is selected within the fitted analysis.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{reported_order.pdf}
+\caption{Reported-rank percentiles, area, and relative order.
+Panels (a)--(c) show cumulative distributions of reported-rank sample
+percentiles for the reported top 100 in PDZ trans-1 and TrpB libB
+(both Exponential--Exponential), and NucB G3 (Exponential).
+Panels (d)--(f) show the absolute area between each curve and the
+diagonal; panels (g)--(i) show reported-versus-median-sampled-rank
+Spearman correlations. Each small filled dot summarizes one model
+specification within a landscape and sampling scheme, not an individual
+draw. Hollow blue circles, red squares, and green triangles mark model
+medians for parameter, optimized-fit count, and posterior count resampling
+(49, 60, and 49 analyses). Vertical offsets improve visibility only;
+horizontal values are unchanged. Black outlines and arrows mark example
+model points. The diagonal is descriptive, not a calibration target.
+Complete curves appear in Supplementary Section~\ref{app:all-reported-curves}.}
+\label{fig:reported}
+\end{figure}
+
+\paragraph{How far do the reported ranks move?}
+The percentile curves describe where a reported rank falls within its
+sampled distribution, but not whether the difference is a few positions
+or hundreds. We therefore also calculate \emph{mean absolute rank
+displacement}: for each candidate in the reported top 100, we take the
+absolute difference between its reported rank and its median sampled
+rank, then average over supported candidates. Table~\ref{tab:rank-displacement}
+reports this quantity for every landscape/model specification, with the
+three sampling schemes in separate columns. The ranks still refer to
+the full eligible competitor pool, so their displacement can exceed
+the size of the reported cohort.
+
+Under parameter resampling, the mean absolute displacement is 427.6
+positions for PDZ trans-1, 1,116.1 for TrpB libB, and 42.2 for NucB G3.
+The difference persists across sampling schemes: the example ranges are
+427.6--958.7, 1,116.1--1,600.9, and 42.2--44.2 positions, respectively.
+TrpB libB's low correlation in Fig.~\ref{fig:reported}h therefore
+accompanies large differences in rank, not only exchanges within its
+reported top 100. NucB G3 also differs from its reported ordering, but
+the absolute movements are much smaller in these analyses.
+
+Displacement and percentile area distinguish these examples differently.
+PDZ trans-1 has a smaller parameter-resampling area than NucB G3
+(0.210 versus 0.232), yet a larger mean absolute displacement
+(427.6 versus 42.2 positions). A percentile near an endpoint can
+result from a small but consistent rank difference as well as a large
+one. The area cannot distinguish their sizes. Correlation addresses
+another aspect: whether candidates retain their relative order, which
+can persist even when other candidates move ahead of the reported
+cohort. The table supplies the rank-distance information absent from
+both Figure~\ref{fig:reported} overview rows.
+
+PDZ CRIPT-C also distinguishes correlation from displacement. Under
+parameter resampling, its Exponential--Exponential and Gamma--Exponential
+analyses have reported-top-100 correlations of 0.885 and 0.887,
+but mean absolute displacements of 12.9 and 316.4 positions, respectively.
+These similarly high correlations accompany different amounts of
+movement in the full ranking.
+Table~\ref{tab:rank-displacement} retains these model-specific
+differences rather than averaging them into one landscape value.
+
+These displacements compare reported ranks with the centers of sampled
+rank distributions; they do not measure the spread of those distributions.
+A value of zero would mean that all supported median sampled ranks equal
+their reported ranks, not that the ranks are certain. Large movements
+by a few candidates can also influence the mean, and different landscapes
+have different numbers of eligible competitors. We therefore read the
+table as an absolute rank-position comparison on each landscape, not
+as a normalized error against biological truth. The following rank
+intervals and batch summaries address the uncertainty and selection
+consequences separately.
+
+\clearpage
+\input{paper/figures/rank_displacement.tex}
+
+\subsection{Broad rank intervals can coexist with stable batches}
+\label{sec:noise}
+\label{sec:ranks}
+
+Leading candidates can have uncertain positions while remaining in
+the selected batch. We describe each candidate's rank distribution
+by its central 90\% interval, from the 5th to the 95th sampled-rank
+percentile. Among the reference top 100, the median interval width
+under parameter resampling is 178.5 positions for PDZ trans-1, 281 for
+TrpB libB, and 38 for NucB G3. These are widths of individual rank
+distributions, not error bars on an average rank.
+
+Figure~\ref{fig:ranks}a--c displays the first 20 candidates in each
+median-score reference. Blue points show median sampled ranks;
+black ticks show ranks of median scores. They can differ because
+ranking before taking a median is not the same as taking medians
+before ranking. The intervals can extend farther toward worse ranks
+than toward better ranks, and a reference rank need not fall inside
+its candidate's sampled-rank interval. The bottom row summarizes
+widths for the reference top 100 in every analysis. For TrpB libB,
+the median width increases from 281 under parameter resampling to
+624.2 under optimized-fit count resampling and 859.5 under posterior
+count resampling. Moving from parameter to count resampling changes
+both the score construction and the uncertainty represented; the
+difference is not a pure decomposition of experimental noise.
+
+The NucB G3 intervals illustrate why their location matters as much as
+their width. The candidate at reference rank 10 has a median sampled
+rank of 21 and a central 90\% interval from rank 3 to rank 40
+(Fig.~\ref{fig:ranks}c). Across the first 20 reference candidates,
+median sampled ranks lie between 16 and 23, and the intervals overlap
+extensively. Each candidate occupies a broad range of rank positions;
+the marginal intervals do not specify how each pair is ordered jointly.
+Yet all 20 remain in the sampled top 100
+in every retained parameter draw. Uncertainty about their individual ranks is not
+uncertainty about their membership in that larger batch.
+
+The conclusion changes closer to the cutoff. Among the full reference
+top 100, 78 PDZ trans-1 candidates, 84 TrpB libB candidates, and 18 NucB G3
+candidates have a 95th-percentile rank beyond 100 under parameter
+resampling. Thus the first 20 intervals do not describe every member
+of the proposed batch. The lower panels summarize the broader group,
+while the inclusion analysis below measures how often each candidate
+actually crosses its boundary.
+
+The landscape summaries in Fig.~\ref{fig:ranks}d--f put those examples
+in context. After taking the median across models within each TrpB
+landscape, the reference-top-100 rank width under parameter resampling
+ranges from 12 positions for libD to 285.5 for libA. The small filled
+points also reveal specifications
+with much wider intervals than neighboring fits of the same landscape.
+This variation is a reason to inspect models separately, not evidence
+that all their intervals are equally adequate descriptions of the
+experiment. Sampler summaries and the status of predictive checks are discussed
+in Supplementary Section~\ref{app:fit-checks}.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{rank_uncertainty.pdf}
+\caption{Rank uncertainty within leading batches. Panels (a)--(c)
+show the first 20 candidates in the median-score references for PDZ
+trans-1 and TrpB libB (both Exponential--Exponential), and NucB G3
+(Exponential). Intervals span the 5th--95th sampled-rank
+percentiles under parameter resampling; blue points mark median
+sampled ranks and black ticks mark median-score reference ranks.
+Horizontal scales differ between examples. Panels (d)--(f) show
+the median interval width among each run's reference top 100.
+Small filled dots each summarize one model specification within a
+landscape and sampling scheme; hollow symbols mark medians across
+those models. Vertical offsets are for visibility only. These dots
+are not individual posterior draws. Black outlines and arrows mark
+the exact parameter fits displayed above. Blue circles, red squares,
+and green triangles denote parameter, optimized-fit count, and
+posterior count resampling. Logarithmic horizontal axes report
+rank positions; the dashed line marks a width of 100. Intervals
+describe sample distributions, not validated coverage of a known
+biological ordering.}
+\label{fig:ranks}
+\end{figure}
+
+\paragraph{Batch membership.}
+\label{sec:decisions}
+A rank movement changes a batch only if it crosses the selection
+cutoff. For a budget of $k$ candidates, we select the top $k$
+separately in each joint score sample. A candidate's \emph{inclusion frequency} is the
+fraction of retained samples in which it is selected. The
+\emph{mean shared fraction}, denoted $\widehat C_k$, is the average
+fraction of members shared by two distinct sampled size-$k$ batches.
+For example, a value of 0.8 at $k=100$ means 80 shared members on
+average, not an 80\% chance that the complete lists match.
+
+These two summaries serve different decisions. Inclusion frequency
+locates the candidates whose membership changes; shared fraction
+describes how much of the batch changes overall. The same shared
+fraction could arise from many low-frequency alternatives or a
+smaller number of frequently exchanged candidates. A batch-level
+number therefore needs a candidate-level view to identify its
+uncertain members.
+
+For the three running examples, sampled top-100 batches under
+parameter resampling share approximately 60, 51, and 93 members
+(60\%, 51\%, and 93\%), respectively. In PDZ and TrpB, uncertainty
+therefore changes much of the membership, not only the internal order.
+Across the three recipes, TrpB libB shares about 26--51 members on
+average, compared with
+87--93 for NucB G3 (Fig.~\ref{fig:selection}e,f). These are comparisons
+within each fitted sampling distribution, not observed agreement
+between new physical experiments.
+
+The top row of Fig.~\ref{fig:selection} locates the candidates that
+can cross the cutoff. It shows reference ranks 91--100 and the ten
+outside candidates with the largest inclusion frequencies under
+parameter resampling. These candidates can enter a sampled batch
+despite lying outside the fixed median-score reference. We call an
+outside candidate a \emph{challenger} when its top-100 inclusion
+frequency is at least 0.01. Challengers need not belong to the
+reference top 1,000.
+
+For TrpB libB, the ten reference candidates near the cutoff have
+inclusion frequencies of 28--43\%, while the ten displayed outside
+candidates have frequencies of 30--34\% (Fig.~\ref{fig:selection}b).
+The most frequently selected outside candidate exceeds five of those
+ten reference members. The median-score ordering is therefore not
+an ordering by inclusion frequency. In PDZ trans-1 the displayed ranges
+are 29--43\% inside and 33--40\% outside (panel a); in NucB G3 they
+are 54--93\% and 18--46\% (panel c). The NucB boundary separates
+these displayed groups more clearly, but membership of some reference
+candidates is still far from certain. A hard cutoff in a fixed list
+does not create a corresponding certainty threshold.
+
+Agreement within an analysis does not imply agreement with the
+reported batch. A parameter-sampled NucB G3 batch shares 95.36
+members on average with its median-score reference, but 68.14
+with the reported batch. For TrpB libB, those numbers are 63.44
+and 29.81, while two sampled batches share 50.96 members
+(Table~\ref{tab:reference-comparisons}). NucB therefore mainly differs
+from the reported list while retaining a comparatively stable sampled
+batch; TrpB also has substantial variation within the fitted analysis.
+Overlap with the reported batch alone would not distinguish those cases.
+
+The PDZ row combines both effects. Its parameter samples share 70.59
+members with the median-score reference, 47.51 with the reported batch,
+and 59.80 with another sampled batch. The \emph{Reference} column
+compares samples with one fixed summary of the fitted score distribution;
+\emph{Sample pair} compares two variable selections. Neither is the
+fixed intersection of 52 candidates. Keeping these columns separate
+distinguishes disagreement between summaries from variation around them.
+
+The distinction persists across sampling recipes. TrpB libB's fixed
+intersection changes only from 33 to 34 candidates, while its sample-pair
+overlap changes from 50.96 under parameter resampling to 32.12 and
+25.87 under the two count-based recipes. In PDZ trans-1, optimized-fit
+count overlap is higher than parameter overlap, whereas posterior count
+overlap is lower. These comparisons do not rank the sampling recipes
+by quality. They show that disagreement with the reported score summary
+and uncertainty within an analysis vary separately.
+
+\input{paper/figures/reference_comparisons.tex}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{selection_stability.pdf}
+\caption{Candidate inclusion and batch overlap. Panels (a)--(c)
+show top-100 inclusion frequencies under parameter resampling for
+median-score reference ranks 91--100 (blue) and the ten
+highest-frequency outside candidates (orange). Outside candidates
+are ordered by inclusion frequency; their row numbers are not
+sampled ranks. Panels (d)--(f) show mean shared fractions between
+distinct sampled top-$k$ batches, for budgets from 10 to 1,000.
+Blue, red, and green denote parameter, optimized-fit count, and
+posterior count resampling; the vertical guide marks $k=100$.
+Each curve represents one run. PDZ trans-1 and TrpB libB use
+Exponential--Exponential, and NucB G3 uses Exponential.
+Each example has 16,000 parameter and posterior count samples and
+1,000 optimized-fit count samples. Shared fraction measures the
+number of common members divided by batch size, not the probability
+of exact batch agreement.}
+\label{fig:selection}
+\end{figure}
+
+\paragraph{The selection budget changes the question.}
+The lower row of Fig.~\ref{fig:selection} varies the budget within
+each analysis rather than fixing it at 100. NucB G3 parameter samples
+share only 21\% of a size-10 batch on average, but 91\% of a size-50
+batch and 93\% of a size-100 batch (panel f). This agrees with the
+rank intervals in Fig.~\ref{fig:ranks}c: identifying a broader group
+can be much more stable than specifying its first few positions.
+For this analysis, a ranking-resolution statement without the budget
+would omit an important part of the result.
+
+The other examples do not show the same budget response. PDZ trans-1
+parameter-sample overlap is 56\% at 10 and 71\% at 1,000.
+TrpB libB is nonmonotone over the displayed budgets: overlap falls
+from 76\% at 10 to 50\% at 50, then rises to 76\% at 1,000
+(Fig.~\ref{fig:selection}d,e). These values are fractions of the
+batch, not absolute numbers of common members. Larger budgets admit
+a new part of the landscape, and agreement among those additional
+candidates need not match agreement among the original leaders.
+
+Although all three examples have higher parameter-sample overlap at
+1,000 than at 100, the complete results do not show a universal increase.
+After taking the median across models within each landscape,
+$\widehat C_{1000}>\widehat C_{100}$ in 13 of 18 landscapes (72\%) for
+parameter resampling, 14 of 19 (74\%) for optimized-fit count resampling,
+and 13 of 18 (72\%) for posterior count resampling. The same five TrpB
+libraries, D--H, decrease under all three recipes
+(Table~\ref{tab:landscape-set-sizes}). Larger batches include candidates
+at a different cutoff, with different competing scores. This endpoint
+comparison does not establish monotonicity between budgets; the curves
+show the intermediate values for each running example.
+
+\subsection{Score width alone does not determine batch inclusion}
+\label{sec:mechanisms}
+
+Lower input counts are associated with wider score intervals in all
+158 leading-candidate analyses. But score width alone does not identify
+which candidates will replace members of a batch. A low-count candidate
+may remain far below the cutoff, while a closely competing candidate
+with a narrower interval may repeatedly cross it. To connect precision
+with selection, we examine every
+reference top-100 member and challenger together, a group we call
+the \emph{decision cohort}. Counts are fixed observed features;
+intervals and inclusion frequencies summarize the fitted samples.
+
+This comparison is deliberately restricted to the batch and its
+plausible replacements. Most candidates in a landscape may be
+irrelevant to a particular selection budget; their precision does
+not answer whether the leading list is resolved. Conversely, a
+display limited to the reference members would omit the candidates
+that replace them. The decision cohort retains both sides of that
+comparison without changing the full competitor pool used for ranking.
+
+To compare widths on a stated scale, we divide each candidate's
+central 90\% score width by the interquartile range (IQR) of its
+run's top-1,000 median scores. The IQR is the difference between
+the 75th and 25th percentiles of those scores. It puts uncertainty
+on the scale of differences among leading candidates, rather than
+equating the assays' numerical units. We use the same denominator
+for a candidate's median-score difference from the rank-100 cutoff,
+which we call its \emph{score margin}. Positive margins place a
+candidate above the cutoff, subject to exact ties; negative margins
+place it below.
+
+Figure~\ref{fig:explanation} follows the same candidates across
+four panels per row: score width against input count, output count,
+and score margin, then inclusion frequency against margin. Filled
+blue points are reference members and open orange points are
+challengers. Every candidate is retained, without bins, point
+subsampling, or pooling across analyses.
+
+The columns separate three aspects of the selection result. Input
+counts describe how well the starting composition was observed;
+output counts also depend on what happened during selection.
+The margin places a candidate relative to the proposed cutoff,
+while inclusion frequency records the consequence of all scores
+varying jointly. The same count--width association can therefore
+coexist with different margin--inclusion patterns. The IQR scaling
+allows the plots to be read on a stated relative score scale;
+it does not make growth and fluorescence the same physical quantity.
+
+In PDZ trans-1, score widths decline with count support, but span a
+narrow range (Fig.~\ref{fig:explanation}a,b). Reference members and
+challengers have overlapping widths (panel c), yet candidates with
+similar widths have very different inclusion frequencies at different
+margins (panel d). There are 319 challengers. The strong count--width
+relationship does not make those candidates' selection frequencies
+interchangeable: their position relative to the cutoff also matters.
+
+In TrpB libB, the width--count relationship spans a wider range
+(Fig.~\ref{fig:explanation}e,f). Some challengers have median scores
+well below the cutoff but enter the batch in at least 1\% of samples
+(panels g,h). Their broad score distributions make uncertainty in
+those low medians relevant to selection. The 416 challengers would
+be absent from a display restricted to the reference top 100.
+This is not a reason to prefer uncertain candidates; it shows
+which alternatives a single median-score list leaves unexamined.
+
+NucB G3 has a different margin--width pattern: many reference members
+have wider score intervals than the challengers
+(Fig.~\ref{fig:explanation}k). Yet 77 of its 100 reference members
+(77\%) have inclusion frequency at least 0.99, and only 28 outside
+candidates meet the challenger threshold (panel l). A broad marginal
+score interval does not necessarily imply uncertain batch membership.
+Selection depends on a candidate's score relative to its competitors
+within each joint draw, not on its interval in isolation.
+
+The number of challengers and the number of replacements per sample
+are different quantities. TrpB libB has 416 challengers at the 0.01
+inspection threshold, but a parameter-sampled top-100 batch contains
+36.56 candidates outside its median-score reference on average.
+That value is 100 minus the \emph{Reference} overlap of 63.44 in
+Table~\ref{tab:reference-comparisons}; it counts all outside candidates,
+not only the displayed challengers. NucB G3 has 28 challengers and
+an average of 4.64 outside-reference members per sample. A large
+collection of possible replacements need not imply that many are
+selected together. The threshold determines which alternatives we
+inspect, not a new batch-selection rule.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{explaining_resolution.pdf}
+\caption{Count support and plausible batch replacements. Rows show
+PDZ trans-1 and TrpB libB (both Exponential--Exponential),
+and NucB G3 (Exponential), each with 16,000 parameter samples.
+Every reference top-100 member (blue, filled) and outside challenger
+with inclusion frequency at least 0.01 (orange, open) is retained:
+419, 516, and 128 candidates, respectively. Columns show central
+90\% score width against input count, output count, and median-score
+margin from the top-100 cutoff, then top-100 inclusion frequency
+against that margin. Widths and margins are divided by the run's
+top-1,000 median-score IQR. Count axes show $\log_{10}(n+1)$; width
+axes are logarithmic. Count and width limits are common across
+rows. Margin limits are common within a row but differ between
+rows. Dotted lines mark zero margin. All candidate points are
+shown and no regression lines are fitted. Supplementary
+Section~\ref{app:figure-explanation} gives the display conventions.}
+\label{fig:explanation}
+\end{figure}
+
+Across all runs, within-cohort Spearman correlations between input
+counts and normalized score width are negative in 158 of 158
+analyses; output-count correlations are negative in 157
+(Fig.~\ref{fig:counts}). These are not 158 independent replications:
+multiple models and sampling recipes share the same observations.
+Output counts also reflect selection, whereas input counts precede
+it. Supplementary Section~\ref{app:per-analysis-why} shows the
+unaggregated relationships for every run, including Gamma fits.
+
+Descriptive regressions also relate rank width to score width,
+local score crowding, their interaction, and reference rank.
+Crowding measures how closely spaced neighboring median scores
+are. Its association and its interaction with score width vary
+across analyses; the interaction is not consistently positive
+(Supplementary Section~\ref{app:associations}). Neither those fits
+nor the count correlations establish how extra sequencing would
+change batch stability. They describe the candidates selected into
+the decision cohort under the current analysis.
+
+\section{Discussion}
+\label{sec:discussion}
+
+We distinguish disagreement with reported fitness rankings from
+uncertainty in ranks and batches within a fitted analysis.
+
+\paragraph{Limitations.}
+All uncertainty estimates are conditional on the count models,
+score definitions, and retained fits. A model that does not
+reproduce the observations can give misleading rank intervals
+and inclusion frequencies. Sampler diagnostics were run for all retained
+posterior fits, but checking whether a fitted distribution reproduces the experiment
+is a separate question. Predictive checks remain incomplete
+(Supplementary Section~\ref{app:fit-checks}). Agreement between
+sampling recipes is not independent validation, because the
+recipes share modeling assumptions. Some results change strongly
+with the specification, as illustrated by the PDZ Gamma fits
+in Supplementary Section~\ref{sec:sensitivity}. The datasets are
+also not a representative sample of all protein assays.
+
+\paragraph{Implications for prediction.}
+For machine-learning researchers, these results concern the labels
+used to learn and evaluate sequence--fitness relationships. A
+reported score is an estimate of an assay-defined quantity, not
+an uncertainty-free property of a sequence. A predictor's failure
+to reproduce an exact ordering can reflect disagreement over
+candidates that the experimental analysis itself does not separate
+reliably. Conversely, high correlation over a large cohort does
+not guarantee agreement on a smaller batch. These possibilities
+motivate evaluating the particular retrieval or ranking decision,
+with its candidate set and experimental budget specified.
+
+We have not tested whether label uncertainty changes a comparison
+between predictors. A direct next analysis would hold predictions
+fixed and evaluate them across sampled score sets, measuring uncertainty
+in rank correlation, retrieval, and differences between predictors.
+Retraining on uncertain labels would address a separate question.
+
+\paragraph{Batch selection.}
+For protein engineers, inclusion frequencies distinguish repeatedly
+selected candidates from candidates with plausible replacements
+near or below the cutoff. But turnover in identity is not itself
+a loss in engineering utility. Alternative variants may have
+similar activity, and selection may also value diversity, cost,
+or information for a later round. The median-score list is a
+reference for measuring turnover, not an optimal rule for every
+objective. Assessing the expected activity or information gained
+from a batch requires specifying that objective and, where
+possible, testing it against follow-up measurements.
+
+\paragraph{Further evidence.}
+Two kinds of additional evidence would strengthen the conclusions.
+First, predictive checks and suitable held-out measurements could
+test whether the fitted models reproduce the experimental
+variation relevant to the leading candidates. Second, controlled
+read thinning or leave-one-replicate-out fits could test how
+changing count support changes batch stability. These require
+altered or additional observations; using fewer existing model
+draws only assesses Monte Carlo variability.
+
+Under parameter resampling, NucB G3 top-100 batches share about
+93 members with each other but only 68 with the reported batch,
+whereas TrpB libB batches share about 51 members with each other
+(Table~\ref{tab:reference-comparisons}). Disagreement with the reported
+list and uncertainty within a fitted analysis are distinct results.
+
+\section*{Data and code availability}
+PDZ processed counts and scores are available through GEO accession GSE265816.
+TrpB data and analysis code are deposited at
+\url{https://doi.org/10.22002/h5rah-5z170}. NucB data and source calculations
+are available from \url{https://github.com/google-deepmind/nuclease_design}.
+The rank-analysis code consumes prepared sampled-score matrices and aligned
+count features; fitting the original models is not required to recreate its
+tables and figures. The accompanying repository includes a small pipeline
+example, distinct from the real-data analyses reported here.
+\note{TODO: Add versioned fitting and analysis repositories and a public
+archive for prepared samples, features, and fit diagnostics.}
+
+\section*{Author contributions}
+\note{TODO: Confirm contributions with all authors.}
+
+\section*{Competing interests}
+\note{TODO: Obtain declarations from all authors.}
+
+\section*{Acknowledgments}
+\note{TODO: Confirm funding and acknowledgments.}
+
+\clearpage
+\input{paper/references.tex}
+
+\clearpage
+\input{paper/materials_methods.tex}
+
+\clearpage
+\appendix
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\theHfigure}{supp.\arabic{figure}}
+\setcounter{figure}{0}
+
+\input{paper/supplementary_details.tex}
+\input{paper/supplementary_analyses.tex}
+
+\end{document}

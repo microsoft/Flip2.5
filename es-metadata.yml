@@ -1,0 +1,12 @@
+schemaVersion: 1.0.0
+providers:
+- provider: InventoryAsCode
+  version: 1.0.0
+  metadata:
+    isProduction: false
+    accountableOwners:
+      service: 04714f6c-b21e-451c-b115-2252cf6261f7
+    routing:
+      defaultAreaPath:
+        org: MSOCSO
+        path: OCSO

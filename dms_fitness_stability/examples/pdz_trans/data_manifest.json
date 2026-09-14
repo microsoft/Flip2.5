@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "landscape": "pdz_trans",
+  "raw": {
+    "trans-1.tsv": {
+      "bytes": 39648781,
+      "sha256": "0110692928a73ebecfe79a8eaeecec993871e1d0ef07bbf63fc9b9201780036f"
+    },
+    "trans-2.tsv": {
+      "bytes": 39998389,
+      "sha256": "c7a8b408bf6b86a5d96b34d50fc2a98b9c9992fc2620202da75734c7acfba5ff"
+    },
+    "GSE265816_pdz3cript_sub.csv.gz": {
+      "bytes": 5797639,
+      "sha256": "30033e0af7bf2b8dd69c4a40b39c0d25074aff26b6d58426532e81fd47f38151"
+    }
+  },
+  "fits": {
+    "trans-1_exponential_exponential.nc": {
+      "bytes": 183600800198,
+      "posterior_log_r_mean_shape": [8, 2000, 150769],
+      "posterior_predictive_count_shape": [8, 2000, 3, 150769]
+    },
+    "trans-2_exponential_exponential.nc": {
+      "bytes": 126600320254,
+      "posterior_log_r_mean_shape": [8, 2000, 151624],
+      "posterior_predictive_count_shape": [8, 2000, 3, 151624]
+    }
+  }
+}

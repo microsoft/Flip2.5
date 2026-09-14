@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "activated_at": "2026-09-03T15:10:32Z",
+  "reason": "replace method-specific proxy persistence with the standard ScoreEnsemble schema while preserving audited scientific outputs",
+  "pre_activation_nested_commit": "ac94d311caf467fe1ac9f836aeabcac4b6b2f36a",
+  "pre_activation_azure_commit": "8a33ea5a9e6f4146adca43c8f627e4d08012a3e1",
+  "activation_nested_commit": "383b169bc726f6521f1d1c72c0a881524d08e5fd",
+  "activation_azure_commit": "435d59d109cde0b13b6d449dec62d461eea349c9",
+  "analysis_data_manifest": {
+    "path": "data/analysis_data_manifest.json",
+    "sha256": "4ab73c14cc8407508ec674eb720ac35dc4a2ce356fec66a94d6f9334a5cc0620",
+    "score_bundles": 208,
+    "feature_bundles": 21,
+    "score_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "validation_status": "valid"
+  },
+  "methods": {
+    "mle_predictive": {
+      "bundle_count": 61,
+      "score_view_count": 62,
+      "canonical_root": "/data/data_dms_stability/paper/mle_predictive/proxies",
+      "canonical_logical_bytes": 25948026193,
+      "canonical_allocated_bytes": 25948811264,
+      "rollback_root": "/data/data_dms_stability/paper/mle_predictive_schema_v1_backup",
+      "rollback_bundle_count": 61,
+      "rollback_logical_bytes": 24855707673,
+      "rollback_allocated_bytes": 24856358912,
+      "conversion_audit": "data/mle_schema_v2_conversion.json",
+      "equivalence_audit": "data/mle_schema_v2_post_conversion_audit.json",
+      "equivalence_audit_sha256": "cd2cd62d781233385dd19eaea05c24fdeb8815ae9dec23c074845e85f566d6b8",
+      "canonical_method_audit": "61 valid",
+      "v1_v2_replay_analysis_id": "nuc__nuc-g1__mle-predictive__exponential__mle-55",
+      "v1_v2_replay_status": "exact"
+    },
+    "hmc_count_based": {
+      "bundle_count": 49,
+      "score_view_count": 49,
+      "canonical_root": "/data/data_dms_stability/paper/hmc_count_based/proxies",
+      "canonical_logical_bytes": 110405530176,
+      "canonical_allocated_bytes": 110406275072,
+      "rollback_root": "/data/data_dms_stability/paper/hmc_count_based_schema_v1_backup",
+      "rollback_bundle_count": 49,
+      "rollback_logical_bytes": 110032862377,
+      "rollback_allocated_bytes": 110033440768,
+      "conversion_audit": "data/hmc_count_schema_v2_conversion.json",
+      "equivalence_audit": "data/hmc_count_schema_v2_post_conversion_audit.json",
+      "equivalence_audit_sha256": "cf459d8863aa450398d44c6ffb485055a18525c8d8ff97608e11b28efbce92ab",
+      "canonical_method_audit": "49 valid",
+      "v1_v2_replay_analysis_id": "nuc__nuc-g4__hmc-count-based__lomax__small-clean-62",
+      "v1_v2_replay_status": "exact"
+    }
+  },
+  "mechanism_cache_replay": {
+    "analysis_id": "nuc__nuc-g1__mle-predictive__exponential__mle-55",
+    "status": "exact_arrays_and_coordinates",
+    "source_filename": "fitness_scores.nc"
+  },
+  "rollback_cleanup": {
+    "status": "removed",
+    "removed_at": "2026-09-03T15:21:13Z",
+    "bundle_count": 110,
+    "logical_bytes": 134888570050,
+    "allocated_bytes": 134889799680,
+    "free_bytes_before": 333079998464,
+    "free_bytes_after": 467969798144,
+    "freed_bytes": 134889799680,
+    "condition": "published and independently verified the activation record and canonical schema-v2 manifest on Azure before removal"
+  }
+}

@@ -1,0 +1,4 @@
+figure_row,run_id,family,landscape,model,n_samples,cohort_size,reference_members,challengers,sample_self_consistency,zero_width_count,plot_width_floor
+1,pdz-trans-1-parameter-posterior-exponential-exponential,pdz,pdz-trans-1,exponential-exponential,16000,419,100,319,0.597990816222889,0,0.0211295399923033
+2,trpb-libb-parameter-posterior-exponential-exponential,trpb,trpb-libB,exponential-exponential,16000,516,100,416,0.5095999004625289,0,0.0211295399923033
+3,nuc-g3-parameter-posterior-exponential,nuc,nuc-G3,exponential,16000,128,100,28,0.9348656094130884,0,0.0211295399923033

@@ -1,0 +1,683 @@
+[
+  {
+    "job_id": 15,
+    "job_name": "small_clean_15",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_15/trpb/libC/trpb_libC_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 3920045182,
+        "issues": [
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:posterior_predictive",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior"
+        ],
+        "score_variable": "r",
+        "score_shape": [
+          8,
+          2000,
+          9260
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "small-clean",
+      "job_name": "small-clean_15",
+      "name": "trpb/libC/trpb_libC_exponential_exponential-20260405085014.nc",
+      "size": "6.0 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 25,
+    "job_name": "small_clean_25",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_25/trpb/libE/trpb_libE_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 9992948527,
+        "issues": [
+          "h5netcdf_open_failure",
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9229
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "small-clean",
+      "job_name": "small-clean_25",
+      "name": "trpb/libE/trpb_libE_exponential_exponential-20260404232845.nc",
+      "size": "15.4 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 37,
+    "job_name": "small_clean_37",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_37/trpb/libG/trpb_libG_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 12303798366,
+        "issues": [
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:posterior_predictive",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          9041
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "small-clean",
+      "job_name": "small-clean_37",
+      "name": "trpb/libG/trpb_libG_exponential_exponential-20260404234146.nc",
+      "size": "19.5 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 43,
+    "job_name": "small_clean_43",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_43/trpb/libH/trpb_libH_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 11923607188,
+        "issues": [
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:posterior_predictive",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          8970
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "small-clean",
+      "job_name": "small-clean_43",
+      "name": "trpb/libH/trpb_libH_exponential_exponential-20260405101041.nc",
+      "size": "19.5 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 56,
+    "job_name": "small_clean_56",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/small-clean/small-clean_56/nuc/G1/nuc_G1_lomax_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "limited",
+        "bytes": 27089876940,
+        "issues": [
+          "h5netcdf_open_failure",
+          "observed_variable_missing:ic1",
+          "observed_variable_missing:ic2",
+          "observed_variable_missing:ic3",
+          "observed_variable_missing:lc",
+          "observed_variable_missing:hc1",
+          "observed_variable_missing:hc2",
+          "observed_variable_missing:hc3",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "absolute_mean_log_fluorescence",
+        "score_shape": [
+          8,
+          4000,
+          10760
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "small-clean",
+      "job_name": "small-clean_56",
+      "name": "nuc/G1/nuc_G1_lomax-20260405064020.nc",
+      "size": "45.7 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 71,
+    "job_name": "large_clean_71",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_71/pdz/cript-c/pdz_cript-c_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 185380575898,
+        "issues": [
+          "h5netcdf_open_failure",
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_71",
+      "name": "pdz/cript-c/pdz_cript-c_lomax_exponential-20260403053144.nc",
+      "size": "265.2 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 72,
+    "job_name": "large_clean_72",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_72/pdz/cript-c/pdz_cript-c_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "limited",
+        "bytes": 184913381184,
+        "issues": [
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          145290
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ],
+          "timepoint_counts": [
+            8,
+            3000,
+            3,
+            145290
+          ]
+        },
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_72",
+      "name": "pdz/cript-c/pdz_cript-c_gamma_exponential-20260407031255.nc",
+      "size": "265.2 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 74,
+    "job_name": "large_clean_74",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_74/pdz/cript-c/pdz_cript-c_lomax_sigmoid_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 116850942448,
+        "issues": [
+          "h5netcdf_open_failure",
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          145290
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_74",
+      "name": "pdz/cript-c/pdz_cript-c_lomax_sigmoid-20260407025947.nc",
+      "size": "178.5 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 76,
+    "job_name": "large_clean_76",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_76/pdz/cript-n/pdz_cript-n_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "limited",
+        "bytes": 109285683020,
+        "issues": [
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          123765
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            123765
+          ]
+        },
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_76",
+      "name": "pdz/cript-n/pdz_cript-n_exponential_exponential-20260407031157.nc",
+      "size": "153.0 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 77,
+    "job_name": "large_clean_77",
+    "retired_at": "2026-08-27T00:41:56.568424+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_77/pdz/cript-n/pdz_cript-n_lomax_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 109135259501,
+        "issues": [
+          "h5netcdf_open_failure",
+          "predictive_variable_missing:starting_counts",
+          "predictive_variable_missing:timepoint_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (len not positive after adjustment for EOA)'"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "log_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          123765
+        ],
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_77",
+      "name": "pdz/cript-n/pdz_cript-n_lomax_exponential-20260407031328.nc",
+      "size": "153.0 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 78,
+    "job_name": "large_clean_78",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_78/pdz/cript-n/pdz_cript-n_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 143656232729,
+        "issues": [
+          "predictive_boundary_read_failure:starting_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "OSError: Can't synchronously read data (wrong B-tree signature)"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          3000,
+          123765
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            3000,
+            3,
+            123765
+          ],
+          "timepoint_counts": [
+            8,
+            3000,
+            3,
+            123765
+          ]
+        },
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_78",
+      "name": "pdz/cript-n/pdz_cript-n_gamma_exponential-20260407031232.nc",
+      "size": "226.9 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 82,
+    "job_name": "large_clean_82",
+    "retired_at": null,
+    "recorded_at": "2026-08-26",
+    "reason": "historical_h5netcdf_open_failure_with_validated_raw_replacement",
+    "evidence": "user_reported",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_82/pdz/trans-1/pdz_trans-1_exponential_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": null,
+        "issues": [
+          "historical_h5netcdf_open_failure",
+          "original_artifact_unavailable_for_reaudit"
+        ],
+        "errors": [
+          "Historical report: downloaded diagnosed NetCDF did not open; original local file is unavailable for re-audit."
+        ],
+        "groups": [],
+        "score_variable": "log_r_mean",
+        "score_shape": null,
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": null,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_82",
+      "name": "pdz/trans-1/pdz_trans-1_exponential_exponential-20260407030507.nc",
+      "size": "183.6 GB"
+    }
+  },
+  {
+    "job_id": 90,
+    "job_name": "large_clean_90",
+    "retired_at": "2026-08-26T19:34:58.899354+00:00",
+    "reason": "replaced_by_raw_hmc_after_failed_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_90/pdz/trans-2/pdz_trans-2_gamma_exponential_diagnosed.nc",
+        "kind": "diagnosed_hmc",
+        "status": "unusable",
+        "bytes": 126079290132,
+        "issues": [
+          "predictive_boundary_read_failure:starting_counts",
+          "observed_variable_missing:starting_counts",
+          "observed_variable_missing:timepoint_counts",
+          "diagnostic_group_missing:sample_stats",
+          "diagnostic_group_missing:observed_data",
+          "diagnostic_group_missing:variable_diagnostic_stats",
+          "diagnostic_group_missing:sample_diagnostic_tests",
+          "diagnostic_group_missing:variable_diagnostic_tests"
+        ],
+        "errors": [
+          "OSError: Can't synchronously read data (wrong B-tree signature)"
+        ],
+        "groups": [
+          "posterior",
+          "posterior_predictive"
+        ],
+        "score_variable": "inv_r_mean",
+        "score_shape": [
+          8,
+          2000,
+          151624
+        ],
+        "predictive_shapes": {
+          "starting_counts": [
+            8,
+            2000,
+            3,
+            151624
+          ],
+          "timepoint_counts": [
+            8,
+            2000,
+            3,
+            151624
+          ]
+        },
+        "observed_shapes": {},
+        "h5py_compatible": true,
+        "h5netcdf_compatible": true
+      }
+    ],
+    "replacement": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_90",
+      "name": "pdz/trans-2/pdz_trans-2_gamma_exponential-20260403124036.nc",
+      "size": "186.2 GB",
+      "last_modified": "4mo ago"
+    }
+  }
+]

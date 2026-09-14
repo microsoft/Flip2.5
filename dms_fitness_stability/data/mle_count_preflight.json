@@ -1,0 +1,4355 @@
+[
+  {
+    "analysis_id": "pdz__pdz-cis__mle-predictive__exponential-exponential__mle-1",
+    "job_id": 1,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/data_dms_stability/pdz_cis/fits/pdz_cis_exponential_exponential_samples.nc",
+      "size": 555473531,
+      "mtime_ns": 1783369291000000000
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          10660
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "observed_totals": [
+          6666490,
+          7037006,
+          6399839
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          10660
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "observed_totals": [
+          6742447,
+          6705419,
+          6754664
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cis__mle-predictive__lomax-exponential__mle-3",
+    "job_id": 3,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_3/pdz/cis/pdz_cis_lomax_exponential_samples.nc",
+      "size": 555473531,
+      "mtime_ns": 1787736846042461254
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          10660
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "observed_totals": [
+          6666490,
+          7037006,
+          6399839
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          10660
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "observed_totals": [
+          6742447,
+          6705419,
+          6754664
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cis__mle-predictive__exponential-sigmoid__mle-4",
+    "job_id": 4,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "model_spec": "exponential-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_4/pdz/cis/pdz_cis_exponential_sigmoid_samples.nc",
+      "size": 555483602,
+      "mtime_ns": 1787737202971095660
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          10660
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "observed_totals": [
+          6666490,
+          7037006,
+          6399839
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          10660
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          3,
+          10660
+        ],
+        "observed_totals": [
+          6742447,
+          6705419,
+          6754664
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__exponential-exponential__mle-70",
+    "job_id": 70,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_70/pdz/cript-c/pdz_cript-c_exponential_exponential_samples.nc",
+      "size": 8739734571,
+      "mtime_ns": 1787764792329445000
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13088241,
+          12898827,
+          12889658
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13219230,
+          12371484,
+          13386755
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__lomax-exponential__mle-71",
+    "job_id": 71,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_71/pdz/cript-c/pdz_cript-c_lomax_exponential_samples.nc",
+      "size": 8739734571,
+      "mtime_ns": 1787764878869380865
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13088241,
+          12898827,
+          12889658
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13219230,
+          12371484,
+          13386755
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__gamma-exponential__mle-72",
+    "job_id": 72,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_72/pdz/cript-c/pdz_cript-c_gamma_exponential_samples.nc",
+      "size": 8739734571,
+      "mtime_ns": 1787764962028358304
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13088241,
+          12898827,
+          12889658
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13219230,
+          12371484,
+          13386755
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__exponential-sigmoid__mle-73",
+    "job_id": 73,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "model_spec": "exponential-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_73/pdz/cript-c/pdz_cript-c_exponential_sigmoid_samples.nc",
+      "size": 8739744642,
+      "mtime_ns": 1787765047694304918
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13088241,
+          12898827,
+          12889658
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13219230,
+          12371484,
+          13386755
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__mle-predictive__lomax-sigmoid__mle-74",
+    "job_id": 74,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "model_spec": "lomax-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_74/pdz/cript-c/pdz_cript-c_lomax_sigmoid_samples.nc",
+      "size": 8739744642,
+      "mtime_ns": 1787765132590261001
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13088241,
+          12898827,
+          12889658
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          145290
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          145290
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          13219230,
+          12371484,
+          13386755
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__exponential-exponential__mle-76",
+    "job_id": 76,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_76/pdz/cript-n/pdz_cript-n_exponential_exponential_samples.nc",
+      "size": 6992399275,
+      "mtime_ns": 1787765202884396636
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15196301,
+          14740856,
+          15156751
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15490535,
+          14730941,
+          13829762
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__lomax-exponential__mle-77",
+    "job_id": 77,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_77/pdz/cript-n/pdz_cript-n_lomax_exponential_samples.nc",
+      "size": 6992399275,
+      "mtime_ns": 1787765271905547922
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15196301,
+          14740856,
+          15156751
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15490535,
+          14730941,
+          13829762
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__gamma-exponential__mle-78",
+    "job_id": 78,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_78/pdz/cript-n/pdz_cript-n_gamma_exponential_samples.nc",
+      "size": 6992399275,
+      "mtime_ns": 1787765340935699100
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15196301,
+          14740856,
+          15156751
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15490535,
+          14730941,
+          13829762
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__lomax-sigmoid__mle-80",
+    "job_id": 80,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "model_spec": "lomax-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_80/pdz/cript-n/pdz_cript-n_lomax_sigmoid_samples.nc",
+      "size": 6992409346,
+      "mtime_ns": 1787765409791852413
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15196301,
+          14740856,
+          15156751
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15490535,
+          14730941,
+          13829762
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__mle-predictive__gamma-sigmoid__mle-81",
+    "job_id": 81,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "model_spec": "gamma-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_81/pdz/cript-n/pdz_cript-n_gamma_sigmoid_samples.nc",
+      "size": 6992409346,
+      "mtime_ns": 1787765480908977923
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15196301,
+          14740856,
+          15156751
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          123765
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          123765
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          15490535,
+          14730941,
+          13829762
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-1__mle-predictive__exponential-exponential__mle-82",
+    "job_id": 82,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-1",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_82/pdz/trans-1/pdz_trans-1_exponential_exponential_samples.nc",
+      "size": 8740172891,
+      "mtime_ns": 1787765564423950988
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          150769
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          150769
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          4182411,
+          4510198,
+          4953999
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          150769
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          150769
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          7972905,
+          16297743,
+          5781008
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-1__mle-predictive__gamma-exponential__mle-84",
+    "job_id": 84,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-1",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_84/pdz/trans-1/pdz_trans-1_gamma_exponential_samples.nc",
+      "size": 8740172891,
+      "mtime_ns": 1787765649271907658
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          150769
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          150769
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          4182411,
+          4510198,
+          4953999
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          150769
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          150769
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          7972905,
+          16297743,
+          5781008
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__mle-predictive__exponential-exponential__mle-88",
+    "job_id": 88,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_88/pdz/trans-2/pdz_trans-2_exponential_exponential_samples.nc",
+      "size": 8740241291,
+      "mtime_ns": 1787765733064877302
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          151624
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          151624
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          4803106,
+          5051861,
+          6477153
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          151624
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          151624
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          6570997,
+          6801072,
+          5209425
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__mle-predictive__gamma-exponential__mle-90",
+    "job_id": 90,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_90/pdz/trans-2/pdz_trans-2_gamma_exponential_samples.nc",
+      "size": 8740241291,
+      "mtime_ns": 1787765816455851892
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          151624
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          151624
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          4803106,
+          5051861,
+          6477153
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          151624
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          151624
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          6570997,
+          6801072,
+          5209425
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__mle-predictive__lomax-sigmoid__mle-92",
+    "job_id": 92,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "model_spec": "lomax-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_92/pdz/trans-2/pdz_trans-2_lomax_sigmoid_samples.nc",
+      "size": 8740251362,
+      "mtime_ns": 1787765900734815562
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          151624
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          151624
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          4803106,
+          5051861,
+          6477153
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          151624
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          151624
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          6570997,
+          6801072,
+          5209425
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__mle-predictive__gamma-sigmoid__mle-93",
+    "job_id": 93,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "model_spec": "gamma-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_93/pdz/trans-2/pdz_trans-2_gamma_sigmoid_samples.nc",
+      "size": 8740251362,
+      "mtime_ns": 1787765986596759764
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          3,
+          151624
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          151624
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          4803106,
+          5051861,
+          6477153
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          151624
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          151624
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          6570997,
+          6801072,
+          5209425
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__mle-predictive__exponential-exponential__mle-7",
+    "job_id": 7,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_7/trpb/libA/trpb_libA_exponential_exponential_samples.nc",
+      "size": 185451496,
+      "mtime_ns": 1787738392410547735
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9254
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9254
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9254
+        ],
+        "observed_totals": 5099601
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9254
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9254
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9254
+        ],
+        "observed_totals": [
+          9891926,
+          8319682
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__mle-predictive__lomax-exponential__mle-8",
+    "job_id": 8,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_8/trpb/libA/trpb_libA_lomax_exponential_samples.nc",
+      "size": 185451496,
+      "mtime_ns": 1787738443394924157
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9254
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9254
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9254
+        ],
+        "observed_totals": 5099601
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9254
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9254
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9254
+        ],
+        "observed_totals": [
+          9891926,
+          8319682
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__mle-predictive__exponential-sigmoid__mle-9",
+    "job_id": 9,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "model_spec": "exponential-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_9/trpb/libA/trpb_libA_exponential_sigmoid_samples.nc",
+      "size": 185458918,
+      "mtime_ns": 1787738453299802710
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9254
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9254
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9254
+        ],
+        "observed_totals": 5099601
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9254
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9254
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9254
+        ],
+        "observed_totals": [
+          9891926,
+          8319682
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__mle-predictive__exponential-exponential__mle-11",
+    "job_id": 11,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_11/trpb/libB/trpb_libB_exponential_exponential_samples.nc",
+      "size": 185591748,
+      "mtime_ns": 1787735944293499129
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9261
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9261
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9261
+        ],
+        "observed_totals": 8996949
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9261
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9261
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9261
+        ],
+        "observed_totals": [
+          8957236,
+          7206964
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__mle-predictive__lomax-exponential__mle-12",
+    "job_id": 12,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_12/trpb/libB/trpb_libB_lomax_exponential_samples.nc",
+      "size": 185591748,
+      "mtime_ns": 1787735999652820913
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9261
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9261
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9261
+        ],
+        "observed_totals": 8996949
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9261
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9261
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9261
+        ],
+        "observed_totals": [
+          8957236,
+          7206964
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__mle-predictive__exponential-sigmoid__mle-13",
+    "job_id": 13,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "model_spec": "exponential-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_13/trpb/libB/trpb_libB_exponential_sigmoid_samples.nc",
+      "size": 185599170,
+      "mtime_ns": 1787736007868720259
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9261
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9261
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9261
+        ],
+        "observed_totals": 8996949
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9261
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9261
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9261
+        ],
+        "observed_totals": [
+          8957236,
+          7206964
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__mle-predictive__exponential-exponential__mle-15",
+    "job_id": 15,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_15/trpb/libC/trpb_libC_exponential_exponential_samples.nc",
+      "size": 185571712,
+      "mtime_ns": 1787736018969584260
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9260
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9260
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9260
+        ],
+        "observed_totals": 7710483
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9260
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9260
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9260
+        ],
+        "observed_totals": [
+          6751310,
+          9951100
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__mle-predictive__lomax-exponential__mle-16",
+    "job_id": 16,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_16/trpb/libC/trpb_libC_lomax_exponential_samples.nc",
+      "size": 185571712,
+      "mtime_ns": 1787736070174956934
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9260
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9260
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9260
+        ],
+        "observed_totals": 7710483
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9260
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9260
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9260
+        ],
+        "observed_totals": [
+          6751310,
+          9951100
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__mle-predictive__exponential-sigmoid__mle-17",
+    "job_id": 17,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "model_spec": "exponential-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_17/trpb/libC/trpb_libC_exponential_sigmoid_samples.nc",
+      "size": 185579134,
+      "mtime_ns": 1787736078145859281
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9260
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9260
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9260
+        ],
+        "observed_totals": 7710483
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          9260
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          9260
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          9260
+        ],
+        "observed_totals": [
+          6751310,
+          9951100
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__mle-predictive__exponential-exponential__mle-19",
+    "job_id": 19,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_19/trpb/libD/trpb_libD_exponential_exponential_samples.nc",
+      "size": 471698939,
+      "mtime_ns": 1787736089703717687
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9057
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9057
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9057
+        ],
+        "observed_totals": 2977382
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9057
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9057
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9057
+        ],
+        "observed_totals": [
+          [
+            2961388,
+            2493225
+          ],
+          [
+            4929959,
+            4304605
+          ],
+          [
+            5273763,
+            2899414
+          ],
+          [
+            5080577,
+            3937513
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__mle-predictive__lomax-exponential__mle-20",
+    "job_id": 20,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_20/trpb/libD/trpb_libD_lomax_exponential_samples.nc",
+      "size": 471698939,
+      "mtime_ns": 1787736688639386448
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9057
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9057
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9057
+        ],
+        "observed_totals": 2977382
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9057
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9057
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9057
+        ],
+        "observed_totals": [
+          [
+            2961388,
+            2493225
+          ],
+          [
+            4929959,
+            4304605
+          ],
+          [
+            5273763,
+            2899414
+          ],
+          [
+            5080577,
+            3937513
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__mle-predictive__gamma-exponential__mle-21",
+    "job_id": 21,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_21/trpb/libD/trpb_libD_gamma_exponential_samples.nc",
+      "size": 471698939,
+      "mtime_ns": 1787736704245195560
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9057
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9057
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9057
+        ],
+        "observed_totals": 2977382
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9057
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9057
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9057
+        ],
+        "observed_totals": [
+          [
+            2961388,
+            2493225
+          ],
+          [
+            4929959,
+            4304605
+          ],
+          [
+            5273763,
+            2899414
+          ],
+          [
+            5080577,
+            3937513
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__mle-predictive__exponential-exponential__mle-25",
+    "job_id": 25,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_25/trpb/libE/trpb_libE_exponential_exponential_samples.nc",
+      "size": 332768147,
+      "mtime_ns": 1787736714114074848
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9229
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9229
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9229
+        ],
+        "observed_totals": 2699973
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          2,
+          9229
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          2,
+          9229
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9229
+        ],
+        "observed_totals": [
+          [
+            1948639,
+            5919858
+          ],
+          [
+            6567139,
+            4963095
+          ],
+          [
+            4724790,
+            12737519
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__mle-predictive__lomax-exponential__mle-26",
+    "job_id": 26,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_26/trpb/libE/trpb_libE_lomax_exponential_samples.nc",
+      "size": 406750155,
+      "mtime_ns": 1787736821666759395
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9229
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9229
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9229
+        ],
+        "observed_totals": 2699973
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          2,
+          9229
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          2,
+          9229
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9229
+        ],
+        "observed_totals": [
+          [
+            1948639,
+            5919858
+          ],
+          [
+            6567139,
+            4963095
+          ],
+          [
+            4724790,
+            12737519
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__mle-predictive__gamma-exponential__mle-27",
+    "job_id": 27,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_27/trpb/libE/trpb_libE_gamma_exponential_samples.nc",
+      "size": 406750155,
+      "mtime_ns": 1787736833341616599
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9229
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9229
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9229
+        ],
+        "observed_totals": 2699973
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          3,
+          2,
+          9229
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          2,
+          9229
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9229
+        ],
+        "observed_totals": [
+          [
+            1948639,
+            5919858
+          ],
+          [
+            6567139,
+            4963095
+          ],
+          [
+            4724790,
+            12737519
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__mle-predictive__exponential-exponential__mle-31",
+    "job_id": 31,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_31/trpb/libF/trpb_libF_exponential_exponential_samples.nc",
+      "size": 324442319,
+      "mtime_ns": 1787736860216287885
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          8996
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          8996
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          8996
+        ],
+        "observed_totals": 1299336
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          2,
+          8996
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          2,
+          8996
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          8996
+        ],
+        "observed_totals": [
+          [
+            1873668,
+            1805880
+          ],
+          [
+            2476725,
+            2945977
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__mle-predictive__lomax-exponential__mle-32",
+    "job_id": 32,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_32/trpb/libF/trpb_libF_lomax_exponential_samples.nc",
+      "size": 324442319,
+      "mtime_ns": 1787736941697291293
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          8996
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          8996
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          8996
+        ],
+        "observed_totals": 1299336
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          2,
+          8996
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          2,
+          8996
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          8996
+        ],
+        "observed_totals": [
+          [
+            1873668,
+            1805880
+          ],
+          [
+            2476725,
+            2945977
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__mle-predictive__gamma-exponential__mle-33",
+    "job_id": 33,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_33/trpb/libF/trpb_libF_gamma_exponential_samples.nc",
+      "size": 324442319,
+      "mtime_ns": 1787737026107258878
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          8996
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          8996
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          8996
+        ],
+        "observed_totals": 1299336
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          2,
+          8996
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          2,
+          8996
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          8996
+        ],
+        "observed_totals": [
+          [
+            1873668,
+            1805880
+          ],
+          [
+            2476725,
+            2945977
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__mle-predictive__exponential-sigmoid__mle-34",
+    "job_id": 34,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "model_spec": "exponential-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_34/trpb/libF/trpb_libF_exponential_sigmoid_samples.nc",
+      "size": 324452179,
+      "mtime_ns": 1787737037664117527
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          8996
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          8996
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          8996
+        ],
+        "observed_totals": 1299336
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          2,
+          2,
+          8996
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          2,
+          8996
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          8996
+        ],
+        "observed_totals": [
+          [
+            1873668,
+            1805880
+          ],
+          [
+            2476725,
+            2945977
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__mle-predictive__exponential-exponential__mle-37",
+    "job_id": 37,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_37/trpb/libG/trpb_libG_exponential_exponential_samples.nc",
+      "size": 470865723,
+      "mtime_ns": 1787737047879992577
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9041
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9041
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9041
+        ],
+        "observed_totals": 2683508
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9041
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9041
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9041
+        ],
+        "observed_totals": [
+          [
+            3203062,
+            2241421
+          ],
+          [
+            3526944,
+            1913224
+          ],
+          [
+            4651927,
+            2674886
+          ],
+          [
+            2872251,
+            5508180
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__mle-predictive__lomax-exponential__mle-38",
+    "job_id": 38,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_38/trpb/libG/trpb_libG_lomax_exponential_samples.nc",
+      "size": 470865723,
+      "mtime_ns": 1787737175708429122
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9041
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9041
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9041
+        ],
+        "observed_totals": 2683508
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9041
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9041
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9041
+        ],
+        "observed_totals": [
+          [
+            3203062,
+            2241421
+          ],
+          [
+            3526944,
+            1913224
+          ],
+          [
+            4651927,
+            2674886
+          ],
+          [
+            2872251,
+            5508180
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__mle-predictive__gamma-exponential__mle-39",
+    "job_id": 39,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_39/trpb/libG/trpb_libG_gamma_exponential_samples.nc",
+      "size": 470865723,
+      "mtime_ns": 1787737189763257210
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9041
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9041
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9041
+        ],
+        "observed_totals": 2683508
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9041
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9041
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9041
+        ],
+        "observed_totals": [
+          [
+            3203062,
+            2241421
+          ],
+          [
+            3526944,
+            1913224
+          ],
+          [
+            4651927,
+            2674886
+          ],
+          [
+            2872251,
+            5508180
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__mle-predictive__exponential-exponential__mle-43",
+    "job_id": 43,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_43/trpb/libH/trpb_libH_exponential_exponential_samples.nc",
+      "size": 467168327,
+      "mtime_ns": 1787737216417931195
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          8970
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          8970
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          8970
+        ],
+        "observed_totals": 2198002
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          8970
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          8970
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          8970
+        ],
+        "observed_totals": [
+          [
+            2228317,
+            1737879
+          ],
+          [
+            2099201,
+            3338035
+          ],
+          [
+            4012553,
+            3182600
+          ],
+          [
+            3810742,
+            4002836
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__mle-predictive__lomax-exponential__mle-44",
+    "job_id": 44,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_44/trpb/libH/trpb_libH_lomax_exponential_samples.nc",
+      "size": 467168327,
+      "mtime_ns": 1787737341365402977
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          8970
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          8970
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          8970
+        ],
+        "observed_totals": 2198002
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          8970
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          8970
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          8970
+        ],
+        "observed_totals": [
+          [
+            2228317,
+            1737879
+          ],
+          [
+            2099201,
+            3338035
+          ],
+          [
+            4012553,
+            3182600
+          ],
+          [
+            3810742,
+            4002836
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__mle-predictive__gamma-exponential__mle-45",
+    "job_id": 45,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_45/trpb/libH/trpb_libH_gamma_exponential_samples.nc",
+      "size": 467168327,
+      "mtime_ns": 1787737353427255446
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          8970
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          8970
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          8970
+        ],
+        "observed_totals": 2198002
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          8970
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          8970
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          8970
+        ],
+        "observed_totals": [
+          [
+            2228317,
+            1737879
+          ],
+          [
+            2099201,
+            3338035
+          ],
+          [
+            4012553,
+            3182600
+          ],
+          [
+            3810742,
+            4002836
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__mle-predictive__exponential-exponential__mle-49",
+    "job_id": 49,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_49/trpb/libI/trpb_libI_exponential_exponential_samples.nc",
+      "size": 475031803,
+      "mtime_ns": 1787737371648032579
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9121
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9121
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9121
+        ],
+        "observed_totals": 3529664
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9121
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9121
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9121
+        ],
+        "observed_totals": [
+          [
+            3619670,
+            4535580
+          ],
+          [
+            5592227,
+            5493865
+          ],
+          [
+            5063081,
+            4473845
+          ],
+          [
+            6305887,
+            4722717
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__mle-predictive__lomax-exponential__mle-50",
+    "job_id": 50,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_50/trpb/libI/trpb_libI_lomax_exponential_samples.nc",
+      "size": 475031803,
+      "mtime_ns": 1787737500045462166
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9121
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9121
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9121
+        ],
+        "observed_totals": 3529664
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9121
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9121
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9121
+        ],
+        "observed_totals": [
+          [
+            3619670,
+            4535580
+          ],
+          [
+            5592227,
+            5493865
+          ],
+          [
+            5063081,
+            4473845
+          ],
+          [
+            6305887,
+            4722717
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__mle-predictive__gamma-exponential__mle-51",
+    "job_id": 51,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_51/trpb/libI/trpb_libI_gamma_exponential_samples.nc",
+      "size": 475031803,
+      "mtime_ns": 1787737512790306280
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          9121
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          9121
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          9121
+        ],
+        "observed_totals": 3529664
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          4,
+          2,
+          9121
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          2,
+          9121
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          2,
+          9121
+        ],
+        "observed_totals": [
+          [
+            3619670,
+            4535580
+          ],
+          [
+            5592227,
+            5493865
+          ],
+          [
+            5063081,
+            4473845
+          ],
+          [
+            6305887,
+            4722717
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__exponential-exponential__mle-64",
+    "job_id": 64,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "model_spec": "exponential-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_64/trpb/four-site/trpb_four-site_exponential_exponential_samples.nc",
+      "size": 14514442100,
+      "mtime_ns": 1787778634204955232
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          54094236,
+          60123241
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          6,
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          6,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          [
+            60488981,
+            65398460
+          ],
+          [
+            56501707,
+            66967294
+          ],
+          [
+            59372873,
+            62533115
+          ],
+          [
+            63101269,
+            61188992
+          ],
+          [
+            66522702,
+            65479647
+          ],
+          [
+            68550537,
+            65666954
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__lomax-exponential__mle-65",
+    "job_id": 65,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "model_spec": "lomax-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_65/trpb/four-site/trpb_four-site_lomax_exponential_samples.nc",
+      "size": 14514442100,
+      "mtime_ns": 1787778767804299293
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          54094236,
+          60123241
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          6,
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          6,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          [
+            60488981,
+            65398460
+          ],
+          [
+            56501707,
+            66967294
+          ],
+          [
+            59372873,
+            62533115
+          ],
+          [
+            63101269,
+            61188992
+          ],
+          [
+            66522702,
+            65479647
+          ],
+          [
+            68550537,
+            65666954
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__gamma-exponential__mle-66",
+    "job_id": 66,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "model_spec": "gamma-exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_66/trpb/four-site/trpb_four-site_gamma_exponential_samples.nc",
+      "size": 14514442100,
+      "mtime_ns": 1787778901998635981
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          54094236,
+          60123241
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          6,
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          6,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          [
+            60488981,
+            65398460
+          ],
+          [
+            56501707,
+            66967294
+          ],
+          [
+            59372873,
+            62533115
+          ],
+          [
+            63101269,
+            61188992
+          ],
+          [
+            66522702,
+            65479647
+          ],
+          [
+            68550537,
+            65666954
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__exponential-sigmoid__mle-67",
+    "job_id": 67,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "model_spec": "exponential-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_67/trpb/four-site/trpb_four-site_exponential_sigmoid_samples.nc",
+      "size": 14514449461,
+      "mtime_ns": 1787779034260996613
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          54094236,
+          60123241
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          6,
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          6,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          [
+            60488981,
+            65398460
+          ],
+          [
+            56501707,
+            66967294
+          ],
+          [
+            59372873,
+            62533115
+          ],
+          [
+            63101269,
+            61188992
+          ],
+          [
+            66522702,
+            65479647
+          ],
+          [
+            68550537,
+            65666954
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__lomax-sigmoid__mle-68",
+    "job_id": 68,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "model_spec": "lomax-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_68/trpb/four-site/trpb_four-site_lomax_sigmoid_samples.nc",
+      "size": 14514449461,
+      "mtime_ns": 1787779166904352524
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          54094236,
+          60123241
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          6,
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          6,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          [
+            60488981,
+            65398460
+          ],
+          [
+            56501707,
+            66967294
+          ],
+          [
+            59372873,
+            62533115
+          ],
+          [
+            63101269,
+            61188992
+          ],
+          [
+            66522702,
+            65479647
+          ],
+          [
+            68550537,
+            65666954
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "trpb__trpb-four-site__mle-predictive__gamma-sigmoid__mle-69",
+    "job_id": 69,
+    "protein_family": "trpb",
+    "landscape": "trpb-four-site",
+    "model_spec": "gamma-sigmoid",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_69/trpb/four-site/trpb_four-site_gamma_sigmoid_samples.nc",
+      "size": 14514449461,
+      "mtime_ns": 1787779298998715240
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "starting_counts": {
+        "observed_shape": [
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          54094236,
+          60123241
+        ]
+      },
+      "timepoint_counts": {
+        "observed_shape": [
+          6,
+          2,
+          194361
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          6,
+          2,
+          194361
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          1,
+          33554
+        ],
+        "observed_totals": [
+          [
+            60488981,
+            65398460
+          ],
+          [
+            56501707,
+            66967294
+          ],
+          [
+            59372873,
+            62533115
+          ],
+          [
+            63101269,
+            61188992
+          ],
+          [
+            66522702,
+            65479647
+          ],
+          [
+            68550537,
+            65666954
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "nuc__nuc-g1__mle-predictive__exponential__mle-55",
+    "job_id": 55,
+    "protein_family": "nuc",
+    "landscape": "nuc-G1",
+    "model_spec": "exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_55/nuc/G1/nuc_G1_exponential_None_samples.nc",
+      "size": 819241913,
+      "mtime_ns": 1787737771568141190
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "ic1": {
+        "observed_shape": [
+          2,
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "observed_totals": [
+          295512,
+          2750258
+        ]
+      },
+      "ic2": {
+        "observed_shape": [
+          2,
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "observed_totals": [
+          238778,
+          2309175
+        ]
+      },
+      "ic3": {
+        "observed_shape": [
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          10760
+        ],
+        "observed_totals": 383379
+      },
+      "lc": {
+        "observed_shape": [
+          3,
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          3,
+          10760
+        ],
+        "observed_totals": [
+          294836,
+          285871,
+          534708
+        ]
+      },
+      "hc1": {
+        "observed_shape": [
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          10760
+        ],
+        "observed_totals": 367766
+      },
+      "hc2": {
+        "observed_shape": [
+          2,
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "observed_totals": [
+          224293,
+          1936861
+        ]
+      },
+      "hc3": {
+        "observed_shape": [
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          10760
+        ],
+        "observed_totals": 956648
+      }
+    }
+  },
+  {
+    "analysis_id": "nuc__nuc-g1__mle-predictive__lomax__mle-56",
+    "job_id": 56,
+    "protein_family": "nuc",
+    "landscape": "nuc-G1",
+    "model_spec": "lomax",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_56/nuc/G1/nuc_G1_lomax_None_samples.nc",
+      "size": 819241913,
+      "mtime_ns": 1787738030129978747
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "ic1": {
+        "observed_shape": [
+          2,
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "observed_totals": [
+          295512,
+          2750258
+        ]
+      },
+      "ic2": {
+        "observed_shape": [
+          2,
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "observed_totals": [
+          238778,
+          2309175
+        ]
+      },
+      "ic3": {
+        "observed_shape": [
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          10760
+        ],
+        "observed_totals": 383379
+      },
+      "lc": {
+        "observed_shape": [
+          3,
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          3,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          3,
+          10760
+        ],
+        "observed_totals": [
+          294836,
+          285871,
+          534708
+        ]
+      },
+      "hc1": {
+        "observed_shape": [
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          10760
+        ],
+        "observed_totals": 367766
+      },
+      "hc2": {
+        "observed_shape": [
+          2,
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          10760
+        ],
+        "observed_totals": [
+          224293,
+          1936861
+        ]
+      },
+      "hc3": {
+        "observed_shape": [
+          10760
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          10760
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          10760
+        ],
+        "observed_totals": 956648
+      }
+    }
+  },
+  {
+    "analysis_id": "nuc__nuc-g2__mle-predictive__exponential__mle-57",
+    "job_id": 57,
+    "protein_family": "nuc",
+    "landscape": "nuc-G2",
+    "model_spec": "exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_57/nuc/G2/nuc_G2_exponential_None_samples.nc",
+      "size": 532194312,
+      "mtime_ns": 1787738109877003369
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "ic1": {
+        "observed_shape": [
+          2,
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          14755
+        ],
+        "observed_totals": [
+          4297655,
+          1099653
+        ]
+      },
+      "ic2": {
+        "observed_shape": [
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          14755
+        ],
+        "observed_totals": 1147268
+      },
+      "c86": {
+        "observed_shape": [
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          14755
+        ],
+        "observed_totals": 1403562
+      },
+      "c93": {
+        "observed_shape": [
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          14755
+        ],
+        "observed_totals": 726796
+      },
+      "c975": {
+        "observed_shape": [
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          14755
+        ],
+        "observed_totals": 790691
+      }
+    }
+  },
+  {
+    "analysis_id": "nuc__nuc-g2__mle-predictive__lomax__mle-58",
+    "job_id": 58,
+    "protein_family": "nuc",
+    "landscape": "nuc-G2",
+    "model_spec": "lomax",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_58/nuc/G2/nuc_G2_lomax_None_samples.nc",
+      "size": 532194312,
+      "mtime_ns": 1787738216764696044
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "ic1": {
+        "observed_shape": [
+          2,
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          2,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          14755
+        ],
+        "observed_totals": [
+          4297655,
+          1099653
+        ]
+      },
+      "ic2": {
+        "observed_shape": [
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          14755
+        ],
+        "observed_totals": 1147268
+      },
+      "c86": {
+        "observed_shape": [
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          14755
+        ],
+        "observed_totals": 1403562
+      },
+      "c93": {
+        "observed_shape": [
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          14755
+        ],
+        "observed_totals": 726796
+      },
+      "c975": {
+        "observed_shape": [
+          14755
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          14755
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          14755
+        ],
+        "observed_totals": 790691
+      }
+    }
+  },
+  {
+    "analysis_id": "nuc__nuc-g3__mle-predictive__exponential__mle-59",
+    "job_id": 59,
+    "protein_family": "nuc",
+    "landscape": "nuc-G3",
+    "model_spec": "exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_59/nuc/G3/nuc_G3_exponential_None_samples.nc",
+      "size": 526991806,
+      "mtime_ns": 1787738308502574007
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "ic1": {
+        "observed_shape": [
+          18790
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          18790
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          18790
+        ],
+        "observed_totals": 4545995
+      },
+      "oc1": {
+        "observed_shape": [
+          4,
+          18790
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          18790
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          1,
+          18790
+        ],
+        "observed_totals": [
+          1330081,
+          773672,
+          959008,
+          1089311
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "nuc__nuc-g4__mle-predictive__exponential__mle-61",
+    "job_id": 61,
+    "protein_family": "nuc",
+    "landscape": "nuc-G4",
+    "model_spec": "exponential",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_61/nuc/G4/nuc_G4_exponential_None_samples.nc",
+      "size": 436241422,
+      "mtime_ns": 1787738383358658450
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "ic1": {
+        "observed_shape": [
+          15554
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          15554
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          15554
+        ],
+        "observed_totals": 2553699
+      },
+      "oc1": {
+        "observed_shape": [
+          4,
+          15554
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          15554
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          15554
+        ],
+        "observed_totals": [
+          855285,
+          1184219,
+          1159758,
+          796114
+        ]
+      }
+    }
+  },
+  {
+    "analysis_id": "nuc__nuc-g4__mle-predictive__lomax__mle-62",
+    "job_id": 62,
+    "protein_family": "nuc",
+    "landscape": "nuc-G4",
+    "model_spec": "lomax",
+    "artifact_status": "validated",
+    "status": "ready",
+    "source_artifact": {
+      "path": "/data/amlt/mle/mle_62/nuc/G4/nuc_G4_lomax_None_samples.nc",
+      "size": 436241422,
+      "mtime_ns": 1787760922828026151
+    },
+    "n_draws": 1000,
+    "count_variables": {
+      "ic1": {
+        "observed_shape": [
+          15554
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          15554
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          15554
+        ],
+        "observed_totals": 2553699
+      },
+      "oc1": {
+        "observed_shape": [
+          4,
+          15554
+        ],
+        "predictive_shape": [
+          1,
+          1000,
+          4,
+          15554
+        ],
+        "dtype": "int32",
+        "chunks": [
+          1,
+          1000,
+          2,
+          15554
+        ],
+        "observed_totals": [
+          855285,
+          1184219,
+          1159758,
+          796114
+        ]
+      }
+    }
+  }
+]

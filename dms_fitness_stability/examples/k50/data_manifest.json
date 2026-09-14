@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "landscape": "k50",
+  "paper": {
+    "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+    "doi": "10.1038/s41586-023-06328-6",
+    "data_doi": "10.5281/zenodo.7992926",
+    "concept_doi": "10.5281/zenodo.7401274",
+    "code_repository": "https://github.com/Rocklin-Lab/cdna-display-proteolysis-pipeline",
+    "code_commit": "597442a33f931a5e86003134c279b6f2a58ffd33",
+    "license": "CC-BY-4.0"
+  },
+  "loader": {
+    "repository": "https://github.com/microsoft/SciStanPy",
+    "commit": "09c439f675ead70f851d814242f153ecb7712113",
+    "path": "flipv3/flip_dsets.py",
+    "blob_sha": "84a7e716aac80f0f949879ba4cb97f0018c72152",
+    "function": "load_k50_data"
+  },
+  "archive": {
+    "filename": "Raw_NGS_count_tables.zip",
+    "zenodo_record": "7992926",
+    "bytes": 242934040,
+    "md5": "f0a2c5882439001dbbb8d81b4e64fe24",
+    "sha256": "efeff39295333b2b4bf303ec6cc88bcbc4e958758c8fc8bdd47e521351b8524b"
+  },
+  "raw": {
+    "NGS_count_lib1.csv": {
+      "bytes": 132390066,
+      "sha256": "b410eafd91802089ca18d2d9e127cedfa98a8c7e3f3c252138b3e92ec3a54ff1",
+      "rows": 297929,
+      "zip_crc32": "83bc3e8f",
+      "grouped_non_dummy_variants": 297699
+    },
+    "NGS_count_lib2.csv": {
+      "bytes": 330431201,
+      "sha256": "d534e425abb67a93611c3cdc1bca2ea52903c26e555f1bc7db873dae83aae6ec",
+      "rows": 661335,
+      "zip_crc32": "62666330",
+      "grouped_non_dummy_variants": 573650
+    },
+    "NGS_count_lib3.csv": {
+      "bytes": 440052777,
+      "sha256": "e54b687818b5024a87789e6f26b53b266d76ddc01eaf21ea80038e2628491629",
+      "rows": 792775,
+      "zip_crc32": "2089652b",
+      "grouped_non_dummy_variants": 709823
+    },
+    "NGS_count_lib4.csv": {
+      "bytes": 326716838,
+      "sha256": "75ee9d0de3dd01fda2a590e81c002366e7691901a808d0534518589541d95c65",
+      "rows": 900000,
+      "zip_crc32": "f8f932e1",
+      "grouped_non_dummy_variants": 315593
+    },
+    "Raw_qPCR_data_FigS1.csv": {
+      "bytes": 2858,
+      "sha256": "4351767e3fb1a4153c84689417ba85fb47cb37c4e23a48b8cb91062c28cd7b75",
+      "rows": 24,
+      "source_repository": "Rocklin-Lab/cdna-display-proteolysis-pipeline",
+      "source_commit": "597442a33f931a5e86003134c279b6f2a58ffd33",
+      "source_path": "Pipeline_qPCR_data/Raw_qPCR_data_FigS1.csv",
+      "source_blob_sha": "371ec307fb775445aa28e90e651bef945c1633db"
+    },
+    "K50_scrambles_for_STEP3.csv": {
+      "bytes": 9323361,
+      "sha256": "fe15f9c3cedd57b4227115ac47e6db81baa86fda42ff06084ac3f50f6b560451",
+      "rows": 127717,
+      "columns": ["aa_seq_experimental"],
+      "projection": "Identity-only projection used by the historical loader; fitted K50 columns are intentionally omitted.",
+      "source_zenodo_record": "7401275",
+      "source_archive": "Pipeline_K50_dG.zip",
+      "source_archive_bytes": 198777302,
+      "source_archive_md5": "57a81806aa701e2c6e5976f70b0f88a7",
+      "source_member": "Pipeline_K50_dG/K50_scrambles_for_STEP3.csv",
+      "source_member_bytes": 59028290,
+      "source_member_sha256": "4512ce79de6bfae51bb761419918fcc67c18d51c03c20836e3f0242ebd6dfd5b",
+      "source_member_zip_crc32": "cfc3d4df",
+      "release_note": "The file is present only in the first Zenodo version; later versions document but omit it (upstream issue 7)."
+    }
+  },
+  "loader_output": {
+    "global_fitted_variants": 1824523,
+    "scrambled_variants": 64238,
+    "ordinal_sequence_shape": [1824523, 86],
+    "qpcr_log_protease_concentration_shape": [11],
+    "qpcr_log2_survival_shape": [2, 11, 8],
+    "log_expected_protease_concentration_shape": [2, 11],
+    "libraries": {
+      "v1": {
+        "fitted_variants": 297699,
+        "counts_c0_shape": [2, 2, 297699],
+        "counts_cg0_shape": [2, 2, 11, 297699]
+      },
+      "v2": {
+        "fitted_variants": 573650,
+        "counts_c0_shape": [2, 2, 573650],
+        "counts_cg0_shape": [2, 2, 11, 573650]
+      },
+      "v3": {
+        "fitted_variants": 709823,
+        "counts_c0_shape": [2, 2, 709823],
+        "counts_cg0_shape": [2, 2, 11, 709823]
+      },
+      "v4": {
+        "fitted_variants": 315593,
+        "counts_c0_shape": [2, 2, 315593],
+        "counts_cg0_shape": [2, 2, 11, 315593]
+      }
+    }
+  },
+  "axes": {
+    "counts_c0": ["protease", "replicate", "variant"],
+    "counts_cg0": ["protease", "replicate", "concentration", "variant"],
+    "protease_order": ["chymotrypsin", "trypsin"],
+    "replicate_columns": {
+      "replicate_1": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+      "replicate_2": ["13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
+    },
+    "untreated_concentration_index": 0,
+    "treated_concentration_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  },
+  "variant_order": "Within each library, pandas groupby('aa_seq') lexicographic order after duplicate collapse and removal of aa_seq '-'. Global IDs are assigned on first appearance in v1, then v2, v3, and v4.",
+  "reference": {
+    "identity": "domain-specific",
+    "global_wild_type_index": null,
+    "reason": "The four libraries contain hundreds of natural and designed domain backgrounds; there is no single K50-wide wild type."
+  },
+  "reported_fitness": {
+    "available_in_raw_loader_inputs": false,
+    "available_as_published_processed_reference": true,
+    "reason": "K50 and folding free energy are inferred from the count and qPCR observations, then published separately by the authors.",
+    "canonical_score": "dG_ML",
+    "canonical_score_semantics": "quality-filtered absolute folding stability in kcal/mol",
+    "ranking_direction": "higher is more stable",
+    "projection": {
+      "path": "reported_fitness/Tsuboyama2023_Dataset2_Dataset3_20230416.csv",
+      "bytes": 112916008,
+      "sha256": "a5ae968d7f2e9a81119bb1fb74d6268864cbf76dc25f79ad7db54114fc97eecb",
+      "rows": 537021,
+      "columns": [
+        "variant_id",
+        "source_aa_seq_full",
+        "reported_fitness_raw",
+        "reported_fitness_95ci_width",
+        "reported_fitness_ml",
+        "reported_wt_name",
+        "reported_wt_cluster"
+      ],
+      "source_zenodo_record": "7992926",
+      "source_archive": "Processed_K50_dG_datasets.zip",
+      "source_archive_bytes": 1013678473,
+      "source_archive_md5": "f7e8c553efee734cf161ee6f2b0a09cf",
+      "source_member": "Processed_K50_dG_datasets/Tsuboyama2023_Dataset2_Dataset3_20230416.csv",
+      "source_member_bytes": 697658024,
+      "source_member_compressed_bytes": 209854627,
+      "source_member_zip_crc32": "9ac87977",
+      "source_member_sha256": "0c7b2bf1f162122d83d5bb39b901cc446e436b5643684ca268f934be145d8398",
+      "projection_method": "Stream the publication member, join each row to the staged raw tables by exact (name, dna_seq), use the raw aa_seq as the job-63 variant ID, retain source aa_seq_full for audit, and retain only deltaG, deltaG_95CI, dG_ML, WT_name, and WT_cluster."
+    },
+    "source_member_rows": {
+      "total": 776298,
+      "measured": 675467,
+      "below_lower_limit": 53235,
+      "above_upper_limit": 43059,
+      "unavailable": 4537,
+      "unique_sequences_all": 754354,
+      "eligible_measurements": 771761,
+      "eligible_unique_sequences": 749890,
+      "duplicate_eligible_sequences": 16955,
+      "max_measurements_per_sequence": 20,
+      "mixed_status_sequences": 518
+    },
+    "projected_rows": {
+      "total": 537021,
+      "measured": 468642,
+      "below_lower_limit": 23647,
+      "above_upper_limit": 42647,
+      "unavailable": 2085,
+      "unique_sequences_all": 526904,
+      "eligible_measurements": 534936,
+      "eligible_unique_sequences": 524836,
+      "duplicate_eligible_sequences": 8265,
+      "max_measurements_per_sequence": 12,
+      "mixed_status_sequences": 239,
+      "source_identity_differences": 43947,
+      "source_constructs_absent_from_job_inputs": 239277
+    },
+    "top_k_boundaries": {
+      "50": {
+        "score": 5.0,
+        "strictly_above": 0,
+        "tied_at_boundary": 41517,
+        "best_rank": 1,
+        "worst_rank": 41517,
+        "exact_top_k_identifiable": false
+      },
+      "100": {
+        "score": 5.0,
+        "strictly_above": 0,
+        "tied_at_boundary": 41517,
+        "best_rank": 1,
+        "worst_rank": 41517,
+        "exact_top_k_identifiable": false
+      },
+      "1000": {
+        "score": 5.0,
+        "strictly_above": 0,
+        "tied_at_boundary": 41517,
+        "best_rank": 1,
+        "worst_rank": 41517,
+        "exact_top_k_identifiable": false
+      }
+    },
+    "alignment_policy": "Join publication rows to the exact final raw snapshot by (name, dna_seq), use its aa_seq identity, and exclude unmatched constructs. Exclude '-' dG_ML rows, map '<-1' and '>5' to assay limits, clip numeric values to [-1, 5], and take the median across duplicate sequence measurements.",
+    "full_archives_not_retained": {
+      "K50_dG_tables.zip": {
+        "zenodo_record": "7992926",
+        "bytes": 449818840,
+        "md5": "1cd1e460db6aa907e17c1249b35fbb82"
+      },
+      "Processed_K50_dG_datasets.zip": {
+        "zenodo_record": "7992926",
+        "bytes": 1013678473,
+        "md5": "f7e8c553efee734cf161ee6f2b0a09cf",
+        "note": "The canonical score member is streamed into the projection above; the full archive is not retained."
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "notebooks": {
+    "direct_hmc": {
+      "error_outputs": 0,
+      "executed_code_cells": 27,
+      "figure_file_count": 52,
+      "figure_pairs": 26,
+      "figure_tree_sha256": "dd436d4fd5f6eb8a91e2a63b5d3675d2ee42888ef97b49912aa496e5ad917737",
+      "notebook": "examples/paper/plots.ipynb",
+      "notebook_sha256": "7e0b908a939ae8245dc145ca0d5b11410a2036651c00e57063efe640373fdac8",
+      "pdf_validation": "valid",
+      "pixel_identical_control_pngs": 23,
+      "pixel_identical_control_scope": "figures_4_through_11",
+      "png_validation": "valid_nonblank"
+    },
+    "hmc_count_based": {
+      "error_outputs": 0,
+      "executed_code_cells": 27,
+      "figure_file_count": 52,
+      "figure_pairs": 26,
+      "figure_tree_sha256": "c5f97d79c1f7e9add107e1f5df2b9de08552d0eedd3eec0f3d46ca8e35d3a32c",
+      "notebook": "examples/paper/plots_hmc_count_based.ipynb",
+      "notebook_sha256": "e5520c07051c9285ebe21ada96caab4f0543a21971339bda71cfa57b5bfcffea",
+      "pdf_validation": "valid",
+      "png_validation": "valid_nonblank"
+    },
+    "mle_predictive": {
+      "error_outputs": 0,
+      "executed_code_cells": 13,
+      "figure_file_count": 52,
+      "figure_pairs": 26,
+      "figure_tree_sha256": "a03587b872d21b4aebf3551c06b3831cc3374e6dbafd5d61009f1bb21642c445",
+      "notebook": "examples/paper/plots_mle.ipynb",
+      "notebook_sha256": "5bf3953a1a40592602b150b18af6644060c89c6788c1bbc56f747aa589049f2c",
+      "pdf_validation": "valid",
+      "png_validation": "valid_nonblank"
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "retired_at": "2026-08-31",
+  "updated_at": "2026-09-03",
+  "reason": "sampled-MLE score matrices, compact results, mechanism caches, paper tables, and figures were validated; source artifacts were retired for HMC analysis and score-bundle conversion capacity",
+  "canonical_manifest": "examples/paper/analyses_mle.json",
+  "retained_manifest": "examples/paper/analyses_mle_pilot.json",
+  "pre_retirement_audit": "data/mle_proxy_audit.json",
+  "product_fit_retirement_archive": "data/retired_product_fits.json",
+  "source_inventory_before_retirement": {
+    "files": 61,
+    "logical_bytes": 677353376841,
+    "allocated_bytes": 677353824256
+  },
+  "retained_sources": [
+    {
+      "protein_family": "pdz",
+      "job_id": 3,
+      "landscape": "pdz-cis",
+      "path": "/data/amlt/mle/mle_3/pdz/cis/pdz_cis_lomax_exponential_samples.nc",
+      "bytes": 555473531,
+      "purpose": "three-replicate PDZ DiMSum-style preprocessing example"
+    },
+    {
+      "protein_family": "trpb",
+      "job_id": 64,
+      "landscape": "trpb-four-site",
+      "path": "/data/amlt/mle/mle_64/trpb/four-site/trpb_four-site_exponential_exponential_samples.nc",
+      "bytes": 14514442100,
+      "purpose": "two-input, six-timepoint, two-output-replicate Johnston preprocessing example"
+    },
+    {
+      "protein_family": "nuc",
+      "job_id": 59,
+      "landscape": "nuc-G3",
+      "path": "/data/amlt/mle/mle_59/nuc/G3/nuc_G3_exponential_None_samples.nc",
+      "bytes": 526991806,
+      "purpose": "four-gate NucB enrichment preprocessing example"
+    }
+  ],
+  "retained_source_totals": {
+    "files": 3,
+    "logical_bytes": 15596907437,
+    "allocated_bytes": 15596929024
+  },
+  "retired_sources": {
+    "files": 58,
+    "job_ids": [
+      1,
+      4,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      19,
+      20,
+      21,
+      25,
+      26,
+      27,
+      31,
+      32,
+      33,
+      34,
+      37,
+      38,
+      39,
+      43,
+      44,
+      45,
+      49,
+      50,
+      51,
+      55,
+      56,
+      57,
+      58,
+      61,
+      62,
+      63,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      76,
+      77,
+      78,
+      80,
+      81,
+      82,
+      84,
+      88,
+      90,
+      92,
+      93
+    ],
+    "logical_bytes": 661756469404,
+    "allocated_bytes": 661756895232
+  },
+  "retired_noncanonical_products": [
+    {
+      "kind": "proxy",
+      "path": "/data/data_dms_stability/paper/mle_predictive/proxies/k50__k50__mle-predictive__massive-only-mle__k50-mle-lr0-01-combined-v1-retired",
+      "allocated_bytes": 6224945152
+    },
+    {
+      "kind": "result",
+      "path": "/data/data_dms_stability/paper/mle_predictive/results/k50__k50__mle-predictive__massive-only-mle__k50-mle-lr0-01-combined-v1-retired",
+      "allocated_bytes": 468705280
+    }
+  ],
+  "validated_products_after_retirement": {
+    "proxy_bundles": 61,
+    "compact_results": 61,
+    "paper_score_views": 62,
+    "mechanism_caches": 62,
+    "paper_table_files": 14,
+    "figure_png_files": 29,
+    "figure_pdf_files": 29,
+    "matrix_only_audit_status": "61 valid",
+    "mechanism_table_validation_status": "valid"
+  },
+  "supporting_experimental_data_retained": [
+    "/data/data_dms_stability/pdz_cis/raw",
+    "/data/data_dms_stability/trpb/raw",
+    "/data/data_dms_stability/nuc/raw",
+    "/data/data_dms_stability/k50/raw"
+  ],
+  "rebuild_limit": "The 58 retired proxy matrices cannot be regenerated locally unless their sampled-MLE source artifacts are downloaded or regenerated. All downstream paper products can be regenerated from the retained proxy bundles."
+}

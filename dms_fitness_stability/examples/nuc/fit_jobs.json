@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "source": "data/HMC Results Summaries.csv and microsoft/SciStanPy@09c439f675ead70f851d814242f153ecb7712113/amlt_configs/cmds.txt",
+  "fits_downloaded": false,
+  "fits": [
+    {
+      "job": 55,
+      "dataset": "nuc",
+      "subset": "G1",
+      "fitness_dist": "exponential",
+      "inference_method": "hmc",
+      "cli_args": "--dataset nuc --subset G1 --fitness_dist exponential --n_samples 4000 --n_warmup 4000 --alpha 5.0 --centered",
+      "posterior_variable": "absolute_mean_log_fluorescence",
+      "posterior_dims": ["chain", "draw", "a"],
+      "posterior_shape": [8, 4000, 10760]
+    },
+    {
+      "job": 56,
+      "dataset": "nuc",
+      "subset": "G1",
+      "fitness_dist": "lomax",
+      "inference_method": "hmc",
+      "cli_args": "--dataset nuc --subset G1 --fitness_dist lomax --n_samples 4000 --alpha 5.0 --centered",
+      "posterior_variable": "absolute_mean_log_fluorescence",
+      "posterior_dims": ["chain", "draw", "a"],
+      "posterior_shape": [8, 4000, 10760]
+    },
+    {
+      "job": 57,
+      "dataset": "nuc",
+      "subset": "G2",
+      "fitness_dist": "exponential",
+      "inference_method": "hmc",
+      "cli_args": "--dataset nuc --subset G2 --fitness_dist exponential --exp_beta 12.5 --alpha 5.0 --centered",
+      "posterior_variable": "log_fluorescence",
+      "posterior_dims": ["chain", "draw", "a"],
+      "posterior_shape": [8, 2000, 14755]
+    },
+    {
+      "job": 58,
+      "dataset": "nuc",
+      "subset": "G2",
+      "fitness_dist": "lomax",
+      "inference_method": "hmc",
+      "cli_args": "--dataset nuc --subset G2 --fitness_dist lomax --lomax_alpha 4.0 --alpha 5.0 --centered --n_warmup 4000 --n_samples 3000",
+      "posterior_variable": "log_fluorescence",
+      "posterior_dims": ["chain", "draw", "a"],
+      "posterior_shape": [8, 3000, 14755]
+    },
+    {
+      "job": 59,
+      "dataset": "nuc",
+      "subset": "G3",
+      "fitness_dist": "exponential",
+      "inference_method": "hmc",
+      "cli_args": "--dataset nuc --subset G3 --fitness_dist exponential --exp_beta 15.0 --alpha 5.0 --experimental_dist normal --centered",
+      "posterior_variable": "log_fluorescence",
+      "posterior_dims": ["chain", "draw", "a"],
+      "posterior_shape": [8, 2000, 18790]
+    },
+    {
+      "job": 61,
+      "dataset": "nuc",
+      "subset": "G4",
+      "fitness_dist": "exponential",
+      "inference_method": "hmc",
+      "cli_args": "--dataset nuc --subset G4 --fitness_dist exponential --exp_beta 17.5 --alpha 5.0 --centered",
+      "posterior_variable": "log_fluorescence",
+      "posterior_dims": ["chain", "draw", "a"],
+      "posterior_shape": [8, 2000, 15554]
+    },
+    {
+      "job": 62,
+      "dataset": "nuc",
+      "subset": "G4",
+      "fitness_dist": "lomax",
+      "inference_method": "hmc",
+      "cli_args": "--dataset nuc --subset G4 --fitness_dist lomax --lomax_alpha 8.0 --alpha 5.0 --centered",
+      "posterior_variable": "log_fluorescence",
+      "posterior_dims": ["chain", "draw", "a"],
+      "posterior_shape": [8, 2000, 15554]
+    }
+  ],
+  "omitted_job": {
+    "job": 60,
+    "reason": "G3 lomax was not included in the user-requested job set."
+  }
+}

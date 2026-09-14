@@ -1,0 +1,28 @@
+{
+  "source_revision": "09c439f675ead70f851d814242f153ecb7712113",
+  "source_file_sha256": {
+    "flipv3/base_models.py": "11fd7ce8065703ff91c257d695c485559bd87ac7e4dc17d2dc5af667f64ef11d",
+    "flipv3/pdz3_models.py": "b61e30efc777bf6d5fd410f1397d14c1bea4632f8b81836f24912818ed316dfa",
+    "flipv3/trpb_models.py": "41b27c1d0653c20f9579f196c71831bbd6e7d983717aef62d2122778979f2849",
+    "flipv3/nuclease_models.py": "a2f010f2b372df89c31280a3adf7739cf2d301c81446aed2c283c097d66898b1",
+    "flipv3/constants.py": "2b01fbbfda9f04e29ff3b5cdd191268db1f562e850f3d818fe2dd0732c62e911",
+    "scistanpy/defaults.py": "dafa282a7bc0bab0e1c26c16b30752e31fa3cab8211012011c577e1c5a918e91",
+    "scistanpy/model/components/parameters.py": "abe0e92cfd143ac6a08d91ceebff1eaefcb0ea7e92dd928664148af0053ec19d",
+    "scistanpy/model/components/transformations/transformed_parameters.py": "5edff0a09b57334dd75fe59623c08a64b75a1ca472cbd5a1e846f81c046fd406",
+    "scistanpy/model/nn_module.py": "ad25c45f4038efeae28b8c815f8f92720c4370897c815b566e9c621316e63065",
+    "scistanpy/model/results/hmc.py": "2d92538d2f1312348cf5bb4ae293133a079d32ba539f3c274b2bcee6067bbcaa",
+    "scistanpy/model/results/mle.py": "1a6cd6ff86de5dc19dc3c698ea6fd2abd2e9f390d98e69ac1fbdb2f36e8d425e",
+    "scistanpy/pipelines/mcmc_flip.py": "2a484be33008a2080705fda199f8508b3502aa78bd4c4dab5141a20402da7c35",
+    "scistanpy/pipelines/mle_flip.py": "d92ee13c76982d7f14bb69b2d50d8244e717c2663c69dfd3dcf323b40968b453",
+    "amlt_configs/cmds.txt": "efa59b52b624164481f36c769ca5053f6b3c7e0a3dda9d0a9481254ce33a7db0",
+    "amlt_configs/cmds-mle.txt": "9a923c77ceafb7424bccad0fe234e6fd7208a10e0d86e8978fa6bffd31a5ed0d"
+  },
+  "committed_loader_sha256": "01c0d238751b749df4d6abad89a3e7960f297872428c2557932ad912ccd3f28f",
+  "config_sha256": "cf09571dd9cb3c074b3ca80ed2fd1c0f8bcffcba119e8d5edf48a8ceb6f4616f",
+  "fit_audit_sha256": "633d557d137f24b3c2b1bcf85cc6acf071629298a525f1f4b8e0489a2aa0f46c",
+  "fit_count": 109,
+  "analysis_count": 158,
+  "hmc_count": 49,
+  "optimized_count": 60,
+  "hmc_command_metadata_mismatch_jobs": []
+}

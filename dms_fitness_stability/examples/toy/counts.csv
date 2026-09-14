@@ -1,0 +1,9 @@
+variant_id,replicate,input_count,output_count,reported_fitness
+A,1,10,18,0.10
+A,2,10,22,0.10
+B,1,10,38,0.40
+B,2,10,42,0.40
+C,1,10,28,0.30
+C,2,10,32,0.30
+D,1,10,18,0.20
+D,2,10,22,0.20

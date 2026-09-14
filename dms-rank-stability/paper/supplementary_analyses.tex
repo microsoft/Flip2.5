@@ -1,0 +1,386 @@
+\section{Count-based fitness calculations}
+\label{app:scores}
+
+\paragraph{PDZ.}
+Let $n_{ir}^{\mathrm{in}}$ and $n_{ir}^{\mathrm{out}}$ denote counts for
+variant $i$ in replicate $r$, and let $w$ index the wild-type reference. Let
+$\mathcal R_i$ be the set of replicates for which all four counts for $i$
+and $w$ are positive. For $r\in\mathcal R_i$, define the wild-type-relative
+log enrichment $f_{ir}$ and its working variance $v_{ir}$ by
+\begin{align}
+f_{ir}&:=\log\frac{n_{ir}^{\mathrm{out}}}{n_{ir}^{\mathrm{in}}}
+-\log\frac{n_{wr}^{\mathrm{out}}}{n_{wr}^{\mathrm{in}}},\\
+v_{ir}&:=\frac{1}{n_{ir}^{\mathrm{in}}}+\frac{1}{n_{ir}^{\mathrm{out}}}
++\frac{1}{n_{wr}^{\mathrm{in}}}+\frac{1}{n_{wr}^{\mathrm{out}}},\qquad
+g_i(\data):=\frac{\sum_{r\in\mathcal R_i} f_{ir}/v_{ir}}
+{\sum_{r\in\mathcal R_i}1/v_{ir}}.
+\end{align}
+Only valid replicates enter the sums. We define the score as undefined when
+$\mathcal R_i$ is empty, so undefined logarithms never enter the weighted
+average. This inverse-Poisson-variance calculation is a DiMSum-style
+approximation. The exact source DiMSum revision and configuration have not
+been recovered, so we do not describe it as an exact reproduction of the
+published score \citep{faure2020,zarin2024}.
+
+\paragraph{TrpB.}
+Following the deposited calculations of \citet{johnston2024}, we form log
+output/input ratios separately for each retained timepoint and replicate.
+We subtract the same-observation mean for stop-codon variants and divide by
+the difference between the same-observation maximum and that stop-variant
+mean. The final score averages valid normalized observations. The three-site
+libraries use one input count per variant; the four-site landscape uses the
+mean of two input-replicate counts. Inputs must be at least 10 and required
+outputs positive; if an observation has two output replicates, both must be
+positive. Library-specific timepoints follow the deposited notebooks; the
+four-site calculation excludes 12 hours and retains 16, 20, 24, 28, and
+36 hours. Culture-density and time factors cancel from the within-observation
+stop/maximum normalization. The source count calculations reproduce the
+published finite scores and coverage at numerical tolerance $10^{-12}$.
+
+\paragraph{NucB.}
+For the highest selected fluorescence gate, we calculate
+\[
+g_i(\data):=\frac{n_i^{\mathrm{gate}}/D^{\mathrm{gate}}}
+{n_i^{\mathrm{in}}/D^{\mathrm{in}}},
+\]
+where $D^{\mathrm{gate}}$ and $D^{\mathrm{in}}$ are the source normalization
+totals, including controls when specified by the source. The selected gates
+are generation-specific \citep{thomas2025}. A zero gate count gives zero
+enrichment; a zero input count makes the score undefined. Source controls
+contribute to the appropriate totals but not to ranking candidates.
+Generation 1 retains the source total correction for sequences omitted
+from the fitted axis; this common multiplicative correction does not alter
+ranks. The observed count calculations reproduce source enrichment values
+at tolerance $10^{-12}$.
+
+\section{Ranking and computational conventions}
+\label{app:computation}
+
+\paragraph{Finite samples and reference support.}
+We store sampled scores as single-precision arrays and retain samples with
+at least 1,000 finite candidate scores. Table~\ref{tab:inventory} gives the
+resulting sample-count ranges. Rank intervals and reported-rank percentiles
+use the finite observations for each candidate; undefined scores do not
+become zero scores. Inclusion counts use membership in retained size-$k$
+sets, with the retained sample count as denominator. Count-based median-score
+references require at least two finite scores per candidate; parameter
+collections require at least one. Stored sample identities preserve
+alignment across parameters and count draws. Source controls and other
+excluded candidates remain outside the ranking universe.
+
+\paragraph{Ranks and selections.}
+Exact tied scores receive average ranks for interval summaries. Fixed-size
+top-$k$ selection uses the deterministic selection order, with source block
+order retained where needed to reproduce prepared results. Because the two
+conventions answer different questions at a tie, we calculate set membership
+from stored selections rather than from average rank thresholds. The
+median-score reference orders median scores and resolves exact ties
+deterministically. Rankings always use the eligible full competitor pool;
+reported cohorts and displayed summaries remain top-focused.
+
+\paragraph{Exact shared fractions.}
+Let $c_i(k):=\sum_s\mathbf{1}\{i\in T_k^{(s)}\}$ be the number of retained
+sets containing variant $i$. Then sample-pair overlap is exactly
+\[
+\widehat C_k=\frac{\sum_i c_i(k)[c_i(k)-1]}{S(S-1)k}.
+\]
+We use this identity instead of drawing random pairs of samples. It is an
+empirical summary of distinct retained samples; dependence among Monte
+Carlo draws is not removed by the identity. We likewise obtain reference
+overlap by averaging inclusion frequencies over each fixed reference set.
+
+\subsection{What the percentile area measures}
+\label{app:area-interpretation}
+
+The area $A=\int_0^1|F(u)-u|\,du$ describes departure of the
+reported-rank percentile distribution from uniformity. It is not the
+ordinary area under an empirical curve, a receiver-operating-characteristic
+area, or a rank error. Three simple cases distinguish its interpretation.
+If every sampled rank equals its reported rank, all percentiles equal
+0.5 and $A=0.25$. If half the percentiles equal zero and half equal
+one, $A$ is also 0.25 despite a very different curve. If every
+percentile equals zero, or every percentile equals one, $A=0.5$;
+these opposite directions have the same unsigned area.
+
+The implementation integrates each constant segment of the empirical
+cumulative distribution against the diagonal, splitting a segment where
+they cross. This avoids interpolation between successive jumps. Tests
+verify the cases above, $A=0.125$ for percentiles $\{0.25,0.75\}$,
+permutation invariance, and rejection of empty, nonfinite, or out-of-range
+inputs. Each supplementary curve export recomputes the exact area from
+its complete stored percentile vector and checks agreement with its
+stored scalar to absolute tolerance $10^{-12}$.
+
+Spearman correlation retains a different feature: the relative order
+of reported ranks and median sampled ranks within the cohort. For
+example, all candidates in a reported cohort could move down by the
+same number of positions because other eligible candidates overtake
+them, yet their within-cohort correlation would remain one. This is
+an illustrative possibility, not a claimed result for every example.
+Neither correlation nor percentile area measures the spread of each
+candidate's ranks or the overlap between jointly sampled batches.
+
+Uniformity can be a target in an appropriate repeated-data calibration
+study, but the present comparison selects leading candidates and uses
+reported and fitted scores derived from the same observations, sometimes
+with different score definitions. The diagonal is therefore descriptive.
+There is no demonstrated target value of $A$ for a correct biological model
+in this analysis.
+
+\paragraph{Implementation checks.}
+Repository tests compare streamed rankings with dense calculations,
+exercise ties and candidate exclusions, and check table and figure
+outputs. These checks do not demonstrate frequentist interval coverage
+or biological model adequacy. A controlled synthetic coverage study
+is not part of the present draft.
+
+\section{Descriptive association analyses}
+\label{app:associations}
+
+The unaggregated relationships are shown for every landscape, model,
+and sampling recipe in Supplementary Section~\ref{app:per-analysis-why}.
+Those scatterplots contain no fitted regression lines. The regression
+coefficients summarized here are separate descriptive calculations;
+the point displays let the reader assess patterns that a coefficient
+or an across-landscape median can obscure.
+
+Recall that $U_i$ is normalized score width and $\widetilde r_i$ is the
+median-score reference rank. Local score spacing is the average change in
+median score per rank across up to five neighbors on each side of a
+reference rank, divided by $S_{\mathrm{run}}$. Endpoints use the available
+neighbors. We define crowding as minus the base-10 logarithm of this
+spacing, using a small numerical floor for zero spacings. Larger values
+indicate closer competitors on this scale.
+
+\paragraph{Figure 4 examples and plotted data.}
+\label{app:figure-explanation}
+Figure~\ref{fig:explanation} uses the parameter-resampling versions of
+the same running examples as Figs.~\ref{fig:reported}--\ref{fig:selection}:
+PDZ trans-1 and TrpB libB under Exponential--Exponential,
+and NucB G3 under Exponential. Methods Section~\ref{methods:examples}
+describes their selection. No Gamma specification enters this figure;
+the complete displays below retain Gamma fits and all other analyses.
+
+Each row includes every median-score reference top-100 member and
+every outside candidate with $\hat q_i(100)\geq0.01$. The rows contain
+419, 516, and 128 candidates, totaling 1,063. Every candidate appears in
+all four panels of its row, without binning, point subsampling, or
+pooling across analyses. Each point summarizes one candidate's samples;
+it is not an individual sample. Stored input counts, output counts,
+score medians, interval endpoints, and inclusion frequencies are unchanged.
+
+Counts are transformed as $\log_{10}(n+1)$, retaining zero counts at zero.
+Normalized widths use a logarithmic axis. All widths in these three
+examples are positive, so no plot-only floor affects them. Count and
+width limits cover all points and are common to the three rows. The
+margin panels share limits within a row, but limits differ between
+rows; apparent transition steepness should not be compared without
+reading the axes. Inclusion frequencies use a common zero-to-one scale.
+
+The exported variant table retains every plotted row and its coordinates.
+The run index records identities, cohort sizes, sample counts, and mean
+shared fractions. Inclusion and overlap come from joint rankings against
+all finite eligible competitors, not from marginal intervals or rankings
+restricted to the displayed cohort. Because challengers are selected
+using inclusion frequencies, these associations do not describe all
+variants in a landscape.
+
+\paragraph{Observed count features.}
+\label{app:count-features}
+Features are fixed from the observed data and shared across sampling
+recipes for a landscape. PDZ input and output support sum the three
+paired replicates separately. TrpB input support uses the single input
+count once for three-site libraries and the sum of the two input counts
+for four-site; output support sums every retained output replicate and
+model timepoint. NucB input support sums the arrays \texttt{ic1},
+\texttt{ic2}, and \texttt{ic3} where present, over all observation axes.
+Output support sums the low- and high-gate arrays for G1, the three
+gate arrays for G2, and all four output rows for G3 and G4. Resequenced
+libraries contribute their recorded reads to these descriptive totals.
+None of these sums turns sequencing repeats, timepoints, or different
+gates into independent biological replicates. Log input support in
+regressions means $\log(1+n_i^{\mathrm{in}})$; scatterplots use
+$\log_{10}(1+n)$ for display.
+
+\paragraph{Observation discordance.}
+For PDZ paired replicates, let $e_{ir}$ be the difference of smoothed
+log output and input frequencies for variant $i$ and replicate $r$:
+\[
+e_{ir}:=\log\frac{n_{ir}^{\mathrm{out}}+\delta}
+{D_r^{\mathrm{out}}+M\delta}
+-\log\frac{n_{ir}^{\mathrm{in}}+\delta}{D_r^{\mathrm{in}}+M\delta},
+\qquad
+v_{ir}^{\mathrm{obs}}:=\frac{1}{n_{ir}^{\mathrm{in}}+\delta}
++\frac{1}{n_{ir}^{\mathrm{out}}+\delta},
+\]
+where $\delta=0.5$ and $D_r$ are totals on the feature-construction
+count axis of length $M$. Set $w_{ir}:=1/v_{ir}^{\mathrm{obs}}$ and
+$\overline e_i:=\sum_rw_{ir}e_{ir}/\sum_rw_{ir}$. Reduced heterogeneity is
+\[
+H_i:=\frac{1}{R-1}\sum_{r=1}^R w_{ir}(e_{ir}-\overline e_i)^2,
+\]
+where $R=3$ for PDZ. It measures replicate scatter relative to a working
+Poisson log-count variance. This diagnostic smoothing does not change
+the no-pseudocount fitness reconstructions in Supplementary
+Section~\ref{app:scores}.
+
+For TrpB observations with two output replicates, we use smoothed log
+output frequencies and variance $1/(n_{i\ell r}^{\mathrm{out}}+\delta)$,
+remove a separate weighted mean within each timepoint $\ell$, and sum
+weighted squared residuals over timepoints. With $J$ timepoints and
+$R=2$ replicates, the denominator is $J(R-1)$. This removes between-timepoint
+changes before measuring within-timepoint disagreement. TrpB A--C has
+no paired output contrast; NucB has no verified comparable feature in
+the current analysis. Their discordance value is missing, not zero.
+The regression includes it only when more than three decision-cohort
+values are available, then uses complete cases.
+
+Within the decision cohort, the score-precision regression uses
+$\log(1+U_i)$ as response, with log input support and
+$\log(1+\widetilde r_i)$ as predictors, adding observation discordance
+where available. The rank regression uses
+$\log[1+Q_{0.95}(R_i)-Q_{0.05}(R_i)]$ as response, with $U_i$,
+crowding, their product, and $\log(1+\widetilde r_i)$ as predictors.
+We standardize the response and predictors on complete cases before
+fitting linear regressions. Coefficients are summarized within
+landscapes by their median across models. Because of the interaction,
+a main-effect coefficient is not a universal effect at every value
+of the other predictor.
+
+The score-uncertainty coefficient is positive in 17 of 18, 18 of 19,
+and 17 of 18 landscape summaries for parameter, optimized-fit count,
+and posterior count resampling, respectively. The crowding coefficient
+is positive in 15 of 18, 17 of 19, and 14 of 18. The interaction is
+positive in 3 of 18, 7 of 19, and 6 of 18. These are counts of fitted
+coefficient signs, not uniformly positive conditional slopes. Predictors
+and rank widths summarize the same samples; the regressions are not
+independent tests of an effect of additional sequencing.
+
+\subsection{Sensitivity to modeling assumptions}
+\label{sec:sensitivity}
+
+The running TrpB libB example has lower top-100 sample-pair overlap
+than NucB G3 under all three recipes. Some comparisons are much
+more sensitive to model choice. In PDZ trans-1, parameter-resampling
+top-100 overlap is 59.80\% under Exponential--Exponential but 0.27\%
+under Gamma--Exponential. The former is the running example; both
+remain in the full results. The larger uncertainty
+cannot be attributed to the experiment without checking the model.
+Supplementary Section~\ref{app:fit-checks} records available
+diagnostics and missing predictive checks.
+
+For the batch-size comparison, the uniform-subset-adjusted shared
+fraction is $(\widehat C_k-k/N)/(1-k/N)$, where $N$ is the eligible
+candidate count. Applying this adjustment leaves the counts of
+landscapes with greater overlap at $k=1000$ than at $k=100$
+unchanged: 13/18, 14/19, and 13/18 for parameter, optimized-fit
+count, and posterior count resampling. TrpB D--H remains the
+common set of five decreasing landscapes. Table~\ref{tab:landscape-set-sizes}
+gives the unadjusted endpoint values.
+
+\section{Supporting figure views}
+
+\input{paper/figures/landscape_set_sizes.tex}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{reported_order_top1000.pdf}
+\caption{Reported-rank summaries for the reported top 1,000.
+Panels (a)--(c) show percentile curves for PDZ trans-1 and TrpB libB
+(both Exponential--Exponential), and
+NucB G3 (Exponential). Panels (d)--(f) show the area between each
+curve and the diagonal; panels (g)--(i) show Spearman correlation
+between reported and median sampled ranks. Small filled dots summarize
+individual model specifications within each landscape and sampling scheme,
+not individual draws. Hollow blue circles, red squares, and green triangles
+show model medians for parameter, optimized-fit count, and posterior count
+resampling. Vertical offsets are for visibility only; horizontal values
+are unchanged. Black outlines and arrows mark the exact example model
+points. Ranks still compare each candidate with all finite
+eligible competitors, not just this cohort. The diagonal is
+descriptive and area is not a rank-error or calibration score.}
+\label{fig:reported1000}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{count_support.pdf}
+\caption{Count support and score uncertainty across landscapes.
+Panels show within-run Spearman correlations of input counts
+(left) and output counts (right) with normalized central 90\%
+score width. Each run uses its reference top 100 plus challengers
+with inclusion frequency at least 0.01. Small filled dots each summarize
+one model specification within a landscape and sampling scheme, not an
+individual draw. Hollow blue circles, red squares, and green triangles
+mark model medians for parameter, optimized-fit count, and posterior count
+resampling. Vertical offsets improve visibility only; horizontal values
+are unchanged.
+These are associations in selected cohorts, not independent
+experimental effects.}
+\label{fig:counts}
+\end{figure}
+
+\clearpage
+\section{Reported-rank curves and per-analysis statistics}
+\label{app:all-reported-curves}
+
+Table~\ref{tab:reported-curve-statistics} reports the curve area and
+reported-versus-median-sampled-rank Spearman correlation for each of
+the 158 analysis runs. Both reported cohorts, top 100 and top 1,000,
+appear in the same row. The table also records retained samples and
+supported candidate counts. IDs use P for parameter, O for optimized-fit
+count, and C for posterior count resampling. Model codes use E, L,
+and G for Exponential, Lomax, and Gamma priors; a second E or S
+denotes exponential or sigmoid growth. NucB has only the prior code.
+Rounding affects table display only; the companion CSV retains full
+precision and complete run identifiers.
+
+The 316 curves are overlaid in nine figures, one per protein system
+and sampling scheme (Table~\ref{tab:reported-curves-index}). Each
+figure has separate panels for the reported top 100 and top 1,000.
+Color identifies the landscape, line style identifies the model, and
+a thicker line marks the main example. All models, including Gamma,
+are retained. Each line is the complete empirical step function for
+one analysis; percentiles are neither pooled nor subsampled. Similar
+curves can overlap, so the table supplies values that are difficult
+to distinguish visually. The index links each run and cohort to its
+figure and panel.
+
+\input{paper/figures/reported_curve_statistics.tex}
+\clearpage
+
+\input{paper/figures/reported_curves.tex}
+
+\clearpage
+\section{Per-analysis count support and selection uncertainty}
+\label{app:per-analysis-why}
+
+We show each of the 158 runs separately, grouped by protein system
+and sampling recipe. Table~\ref{tab:why-index} locates the 58 figure
+pages. Row headings give the landscape, model, retained sample
+count, decision-cohort size, and mean shared top-100 fraction.
+Each row contains the reference top 100 and all outside candidates
+with inclusion frequency at least 0.01. These are the top-focused
+cohorts used in Section~\ref{sec:mechanisms}, not samples of all
+eligible variants.
+
+From left to right, panels show normalized score width against
+input support, output support, and score margin from the top-100
+cutoff, followed by top-100 inclusion against margin. Score width
+and margin are divided by the run's top-1,000 median-score IQR.
+Counts use $\log_{10}(1+n)$, and score widths use logarithmic axes.
+Count and width limits are common within each protein-system
+and recipe collection, including across pages. Margin panels
+share a scale within a row but can differ between runs.
+
+All points are retained. Exact-zero score widths are displayed
+at half the smallest positive normalized width in the corresponding
+protein-system and recipe collection; numerical tables retain
+zero. The index records these plot-only floors and affected point
+counts. Blue filled points denote reference members and orange
+open points denote challengers. Dotted lines mark zero margin.
+No regression lines or smoothing curves are fitted. The figures
+show within-analysis associations, not causal effects of read
+depth or model-adequacy checks against new observations.
+
+\input{paper/figures/summary_why.tex}

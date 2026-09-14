@@ -1,0 +1,94 @@
+ID,Dataset,Subset,Fitness Distribution,Growth Curve,Result
+1,pdz,cis,exponential,exponential,Perfect!
+2,pdz,cis,gamma,exponential,A few failed.
+3,pdz,cis,lomax,exponential,Perfect!
+4,pdz,cis,exponential,sigmoid,Perfect!
+5,pdz,cis,gamma,sigmoid,A few failed.
+6,pdz,cis,lomax,sigmoid,Most failed.
+7,trpb,libA,exponential,exponential,Perfect!
+8,trpb,libA,lomax,exponential,Perfect!
+9,trpb,libA,exponential,sigmoid,Perfect!
+10,trpb,libA,lomax,sigmoid,Many failed.
+11,trpb,libB,exponential,exponential,Perfect!
+12,trpb,libB,lomax,exponential,Perfect!
+13,trpb,libB,exponential,sigmoid,Perfect!
+14,trpb,libB,lomax,sigmoid,Many failed.
+15,trpb,libC,exponential,exponential,Perfect!
+16,trpb,libC,lomax,exponential,Perfect!
+17,trpb,libC,exponential,sigmoid,Perfect!
+18,trpb,libC,lomax,sigmoid,Many failed.
+19,trpb,libD,exponential,exponential,Perfect!
+20,trpb,libD,lomax,exponential,Perfect!
+21,trpb,libD,gamma,exponential,Perfect!
+22,trpb,libD,exponential,sigmoid,Many failed.
+23,trpb,libD,lomax,sigmoid,Most failed.
+24,trpb,libD,gamma,sigmoid,Many failed.
+25,trpb,libE,exponential,exponential,Perfect!
+26,trpb,libE,lomax,exponential,Perfect!
+27,trpb,libE,gamma,exponential,Perfect!
+28,trpb,libE,exponential,sigmoid,Most failed.
+29,trpb,libE,lomax,sigmoid,Most failed.
+30,trpb,libE,gamma,sigmoid,Most failed.
+31,trpb,libF,exponential,exponential,Perfect!
+32,trpb,libF,lomax,exponential,Perfect!
+33,trpb,libF,gamma,exponential,Perfect!
+34,trpb,libF,exponential,sigmoid,Perfect!
+35,trpb,libF,lomax,sigmoid,Most failed.
+36,trpb,libF,gamma,sigmoid,Most failed.
+37,trpb,libG,exponential,exponential,Perfect!
+38,trpb,libG,lomax,exponential,Perfect!
+39,trpb,libG,gamma,exponential,Perfect!
+40,trpb,libG,exponential,sigmoid,Many failed.
+41,trpb,libG,lomax,sigmoid,Most failed.
+42,trpb,libG,gamma,sigmoid,Most failed.
+43,trpb,libH,exponential,exponential,Perfect!
+44,trpb,libH,lomax,exponential,Perfect!
+45,trpb,libH,gamma,exponential,Perfect!
+46,trpb,libH,exponential,sigmoid,Most failed.
+47,trpb,libH,lomax,sigmoid,Most failed.
+48,trpb,libH,gamma,sigmoid,Most failed.
+49,trpb,libI,exponential,exponential,Perfect!
+50,trpb,libI,lomax,exponential,Perfect!
+51,trpb,libI,gamma,exponential,Perfect!
+52,trpb,libI,exponential,sigmoid,Most failed.
+53,trpb,libI,lomax,sigmoid,Most failed.
+54,trpb,libI,gamma,sigmoid,Most failed.
+55,nuc,G1,exponential,,Perfect!
+56,nuc,G1,lomax,,Perfect!
+57,nuc,G2,exponential,,Perfect!
+58,nuc,G2,lomax,,Perfect!
+59,nuc,G3,exponential,,Perfect!
+60,nuc,G3,lomax,,A few failed ESS tails.
+61,nuc,G4,exponential,,Perfect!
+62,nuc,G4,lomax,,Perfect!
+63,dataset,K50,"(MASSIVE, only MLE)",,
+64,trpb,four-site,exponential,exponential,
+65,trpb,four-site,lomax,exponential,
+66,trpb,four-site,gamma,exponential,
+67,trpb,four-site,exponential,sigmoid,
+68,trpb,four-site,lomax,sigmoid,
+69,trpb,four-site,gamma,sigmoid,
+70,,cript-c,exponential,exponential,Perfect!
+71,,cript-c,lomax,exponential,Perfect!
+72,,cript-c,gamma,exponential,Perfect!
+73,,cript-c,exponential,sigmoid,Perfect!
+74,,cript-c,lomax,sigmoid,Perfect!
+75,,cript-c,gamma,sigmoid,
+76,,cript-n,exponential,exponential,Perfect!
+77,,cript-n,lomax,exponential,Perfect!
+78,,cript-n,gamma,exponential,Perfect!
+79,,cript-n,exponential,sigmoid,A few failed.
+80,,cript-n,lomax,sigmoid,Perfect!
+81,,cript-n,gamma,sigmoid,Perfect!
+82,,trans-1,exponential,exponential,Perfect!
+83,,trans-1,lomax,exponential,
+84,,trans-1,gamma,exponential,Perfect!
+85,,trans-1,exponential,sigmoid,A few failed.
+86,,trans-1,lomax,sigmoid,
+87,,trans-1,gamma,sigmoid,Many failed.
+88,,trans-2,exponential,exponential,Perfect!
+89,,trans-2,lomax,exponential,
+90,,trans-2,gamma,exponential,Perfect!
+91,,trans-2,exponential,sigmoid,Many failed.
+92,,trans-2,lomax,sigmoid,Perfect!
+93,,trans-2,gamma,sigmoid,Perfect!

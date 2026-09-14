@@ -1,0 +1,1717 @@
+[
+  {
+    "analysis_id": "pdz__pdz-trans-1__hmc-count-based__exponential-exponential__large-clean-82",
+    "job_id": 82,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-1",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 150769,
+    "n_ranking_candidates": 109376,
+    "n_score_supported_candidates": 109376,
+    "n_variable_candidates": 109376,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 109376
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 109376
+    },
+    "min_finite_ranking_candidates": 109370,
+    "max_finite_ranking_candidates": 109376,
+    "score_bytes": 7591914490,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-1__hmc-count-based__gamma-exponential__large-clean-84",
+    "job_id": 84,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-1",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 150769,
+    "n_ranking_candidates": 109376,
+    "n_score_supported_candidates": 109376,
+    "n_variable_candidates": 109376,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 109376
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 109376
+    },
+    "min_finite_ranking_candidates": 109195,
+    "max_finite_ranking_candidates": 109283,
+    "score_bytes": 7697489209,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__hmc-count-based__exponential-exponential__large-clean-88",
+    "job_id": 88,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 151624,
+    "n_ranking_candidates": 142251,
+    "n_score_supported_candidates": 142251,
+    "n_variable_candidates": 142250,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 142251
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 142250
+    },
+    "min_finite_ranking_candidates": 142246,
+    "max_finite_ranking_candidates": 142251,
+    "score_bytes": 7783557688,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-trans-2__hmc-count-based__gamma-sigmoid__large-clean-93",
+    "job_id": 93,
+    "protein_family": "pdz",
+    "landscape": "pdz-trans-2",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 151624,
+    "n_ranking_candidates": 142251,
+    "n_score_supported_candidates": 142251,
+    "n_variable_candidates": 142250,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 142251
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 142250
+    },
+    "min_finite_ranking_candidates": 142054,
+    "max_finite_ranking_candidates": 142147,
+    "score_bytes": 7882246144,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cis__hmc-count-based__exponential-exponential__small-clean-1",
+    "job_id": 1,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 10660,
+    "n_ranking_candidates": 9475,
+    "n_score_supported_candidates": 9475,
+    "n_variable_candidates": 9474,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 9475
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 9474
+    },
+    "min_finite_ranking_candidates": 9473,
+    "max_finite_ranking_candidates": 9475,
+    "score_bytes": 536133106,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cis__hmc-count-based__lomax-exponential__small-clean-3",
+    "job_id": 3,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 10660,
+    "n_ranking_candidates": 9475,
+    "n_score_supported_candidates": 9475,
+    "n_variable_candidates": 9474,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 9475
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 9474
+    },
+    "min_finite_ranking_candidates": 9467,
+    "max_finite_ranking_candidates": 9475,
+    "score_bytes": 539542815,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cis__hmc-count-based__exponential-sigmoid__small-clean-4",
+    "job_id": 4,
+    "protein_family": "pdz",
+    "landscape": "pdz-cis",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 10660,
+    "n_ranking_candidates": 9475,
+    "n_score_supported_candidates": 9475,
+    "n_variable_candidates": 9474,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 9475
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 9474
+    },
+    "min_finite_ranking_candidates": 9473,
+    "max_finite_ranking_candidates": 9475,
+    "score_bytes": 536036607,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__hmc-count-based__exponential-exponential__large-clean-70",
+    "job_id": 70,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117694,
+    "max_finite_ranking_candidates": 117721,
+    "score_bytes": 6702507381,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__hmc-count-based__lomax-exponential__large-clean-71",
+    "job_id": 71,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 24000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117648,
+    "max_finite_ranking_candidates": 117706,
+    "score_bytes": 10331499023,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 3000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__hmc-count-based__gamma-exponential__large-clean-72",
+    "job_id": 72,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 24000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117672,
+    "max_finite_ranking_candidates": 117713,
+    "score_bytes": 10281715448,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 3000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-c__hmc-count-based__exponential-sigmoid__large-clean-73",
+    "job_id": 73,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-c",
+    "status": "valid",
+    "n_samples": 24000,
+    "n_variants": 145290,
+    "n_ranking_candidates": 117723,
+    "n_score_supported_candidates": 117723,
+    "n_variable_candidates": 117722,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 117723
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 117722
+    },
+    "min_finite_ranking_candidates": 117693,
+    "max_finite_ranking_candidates": 117721,
+    "score_bytes": 10049650550,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 3000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__hmc-count-based__gamma-exponential__large-clean-78",
+    "job_id": 78,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "status": "valid",
+    "n_samples": 24000,
+    "n_variants": 123765,
+    "n_ranking_candidates": 91815,
+    "n_score_supported_candidates": 91815,
+    "n_variable_candidates": 91814,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 91815
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 91814
+    },
+    "min_finite_ranking_candidates": 0,
+    "max_finite_ranking_candidates": 91790,
+    "score_bytes": 9671639706,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 3000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__hmc-count-based__lomax-sigmoid__large-clean-80",
+    "job_id": 80,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 123765,
+    "n_ranking_candidates": 91815,
+    "n_score_supported_candidates": 91815,
+    "n_variable_candidates": 91814,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 91815
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 91814
+    },
+    "min_finite_ranking_candidates": 0,
+    "max_finite_ranking_candidates": 91769,
+    "score_bytes": 6529637962,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "pdz__pdz-cript-n__hmc-count-based__gamma-sigmoid__large-clean-81",
+    "job_id": 81,
+    "protein_family": "pdz",
+    "landscape": "pdz-cript-n",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 123765,
+    "n_ranking_candidates": 91815,
+    "n_score_supported_candidates": 91815,
+    "n_variable_candidates": 91814,
+    "n_score_supported_candidates_by_score": {
+      "dimsum_fitness": 91815
+    },
+    "n_variable_candidates_by_score": {
+      "dimsum_fitness": 91814
+    },
+    "min_finite_ranking_candidates": 0,
+    "max_finite_ranking_candidates": 91788,
+    "score_bytes": 6467119297,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__hmc-count-based__exponential-exponential__small-clean-7",
+    "job_id": 7,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9254,
+    "n_ranking_candidates": 9230,
+    "n_score_supported_candidates": 9230,
+    "n_variable_candidates": 9230,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "min_finite_ranking_candidates": 9216,
+    "max_finite_ranking_candidates": 9230,
+    "score_bytes": 504300478,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__hmc-count-based__lomax-exponential__small-clean-8",
+    "job_id": 8,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9254,
+    "n_ranking_candidates": 9230,
+    "n_score_supported_candidates": 9230,
+    "n_variable_candidates": 9230,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "min_finite_ranking_candidates": 9209,
+    "max_finite_ranking_candidates": 9230,
+    "score_bytes": 504218458,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-liba__hmc-count-based__exponential-sigmoid__small-clean-9",
+    "job_id": 9,
+    "protein_family": "trpb",
+    "landscape": "trpb-libA",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9254,
+    "n_ranking_candidates": 9230,
+    "n_score_supported_candidates": 9230,
+    "n_variable_candidates": 9230,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9230
+    },
+    "min_finite_ranking_candidates": 9215,
+    "max_finite_ranking_candidates": 9230,
+    "score_bytes": 504250534,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__hmc-count-based__exponential-exponential__small-clean-11",
+    "job_id": 11,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9261,
+    "n_ranking_candidates": 9257,
+    "n_score_supported_candidates": 9257,
+    "n_variable_candidates": 9256,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9257
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9256
+    },
+    "min_finite_ranking_candidates": 9254,
+    "max_finite_ranking_candidates": 9257,
+    "score_bytes": 487130275,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__hmc-count-based__lomax-exponential__small-clean-12",
+    "job_id": 12,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9261,
+    "n_ranking_candidates": 9257,
+    "n_score_supported_candidates": 9257,
+    "n_variable_candidates": 9256,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9257
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9256
+    },
+    "min_finite_ranking_candidates": 9253,
+    "max_finite_ranking_candidates": 9257,
+    "score_bytes": 491144620,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libb__hmc-count-based__exponential-sigmoid__small-clean-13",
+    "job_id": 13,
+    "protein_family": "trpb",
+    "landscape": "trpb-libB",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9261,
+    "n_ranking_candidates": 9257,
+    "n_score_supported_candidates": 9257,
+    "n_variable_candidates": 9256,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9257
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9256
+    },
+    "min_finite_ranking_candidates": 9253,
+    "max_finite_ranking_candidates": 9257,
+    "score_bytes": 487211280,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__hmc-count-based__exponential-exponential__small-clean-15",
+    "job_id": 15,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9260,
+    "n_ranking_candidates": 9255,
+    "n_score_supported_candidates": 9255,
+    "n_variable_candidates": 9254,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9255
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9254
+    },
+    "min_finite_ranking_candidates": 9250,
+    "max_finite_ranking_candidates": 9255,
+    "score_bytes": 490813366,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__hmc-count-based__lomax-exponential__small-clean-16",
+    "job_id": 16,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9260,
+    "n_ranking_candidates": 9255,
+    "n_score_supported_candidates": 9255,
+    "n_variable_candidates": 9254,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9255
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9254
+    },
+    "min_finite_ranking_candidates": 9250,
+    "max_finite_ranking_candidates": 9255,
+    "score_bytes": 490345679,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libc__hmc-count-based__exponential-sigmoid__small-clean-17",
+    "job_id": 17,
+    "protein_family": "trpb",
+    "landscape": "trpb-libC",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9260,
+    "n_ranking_candidates": 9255,
+    "n_score_supported_candidates": 9255,
+    "n_variable_candidates": 9254,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9255
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9254
+    },
+    "min_finite_ranking_candidates": 9251,
+    "max_finite_ranking_candidates": 9255,
+    "score_bytes": 490789122,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__hmc-count-based__exponential-exponential__small-clean-19",
+    "job_id": 19,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9057,
+    "n_ranking_candidates": 8968,
+    "n_score_supported_candidates": 8968,
+    "n_variable_candidates": 8968,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "min_finite_ranking_candidates": 8924,
+    "max_finite_ranking_candidates": 8951,
+    "score_bytes": 501944323,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__hmc-count-based__lomax-exponential__small-clean-20",
+    "job_id": 20,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9057,
+    "n_ranking_candidates": 8968,
+    "n_score_supported_candidates": 8968,
+    "n_variable_candidates": 8968,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "min_finite_ranking_candidates": 8922,
+    "max_finite_ranking_candidates": 8951,
+    "score_bytes": 501191160,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libd__hmc-count-based__gamma-exponential__small-clean-21",
+    "job_id": 21,
+    "protein_family": "trpb",
+    "landscape": "trpb-libD",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9057,
+    "n_ranking_candidates": 8968,
+    "n_score_supported_candidates": 8968,
+    "n_variable_candidates": 8968,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8968
+    },
+    "min_finite_ranking_candidates": 8921,
+    "max_finite_ranking_candidates": 8949,
+    "score_bytes": 501615876,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__hmc-count-based__exponential-exponential__small-clean-25",
+    "job_id": 25,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9229,
+    "n_ranking_candidates": 9222,
+    "n_score_supported_candidates": 9222,
+    "n_variable_candidates": 9221,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9222
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9221
+    },
+    "min_finite_ranking_candidates": 9214,
+    "max_finite_ranking_candidates": 9222,
+    "score_bytes": 509734005,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__hmc-count-based__lomax-exponential__small-clean-26",
+    "job_id": 26,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9229,
+    "n_ranking_candidates": 9222,
+    "n_score_supported_candidates": 9222,
+    "n_variable_candidates": 9221,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9222
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9221
+    },
+    "min_finite_ranking_candidates": 9212,
+    "max_finite_ranking_candidates": 9222,
+    "score_bytes": 507423201,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libe__hmc-count-based__gamma-exponential__small-clean-27",
+    "job_id": 27,
+    "protein_family": "trpb",
+    "landscape": "trpb-libE",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9229,
+    "n_ranking_candidates": 9222,
+    "n_score_supported_candidates": 9222,
+    "n_variable_candidates": 9221,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9222
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9221
+    },
+    "min_finite_ranking_candidates": 9214,
+    "max_finite_ranking_candidates": 9222,
+    "score_bytes": 509583419,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__hmc-count-based__exponential-exponential__small-clean-31",
+    "job_id": 31,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 8996,
+    "n_ranking_candidates": 8543,
+    "n_score_supported_candidates": 8543,
+    "n_variable_candidates": 8541,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8543
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8541
+    },
+    "min_finite_ranking_candidates": 8420,
+    "max_finite_ranking_candidates": 8480,
+    "score_bytes": 486164003,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__hmc-count-based__lomax-exponential__small-clean-32",
+    "job_id": 32,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 8996,
+    "n_ranking_candidates": 8543,
+    "n_score_supported_candidates": 8542,
+    "n_variable_candidates": 8541,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8542
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8541
+    },
+    "min_finite_ranking_candidates": 8381,
+    "max_finite_ranking_candidates": 8453,
+    "score_bytes": 482648625,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__hmc-count-based__gamma-exponential__small-clean-33",
+    "job_id": 33,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 8996,
+    "n_ranking_candidates": 8543,
+    "n_score_supported_candidates": 8543,
+    "n_variable_candidates": 8541,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8543
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8541
+    },
+    "min_finite_ranking_candidates": 8395,
+    "max_finite_ranking_candidates": 8456,
+    "score_bytes": 482197644,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libf__hmc-count-based__exponential-sigmoid__small-clean-34",
+    "job_id": 34,
+    "protein_family": "trpb",
+    "landscape": "trpb-libF",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 8996,
+    "n_ranking_candidates": 8543,
+    "n_score_supported_candidates": 8543,
+    "n_variable_candidates": 8542,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8543
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8542
+    },
+    "min_finite_ranking_candidates": 8425,
+    "max_finite_ranking_candidates": 8484,
+    "score_bytes": 485586587,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__hmc-count-based__exponential-exponential__small-clean-37",
+    "job_id": 37,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9041,
+    "n_ranking_candidates": 8709,
+    "n_score_supported_candidates": 8709,
+    "n_variable_candidates": 8709,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8709
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8709
+    },
+    "min_finite_ranking_candidates": 8664,
+    "max_finite_ranking_candidates": 8695,
+    "score_bytes": 499279105,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__hmc-count-based__lomax-exponential__small-clean-38",
+    "job_id": 38,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9041,
+    "n_ranking_candidates": 8709,
+    "n_score_supported_candidates": 8709,
+    "n_variable_candidates": 8709,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8709
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8709
+    },
+    "min_finite_ranking_candidates": 8650,
+    "max_finite_ranking_candidates": 8687,
+    "score_bytes": 498721692,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libg__hmc-count-based__gamma-exponential__small-clean-39",
+    "job_id": 39,
+    "protein_family": "trpb",
+    "landscape": "trpb-libG",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9041,
+    "n_ranking_candidates": 8709,
+    "n_score_supported_candidates": 8709,
+    "n_variable_candidates": 8709,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8709
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8709
+    },
+    "min_finite_ranking_candidates": 8653,
+    "max_finite_ranking_candidates": 8690,
+    "score_bytes": 498230137,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__hmc-count-based__exponential-exponential__small-clean-43",
+    "job_id": 43,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 8970,
+    "n_ranking_candidates": 8930,
+    "n_score_supported_candidates": 8930,
+    "n_variable_candidates": 8930,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "min_finite_ranking_candidates": 8927,
+    "max_finite_ranking_candidates": 8930,
+    "score_bytes": 495198434,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__hmc-count-based__lomax-exponential__small-clean-44",
+    "job_id": 44,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 8970,
+    "n_ranking_candidates": 8930,
+    "n_score_supported_candidates": 8930,
+    "n_variable_candidates": 8930,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "min_finite_ranking_candidates": 8925,
+    "max_finite_ranking_candidates": 8930,
+    "score_bytes": 494240438,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libh__hmc-count-based__gamma-exponential__small-clean-45",
+    "job_id": 45,
+    "protein_family": "trpb",
+    "landscape": "trpb-libH",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 8970,
+    "n_ranking_candidates": 8930,
+    "n_score_supported_candidates": 8930,
+    "n_variable_candidates": 8930,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 8930
+    },
+    "min_finite_ranking_candidates": 8926,
+    "max_finite_ranking_candidates": 8930,
+    "score_bytes": 494703998,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__hmc-count-based__exponential-exponential__small-clean-49",
+    "job_id": 49,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9121,
+    "n_ranking_candidates": 9018,
+    "n_score_supported_candidates": 9018,
+    "n_variable_candidates": 9018,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "min_finite_ranking_candidates": 8951,
+    "max_finite_ranking_candidates": 8993,
+    "score_bytes": 502685449,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__hmc-count-based__lomax-exponential__small-clean-50",
+    "job_id": 50,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9121,
+    "n_ranking_candidates": 9018,
+    "n_score_supported_candidates": 9018,
+    "n_variable_candidates": 9018,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "min_finite_ranking_candidates": 8940,
+    "max_finite_ranking_candidates": 8984,
+    "score_bytes": 501582048,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "trpb__trpb-libi__hmc-count-based__gamma-exponential__small-clean-51",
+    "job_id": 51,
+    "protein_family": "trpb",
+    "landscape": "trpb-libI",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 9121,
+    "n_ranking_candidates": 9018,
+    "n_score_supported_candidates": 9018,
+    "n_variable_candidates": 9018,
+    "n_score_supported_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "n_variable_candidates_by_score": {
+      "johnston_fitness": 9018
+    },
+    "min_finite_ranking_candidates": 8947,
+    "max_finite_ranking_candidates": 8984,
+    "score_bytes": 502042199,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "nuc__nuc-g1__hmc-count-based__exponential__small-clean-55",
+    "job_id": 55,
+    "protein_family": "nuc",
+    "landscape": "nuc-G1",
+    "status": "valid",
+    "n_samples": 32000,
+    "n_variants": 10760,
+    "n_ranking_candidates": 9441,
+    "n_score_supported_candidates": 9441,
+    "n_variable_candidates": 9441,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 9441
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 9441
+    },
+    "min_finite_ranking_candidates": 9441,
+    "max_finite_ranking_candidates": 9441,
+    "score_bytes": 673206259,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 4000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "nuc__nuc-g1__hmc-count-based__lomax__small-clean-56",
+    "job_id": 56,
+    "protein_family": "nuc",
+    "landscape": "nuc-G1",
+    "status": "valid",
+    "n_samples": 32000,
+    "n_variants": 10760,
+    "n_ranking_candidates": 9441,
+    "n_score_supported_candidates": 9441,
+    "n_variable_candidates": 9441,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 9441
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 9441
+    },
+    "min_finite_ranking_candidates": 9441,
+    "max_finite_ranking_candidates": 9441,
+    "score_bytes": 673726178,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "raw_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 4000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "nuc__nuc-g2__hmc-count-based__exponential__small-clean-57",
+    "job_id": 57,
+    "protein_family": "nuc",
+    "landscape": "nuc-G2",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 14755,
+    "n_ranking_candidates": 14678,
+    "n_score_supported_candidates": 14678,
+    "n_variable_candidates": 14115,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 14678
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 14115
+    },
+    "min_finite_ranking_candidates": 14678,
+    "max_finite_ranking_candidates": 14678,
+    "score_bytes": 350691440,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "nuc__nuc-g2__hmc-count-based__lomax__small-clean-58",
+    "job_id": 58,
+    "protein_family": "nuc",
+    "landscape": "nuc-G2",
+    "status": "valid",
+    "n_samples": 24000,
+    "n_variants": 14755,
+    "n_ranking_candidates": 14678,
+    "n_score_supported_candidates": 14678,
+    "n_variable_candidates": 14539,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 14678
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 14539
+    },
+    "min_finite_ranking_candidates": 14678,
+    "max_finite_ranking_candidates": 14678,
+    "score_bytes": 523533739,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 3000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "nuc__nuc-g3__hmc-count-based__exponential__small-clean-59",
+    "job_id": 59,
+    "protein_family": "nuc",
+    "landscape": "nuc-G3",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 18790,
+    "n_ranking_candidates": 18618,
+    "n_score_supported_candidates": 18618,
+    "n_variable_candidates": 10306,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 18618
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 10306
+    },
+    "min_finite_ranking_candidates": 18618,
+    "max_finite_ranking_candidates": 18618,
+    "score_bytes": 435427844,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "nuc__nuc-g4__hmc-count-based__exponential__small-clean-61",
+    "job_id": 61,
+    "protein_family": "nuc",
+    "landscape": "nuc-G4",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 15554,
+    "n_ranking_candidates": 15404,
+    "n_score_supported_candidates": 15404,
+    "n_variable_candidates": 5590,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 15404
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 5590
+    },
+    "min_finite_ranking_candidates": 15402,
+    "max_finite_ranking_candidates": 15404,
+    "score_bytes": 250471247,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  },
+  {
+    "analysis_id": "nuc__nuc-g4__hmc-count-based__lomax__small-clean-62",
+    "job_id": 62,
+    "protein_family": "nuc",
+    "landscape": "nuc-G4",
+    "status": "valid",
+    "n_samples": 16000,
+    "n_variants": 15554,
+    "n_ranking_candidates": 15404,
+    "n_score_supported_candidates": 15404,
+    "n_variable_candidates": 5593,
+    "n_score_supported_candidates_by_score": {
+      "highest_gate_enrichment": 15404
+    },
+    "n_variable_candidates_by_score": {
+      "highest_gate_enrichment": 5593
+    },
+    "min_finite_ranking_candidates": 15402,
+    "max_finite_ranking_candidates": 15404,
+    "score_bytes": 250146977,
+    "score_chunks": [
+      1,
+      64,
+      4096
+    ],
+    "score_compression": "gzip",
+    "source_schema_version": 2,
+    "score_filename": "fitness_scores.nc",
+    "score_variable": "fitness_score",
+    "source_present": true,
+    "artifact_kind": "diagnosed_hmc",
+    "n_chains": 8,
+    "draws_per_chain": 2000,
+    "all_source_samples_present": true
+  }
+]

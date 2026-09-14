@@ -1,0 +1,1226 @@
+[
+  {
+    "job_id": 1,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_1",
+    "diagnosed_hmc": [
+      "/data/data_dms_stability/pdz_cis/fits/pdz_cis_exponential_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/data_dms_stability/pdz_cis/fits/pdz_cis_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 3,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_3",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_3/pdz/cis/pdz_cis_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_3/pdz/cis/pdz_cis_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 4,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_4",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_4/pdz/cis/pdz_cis_exponential_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_4/pdz/cis/pdz_cis_exponential_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 7,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_7",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_7/trpb/libA/trpb_libA_exponential_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_7/trpb/libA/trpb_libA_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 8,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_8",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_8/trpb/libA/trpb_libA_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_8/trpb/libA/trpb_libA_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 9,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_9",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_9/trpb/libA/trpb_libA_exponential_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_9/trpb/libA/trpb_libA_exponential_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 11,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_11",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_11/trpb/libB/trpb_libB_exponential_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_11/trpb/libB/trpb_libB_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 12,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_12",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_12/trpb/libB/trpb_libB_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_12/trpb/libB/trpb_libB_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 13,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_13",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_13/trpb/libB/trpb_libB_exponential_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_13/trpb/libB/trpb_libB_exponential_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 15,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_15",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_15/trpb/libC/trpb_libC_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/small-clean/small-clean_15/trpb/libC/trpb_libC_exponential_exponential-20260405085014.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 16,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_16",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_16/trpb/libC/trpb_libC_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_16/trpb/libC/trpb_libC_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 17,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_17",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_17/trpb/libC/trpb_libC_exponential_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_17/trpb/libC/trpb_libC_exponential_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 19,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_19",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_19/trpb/libD/trpb_libD_exponential_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_19/trpb/libD/trpb_libD_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 20,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_20",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_20/trpb/libD/trpb_libD_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_20/trpb/libD/trpb_libD_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 21,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_21",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_21/trpb/libD/trpb_libD_gamma_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_21/trpb/libD/trpb_libD_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 25,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_25",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_25/trpb/libE/trpb_libE_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/small-clean/small-clean_25/trpb/libE/trpb_libE_exponential_exponential-20260404232845.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 26,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_26",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_26/trpb/libE/trpb_libE_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_26/trpb/libE/trpb_libE_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 27,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_27",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_27/trpb/libE/trpb_libE_gamma_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_27/trpb/libE/trpb_libE_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 31,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_31",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_31/trpb/libF/trpb_libF_exponential_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_31/trpb/libF/trpb_libF_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 32,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_32",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_32/trpb/libF/trpb_libF_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_32/trpb/libF/trpb_libF_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 33,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_33",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_33/trpb/libF/trpb_libF_gamma_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_33/trpb/libF/trpb_libF_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 34,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_34",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_34/trpb/libF/trpb_libF_exponential_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_34/trpb/libF/trpb_libF_exponential_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 37,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_37",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_37/trpb/libG/trpb_libG_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/small-clean/small-clean_37/trpb/libG/trpb_libG_exponential_exponential-20260404234146.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 38,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_38",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_38/trpb/libG/trpb_libG_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_38/trpb/libG/trpb_libG_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 39,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_39",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_39/trpb/libG/trpb_libG_gamma_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_39/trpb/libG/trpb_libG_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 43,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_43",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_43/trpb/libH/trpb_libH_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/small-clean/small-clean_43/trpb/libH/trpb_libH_exponential_exponential-20260405101041.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 44,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_44",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_44/trpb/libH/trpb_libH_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_44/trpb/libH/trpb_libH_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 45,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_45",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_45/trpb/libH/trpb_libH_gamma_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_45/trpb/libH/trpb_libH_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 49,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_49",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_49/trpb/libI/trpb_libI_exponential_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_49/trpb/libI/trpb_libI_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 50,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_50",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_50/trpb/libI/trpb_libI_lomax_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_50/trpb/libI/trpb_libI_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 51,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_51",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_51/trpb/libI/trpb_libI_gamma_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_51/trpb/libI/trpb_libI_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 55,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G1",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_55",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_55/nuc/G1/nuc_G1_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_55/nuc/G1/nuc_G1_exponential_None_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 56,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G1",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_56",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_56/nuc/G1/nuc_G1_lomax_None_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/small-clean/small-clean_56/nuc/G1/nuc_G1_lomax-20260405064020.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 57,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G2",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_57",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_57/nuc/G2/nuc_G2_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_57/nuc/G2/nuc_G2_exponential_None_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 58,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G2",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_58",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_58/nuc/G2/nuc_G2_lomax_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_58/nuc/G2/nuc_G2_lomax_None_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 59,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G3",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_59",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_59/nuc/G3/nuc_G3_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_59/nuc/G3/nuc_G3_exponential_None_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 61,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G4",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_61",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_61/nuc/G4/nuc_G4_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_61/nuc/G4/nuc_G4_exponential_None_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 62,
+    "family": "large_clean",
+    "dataset": "nuc",
+    "subset": "G4",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_62",
+    "diagnosed_hmc": [
+      "/data/amlt/small-clean/small-clean_62/nuc/G4/nuc_G4_lomax_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_62/nuc/G4/nuc_G4_lomax_None_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 63,
+    "family": "large_clean",
+    "dataset": "k50",
+    "subset": "",
+    "fitness_distribution": "(MASSIVE, only MLE)",
+    "growth_curve": "",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_63",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/k50-mle/k50_mle_lr0-01/k50/k50_None_None_None_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 64,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_64",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_64/trpb/four-site/trpb_four-site_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 65,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_65",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_65/trpb/four-site/trpb_four-site_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 66,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_66",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_66/trpb/four-site/trpb_four-site_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 67,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_67",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_67/trpb/four-site/trpb_four-site_exponential_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 68,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_68",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_68/trpb/four-site/trpb_four-site_lomax_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 69,
+    "family": "large_clean",
+    "dataset": "trpb",
+    "subset": "four-site",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_69",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_69/trpb/four-site/trpb_four-site_gamma_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 70,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_70",
+    "diagnosed_hmc": [
+      "/data/amlt/large-clean/large-clean_70/pdz/cript-c/pdz_cript-c_exponential_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_70/pdz/cript-c/pdz_cript-c_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 71,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_71",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_71/pdz/cript-c/pdz_cript-c_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/large-clean/large-clean_71/pdz/cript-c/pdz_cript-c_lomax_exponential-20260403053144.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 72,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_72",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_72/pdz/cript-c/pdz_cript-c_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/large-clean/large-clean_72/pdz/cript-c/pdz_cript-c_gamma_exponential-20260407031255.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 73,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_73",
+    "diagnosed_hmc": [
+      "/data/amlt/large-clean/large-clean_73/pdz/cript-c/pdz_cript-c_exponential_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_73/pdz/cript-c/pdz_cript-c_exponential_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 74,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_74",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_74/pdz/cript-c/pdz_cript-c_lomax_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 76,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_76",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_76/pdz/cript-n/pdz_cript-n_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 77,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_77",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_77/pdz/cript-n/pdz_cript-n_lomax_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 78,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_78",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_78/pdz/cript-n/pdz_cript-n_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/large-clean/large-clean_78/pdz/cript-n/pdz_cript-n_gamma_exponential-20260407031232.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 80,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_80",
+    "diagnosed_hmc": [
+      "/data/amlt/large-clean/large-clean_80/pdz/cript-n/pdz_cript-n_lomax_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_80/pdz/cript-n/pdz_cript-n_lomax_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 81,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_81",
+    "diagnosed_hmc": [
+      "/data/amlt/large-clean/large-clean_81/pdz/cript-n/pdz_cript-n_gamma_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_81/pdz/cript-n/pdz_cript-n_gamma_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 82,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-1",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_82",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_82/pdz/trans-1/pdz_trans-1_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [
+      "/data/amlt/large-clean/large-clean_82/pdz/trans-1/pdz_trans-1_exponential_exponential-20260407030507.nc"
+    ],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 84,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-1",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_84",
+    "diagnosed_hmc": [
+      "/data/amlt/large-clean/large-clean_84/pdz/trans-1/pdz_trans-1_gamma_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_84/pdz/trans-1/pdz_trans-1_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 88,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_88",
+    "diagnosed_hmc": [
+      "/data/amlt/large-clean/large-clean_88/pdz/trans-2/pdz_trans-2_exponential_exponential_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_88/pdz/trans-2/pdz_trans-2_exponential_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  },
+  {
+    "job_id": 90,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_90",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_90/pdz/trans-2/pdz_trans-2_gamma_exponential_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 92,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_92",
+    "diagnosed_hmc": [],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_92/pdz/trans-2/pdz_trans-2_lomax_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": [
+      "diagnosed_hmc"
+    ]
+  },
+  {
+    "job_id": 93,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_93",
+    "diagnosed_hmc": [
+      "/data/amlt/large-clean/large-clean_93/pdz/trans-2/pdz_trans-2_gamma_sigmoid_diagnosed.nc"
+    ],
+    "sampled_mle": [
+      "/data/amlt/mle/mle_93/pdz/trans-2/pdz_trans-2_gamma_sigmoid_samples.nc"
+    ],
+    "raw_hmc": [],
+    "missing_artifacts": []
+  }
+]

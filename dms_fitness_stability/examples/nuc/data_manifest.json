@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "landscape": "nuc",
+  "paper": {
+    "title": "Engineering highly active nuclease enzymes with machine learning and high-throughput screening",
+    "doi": "10.1016/j.cels.2025.101236",
+    "data_repository": "https://github.com/google-deepmind/nuclease_design",
+    "data_repository_commit": "702284847c4558567d8288169a86dc147cfaab32",
+    "license": "CC-BY-4.0"
+  },
+  "loader": {
+    "repository": "https://github.com/microsoft/SciStanPy",
+    "commit": "09c439f675ead70f851d814242f153ecb7712113",
+    "path": "flipv3/flip_dsets.py",
+    "blob_sha": "84a7e716aac80f0f949879ba4cb97f0018c72152",
+    "function": "load_nuclease_data"
+  },
+  "raw": {
+    "counts/g1.csv": {
+      "bytes": 2437712,
+      "sha256": "5269ae56183504795e8bc93571e8b7b4862bde557fa1b5837eeb881fdf60ccfd",
+      "rows": 9441,
+      "source_object": "processed_data/g1.csv",
+      "source_generation": "1708601525023646",
+      "source_md5_base64": "hmRoCGJhi4g/txcPslw64Q=="
+    },
+    "counts/g1_neg_control.csv": {
+      "bytes": 268885,
+      "sha256": "d33578bf3864951738c643fe89ba4b511badf2b454725d5bd829374d521151ea",
+      "rows": 1319,
+      "source_object": "processed_fiducial_data/g1_neg_control.csv",
+      "source_generation": "1708601525169780",
+      "source_md5_base64": "4jVXcM7HTs149FM4yS8ILg=="
+    },
+    "counts/g2.csv": {
+      "bytes": 3163331,
+      "sha256": "fc9254180cb5104675461350d56d48dcb9500d0c7dc60a0cf495818bf05866ba",
+      "rows": 14678,
+      "source_object": "processed_data/g2.csv",
+      "source_generation": "1708601525323079",
+      "source_md5_base64": "0JkQwUKu4geRbKOhDAQ+zQ=="
+    },
+    "counts/g2_neg_control.csv": {
+      "bytes": 26482,
+      "sha256": "1835e52e9a3050e9fb063fa3d6d7f9f6a9941aa8a6b2d3f9c6f706d94ed5fe6d",
+      "rows": 77,
+      "source_object": "processed_fiducial_data/g2_neg_control.csv",
+      "source_generation": "1708601525250145",
+      "source_md5_base64": "QotdvpRPXDryoVzaOYrLDQ=="
+    },
+    "counts/g3.csv": {
+      "bytes": 4788940,
+      "sha256": "e323d6e5a64645c86a381ce945507a5d2df48722b2a880c09bd3b75d7c36d284",
+      "rows": 18618,
+      "source_object": "processed_data/g3.csv",
+      "source_generation": "1708601525400044",
+      "source_md5_base64": "Eix9XwUrmdLxTZZoYVs6WQ=="
+    },
+    "counts/g3_neg_control.csv": {
+      "bytes": 24529,
+      "sha256": "464d5f81429fbfd08eef62a4bad7b39458c8ec1e9b788dce3f1e89539fe1fb95",
+      "rows": 172,
+      "source_object": "processed_fiducial_data/g3_neg_control.csv",
+      "source_generation": "1708601525724852",
+      "source_md5_base64": "WFX3R07CrqL3bxESK10wUQ=="
+    },
+    "counts/g4.csv": {
+      "bytes": 5897118,
+      "sha256": "c792152789aff013b6f028d567bdd154af3bdfb41acb007c271597ce87948d4d",
+      "rows": 15404,
+      "source_object": "processed_data/g4.csv",
+      "source_generation": "1708601525342547",
+      "source_md5_base64": "AIyITT68b9GOXeim29Px8g=="
+    },
+    "counts/g4_neg_control.csv": {
+      "bytes": 34708,
+      "sha256": "8176452f9378d38d129610c9fa4f421628a558f76b0c9a02a857ac393dd816a9",
+      "rows": 150,
+      "source_object": "processed_fiducial_data/g4_neg_control.csv",
+      "source_generation": "1708601526130403",
+      "source_md5_base64": "Ms29Gs/QRq5xUcfh4kzQ5w=="
+    },
+    "reported_fitness/landscape.csv": {
+      "bytes": 17326572,
+      "sha256": "54f64f4abcf7bf36771f397abb8f285b8bf198066dbcef62b7d93cf7083c0c1e",
+      "rows": 55760,
+      "source_object": "processed_data/landscape.csv",
+      "source_generation": "1708601526510660",
+      "source_md5_base64": "+GOap1hprBSJaIMJvXztZw==",
+      "score_type": "categorical activity relative to fiducials"
+    }
+  },
+  "reference": {
+    "organism": "Bacillus licheniformis",
+    "protein": "NucB",
+    "variant_id": "",
+    "sequence": "MIKKWAVHLLFSALVLLGLSGGAAYSPQHAEGAARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+    "sequence_length": 142
+  },
+  "reported_fitness": {
+    "score_type": "generation-specific highest-sort-gate enrichment factor",
+    "formula": "(post-sort variant abundance) / (pooled-input variant abundance)",
+    "ranking_direction": "higher is more active",
+    "source_code": "google-deepmind/nuclease_design@702284847c4558567d8288169a86dc147cfaab32/notebooks/plot_liquid_culture_vs_ef_correlation.ipynb",
+    "selection_note": "The authors explicitly select these highest-gate columns when comparing high-throughput enrichment to independent liquid-culture activity. The merged landscape.csv remains the cross-generation categorical reference.",
+    "negative_controls_reported": false
+  },
+  "generations": {
+    "G1": {
+      "main_rows": 9441,
+      "negative_control_rows": 1319,
+      "fitted_variants": 10760,
+      "reported_variants": 9441,
+      "reported_fitness_column": "ef_2_high_reseq_g1",
+      "reported_fitness_min": 0.0,
+      "reported_fitness_max": 154.51153654721543,
+      "reported_fitness_unique_values": 2228,
+      "reported_fitness_zero_values": 7040,
+      "proxy_input_expression": "ic1[0] + ic1[1] + ic2[0] + ic2[1] + ic3",
+      "proxy_output_expression": "hc2[1]",
+      "source_dna_count_threshold": 20,
+      "source_normalization": {
+        "input_total": 6000424,
+        "output_total": 1937171,
+        "omitted_stop_mutating_dna_variants": 132,
+        "omitted_input_count": 23322,
+        "omitted_output_count": 310
+      },
+      "top_k_boundaries": {"50": 21.4331130070888, "100": 15.655377334611488, "1000": 0.8036587785958983},
+      "wild_type_index": 0,
+      "count_shapes": {
+        "ic1": [2, 10760],
+        "ic2": [2, 10760],
+        "ic3": [10760],
+        "lc": [3, 10760],
+        "hc1": [10760],
+        "hc2": [2, 10760],
+        "hc3": [10760]
+      },
+      "threshold_shapes": {"lt": [3], "ht": [3]}
+    },
+    "G2": {
+      "main_rows": 14678,
+      "negative_control_rows": 77,
+      "fitted_variants": 14755,
+      "reported_variants": 14678,
+      "reported_fitness_column": "ef_1_97.5_g2",
+      "reported_fitness_min": 0.0,
+      "reported_fitness_max": 52.54675229635678,
+      "reported_fitness_unique_values": 3018,
+      "reported_fitness_zero_values": 11153,
+      "proxy_input_expression": "ic1[0] + ic1[1] + ic2",
+      "proxy_output_expression": "c975",
+      "source_dna_count_threshold": 100,
+      "top_k_boundaries": {"50": 23.868655126588862, "100": 20.119959113224976, "1000": 3.1590384226795942},
+      "wild_type_index": 0,
+      "count_shapes": {
+        "ic1": [2, 14755],
+        "ic2": [14755],
+        "c86": [14755],
+        "c93": [14755],
+        "c975": [14755]
+      },
+      "threshold_shapes": {"ft": [3]}
+    },
+    "G3": {
+      "main_rows": 18618,
+      "negative_control_rows": 172,
+      "fitted_variants": 18790,
+      "reported_variants": 18618,
+      "reported_fitness_column": "ef_2_99_g3",
+      "reported_fitness_min": 0.0,
+      "reported_fitness_max": 143.71129455680003,
+      "reported_fitness_unique_values": 1951,
+      "reported_fitness_zero_values": 16530,
+      "top_k_boundaries": {"50": 40.585520722132266, "100": 29.263470489849244, "1000": 2.438927289520922},
+      "wild_type_index": 0,
+      "count_shapes": {"ic1": [18790], "oc1": [4, 18790]},
+      "threshold_shapes": {"ft": [4]}
+    },
+    "G4": {
+      "main_rows": 15404,
+      "negative_control_rows": 150,
+      "fitted_variants": 15554,
+      "reported_variants": 15404,
+      "reported_fitness_column": "ef_4_99.5_g4",
+      "reported_fitness_min": 0.0,
+      "reported_fitness_max": 142.34191726938604,
+      "reported_fitness_unique_values": 1322,
+      "reported_fitness_zero_values": 14027,
+      "top_k_boundaries": {"50": 50.915029460148126, "100": 37.18976963899083, "1000": 0.7377721909173812},
+      "wild_type_index": 0,
+      "count_shapes": {"ic1": [15554], "oc1": [4, 15554]},
+      "threshold_shapes": {"ft": [4]}
+    }
+  },
+  "variant_order": "Rows of gN.csv followed by rows of gN_neg_control.csv; mutations within each signature are sorted by one-indexed position.",
+  "deferred": {
+    "instrument_counts": "gs://nuclease_design/raw_count_data/G1 through G4",
+    "reason": "The compact generation tables already contain the exact count arrays consumed by load_nuclease_data."
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "experiment": "small-clean",
+  "fits": [
+    {
+      "job": "small-clean_7",
+      "library": "libA",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "r",
+      "remote_result": "trpb/libA/trpb_libA_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "job": "small-clean_9",
+      "library": "libA",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "sigmoid",
+      "posterior_variable": "r",
+      "remote_result": "trpb/libA/trpb_libA_exponential_sigmoid_diagnosed.nc",
+      "canonical_filename": "exponential_sigmoid.nc"
+    },
+    {
+      "job": "small-clean_11",
+      "library": "libB",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "r",
+      "remote_result": "trpb/libB/trpb_libB_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "job": "small-clean_13",
+      "library": "libB",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "sigmoid",
+      "posterior_variable": "r",
+      "remote_result": "trpb/libB/trpb_libB_exponential_sigmoid_diagnosed.nc",
+      "canonical_filename": "exponential_sigmoid.nc"
+    },
+    {
+      "job": "small-clean_15",
+      "library": "libC",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "r",
+      "remote_result": "trpb/libC/trpb_libC_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc",
+      "known_issues": ["missing_observed_data"]
+    },
+    {
+      "job": "small-clean_17",
+      "library": "libC",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "sigmoid",
+      "posterior_variable": "r",
+      "remote_result": "trpb/libC/trpb_libC_exponential_sigmoid_diagnosed.nc",
+      "canonical_filename": "exponential_sigmoid.nc"
+    },
+    {
+      "job": "small-clean_19",
+      "library": "libD",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "remote_result": "trpb/libD/trpb_libD_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "job": "small-clean_21",
+      "library": "libD",
+      "growth_rate_prior": "gamma",
+      "growth_curve": "exponential",
+      "posterior_variable": "inv_r_mean",
+      "remote_result": "trpb/libD/trpb_libD_gamma_exponential_diagnosed.nc",
+      "canonical_filename": "gamma_exponential.nc"
+    },
+    {
+      "job": "small-clean_25",
+      "library": "libE",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "remote_result": "trpb/libE/trpb_libE_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc",
+      "known_issues": [
+        "h5netcdf_open_failure",
+        "missing_observed_data"
+      ]
+    },
+    {
+      "job": "small-clean_27",
+      "library": "libE",
+      "growth_rate_prior": "gamma",
+      "growth_curve": "exponential",
+      "posterior_variable": "inv_r_mean",
+      "remote_result": "trpb/libE/trpb_libE_gamma_exponential_diagnosed.nc",
+      "canonical_filename": "gamma_exponential.nc"
+    },
+    {
+      "job": "small-clean_31",
+      "library": "libF",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "remote_result": "trpb/libF/trpb_libF_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "job": "small-clean_34",
+      "library": "libF",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "sigmoid",
+      "posterior_variable": "log_r_mean",
+      "remote_result": "trpb/libF/trpb_libF_exponential_sigmoid_diagnosed.nc",
+      "canonical_filename": "exponential_sigmoid.nc"
+    },
+    {
+      "job": "small-clean_37",
+      "library": "libG",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "remote_result": "trpb/libG/trpb_libG_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc",
+      "known_issues": ["missing_observed_data"]
+    },
+    {
+      "job": "small-clean_39",
+      "library": "libG",
+      "growth_rate_prior": "gamma",
+      "growth_curve": "exponential",
+      "posterior_variable": "inv_r_mean",
+      "remote_result": "trpb/libG/trpb_libG_gamma_exponential_diagnosed.nc",
+      "canonical_filename": "gamma_exponential.nc"
+    },
+    {
+      "job": "small-clean_43",
+      "library": "libH",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "remote_result": "trpb/libH/trpb_libH_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc",
+      "known_issues": ["missing_observed_data"]
+    },
+    {
+      "job": "small-clean_45",
+      "library": "libH",
+      "growth_rate_prior": "gamma",
+      "growth_curve": "exponential",
+      "posterior_variable": "inv_r_mean",
+      "remote_result": "trpb/libH/trpb_libH_gamma_exponential_diagnosed.nc",
+      "canonical_filename": "gamma_exponential.nc"
+    },
+    {
+      "job": "small-clean_49",
+      "library": "libI",
+      "growth_rate_prior": "exponential",
+      "growth_curve": "exponential",
+      "posterior_variable": "log_r_mean",
+      "remote_result": "trpb/libI/trpb_libI_exponential_exponential_diagnosed.nc",
+      "canonical_filename": "exponential_exponential.nc"
+    },
+    {
+      "job": "small-clean_51",
+      "library": "libI",
+      "growth_rate_prior": "gamma",
+      "growth_curve": "exponential",
+      "posterior_variable": "inv_r_mean",
+      "remote_result": "trpb/libI/trpb_libI_gamma_exponential_diagnosed.nc",
+      "canonical_filename": "gamma_exponential.nc"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "source": "data/HMC Results Summaries.csv and microsoft/SciStanPy@09c439f675ead70f851d814242f153ecb7712113/amlt_configs/cmds-mle.txt",
+  "fits_downloaded": true,
+  "fits": [
+    {
+      "job": 63,
+      "dataset": "k50",
+      "subset": null,
+      "inference_method": "mle",
+      "cli_args": "--dataset k50",
+      "primary_score_variable": "mean_dg",
+      "primary_score_semantics": "per-sequence mean folding free energy",
+      "mle_group_dims": ["a"],
+      "mle_group_shape": [1824523],
+      "sampled_mle_posterior_dims": ["chain", "draw", "a"],
+      "sampled_mle_posterior_shape": [1, 1000, 1824523],
+      "secondary_score_variable": "log_K50",
+      "secondary_score_dims": ["protease", "a"],
+      "secondary_score_shape": [2, 1824523],
+      "status": "sampled MLE artifact downloaded and structurally validated"
+    }
+  ]
+}

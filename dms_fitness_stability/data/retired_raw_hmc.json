@@ -1,0 +1,113 @@
+[
+  {
+    "job_id": 74,
+    "job_name": "large_clean_74",
+    "retired_at": "2026-08-26T23:53:04.076393+00:00",
+    "reason": "removed_after_failed_raw_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_74/pdz/cript-c/pdz_cript-c_lomax_sigmoid-20260407025947.nc",
+        "kind": "raw_hmc",
+        "status": "unusable",
+        "bytes": 178500862654,
+        "issues": [
+          "h5netcdf_open_failure",
+          "h5py_open_failure"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (bad object header version number)'",
+          "RuntimeError: Unable to get group info (bad object header version number)"
+        ],
+        "groups": [],
+        "score_variable": "log_r_mean",
+        "score_shape": null,
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": false,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "source": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_74",
+      "name": "pdz/cript-c/pdz_cript-c_lomax_sigmoid-20260407025947.nc",
+      "size": "178.5 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 76,
+    "job_name": "large_clean_76",
+    "retired_at": "2026-08-26T22:55:26.662114+00:00",
+    "reason": "removed_after_failed_raw_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_76/pdz/cript-n/pdz_cript-n_exponential_exponential-20260407031157.nc",
+        "kind": "raw_hmc",
+        "status": "unusable",
+        "bytes": 153000765990,
+        "issues": [
+          "h5netcdf_open_failure",
+          "h5py_open_failure"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (bad object header version number)'",
+          "RuntimeError: Unable to get group info (bad object header version number)"
+        ],
+        "groups": [],
+        "score_variable": "log_r_mean",
+        "score_shape": null,
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": false,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "source": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_76",
+      "name": "pdz/cript-n/pdz_cript-n_exponential_exponential-20260407031157.nc",
+      "size": "153.0 GB",
+      "last_modified": "4mo ago"
+    }
+  },
+  {
+    "job_id": 90,
+    "job_name": "large_clean_90",
+    "retired_at": "2026-08-26T23:24:33.677919+00:00",
+    "reason": "removed_after_failed_raw_validation",
+    "artifacts": [
+      {
+        "path": "/data/amlt/large-clean/large-clean_90/pdz/trans-2/pdz_trans-2_gamma_exponential-20260403124036.nc",
+        "kind": "raw_hmc",
+        "status": "unusable",
+        "bytes": 186150802526,
+        "issues": [
+          "h5netcdf_open_failure",
+          "h5py_open_failure"
+        ],
+        "errors": [
+          "KeyError: 'Unable to synchronously open object (bad object header version number)'",
+          "RuntimeError: Unable to get group info (bad object header version number)"
+        ],
+        "groups": [],
+        "score_variable": "inv_r_mean",
+        "score_shape": null,
+        "predictive_shapes": {},
+        "observed_shapes": {},
+        "h5py_compatible": false,
+        "h5netcdf_compatible": false
+      }
+    ],
+    "source": {
+      "kind": "raw_hmc",
+      "experiment": "large-clean",
+      "job_name": "large-clean_90",
+      "name": "pdz/trans-2/pdz_trans-2_gamma_exponential-20260403124036.nc",
+      "size": "186.2 GB",
+      "last_modified": "4mo ago"
+    }
+  }
+]

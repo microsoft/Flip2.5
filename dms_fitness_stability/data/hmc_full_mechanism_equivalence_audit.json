@@ -1,0 +1,1326 @@
+{
+  "audited_cache_count": 49,
+  "cache_additive_variables": [
+    "candidate_n_finite_samples",
+    "candidate_variant_index",
+    "n_finite_samples"
+  ],
+  "caches": [
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-trans-1__hmc__exponential-exponential__large-clean-82",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 82,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 109376,
+        "mechanism_variant": 1011,
+        "reference_position": 109376,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-trans-1__hmc__gamma-exponential__large-clean-84",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 84,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 109376,
+        "mechanism_variant": 1003,
+        "reference_position": 109376,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-trans-2__hmc__exponential-exponential__large-clean-88",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 88,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 142251,
+        "mechanism_variant": 1011,
+        "reference_position": 142251,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-trans-2__hmc__gamma-sigmoid__large-clean-93",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 93,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 142251,
+        "mechanism_variant": 1001,
+        "reference_position": 142251,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cis__hmc__exponential-exponential__small-clean-1",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 1,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9475,
+        "mechanism_variant": 1000,
+        "reference_position": 9475,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cis__hmc__lomax-exponential__small-clean-3",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 3,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9475,
+        "mechanism_variant": 1000,
+        "reference_position": 9475,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cis__hmc__exponential-sigmoid__small-clean-4",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 4,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9475,
+        "mechanism_variant": 1000,
+        "reference_position": 9475,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cript-c__hmc__exponential-exponential__large-clean-70",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 70,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 117723,
+        "mechanism_variant": 1000,
+        "reference_position": 117723,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cript-c__hmc__lomax-exponential__large-clean-71",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 71,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 117723,
+        "mechanism_variant": 1000,
+        "reference_position": 117723,
+        "sample": 24000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cript-c__hmc__gamma-exponential__large-clean-72",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 72,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 117723,
+        "mechanism_variant": 1364,
+        "reference_position": 117723,
+        "sample": 24000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cript-c__hmc__exponential-sigmoid__large-clean-73",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 73,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 117723,
+        "mechanism_variant": 1000,
+        "reference_position": 117723,
+        "sample": 24000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cript-n__hmc__gamma-exponential__large-clean-78",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 78,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 91815,
+        "mechanism_variant": 1580,
+        "reference_position": 91815,
+        "sample": 24000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cript-n__hmc__lomax-sigmoid__large-clean-80",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 80,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 91815,
+        "mechanism_variant": 1006,
+        "reference_position": 91815,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "pdz__pdz-cript-n__hmc__gamma-sigmoid__large-clean-81",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 81,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 91815,
+        "mechanism_variant": 1620,
+        "reference_position": 91815,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-liba__hmc__exponential-exponential__small-clean-7",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 7,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9254,
+        "mechanism_variant": 1233,
+        "reference_position": 9254,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-liba__hmc__lomax-exponential__small-clean-8",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 8,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9254,
+        "mechanism_variant": 1244,
+        "reference_position": 9254,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-liba__hmc__exponential-sigmoid__small-clean-9",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 9,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9254,
+        "mechanism_variant": 1228,
+        "reference_position": 9254,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libb__hmc__exponential-exponential__small-clean-11",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 11,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9261,
+        "mechanism_variant": 1100,
+        "reference_position": 9261,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libb__hmc__lomax-exponential__small-clean-12",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 12,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9261,
+        "mechanism_variant": 1142,
+        "reference_position": 9261,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libb__hmc__exponential-sigmoid__small-clean-13",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 13,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9261,
+        "mechanism_variant": 1100,
+        "reference_position": 9261,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libc__hmc__exponential-exponential__small-clean-15",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 15,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9260,
+        "mechanism_variant": 1219,
+        "reference_position": 9260,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libc__hmc__lomax-exponential__small-clean-16",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 16,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9260,
+        "mechanism_variant": 1215,
+        "reference_position": 9260,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libc__hmc__exponential-sigmoid__small-clean-17",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 17,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9260,
+        "mechanism_variant": 1220,
+        "reference_position": 9260,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libd__hmc__exponential-exponential__small-clean-19",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 19,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9057,
+        "mechanism_variant": 1000,
+        "reference_position": 9057,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libd__hmc__lomax-exponential__small-clean-20",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 20,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9057,
+        "mechanism_variant": 1005,
+        "reference_position": 9057,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libd__hmc__gamma-exponential__small-clean-21",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 21,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9057,
+        "mechanism_variant": 1116,
+        "reference_position": 9057,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libe__hmc__exponential-exponential__small-clean-25",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 25,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9229,
+        "mechanism_variant": 1073,
+        "reference_position": 9229,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libe__hmc__lomax-exponential__small-clean-26",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 26,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9229,
+        "mechanism_variant": 1104,
+        "reference_position": 9229,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libe__hmc__gamma-exponential__small-clean-27",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 27,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9229,
+        "mechanism_variant": 2495,
+        "reference_position": 9229,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libf__hmc__exponential-exponential__small-clean-31",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 31,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 8996,
+        "mechanism_variant": 1038,
+        "reference_position": 8996,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libf__hmc__lomax-exponential__small-clean-32",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 32,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 8996,
+        "mechanism_variant": 1145,
+        "reference_position": 8996,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libf__hmc__gamma-exponential__small-clean-33",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 33,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 8996,
+        "mechanism_variant": 1446,
+        "reference_position": 8996,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libf__hmc__exponential-sigmoid__small-clean-34",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 34,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 8996,
+        "mechanism_variant": 1040,
+        "reference_position": 8996,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libg__hmc__exponential-exponential__small-clean-37",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 37,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9041,
+        "mechanism_variant": 1022,
+        "reference_position": 9041,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libg__hmc__lomax-exponential__small-clean-38",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 38,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9041,
+        "mechanism_variant": 1226,
+        "reference_position": 9041,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libg__hmc__gamma-exponential__small-clean-39",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 39,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9041,
+        "mechanism_variant": 1544,
+        "reference_position": 9041,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libh__hmc__exponential-exponential__small-clean-43",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 43,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 8970,
+        "mechanism_variant": 1052,
+        "reference_position": 8970,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libh__hmc__lomax-exponential__small-clean-44",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 44,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 8970,
+        "mechanism_variant": 1099,
+        "reference_position": 8970,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libh__hmc__gamma-exponential__small-clean-45",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 45,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 8970,
+        "mechanism_variant": 1868,
+        "reference_position": 8970,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libi__hmc__exponential-exponential__small-clean-49",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 49,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9121,
+        "mechanism_variant": 1003,
+        "reference_position": 9121,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libi__hmc__lomax-exponential__small-clean-50",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 50,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9121,
+        "mechanism_variant": 1067,
+        "reference_position": 9121,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "candidate_variant_index",
+        "n_finite_samples"
+      ],
+      "analysis_id": "trpb__trpb-libi__hmc__gamma-exponential__small-clean-51",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 51,
+      "legacy_variable_count": 7,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9121,
+        "mechanism_variant": 2130,
+        "reference_position": 9121,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "n_finite_samples"
+      ],
+      "analysis_id": "nuc__nuc-g1__hmc__exponential__small-clean-55",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 55,
+      "legacy_variable_count": 8,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9441,
+        "mechanism_variant": 1001,
+        "reference_position": 9441,
+        "sample": 32000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "n_finite_samples"
+      ],
+      "analysis_id": "nuc__nuc-g1__hmc__lomax__small-clean-56",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 56,
+      "legacy_variable_count": 8,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 9441,
+        "mechanism_variant": 1000,
+        "reference_position": 9441,
+        "sample": 32000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "n_finite_samples"
+      ],
+      "analysis_id": "nuc__nuc-g2__hmc__exponential__small-clean-57",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 57,
+      "legacy_variable_count": 8,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 14678,
+        "mechanism_variant": 1000,
+        "reference_position": 14678,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "n_finite_samples"
+      ],
+      "analysis_id": "nuc__nuc-g2__hmc__lomax__small-clean-58",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 58,
+      "legacy_variable_count": 8,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 14678,
+        "mechanism_variant": 1000,
+        "reference_position": 14678,
+        "sample": 24000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [],
+      "analysis_id": "nuc__nuc-g3__hmc__exponential__small-clean-59",
+      "coordinate_count": 5,
+      "expected_source_kind": "hmc_posterior",
+      "job_id": 59,
+      "legacy_variable_count": 10,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 18618,
+        "mechanism_variant": 1000,
+        "reference_position": 18618,
+        "sample": 16000
+      },
+      "status": "exact",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "n_finite_samples"
+      ],
+      "analysis_id": "nuc__nuc-g4__hmc__exponential__small-clean-61",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 61,
+      "legacy_variable_count": 8,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 15404,
+        "mechanism_variant": 1000,
+        "reference_position": 15404,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    },
+    {
+      "added_variables": [
+        "candidate_n_finite_samples",
+        "n_finite_samples"
+      ],
+      "analysis_id": "nuc__nuc-g4__hmc__lomax__small-clean-62",
+      "coordinate_count": 5,
+      "expected_source_kind": null,
+      "job_id": 62,
+      "legacy_variable_count": 8,
+      "observed_source_kind": "hmc_score_matrix",
+      "sizes": {
+        "candidate": 15404,
+        "mechanism_variant": 1000,
+        "reference_position": 15404,
+        "sample": 16000
+      },
+      "status": "exact_with_additions",
+      "variable_count": 10
+    }
+  ],
+  "complete_manifest": true,
+  "manifest_analysis_count": 49,
+  "schema_version": 1,
+  "table_additive_columns": {
+    "functionality_scores.csv.gz": [
+      "n_finite_samples"
+    ],
+    "mechanism_inventory.csv": [
+      "input_replicate_count"
+    ],
+    "mechanism_runs.csv": [
+      "n_reported_context_omitted_low_support"
+    ],
+    "mechanism_variants.csv": [
+      "n_finite_samples"
+    ],
+    "reference_diagnostics.csv": [
+      "n_score_supported_candidates",
+      "reference_top_k_identifiable"
+    ]
+  },
+  "table_atol": 5e-12,
+  "tables": {
+    "functionality_scores.csv.gz": {
+      "added_columns": [
+        "n_finite_samples"
+      ],
+      "columns": [
+        "analysis_id",
+        "variant_index",
+        "score_median",
+        "model_reference_rank",
+        "n_finite_samples"
+      ],
+      "legacy_column_count": 4,
+      "maximum_absolute_difference": 0.0,
+      "normalized_trpb_rows": 0,
+      "rows": 1631243,
+      "status": "exact_with_additions"
+    },
+    "mechanism_diagnostics.csv": {
+      "added_columns": [],
+      "columns": [
+        "analysis_id",
+        "protein_family",
+        "landscape",
+        "model_spec",
+        "stratum",
+        "n_variants",
+        "input_support_vs_score_uncertainty_spearman",
+        "output_abundance_vs_score_uncertainty_spearman",
+        "decision_margin_vs_score_uncertainty_spearman",
+        "decision_margin_vs_inclusion_probability_spearman",
+        "decision_margin_vs_score_uncertainty_partial_spearman_input_adjusted",
+        "source_control_rows"
+      ],
+      "legacy_column_count": 12,
+      "maximum_absolute_difference": 0.0,
+      "normalized_trpb_rows": 0,
+      "rows": 147,
+      "status": "exact"
+    },
+    "mechanism_effects.csv": {
+      "added_columns": [],
+      "columns": [
+        "analysis_id",
+        "protein_family",
+        "landscape",
+        "model_spec",
+        "scope",
+        "stage",
+        "n_observations",
+        "r_squared",
+        "coefficient_log_input_support",
+        "coefficient_log_reference_rank",
+        "coefficient_replicate_discordance",
+        "coefficient_score_uncertainty",
+        "coefficient_crowding",
+        "coefficient_uncertainty_x_crowding"
+      ],
+      "legacy_column_count": 14,
+      "maximum_absolute_difference": 0.0,
+      "normalized_trpb_rows": 0,
+      "rows": 134,
+      "status": "exact"
+    },
+    "mechanism_inventory.csv": {
+      "added_columns": [
+        "input_replicate_count"
+      ],
+      "columns": [
+        "observation_structure",
+        "group_count",
+        "replicate_count",
+        "discordance_available",
+        "protein_family",
+        "landscape",
+        "starting_count_shape",
+        "output_count_shape",
+        "input_library_depths",
+        "output_library_depths",
+        "zero_input_fraction_all_variants",
+        "zero_output_fraction_all_variants",
+        "analysis_run_count",
+        "artifact_statuses",
+        "artifact_warnings",
+        "input_replicate_count"
+      ],
+      "legacy_column_count": 15,
+      "maximum_absolute_difference": 0.0,
+      "normalized_trpb_rows": 0,
+      "rows": 18,
+      "status": "exact_with_additions"
+    },
+    "mechanism_runs.csv": {
+      "added_columns": [
+        "n_reported_context_omitted_low_support"
+      ],
+      "columns": [
+        "analysis_id",
+        "protein_family",
+        "landscape",
+        "inference_method",
+        "model_spec",
+        "fit_id",
+        "n_samples",
+        "n_variants",
+        "challenger_count_q_ge_001",
+        "candidate_cloud_count_q_ge_001",
+        "n_reported_context_omitted_low_support",
+        "boundary_score_gap",
+        "normalized_boundary_score_gap",
+        "boundary_local_score_spacing",
+        "normalized_boundary_local_score_spacing",
+        "boundary_score_uncertainty",
+        "normalized_boundary_score_uncertainty",
+        "uncertainty_to_spacing_ratio",
+        "sample_self_consistency",
+        "top_k_instability",
+        "artifact_status",
+        "artifact_warnings"
+      ],
+      "legacy_column_count": 21,
+      "maximum_absolute_difference": 0.0,
+      "normalized_trpb_rows": 0,
+      "rows": 49,
+      "status": "exact_with_additions"
+    },
+    "mechanism_variants.csv": {
+      "added_columns": [
+        "n_finite_samples"
+      ],
+      "columns": [
+        "analysis_id",
+        "protein_family",
+        "landscape",
+        "inference_method",
+        "model_spec",
+        "fit_id",
+        "variant_index",
+        "variant_id",
+        "source",
+        "variant_label",
+        "input_count",
+        "output_count",
+        "count_ratio",
+        "reported_fitness",
+        "reference_fitness",
+        "reference_fitness_source",
+        "hmc_variant_index",
+        "reported_fitness_sigma",
+        "reported_rank",
+        "model_reference_rank",
+        "model_reference_score",
+        "score_lower",
+        "score_median",
+        "score_upper",
+        "score_interval_width",
+        "n_finite_samples",
+        "normalized_score_interval_width",
+        "reference_score_iqr",
+        "local_score_spacing",
+        "normalized_local_score_spacing",
+        "score_crowding",
+        "competitors_within_1pct_iqr",
+        "competitors_within_2pct_iqr",
+        "rank_lower",
+        "rank_median",
+        "rank_upper",
+        "rank_interval_width",
+        "top_100_inclusion_probability",
+        "rank_interval_leaves_top_100",
+        "score_margin_to_rank_100",
+        "margin_over_score_uncertainty",
+        "is_model_top_100",
+        "is_challenger_q_ge_001",
+        "is_strongest_challenger",
+        "is_reported_top_100",
+        "is_reported_top_1000",
+        "is_primary_cohort",
+        "mechanism_observation_count",
+        "mechanism_input_count",
+        "mechanism_output_count",
+        "mechanism_log_input_support",
+        "mechanism_zero_input_fraction",
+        "mechanism_zero_output_fraction",
+        "mechanism_reduced_heterogeneity",
+        "mechanism_enrichment_range",
+        "mechanism_enrichment_mad",
+        "artifact_status",
+        "artifact_warnings",
+        "library",
+        "active",
+        "number_of_stops",
+        "generation",
+        "is_wild_type",
+        "is_source_control",
+        "is_ranking_candidate",
+        "num_mutations",
+        "reported_activity_level",
+        "reported_is_functional",
+        "reported_generations",
+        "sequence",
+        "sublibrary_names",
+        "reported_activity_source",
+        "reported_fitness_name"
+      ],
+      "legacy_column_count": 72,
+      "maximum_absolute_difference": 2.842170943040401e-14,
+      "normalized_trpb_rows": 35174,
+      "rows": 57771,
+      "status": "within_tolerance_with_additions"
+    },
+    "reference_category_sensitivity.csv": {
+      "added_columns": [],
+      "columns": [
+        "analysis_id",
+        "protein_family",
+        "landscape",
+        "model_spec",
+        "cohort",
+        "top_k",
+        "category_column",
+        "category",
+        "count",
+        "fraction"
+      ],
+      "legacy_column_count": 10,
+      "maximum_absolute_difference": 0.0,
+      "normalized_trpb_rows": 0,
+      "rows": 44,
+      "status": "exact"
+    },
+    "reference_diagnostics.csv": {
+      "added_columns": [
+        "n_score_supported_candidates",
+        "reference_top_k_identifiable"
+      ],
+      "columns": [
+        "analysis_id",
+        "protein_family",
+        "landscape",
+        "inference_method",
+        "model_spec",
+        "fit_id",
+        "n_fitted_variants",
+        "n_ranking_candidates",
+        "n_score_supported_candidates",
+        "n_excluded_from_ranking",
+        "n_source_controls",
+        "n_finite_reported",
+        "n_positive_reported",
+        "all_finite_spearman",
+        "all_finite_kendall",
+        "positive_reported_spearman",
+        "positive_reported_kendall",
+        "top_k",
+        "reference_top_k_identifiable",
+        "model_reported_top_k_intersection",
+        "model_reported_top_k_fraction",
+        "model_reversed_reported_top_k_intersection",
+        "model_reversed_reported_top_k_fraction",
+        "wild_type_variant_index",
+        "wild_type_model_rank",
+        "wild_type_reported_rank",
+        "reference_fitness_source",
+        "within_landscape_model_top_k_pair_count",
+        "within_landscape_model_top_k_overlap_mean",
+        "within_landscape_model_top_k_overlap_min"
+      ],
+      "legacy_column_count": 28,
+      "maximum_absolute_difference": 0.0,
+      "normalized_trpb_rows": 0,
+      "rows": 49,
+      "status": "exact_with_additions"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "landscape": "pdz_cis",
+  "raw": {
+    "cis_from_bruce_azure.tsv": {
+      "bytes": 2834332,
+      "sha256": "1d5453004d445f0d93e1284f632dbaef7a138dedee259e034d2dd2714e4f6a14"
+    },
+    "GSE265816_cript2xa3_sub.csv.gz": {
+      "bytes": 196444,
+      "sha256": "47c5d72de37bb239bbec4a2c85d124c620fc968e4b0cf08ffde037712d1ae944"
+    }
+  },
+  "fits": {
+    "pdz_cis_exponential_exponential_diagnosed.nc": {
+      "bytes": 9913801447,
+      "posterior_log_r_mean_shape": [8, 2000, 10660],
+      "posterior_predictive_count_shape": [8, 2000, 3, 10660]
+    },
+    "pdz_cis_exponential_exponential_samples.nc": {
+      "bytes": 555473531,
+      "posterior_log_r_mean_shape": [1, 1000, 10660],
+      "posterior_predictive_count_shape": [1, 1000, 3, 10660]
+    }
+  }
+}

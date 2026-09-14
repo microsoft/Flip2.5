@@ -1,0 +1,2526 @@
+[
+  {
+    "job_id": 62,
+    "family": "large_clean",
+    "dataset": "nuc",
+    "subset": "G4",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_62",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_62",
+        "name": "nuc/G4/nuc_G4_lomax_diagnosed.nc",
+        "size": "6.6 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_62",
+        "name": "nuc/G4/nuc_G4_lomax_None_samples.nc",
+        "size": "436.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_62",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_62",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 63,
+    "family": "large_clean",
+    "dataset": "k50",
+    "subset": "",
+    "fitness_distribution": "(MASSIVE, only MLE)",
+    "growth_curve": "",
+    "result": "",
+    "require_hmc": false,
+    "require_mle": true,
+    "job_name": "large_clean_63",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "k50-mle",
+        "job_name": "k50_mle_lr0-01",
+        "name": "k50/k50_None_None_None_samples.nc",
+        "size": "443.6 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "k50-mle",
+        ":k50_mle_lr0-01",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 70,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_70",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_70",
+        "name": "pdz/cript-c/pdz_cript-c_exponential_exponential_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_70",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 71,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_71",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "large-clean",
+        "job_name": "large-clean_71",
+        "name": "pdz/cript-c/pdz_cript-c_lomax_exponential_diagnosed.nc",
+        "size": "185.4 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_71",
+        "name": "pdz/cript-c/pdz_cript-c_lomax_exponential_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "large-clean",
+        ":large-clean_71",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_71",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 72,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_72",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_72",
+        "name": "pdz/cript-c/pdz_cript-c_gamma_exponential_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_72",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 73,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_73",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_73",
+        "name": "pdz/cript-c/pdz_cript-c_exponential_sigmoid_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_73",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 74,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-c",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_74",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "large-clean",
+        "job_name": "large-clean_74",
+        "name": "pdz/cript-c/pdz_cript-c_lomax_sigmoid_diagnosed.nc",
+        "size": "116.9 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_74",
+        "name": "pdz/cript-c/pdz_cript-c_lomax_sigmoid_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "large-clean",
+        ":large-clean_74",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_74",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 76,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_76",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_76",
+        "name": "pdz/cript-n/pdz_cript-n_exponential_exponential_samples.nc",
+        "size": "7.0 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_76",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 77,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_77",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "large-clean",
+        "job_name": "large-clean_77",
+        "name": "pdz/cript-n/pdz_cript-n_lomax_exponential_diagnosed.nc",
+        "size": "109.1 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_77",
+        "name": "pdz/cript-n/pdz_cript-n_lomax_exponential_samples.nc",
+        "size": "7.0 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "large-clean",
+        ":large-clean_77",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_77",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 78,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_78",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_78",
+        "name": "pdz/cript-n/pdz_cript-n_gamma_exponential_samples.nc",
+        "size": "7.0 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_78",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 80,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_80",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "large-clean",
+        "job_name": "large-clean_80",
+        "name": "pdz/cript-n/pdz_cript-n_lomax_sigmoid_diagnosed.nc",
+        "size": "109.1 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_80",
+        "name": "pdz/cript-n/pdz_cript-n_lomax_sigmoid_samples.nc",
+        "size": "7.0 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "large-clean",
+        ":large-clean_80",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_80",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 81,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "cript-n",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_81",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_81",
+        "name": "pdz/cript-n/pdz_cript-n_gamma_sigmoid_samples.nc",
+        "size": "7.0 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_81",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 82,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-1",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_82",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "large-clean",
+        "job_name": "large-clean_82",
+        "name": "pdz/trans-1/pdz_trans-1_exponential_exponential_diagnosed.nc",
+        "size": "126.2 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_82",
+        "name": "pdz/trans-1/pdz_trans-1_exponential_exponential_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "large-clean",
+        ":large-clean_82",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_82",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 84,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-1",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_84",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_84",
+        "name": "pdz/trans-1/pdz_trans-1_gamma_exponential_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_84",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 88,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_88",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_88",
+        "name": "pdz/trans-2/pdz_trans-2_exponential_exponential_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_88",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 90,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_90",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_90",
+        "name": "pdz/trans-2/pdz_trans-2_gamma_exponential_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_90",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 92,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "lomax",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_92",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "large-clean",
+        "job_name": "large-clean_92",
+        "name": "pdz/trans-2/pdz_trans-2_lomax_sigmoid_diagnosed.nc",
+        "size": "188.6 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_92",
+        "name": "pdz/trans-2/pdz_trans-2_lomax_sigmoid_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "large-clean",
+        ":large-clean_92",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_92",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 93,
+    "family": "large_clean",
+    "dataset": "pdz",
+    "subset": "trans-2",
+    "fitness_distribution": "gamma",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "large_clean_93",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "large-clean",
+        "job_name": "large-clean_93",
+        "name": "pdz/trans-2/pdz_trans-2_gamma_sigmoid_diagnosed.nc",
+        "size": "126.0 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_93",
+        "name": "pdz/trans-2/pdz_trans-2_gamma_sigmoid_samples.nc",
+        "size": "8.7 GB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "large-clean",
+        ":large-clean_93",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_93",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 1,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_1",
+    "requested_patterns": [],
+    "artifacts": [],
+    "issues": [],
+    "commands": []
+  },
+  {
+    "job_id": 11,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_11",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_11",
+        "name": "trpb/libB/trpb_libB_exponential_exponential_samples.nc",
+        "size": "185.6 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_11",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 12,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_12",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_12",
+        "name": "trpb/libB/trpb_libB_lomax_exponential_diagnosed.nc",
+        "size": "4.0 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_12",
+        "name": "trpb/libB/trpb_libB_lomax_exponential_samples.nc",
+        "size": "185.6 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_12",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_12",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 13,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libB",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_13",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_13",
+        "name": "trpb/libB/trpb_libB_exponential_sigmoid_samples.nc",
+        "size": "185.6 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_13",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 15,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_15",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_15",
+        "name": "trpb/libC/trpb_libC_exponential_exponential_samples.nc",
+        "size": "185.6 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_15",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 16,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_16",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_16",
+        "name": "trpb/libC/trpb_libC_lomax_exponential_diagnosed.nc",
+        "size": "4.0 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_16",
+        "name": "trpb/libC/trpb_libC_lomax_exponential_samples.nc",
+        "size": "185.6 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_16",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_16",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 17,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libC",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_17",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_17",
+        "name": "trpb/libC/trpb_libC_exponential_sigmoid_samples.nc",
+        "size": "185.6 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_17",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 19,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_19",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_19",
+        "name": "trpb/libD/trpb_libD_exponential_exponential_samples.nc",
+        "size": "471.7 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_19",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 20,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_20",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_20",
+        "name": "trpb/libD/trpb_libD_lomax_exponential_diagnosed.nc",
+        "size": "12.4 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_20",
+        "name": "trpb/libD/trpb_libD_lomax_exponential_samples.nc",
+        "size": "471.7 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_20",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_20",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 21,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libD",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_21",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_21",
+        "name": "trpb/libD/trpb_libD_gamma_exponential_samples.nc",
+        "size": "471.7 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_21",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 25,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_25",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_25",
+        "name": "trpb/libE/trpb_libE_exponential_exponential_samples.nc",
+        "size": "332.8 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_25",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 26,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_26",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_26",
+        "name": "trpb/libE/trpb_libE_lomax_exponential_diagnosed.nc",
+        "size": "10.0 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_26",
+        "name": "trpb/libE/trpb_libE_lomax_exponential_samples.nc",
+        "size": "406.8 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_26",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_26",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 27,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libE",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_27",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_27",
+        "name": "trpb/libE/trpb_libE_gamma_exponential_samples.nc",
+        "size": "406.8 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_27",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 3,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_3",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_3",
+        "name": "pdz/cis/pdz_cis_lomax_exponential_samples.nc",
+        "size": "555.5 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_3",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 31,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_31",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_31",
+        "name": "trpb/libF/trpb_libF_exponential_exponential_samples.nc",
+        "size": "324.4 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_31",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 32,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_32",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_32",
+        "name": "trpb/libF/trpb_libF_lomax_exponential_diagnosed.nc",
+        "size": "7.2 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_32",
+        "name": "trpb/libF/trpb_libF_lomax_exponential_samples.nc",
+        "size": "324.4 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_32",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_32",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 33,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_33",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_33",
+        "name": "trpb/libF/trpb_libF_gamma_exponential_diagnosed.nc",
+        "size": "7.2 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_33",
+        "name": "trpb/libF/trpb_libF_gamma_exponential_samples.nc",
+        "size": "324.4 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_33",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_33",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 34,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libF",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_34",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_34",
+        "name": "trpb/libF/trpb_libF_exponential_sigmoid_samples.nc",
+        "size": "324.5 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_34",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 37,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_37",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_37",
+        "name": "trpb/libG/trpb_libG_exponential_exponential_samples.nc",
+        "size": "470.9 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_37",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 38,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_38",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_38",
+        "name": "trpb/libG/trpb_libG_lomax_exponential_diagnosed.nc",
+        "size": "12.4 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_38",
+        "name": "trpb/libG/trpb_libG_lomax_exponential_samples.nc",
+        "size": "470.9 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_38",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_38",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 39,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libG",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_39",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_39",
+        "name": "trpb/libG/trpb_libG_gamma_exponential_samples.nc",
+        "size": "470.9 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_39",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 4,
+    "family": "small_clean",
+    "dataset": "pdz",
+    "subset": "cis",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_4",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_4",
+        "name": "pdz/cis/pdz_cis_exponential_sigmoid_samples.nc",
+        "size": "555.5 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_4",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 43,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_43",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_43",
+        "name": "trpb/libH/trpb_libH_exponential_exponential_samples.nc",
+        "size": "467.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_43",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 44,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_44",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_44",
+        "name": "trpb/libH/trpb_libH_lomax_exponential_diagnosed.nc",
+        "size": "11.9 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_44",
+        "name": "trpb/libH/trpb_libH_lomax_exponential_samples.nc",
+        "size": "467.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_44",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_44",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 45,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libH",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_45",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_45",
+        "name": "trpb/libH/trpb_libH_gamma_exponential_samples.nc",
+        "size": "467.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_45",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 49,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_49",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_49",
+        "name": "trpb/libI/trpb_libI_exponential_exponential_samples.nc",
+        "size": "475.0 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_49",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 50,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_50",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_50",
+        "name": "trpb/libI/trpb_libI_lomax_exponential_diagnosed.nc",
+        "size": "12.6 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_50",
+        "name": "trpb/libI/trpb_libI_lomax_exponential_samples.nc",
+        "size": "475.0 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_50",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_50",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 51,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libI",
+    "fitness_distribution": "gamma",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_51",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_51",
+        "name": "trpb/libI/trpb_libI_gamma_exponential_samples.nc",
+        "size": "475.0 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_51",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 55,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G1",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_55",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_55",
+        "name": "nuc/G1/nuc_G1_exponential_diagnosed.nc",
+        "size": "27.3 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_55",
+        "name": "nuc/G1/nuc_G1_exponential_None_samples.nc",
+        "size": "819.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_55",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_55",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 56,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G1",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_56",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_56",
+        "name": "nuc/G1/nuc_G1_lomax_diagnosed.nc",
+        "size": "27.1 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_56",
+        "name": "nuc/G1/nuc_G1_lomax_None_samples.nc",
+        "size": "819.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_56",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_56",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 57,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G2",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_57",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_57",
+        "name": "nuc/G2/nuc_G2_exponential_diagnosed.nc",
+        "size": "6.7 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_57",
+        "name": "nuc/G2/nuc_G2_exponential_None_samples.nc",
+        "size": "532.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_57",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_57",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 58,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G2",
+    "fitness_distribution": "lomax",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_58",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_58",
+        "name": "nuc/G2/nuc_G2_lomax_diagnosed.nc",
+        "size": "10.2 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_58",
+        "name": "nuc/G2/nuc_G2_lomax_None_samples.nc",
+        "size": "532.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_58",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_58",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 59,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G3",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_59",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_59",
+        "name": "nuc/G3/nuc_G3_exponential_diagnosed.nc",
+        "size": "8.1 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_59",
+        "name": "nuc/G3/nuc_G3_exponential_None_samples.nc",
+        "size": "527.0 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_59",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_59",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 61,
+    "family": "small_clean",
+    "dataset": "nuc",
+    "subset": "G4",
+    "fitness_distribution": "exponential",
+    "growth_curve": "",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_61",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_61",
+        "name": "nuc/G4/nuc_G4_exponential_diagnosed.nc",
+        "size": "6.6 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_61",
+        "name": "nuc/G4/nuc_G4_exponential_None_samples.nc",
+        "size": "436.2 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_61",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_61",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 7,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "exponential",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_7",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_7",
+        "name": "trpb/libA/trpb_libA_exponential_exponential_samples.nc",
+        "size": "185.5 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_7",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 8,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "lomax",
+    "growth_curve": "exponential",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_8",
+    "requested_patterns": [
+      "*diagnosed.nc",
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "diagnosed_hmc",
+        "experiment": "small-clean",
+        "job_name": "small-clean_8",
+        "name": "trpb/libA/trpb_libA_lomax_exponential_diagnosed.nc",
+        "size": "4.0 GB",
+        "last_modified": "4mo ago"
+      },
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_8",
+        "name": "trpb/libA/trpb_libA_lomax_exponential_samples.nc",
+        "size": "185.5 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "small-clean",
+        ":small-clean_8",
+        "--include",
+        "*diagnosed.nc"
+      ],
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_8",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  },
+  {
+    "job_id": 9,
+    "family": "small_clean",
+    "dataset": "trpb",
+    "subset": "libA",
+    "fitness_distribution": "exponential",
+    "growth_curve": "sigmoid",
+    "result": "Perfect!",
+    "require_hmc": true,
+    "require_mle": true,
+    "job_name": "small_clean_9",
+    "requested_patterns": [
+      "*samples.nc"
+    ],
+    "artifacts": [
+      {
+        "kind": "sampled_mle",
+        "experiment": "mle",
+        "job_name": "mle_9",
+        "name": "trpb/libA/trpb_libA_exponential_sigmoid_samples.nc",
+        "size": "185.5 MB",
+        "last_modified": "4mo ago"
+      }
+    ],
+    "issues": [],
+    "commands": [
+      [
+        "/home/t-renatob/venvs/amulet/bin/amlt",
+        "--json-tables",
+        "results",
+        "list",
+        "mle",
+        ":mle_9",
+        "--include",
+        "*samples.nc"
+      ]
+    ]
+  }
+]

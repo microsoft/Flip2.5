@@ -1,0 +1,637 @@
+{
+  "blocked_families": [
+    "pdz",
+    "trpb"
+  ],
+  "family_gates": {
+    "k50": {
+      "license": "CC-BY-4.0",
+      "provenance_manifest": "examples/k50/data_manifest.json",
+      "reason": null,
+      "status": "public_source"
+    },
+    "nuc": {
+      "license": "CC-BY-4.0",
+      "provenance_manifest": "examples/nuc/data_manifest.json",
+      "reason": null,
+      "status": "public_source"
+    },
+    "pdz": {
+      "license": null,
+      "provenance_manifest": null,
+      "reason": "Upstream source locations and redistribution terms for the staged PDZ count tables are not yet recorded.",
+      "status": "blocked"
+    },
+    "trpb": {
+      "license": null,
+      "provenance_manifest": null,
+      "reason": "The staged TrpB count source is internal and redistribution terms are not yet recorded.",
+      "status": "blocked"
+    }
+  },
+  "feature_bundle_count": 21,
+  "publication_status": "blocked_pending_provenance",
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 9323361,
+      "family": "k50",
+      "feature_ids": [
+        "k50__k50__mean-log-chymotrypsin-enrichment",
+        "k50__k50__mean-log-trypsin-enrichment"
+      ],
+      "relative_path": "k50/raw/K50_scrambles_for_STEP3.csv",
+      "sha256": "fe15f9c3cedd57b4227115ac47e6db81baa86fda42ff06084ac3f50f6b560451",
+      "upstream": {
+        "bytes": 9323361,
+        "columns": [
+          "aa_seq_experimental"
+        ],
+        "projection": "Identity-only projection used by the historical loader; fitted K50 columns are intentionally omitted.",
+        "release_note": "The file is present only in the first Zenodo version; later versions document but omit it (upstream issue 7).",
+        "rows": 127717,
+        "sha256": "fe15f9c3cedd57b4227115ac47e6db81baa86fda42ff06084ac3f50f6b560451",
+        "source_archive": "Pipeline_K50_dG.zip",
+        "source_archive_bytes": 198777302,
+        "source_archive_md5": "57a81806aa701e2c6e5976f70b0f88a7",
+        "source_member": "Pipeline_K50_dG/K50_scrambles_for_STEP3.csv",
+        "source_member_bytes": 59028290,
+        "source_member_sha256": "4512ce79de6bfae51bb761419918fcc67c18d51c03c20836e3f0242ebd6dfd5b",
+        "source_member_zip_crc32": "cfc3d4df",
+        "source_zenodo_record": "7401275"
+      }
+    },
+    {
+      "bytes": 132390066,
+      "family": "k50",
+      "feature_ids": [
+        "k50__k50__mean-log-chymotrypsin-enrichment",
+        "k50__k50__mean-log-trypsin-enrichment"
+      ],
+      "relative_path": "k50/raw/NGS_count_lib1.csv",
+      "sha256": "b410eafd91802089ca18d2d9e127cedfa98a8c7e3f3c252138b3e92ec3a54ff1",
+      "upstream": {
+        "bytes": 132390066,
+        "grouped_non_dummy_variants": 297699,
+        "rows": 297929,
+        "sha256": "b410eafd91802089ca18d2d9e127cedfa98a8c7e3f3c252138b3e92ec3a54ff1",
+        "zip_crc32": "83bc3e8f"
+      }
+    },
+    {
+      "bytes": 330431201,
+      "family": "k50",
+      "feature_ids": [
+        "k50__k50__mean-log-chymotrypsin-enrichment",
+        "k50__k50__mean-log-trypsin-enrichment"
+      ],
+      "relative_path": "k50/raw/NGS_count_lib2.csv",
+      "sha256": "d534e425abb67a93611c3cdc1bca2ea52903c26e555f1bc7db873dae83aae6ec",
+      "upstream": {
+        "bytes": 330431201,
+        "grouped_non_dummy_variants": 573650,
+        "rows": 661335,
+        "sha256": "d534e425abb67a93611c3cdc1bca2ea52903c26e555f1bc7db873dae83aae6ec",
+        "zip_crc32": "62666330"
+      }
+    },
+    {
+      "bytes": 440052777,
+      "family": "k50",
+      "feature_ids": [
+        "k50__k50__mean-log-chymotrypsin-enrichment",
+        "k50__k50__mean-log-trypsin-enrichment"
+      ],
+      "relative_path": "k50/raw/NGS_count_lib3.csv",
+      "sha256": "e54b687818b5024a87789e6f26b53b266d76ddc01eaf21ea80038e2628491629",
+      "upstream": {
+        "bytes": 440052777,
+        "grouped_non_dummy_variants": 709823,
+        "rows": 792775,
+        "sha256": "e54b687818b5024a87789e6f26b53b266d76ddc01eaf21ea80038e2628491629",
+        "zip_crc32": "2089652b"
+      }
+    },
+    {
+      "bytes": 326716838,
+      "family": "k50",
+      "feature_ids": [
+        "k50__k50__mean-log-chymotrypsin-enrichment",
+        "k50__k50__mean-log-trypsin-enrichment"
+      ],
+      "relative_path": "k50/raw/NGS_count_lib4.csv",
+      "sha256": "75ee9d0de3dd01fda2a590e81c002366e7691901a808d0534518589541d95c65",
+      "upstream": {
+        "bytes": 326716838,
+        "grouped_non_dummy_variants": 315593,
+        "rows": 900000,
+        "sha256": "75ee9d0de3dd01fda2a590e81c002366e7691901a808d0534518589541d95c65",
+        "zip_crc32": "f8f932e1"
+      }
+    },
+    {
+      "bytes": 2858,
+      "family": "k50",
+      "feature_ids": [
+        "k50__k50__mean-log-chymotrypsin-enrichment",
+        "k50__k50__mean-log-trypsin-enrichment"
+      ],
+      "relative_path": "k50/raw/Raw_qPCR_data_FigS1.csv",
+      "sha256": "4351767e3fb1a4153c84689417ba85fb47cb37c4e23a48b8cb91062c28cd7b75",
+      "upstream": {
+        "bytes": 2858,
+        "rows": 24,
+        "sha256": "4351767e3fb1a4153c84689417ba85fb47cb37c4e23a48b8cb91062c28cd7b75",
+        "source_blob_sha": "371ec307fb775445aa28e90e651bef945c1633db",
+        "source_commit": "597442a33f931a5e86003134c279b6f2a58ffd33",
+        "source_path": "Pipeline_qPCR_data/Raw_qPCR_data_FigS1.csv",
+        "source_repository": "Rocklin-Lab/cdna-display-proteolysis-pipeline"
+      }
+    },
+    {
+      "bytes": 112916008,
+      "family": "k50",
+      "feature_ids": [
+        "k50__k50__mean-log-chymotrypsin-enrichment",
+        "k50__k50__mean-log-trypsin-enrichment"
+      ],
+      "relative_path": "k50/raw/reported_fitness/Tsuboyama2023_Dataset2_Dataset3_20230416.csv",
+      "sha256": "a5ae968d7f2e9a81119bb1fb74d6268864cbf76dc25f79ad7db54114fc97eecb",
+      "upstream": {
+        "bytes": 112916008,
+        "columns": [
+          "variant_id",
+          "source_aa_seq_full",
+          "reported_fitness_raw",
+          "reported_fitness_95ci_width",
+          "reported_fitness_ml",
+          "reported_wt_name",
+          "reported_wt_cluster"
+        ],
+        "path": "reported_fitness/Tsuboyama2023_Dataset2_Dataset3_20230416.csv",
+        "projection_method": "Stream the publication member, join each row to the staged raw tables by exact (name, dna_seq), use the raw aa_seq as the job-63 variant ID, retain source aa_seq_full for audit, and retain only deltaG, deltaG_95CI, dG_ML, WT_name, and WT_cluster.",
+        "rows": 537021,
+        "sha256": "a5ae968d7f2e9a81119bb1fb74d6268864cbf76dc25f79ad7db54114fc97eecb",
+        "source_archive": "Processed_K50_dG_datasets.zip",
+        "source_archive_bytes": 1013678473,
+        "source_archive_md5": "f7e8c553efee734cf161ee6f2b0a09cf",
+        "source_member": "Processed_K50_dG_datasets/Tsuboyama2023_Dataset2_Dataset3_20230416.csv",
+        "source_member_bytes": 697658024,
+        "source_member_compressed_bytes": 209854627,
+        "source_member_sha256": "0c7b2bf1f162122d83d5bb39b901cc446e436b5643684ca268f934be145d8398",
+        "source_member_zip_crc32": "9ac87977",
+        "source_zenodo_record": "7992926"
+      }
+    },
+    {
+      "bytes": 2437712,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g1"
+      ],
+      "relative_path": "nuc/raw/counts/g1.csv",
+      "sha256": "5269ae56183504795e8bc93571e8b7b4862bde557fa1b5837eeb881fdf60ccfd",
+      "upstream": {
+        "bytes": 2437712,
+        "rows": 9441,
+        "sha256": "5269ae56183504795e8bc93571e8b7b4862bde557fa1b5837eeb881fdf60ccfd",
+        "source_generation": "1708601525023646",
+        "source_md5_base64": "hmRoCGJhi4g/txcPslw64Q==",
+        "source_object": "processed_data/g1.csv"
+      }
+    },
+    {
+      "bytes": 268885,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g1"
+      ],
+      "relative_path": "nuc/raw/counts/g1_neg_control.csv",
+      "sha256": "d33578bf3864951738c643fe89ba4b511badf2b454725d5bd829374d521151ea",
+      "upstream": {
+        "bytes": 268885,
+        "rows": 1319,
+        "sha256": "d33578bf3864951738c643fe89ba4b511badf2b454725d5bd829374d521151ea",
+        "source_generation": "1708601525169780",
+        "source_md5_base64": "4jVXcM7HTs149FM4yS8ILg==",
+        "source_object": "processed_fiducial_data/g1_neg_control.csv"
+      }
+    },
+    {
+      "bytes": 3163331,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g2"
+      ],
+      "relative_path": "nuc/raw/counts/g2.csv",
+      "sha256": "fc9254180cb5104675461350d56d48dcb9500d0c7dc60a0cf495818bf05866ba",
+      "upstream": {
+        "bytes": 3163331,
+        "rows": 14678,
+        "sha256": "fc9254180cb5104675461350d56d48dcb9500d0c7dc60a0cf495818bf05866ba",
+        "source_generation": "1708601525323079",
+        "source_md5_base64": "0JkQwUKu4geRbKOhDAQ+zQ==",
+        "source_object": "processed_data/g2.csv"
+      }
+    },
+    {
+      "bytes": 26482,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g2"
+      ],
+      "relative_path": "nuc/raw/counts/g2_neg_control.csv",
+      "sha256": "1835e52e9a3050e9fb063fa3d6d7f9f6a9941aa8a6b2d3f9c6f706d94ed5fe6d",
+      "upstream": {
+        "bytes": 26482,
+        "rows": 77,
+        "sha256": "1835e52e9a3050e9fb063fa3d6d7f9f6a9941aa8a6b2d3f9c6f706d94ed5fe6d",
+        "source_generation": "1708601525250145",
+        "source_md5_base64": "QotdvpRPXDryoVzaOYrLDQ==",
+        "source_object": "processed_fiducial_data/g2_neg_control.csv"
+      }
+    },
+    {
+      "bytes": 4788940,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g3"
+      ],
+      "relative_path": "nuc/raw/counts/g3.csv",
+      "sha256": "e323d6e5a64645c86a381ce945507a5d2df48722b2a880c09bd3b75d7c36d284",
+      "upstream": {
+        "bytes": 4788940,
+        "rows": 18618,
+        "sha256": "e323d6e5a64645c86a381ce945507a5d2df48722b2a880c09bd3b75d7c36d284",
+        "source_generation": "1708601525400044",
+        "source_md5_base64": "Eix9XwUrmdLxTZZoYVs6WQ==",
+        "source_object": "processed_data/g3.csv"
+      }
+    },
+    {
+      "bytes": 24529,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g3"
+      ],
+      "relative_path": "nuc/raw/counts/g3_neg_control.csv",
+      "sha256": "464d5f81429fbfd08eef62a4bad7b39458c8ec1e9b788dce3f1e89539fe1fb95",
+      "upstream": {
+        "bytes": 24529,
+        "rows": 172,
+        "sha256": "464d5f81429fbfd08eef62a4bad7b39458c8ec1e9b788dce3f1e89539fe1fb95",
+        "source_generation": "1708601525724852",
+        "source_md5_base64": "WFX3R07CrqL3bxESK10wUQ==",
+        "source_object": "processed_fiducial_data/g3_neg_control.csv"
+      }
+    },
+    {
+      "bytes": 5897118,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g4"
+      ],
+      "relative_path": "nuc/raw/counts/g4.csv",
+      "sha256": "c792152789aff013b6f028d567bdd154af3bdfb41acb007c271597ce87948d4d",
+      "upstream": {
+        "bytes": 5897118,
+        "rows": 15404,
+        "sha256": "c792152789aff013b6f028d567bdd154af3bdfb41acb007c271597ce87948d4d",
+        "source_generation": "1708601525342547",
+        "source_md5_base64": "AIyITT68b9GOXeim29Px8g==",
+        "source_object": "processed_data/g4.csv"
+      }
+    },
+    {
+      "bytes": 34708,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g4"
+      ],
+      "relative_path": "nuc/raw/counts/g4_neg_control.csv",
+      "sha256": "8176452f9378d38d129610c9fa4f421628a558f76b0c9a02a857ac393dd816a9",
+      "upstream": {
+        "bytes": 34708,
+        "rows": 150,
+        "sha256": "8176452f9378d38d129610c9fa4f421628a558f76b0c9a02a857ac393dd816a9",
+        "source_generation": "1708601526130403",
+        "source_md5_base64": "Ms29Gs/QRq5xUcfh4kzQ5w==",
+        "source_object": "processed_fiducial_data/g4_neg_control.csv"
+      }
+    },
+    {
+      "bytes": 17326572,
+      "family": "nuc",
+      "feature_ids": [
+        "nuc__nuc-g1",
+        "nuc__nuc-g2",
+        "nuc__nuc-g3",
+        "nuc__nuc-g4"
+      ],
+      "relative_path": "nuc/raw/reported_fitness/landscape.csv",
+      "sha256": "54f64f4abcf7bf36771f397abb8f285b8bf198066dbcef62b7d93cf7083c0c1e",
+      "upstream": {
+        "bytes": 17326572,
+        "rows": 55760,
+        "score_type": "categorical activity relative to fiducials",
+        "sha256": "54f64f4abcf7bf36771f397abb8f285b8bf198066dbcef62b7d93cf7083c0c1e",
+        "source_generation": "1708601526510660",
+        "source_md5_base64": "+GOap1hprBSJaIMJvXztZw==",
+        "source_object": "processed_data/landscape.csv"
+      }
+    },
+    {
+      "bytes": 196444,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-cis"
+      ],
+      "relative_path": "pdz_cis/raw/GSE265816_cript2xa3_sub.csv.gz",
+      "sha256": "47c5d72de37bb239bbec4a2c85d124c620fc968e4b0cf08ffde037712d1ae944",
+      "upstream": null
+    },
+    {
+      "bytes": 2315170,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-cript-c"
+      ],
+      "relative_path": "pdz_cis/raw/GSE265816_cript_c_sub.csv.gz",
+      "sha256": "79c87ba09ee30c9c0d2c8380a555327c50a6c56d69117a8083966764628dc6f5",
+      "upstream": null
+    },
+    {
+      "bytes": 1878156,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-cript-n"
+      ],
+      "relative_path": "pdz_cis/raw/GSE265816_cript_n_sub.csv.gz",
+      "sha256": "4fda2d508b4a639a5e09d1a0859d0d443dbff4428a5bc6e40105cb3402f642bd",
+      "upstream": null
+    },
+    {
+      "bytes": 2834332,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-cis"
+      ],
+      "relative_path": "pdz_cis/raw/cis_from_bruce_azure.tsv",
+      "sha256": "1d5453004d445f0d93e1284f632dbaef7a138dedee259e034d2dd2714e4f6a14",
+      "upstream": null
+    },
+    {
+      "bytes": 43108035,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-cript-c"
+      ],
+      "relative_path": "pdz_cis/raw/cript-c.tsv",
+      "sha256": "cd548b20a2d0ceeb6c56516268d06f221edfcddffc5a618cde5c77d60875bf77",
+      "upstream": null
+    },
+    {
+      "bytes": 30303209,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-cript-n"
+      ],
+      "relative_path": "pdz_cis/raw/cript-n.tsv",
+      "sha256": "74a76cecca637c3fe87cb3c858a7b3c2925b4727ae54c1c083dadb44bf35dd5c",
+      "upstream": null
+    },
+    {
+      "bytes": 5797639,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-trans-1",
+        "pdz__pdz-trans-2"
+      ],
+      "relative_path": "pdz_trans/raw/GSE265816_pdz3cript_sub.csv.gz",
+      "sha256": "30033e0af7bf2b8dd69c4a40b39c0d25074aff26b6d58426532e81fd47f38151",
+      "upstream": null
+    },
+    {
+      "bytes": 39648781,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-trans-1",
+        "pdz__pdz-trans-2"
+      ],
+      "relative_path": "pdz_trans/raw/trans-1.tsv",
+      "sha256": "0110692928a73ebecfe79a8eaeecec993871e1d0ef07bbf63fc9b9201780036f",
+      "upstream": null
+    },
+    {
+      "bytes": 39998389,
+      "family": "pdz",
+      "feature_ids": [
+        "pdz__pdz-trans-1",
+        "pdz__pdz-trans-2"
+      ],
+      "relative_path": "pdz_trans/raw/trans-2.tsv",
+      "sha256": "c7a8b408bf6b86a5d96b34d50fc2a98b9c9992fc2620202da75734c7acfba5ff",
+      "upstream": null
+    },
+    {
+      "bytes": 185112017,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-four-site"
+      ],
+      "relative_path": "trpb/raw/counts/four-site.csv",
+      "sha256": "8feeaee38b7b9d5871f9fe03e5fea3f0661ae2fe5477a2226d45c84f333afa7a",
+      "upstream": null
+    },
+    {
+      "bytes": 1875836,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-liba"
+      ],
+      "relative_path": "trpb/raw/counts/libA.csv",
+      "sha256": "81485097b97f2935e4683c183461afc3b45cad3aeb2a7442928796701aa77646",
+      "upstream": null
+    },
+    {
+      "bytes": 1886873,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libb"
+      ],
+      "relative_path": "trpb/raw/counts/libB.csv",
+      "sha256": "7ac8ba509eaa509becd048409839b52fc333edde935d770ce7e73bf5893ff715",
+      "upstream": null
+    },
+    {
+      "bytes": 1883299,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libc"
+      ],
+      "relative_path": "trpb/raw/counts/libC.csv",
+      "sha256": "8641cbc7e071534e2e4e1a0a821630624680fd7fc7c99ef0a33adce8bd1a2b23",
+      "upstream": null
+    },
+    {
+      "bytes": 5820412,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libd"
+      ],
+      "relative_path": "trpb/raw/counts/libD.csv",
+      "sha256": "2aac594d8ce4ae6271621f459ab57ffd42ee2146cb4a90e699d9f75cd2a78c83",
+      "upstream": null
+    },
+    {
+      "bytes": 5943352,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libe"
+      ],
+      "relative_path": "trpb/raw/counts/libE.csv",
+      "sha256": "f529ea30725b5d852d24fe2a293f7763cdf5571507ca88c4bb2559a805dc07c4",
+      "upstream": null
+    },
+    {
+      "bytes": 5574301,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libf"
+      ],
+      "relative_path": "trpb/raw/counts/libF.csv",
+      "sha256": "6f9071cce6bba084a6bfd10e4a1bd7a6d68ab98a0f98818a7649d5cdfe6eb5a5",
+      "upstream": null
+    },
+    {
+      "bytes": 5767090,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libg"
+      ],
+      "relative_path": "trpb/raw/counts/libG.csv",
+      "sha256": "369af608162685ad1302da41784db0309db0b39b14a3989a34e6f945e17d0474",
+      "upstream": null
+    },
+    {
+      "bytes": 5757586,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libh"
+      ],
+      "relative_path": "trpb/raw/counts/libH.csv",
+      "sha256": "becb29ee81a5e8bb2e13e44af21ae07117d97f1de8b29ec9d54b175c7c4fd8ee",
+      "upstream": null
+    },
+    {
+      "bytes": 5871849,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libi"
+      ],
+      "relative_path": "trpb/raw/counts/libI.csv",
+      "sha256": "e35ccfed48ddec04746ad5ec9b79a99d100833efea67ff7a43c77972c82e1362",
+      "upstream": null
+    },
+    {
+      "bytes": 8494938,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-four-site"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/four-site.csv",
+      "sha256": "d7e3ab4bcb721819ddf79ac0c9d322046dcdc4ce7d0df7d5ccd423fee771cb76",
+      "upstream": null
+    },
+    {
+      "bytes": 379993,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-liba"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libA.csv",
+      "sha256": "0ca0c3b280fe7b6376d1b075d6c085c95fed06038e21d7ff9ab68cb95df32dfe",
+      "upstream": null
+    },
+    {
+      "bytes": 380771,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libb"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libB.csv",
+      "sha256": "eceeff8664bd1cf9becaf5194e1123bf717d4bcfb6baafd34fb4a7fa1766f0e0",
+      "upstream": null
+    },
+    {
+      "bytes": 378472,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libc"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libC.csv",
+      "sha256": "4f5990f8b7d3b24342e0fa10d678efa221df995edc54d98aaea0b6306523aaec",
+      "upstream": null
+    },
+    {
+      "bytes": 367281,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libd"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libD.csv",
+      "sha256": "fb6debc7ecc742a96c9dd8f1046a0dae9252d63945810560a8faa7ac3751cc36",
+      "upstream": null
+    },
+    {
+      "bytes": 381620,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libe"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libE.csv",
+      "sha256": "fff6c6f5033cce33043e060f64cb05d3bcf4c529f88c0c465722c528e06413dd",
+      "upstream": null
+    },
+    {
+      "bytes": 352237,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libf"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libF.csv",
+      "sha256": "ea9cda4d528f96ec5eccabfafc4e69f26e3d419a16f48d1e8d6435ff99503c38",
+      "upstream": null
+    },
+    {
+      "bytes": 360763,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libg"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libG.csv",
+      "sha256": "13c8f0cdacf4539423674204b8ef12a2d30e165f5f499105d5301009ce736934",
+      "upstream": null
+    },
+    {
+      "bytes": 371003,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libh"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libH.csv",
+      "sha256": "6d8d110c5300fc74d38612c0f37b9ae2ada9743ab92a493fafbd6e50689665d9",
+      "upstream": null
+    },
+    {
+      "bytes": 364175,
+      "family": "trpb",
+      "feature_ids": [
+        "trpb__trpb-libi"
+      ],
+      "relative_path": "trpb/raw/reported_fitness/libI.csv",
+      "sha256": "02f9eb1f849f5dc93fc3c923a38cc10ec41c5bdaceb9ff2a534a9dd773048fe7",
+      "upstream": null
+    }
+  ]
+}

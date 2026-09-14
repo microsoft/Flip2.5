@@ -1,0 +1,10 @@
+variant_id,is_candidate,variant_label,reported_fitness,reported_rank,reported_activity_level,is_wild_type,is_source_control
+,True,WT,8.0,1.0,high,True,False
+A2C,True,A2C,7.0,2.0,high,False,False
+A3D,True,A3D,6.0,3.0,high,False,False
+A4E,True,A4E,5.0,4.0,medium,False,False
+A5F,True,A5F,4.0,5.0,medium,False,False
+A6G,True,A6G,3.0,6.0,medium,False,False
+A7H,True,A7H,2.0,7.0,low,False,False
+A8I,True,A8I,1.0,8.0,low,False,False
+control,False,control,20.0,,,False,True

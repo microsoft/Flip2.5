@@ -1,0 +1,155 @@
+{
+  "audited_feature_count": 21,
+  "complete_manifest": true,
+  "manifest_feature_count": 21,
+  "records": [
+    {
+      "feature_id": "pdz__pdz-trans-1",
+      "finite_values": 1356921,
+      "n_variants": 150769,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "pdz__pdz-trans-2",
+      "finite_values": 1364616,
+      "n_variants": 151624,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "pdz__pdz-cis",
+      "finite_values": 95940,
+      "n_variants": 10660,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "pdz__pdz-cript-c",
+      "finite_values": 1307610,
+      "n_variants": 145290,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "pdz__pdz-cript-n",
+      "finite_values": 1113885,
+      "n_variants": 123765,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-liba",
+      "finite_values": 55524,
+      "n_variants": 9254,
+      "nan_values": 27762,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-libb",
+      "finite_values": 55566,
+      "n_variants": 9261,
+      "nan_values": 27783,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-libc",
+      "finite_values": 55560,
+      "n_variants": 9260,
+      "nan_values": 27780,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-libd",
+      "finite_values": 81513,
+      "n_variants": 9057,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-libe",
+      "finite_values": 83061,
+      "n_variants": 9229,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-libf",
+      "finite_values": 80964,
+      "n_variants": 8996,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-libg",
+      "finite_values": 81369,
+      "n_variants": 9041,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-libh",
+      "finite_values": 80730,
+      "n_variants": 8970,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-libi",
+      "finite_values": 82089,
+      "n_variants": 9121,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "nuc__nuc-g1",
+      "finite_values": 64560,
+      "n_variants": 10760,
+      "nan_values": 32280,
+      "status": "exact"
+    },
+    {
+      "feature_id": "nuc__nuc-g2",
+      "finite_values": 88530,
+      "n_variants": 14755,
+      "nan_values": 44265,
+      "status": "exact"
+    },
+    {
+      "feature_id": "nuc__nuc-g3",
+      "finite_values": 112740,
+      "n_variants": 18790,
+      "nan_values": 56370,
+      "status": "exact"
+    },
+    {
+      "feature_id": "nuc__nuc-g4",
+      "finite_values": 93324,
+      "n_variants": 15554,
+      "nan_values": 46662,
+      "status": "exact"
+    },
+    {
+      "feature_id": "trpb__trpb-four-site",
+      "finite_values": 1749249,
+      "n_variants": 194361,
+      "nan_values": 0,
+      "status": "exact"
+    },
+    {
+      "feature_id": "k50__k50__mean-log-chymotrypsin-enrichment",
+      "finite_values": 10947138,
+      "n_variants": 1824523,
+      "nan_values": 5473569,
+      "status": "exact"
+    },
+    {
+      "feature_id": "k50__k50__mean-log-trypsin-enrichment",
+      "finite_values": 10947138,
+      "n_variants": 1824523,
+      "nan_values": 5473569,
+      "status": "exact"
+    }
+  ],
+  "schema_version": 1
+}
